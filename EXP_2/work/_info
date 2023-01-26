@@ -1,0 +1,446 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+!s11e vcom 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/home/rafael/Documents/PCS3635/EXP_2
+T_opt
+!s110 1673724271
+V[7=`3m<2Nd^a8<75HM=M^3
+04 22 2 work circuito_exp2_ativ2_tb tb 1
+=1-000ae431a4f1-63c3016f-2347f-6d0b
+!s124 OEM10U5 
+Z2 o-quiet -auto_acc_if_foreign -work work
+Z3 tCvgOpt 0
+n@_opt
+Z4 OL;O;2021.2;73
+R1
+T_opt1
+!s110 1673728165
+Vgd2_nAFzgbk_e:^fZF1B73
+04 15 2 work contador_163_tb tb 1
+=1-000ae431a4f1-63c310a4-ee7a0-7959
+Z5 !s124 OEM10U2 
+R2
+R3
+n@_opt1
+R4
+T_opt2
+!s110 1673719592
+VZEZEgf@0z_7nHMzZn8idn0
+04 11 2 work ram_16x4_tb tb 1
+=1-000ae431a4f1-63c2ef28-96ba-5508
+R5
+R2
+R3
+n@_opt2
+R4
+R1
+Ecircuito_exp2_ativ2
+Z6 w1673724042
+Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z8 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 14
+R1
+Z9 8/home/rafael/Documents/PCS3635/EXP_2/circuito_exp2_ativ2.vhd
+Z10 F/home/rafael/Documents/PCS3635/EXP_2/circuito_exp2_ativ2.vhd
+l0
+L27 1
+VI1Y4WRDk3:2LS?RKA9]?=0
+!s100 >1HDTh^>ZIngZ0oj[>dJY3
+Z11 OL;C;2021.2;73
+32
+Z12 !s110 1673724214
+!i10b 1
+Z13 !s108 1673724214.000000
+Z14 !s90 -reportprogress|300|-work|work|/home/rafael/Documents/PCS3635/EXP_2/circuito_exp2_ativ2.vhd|
+Z15 !s107 /home/rafael/Documents/PCS3635/EXP_2/circuito_exp2_ativ2.vhd|
+!i113 0
+Z16 o-work work
+Z17 tExplicit 1 CvgOpt 0
+Aestrutural
+Z18 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z19 DEx4 work 8 ram_16x4 0 22 9B84EKXR6FZS`R0ID3UH=1
+R7
+R8
+DEx4 work 19 circuito_exp2_ativ2 0 22 I1Y4WRDk3:2LS?RKA9]?=0
+!i122 14
+l91
+L41 102
+VCIedIjjNem@Mm@`FZU]8Q0
+!s100 jIbdR[2UEQ<?W6zJPaD@20
+R11
+32
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 0
+R16
+R17
+Ecircuito_exp2_ativ2_tb
+Z20 w1673379734
+R7
+R8
+!i122 15
+R1
+Z21 8/home/rafael/Documents/PCS3635/EXP_2/circuito_exp2_ativ2_tb.vhd
+Z22 F/home/rafael/Documents/PCS3635/EXP_2/circuito_exp2_ativ2_tb.vhd
+l0
+Z23 L21 1
+VWzYHUOZ<UJao;@1L1km6Z1
+!s100 [2j5UX9PIBIK>=KN6H=>G0
+R11
+32
+R12
+!i10b 1
+R13
+Z24 !s90 -reportprogress|300|-work|work|/home/rafael/Documents/PCS3635/EXP_2/circuito_exp2_ativ2_tb.vhd|
+Z25 !s107 /home/rafael/Documents/PCS3635/EXP_2/circuito_exp2_ativ2_tb.vhd|
+!i113 0
+R16
+R17
+Atb
+R7
+R8
+DEx4 work 22 circuito_exp2_ativ2_tb 0 22 WzYHUOZ<UJao;@1L1km6Z1
+!i122 15
+l59
+L24 191
+Vb^0R45DZazD;k^S4T6SQF3
+!s100 <0:F4jXWm7he43CDX[QWW1
+R11
+32
+R12
+!i10b 1
+R13
+R24
+R25
+!i113 0
+R16
+R17
+Ecomparador_85
+R20
+R7
+R8
+!i122 16
+R1
+Z26 8/home/rafael/Documents/PCS3635/EXP_2/comparador_85.vhd
+Z27 F/home/rafael/Documents/PCS3635/EXP_2/comparador_85.vhd
+l0
+L18 1
+Vn;CBL11<o[1W?[o5iWSn_2
+!s100 UchionOWWKZd[S9Df?mH>0
+R11
+32
+R12
+!i10b 1
+R13
+Z28 !s90 -reportprogress|300|-work|work|/home/rafael/Documents/PCS3635/EXP_2/comparador_85.vhd|
+Z29 !s107 /home/rafael/Documents/PCS3635/EXP_2/comparador_85.vhd|
+!i113 0
+R16
+R17
+Adataflow
+R7
+R8
+DEx4 work 13 comparador_85 0 22 n;CBL11<o[1W?[o5iWSn_2
+!i122 16
+l41
+L37 20
+VC<^GjH9kdG]R3DLD_99jl3
+!s100 P^;hPi]5OVVdjL6GdC0U80
+R11
+32
+R12
+!i10b 1
+R13
+R28
+R29
+!i113 0
+R16
+R17
+Ecomparador_85_tb
+R20
+R7
+R8
+!i122 17
+R1
+Z30 8/home/rafael/Documents/PCS3635/EXP_2/comparador_85_tb.vhd
+Z31 F/home/rafael/Documents/PCS3635/EXP_2/comparador_85_tb.vhd
+l0
+R23
+VgAJc7dUQgWalGHcOSGEge0
+!s100 4VIK_9S5TGB[W@5YeU@Om1
+R11
+32
+R12
+!i10b 1
+R13
+Z32 !s90 -reportprogress|300|-work|work|/home/rafael/Documents/PCS3635/EXP_2/comparador_85_tb.vhd|
+Z33 !s107 /home/rafael/Documents/PCS3635/EXP_2/comparador_85_tb.vhd|
+!i113 0
+R16
+R17
+Atb
+R7
+R8
+DEx4 work 16 comparador_85_tb 0 22 gAJc7dUQgWalGHcOSGEge0
+!i122 17
+l86
+L24 115
+VaM7n<AA>VV_m?7aF?bYE>0
+!s100 cBGS3RGE85l=P2`MJ^QaS0
+R11
+32
+R12
+!i10b 1
+R13
+R32
+R33
+!i113 0
+R16
+R17
+Econtador_163
+R20
+R18
+R7
+R8
+!i122 18
+R1
+Z34 8/home/rafael/Documents/PCS3635/EXP_2/contador_163.vhd
+Z35 F/home/rafael/Documents/PCS3635/EXP_2/contador_163.vhd
+l0
+L19 1
+VX76>IE<hD@PAg93BbE2<M3
+!s100 HncTPI9f>PSaSM@8d2b100
+R11
+32
+R12
+!i10b 1
+R13
+Z36 !s90 -reportprogress|300|-work|work|/home/rafael/Documents/PCS3635/EXP_2/contador_163.vhd|
+Z37 !s107 /home/rafael/Documents/PCS3635/EXP_2/contador_163.vhd|
+!i113 0
+R16
+R17
+Acomportamental
+R18
+R7
+R8
+DEx4 work 12 contador_163 0 22 X76>IE<hD@PAg93BbE2<M3
+!i122 18
+l34
+L32 29
+VgP@4FZQ0Q[OAN>2<2TmgC2
+!s100 :UBU?:`V1RR45eY[;lMH80
+R11
+32
+R12
+!i10b 1
+R13
+R36
+R37
+!i113 0
+R16
+R17
+Econtador_163_tb
+Z38 w1673398788
+R7
+R8
+!i122 19
+R1
+Z39 8/home/rafael/Documents/PCS3635/EXP_2/contador_163_tb.vhd
+Z40 F/home/rafael/Documents/PCS3635/EXP_2/contador_163_tb.vhd
+l0
+L20 1
+V;_[CP1P4hhYVOZSKz`VF:0
+!s100 8<kW60Qd:zde5T3l1AELS2
+R11
+32
+Z41 !s110 1673724215
+!i10b 1
+R13
+Z42 !s90 -reportprogress|300|-work|work|/home/rafael/Documents/PCS3635/EXP_2/contador_163_tb.vhd|
+Z43 !s107 /home/rafael/Documents/PCS3635/EXP_2/contador_163_tb.vhd|
+!i113 0
+R16
+R17
+Atb
+R7
+R8
+DEx4 work 15 contador_163_tb 0 22 ;_[CP1P4hhYVOZSKz`VF:0
+!i122 19
+l57
+L23 225
+VKg3bzHTK^;aXI_Y87UUHz0
+!s100 AjjOZJX`J[Qgfg2Q`iQLI0
+R11
+32
+R41
+!i10b 1
+R13
+R42
+R43
+!i113 0
+R16
+R17
+Ehexa7seg
+R20
+R7
+R8
+!i122 22
+R1
+Z44 8/home/rafael/Documents/PCS3635/EXP_2/hexa7seg.vhd
+Z45 F/home/rafael/Documents/PCS3635/EXP_2/hexa7seg.vhd
+l0
+L24 1
+VQJZeiVSJF@L3lDY8DEh^K0
+!s100 m70:2LbOnf0ODWJKbc?@F3
+R11
+32
+Z46 !s110 1673724221
+!i10b 1
+Z47 !s108 1673724221.000000
+Z48 !s90 -reportprogress|300|-work|work|/home/rafael/Documents/PCS3635/EXP_2/hexa7seg.vhd|
+Z49 !s107 /home/rafael/Documents/PCS3635/EXP_2/hexa7seg.vhd|
+!i113 0
+R16
+R17
+Acomportamental
+R7
+R8
+DEx4 work 8 hexa7seg 0 22 QJZeiVSJF@L3lDY8DEh^K0
+!i122 22
+l32
+L31 22
+V4am;C1Lg0gb:CoRQ`1_]o0
+!s100 U7QTX5YA5zSmB21GTflT=3
+R11
+32
+R46
+!i10b 1
+R47
+R48
+R49
+!i113 0
+R16
+R17
+Eram_16x4
+R20
+R18
+R7
+R8
+!i122 20
+R1
+Z50 8/home/rafael/Documents/PCS3635/EXP_2/ram_16x4.vhd
+Z51 F/home/rafael/Documents/PCS3635/EXP_2/ram_16x4.vhd
+l0
+L28 1
+V9B84EKXR6FZS`R0ID3UH=1
+!s100 7_Oke2`[UPj15mR6JKQR]2
+R11
+32
+Z52 !s110 1673724220
+!i10b 1
+Z53 !s108 1673724220.000000
+Z54 !s90 -reportprogress|300|-work|work|/home/rafael/Documents/PCS3635/EXP_2/ram_16x4.vhd|
+Z55 !s107 /home/rafael/Documents/PCS3635/EXP_2/ram_16x4.vhd|
+!i113 0
+R16
+R17
+Aram_modelsim
+R18
+R7
+R8
+R19
+!i122 20
+l90
+L70 40
+V45Ndf]n=9A`NKcfTXQB4b3
+!s100 @Wb^3GhPLl>oU<nW@hX`C0
+R11
+32
+R52
+!i10b 1
+R53
+R54
+R55
+!i113 0
+R16
+R17
+Aram_mif
+R18
+R7
+R8
+R19
+!i122 20
+l48
+L40 28
+VCDVa6nE`D9c4R]aAKhK6Z0
+!s100 Q0QMUcJL86RTKThife6VD3
+R11
+32
+R52
+!i10b 1
+R53
+R54
+R55
+!i113 0
+R16
+R17
+Eram_16x4_tb
+R20
+R18
+R7
+R8
+!i122 21
+R1
+Z56 8/home/rafael/Documents/PCS3635/EXP_2/ram_16x4_tb.vhd
+Z57 F/home/rafael/Documents/PCS3635/EXP_2/ram_16x4_tb.vhd
+l0
+R23
+VbNBig`jm0TC<B1PE5`Mi<3
+!s100 RK_1P5=FkY]nIR2@D`>_g2
+R11
+32
+R52
+!i10b 1
+R53
+Z58 !s90 -reportprogress|300|-work|work|/home/rafael/Documents/PCS3635/EXP_2/ram_16x4_tb.vhd|
+Z59 !s107 /home/rafael/Documents/PCS3635/EXP_2/ram_16x4_tb.vhd|
+!i113 0
+R16
+R17
+Atb
+R19
+R18
+R7
+R8
+DEx4 work 11 ram_16x4_tb 0 22 bNBig`jm0TC<B1PE5`Mi<3
+!i122 21
+l56
+L24 111
+V]mRDi2AK@O>PeZo0IG4O73
+!s100 bI[;FLQ:_lOCNSZj?idN61
+R11
+32
+R52
+!i10b 1
+R53
+R58
+R59
+!i113 0
+R16
+R17

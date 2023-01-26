@@ -1,0 +1,450 @@
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2021.2 linux_x86_64 Apr 14 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+vcom -reportprogress 300 -work work /home/rafael/Documents/PCS3635/EXP_2/comparador_85.vhd
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 14:30:23 on Jan 14,2023
+# vcom -reportprogress 300 -work work /home/rafael/Documents/PCS3635/EXP_2/comparador_85.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity comparador_85
+# -- Compiling architecture dataflow of comparador_85
+# End time: 14:30:23 on Jan 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/rafael/Documents/PCS3635/EXP_2/comparador_85_tb.vhd
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 14:30:26 on Jan 14,2023
+# vcom -reportprogress 300 -work work /home/rafael/Documents/PCS3635/EXP_2/comparador_85_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity comparador_85_tb
+# -- Compiling architecture tb of comparador_85_tb
+# End time: 14:30:26 on Jan 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.comparador_85_tb
+# vsim work.comparador_85_tb 
+# Start time: 14:30:38 on Jan 14,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.comparador_85_tb(tb)#1
+add log -r /*
+add wave -position insertpoint  \
+sim:/comparador_85_tb/altb_out
+add wave -position insertpoint  \
+sim:/comparador_85_tb/agtb_in
+add wave -position insertpoint  \
+sim:/comparador_85_tb/aeqb_in
+add wave -position insertpoint  \
+sim:/comparador_85_tb/altb_in
+add wave -position insertpoint  \
+sim:/comparador_85_tb/a_in
+add wave -position insertpoint  \
+sim:/comparador_85_tb/b_in
+add wave -position insertpoint  \
+sim:/comparador_85_tb/agtb_out
+add wave -position insertpoint  \
+sim:/comparador_85_tb/aeqb_out
+add wave -position insertpoint  \
+sim:/comparador_85_tb/altb_out
+add wave -position insertpoint  \
+sim:/comparador_85_tb/clockPeriod
+add wave -position insertpoint  \
+sim:/comparador_85_tb/casos_teste
+run -all
+# ** Note: Inicio da simulacao
+#    Time: 0 ns  Iteration: 0  Instance: /comparador_85_tb
+# ** Note: Caso de teste 0
+#    Time: 0 ns  Iteration: 0  Instance: /comparador_85_tb
+# ** Note: Caso de teste 1
+#    Time: 100 ns  Iteration: 0  Instance: /comparador_85_tb
+# ** Note: Caso de teste 2
+#    Time: 200 ns  Iteration: 0  Instance: /comparador_85_tb
+# ** Note: Caso de teste 3
+#    Time: 300 ns  Iteration: 0  Instance: /comparador_85_tb
+# ** Note: Caso de teste 4
+#    Time: 400 ns  Iteration: 0  Instance: /comparador_85_tb
+# ** Note: Caso de teste 5
+#    Time: 500 ns  Iteration: 0  Instance: /comparador_85_tb
+# ** Note: Caso de teste 6
+#    Time: 600 ns  Iteration: 0  Instance: /comparador_85_tb
+# ** Note: Caso de teste 7
+#    Time: 700 ns  Iteration: 0  Instance: /comparador_85_tb
+# ** Note: Caso de teste 8
+#    Time: 800 ns  Iteration: 0  Instance: /comparador_85_tb
+# ** Note: Caso de teste 9
+#    Time: 900 ns  Iteration: 0  Instance: /comparador_85_tb
+# ** Note: Fim da simulacao
+#    Time: 1 us  Iteration: 0  Instance: /comparador_85_tb
+# Causality operation skipped due to absence of debug database file
+vcom -reportprogress 300 -work work /home/rafael/Documents/PCS3635/EXP_2/ram_16x4.vhd
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 15:01:55 on Jan 14,2023
+# vcom -reportprogress 300 -work work /home/rafael/Documents/PCS3635/EXP_2/ram_16x4.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ram_16x4
+# -- Compiling architecture ram_mif of ram_16x4
+# -- Compiling architecture ram_modelsim of ram_16x4
+# -- Loading entity ram_16x4
+# End time: 15:01:55 on Jan 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/rafael/Documents/PCS3635/EXP_2/ram_16x4_tb.vhd
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 15:01:55 on Jan 14,2023
+# vcom -reportprogress 300 -work work /home/rafael/Documents/PCS3635/EXP_2/ram_16x4_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ram_16x4_tb
+# -- Compiling architecture tb of ram_16x4_tb
+# -- Loading entity ram_16x4
+# End time: 15:01:55 on Jan 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.ram_16x4
+# End time: 15:02:14 on Jan 14,2023, Elapsed time: 0:31:36
+# Errors: 0, Warnings: 0
+# vsim work.ram_16x4 
+# Start time: 15:02:14 on Jan 14,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.ram_16x4(ram_modelsim)#1
+quit -sim
+# End time: 15:02:27 on Jan 14,2023, Elapsed time: 0:00:13
+# Errors: 0, Warnings: 0
+vsim work.ram_16x4_tb
+# vsim work.ram_16x4_tb 
+# Start time: 15:06:31 on Jan 14,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.ram_16x4_tb(tb)#1
+add wave -position insertpoint  \
+sim:/ram_16x4_tb/clk_in \
+sim:/ram_16x4_tb/endereco_in \
+sim:/ram_16x4_tb/dado_in \
+sim:/ram_16x4_tb/we_in \
+sim:/ram_16x4_tb/dado_out \
+sim:/ram_16x4_tb/keep_simulating
+run -all
+# ** Note: Inicio da simulacao
+#    Time: 0 ns  Iteration: 0  Instance: /ram_16x4_tb
+# ** Note: Caso de teste 1 - leitura da memoria
+#    Time: 0 ns  Iteration: 0  Instance: /ram_16x4_tb
+# ** Note: Caso de teste 1 - leitura da memoria
+#    Time: 420 ns  Iteration: 0  Instance: /ram_16x4_tb
+# ** Note: Caso de teste 1 - leitura da memoria
+#    Time: 540 ns  Iteration: 0  Instance: /ram_16x4_tb
+# ** Note: Caso de teste 4 - leitura da memoria
+#    Time: 660 ns  Iteration: 0  Instance: /ram_16x4_tb
+# ** Note: Fim da simulacao
+#    Time: 1080 ns  Iteration: 0  Instance: /ram_16x4_tb
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/rafael/Documents/PCS3635/EXP_2/ram_16x4.do
+vcom -reportprogress 300 -work work /home/rafael/Documents/PCS3635/EXP_2/circuito_exp2_ativ2.vhd
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 16:21:02 on Jan 14,2023
+# vcom -reportprogress 300 -work work /home/rafael/Documents/PCS3635/EXP_2/circuito_exp2_ativ2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity circuito_exp2_ativ2
+# -- Compiling architecture estrutural of circuito_exp2_ativ2
+# -- Loading package NUMERIC_STD
+# -- Loading entity ram_16x4
+# End time: 16:21:02 on Jan 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/rafael/Documents/PCS3635/EXP_2/circuito_exp2_ativ2.vhd
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 16:23:19 on Jan 14,2023
+# vcom -reportprogress 300 -work work /home/rafael/Documents/PCS3635/EXP_2/circuito_exp2_ativ2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity circuito_exp2_ativ2
+# -- Compiling architecture estrutural of circuito_exp2_ativ2
+# -- Loading package NUMERIC_STD
+# -- Loading entity ram_16x4
+# End time: 16:23:19 on Jan 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/rafael/Documents/PCS3635/EXP_2/circuito_exp2_ativ2_tb.vhd
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 16:23:19 on Jan 14,2023
+# vcom -reportprogress 300 -work work /home/rafael/Documents/PCS3635/EXP_2/circuito_exp2_ativ2_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity circuito_exp2_ativ2_tb
+# -- Compiling architecture tb of circuito_exp2_ativ2_tb
+# End time: 16:23:19 on Jan 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/rafael/Documents/PCS3635/EXP_2/comparador_85.vhd
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 16:23:19 on Jan 14,2023
+# vcom -reportprogress 300 -work work /home/rafael/Documents/PCS3635/EXP_2/comparador_85.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity comparador_85
+# -- Compiling architecture dataflow of comparador_85
+# End time: 16:23:19 on Jan 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/rafael/Documents/PCS3635/EXP_2/comparador_85_tb.vhd
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 16:23:19 on Jan 14,2023
+# vcom -reportprogress 300 -work work /home/rafael/Documents/PCS3635/EXP_2/comparador_85_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity comparador_85_tb
+# -- Compiling architecture tb of comparador_85_tb
+# End time: 16:23:19 on Jan 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/rafael/Documents/PCS3635/EXP_2/contador_163.vhd
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 16:23:19 on Jan 14,2023
+# vcom -reportprogress 300 -work work /home/rafael/Documents/PCS3635/EXP_2/contador_163.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity contador_163
+# -- Compiling architecture comportamental of contador_163
+# End time: 16:23:20 on Jan 14,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/rafael/Documents/PCS3635/EXP_2/ram_16x4.vhd
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 16:23:20 on Jan 14,2023
+# vcom -reportprogress 300 -work work /home/rafael/Documents/PCS3635/EXP_2/ram_16x4.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ram_16x4
+# -- Compiling architecture ram_mif of ram_16x4
+# -- Compiling architecture ram_modelsim of ram_16x4
+# -- Loading entity ram_16x4
+# End time: 16:23:20 on Jan 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/rafael/Documents/PCS3635/EXP_2/ram_16x4_tb.vhd
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 16:23:20 on Jan 14,2023
+# vcom -reportprogress 300 -work work /home/rafael/Documents/PCS3635/EXP_2/ram_16x4_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ram_16x4_tb
+# -- Compiling architecture tb of ram_16x4_tb
+# -- Loading entity ram_16x4
+# End time: 16:23:20 on Jan 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/rafael/Documents/PCS3635/EXP_2/circuito_exp2_ativ2.vhd
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 16:23:34 on Jan 14,2023
+# vcom -reportprogress 300 -work work /home/rafael/Documents/PCS3635/EXP_2/circuito_exp2_ativ2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity circuito_exp2_ativ2
+# -- Compiling architecture estrutural of circuito_exp2_ativ2
+# -- Loading package NUMERIC_STD
+# -- Loading entity ram_16x4
+# End time: 16:23:34 on Jan 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/rafael/Documents/PCS3635/EXP_2/circuito_exp2_ativ2_tb.vhd
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 16:23:34 on Jan 14,2023
+# vcom -reportprogress 300 -work work /home/rafael/Documents/PCS3635/EXP_2/circuito_exp2_ativ2_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity circuito_exp2_ativ2_tb
+# -- Compiling architecture tb of circuito_exp2_ativ2_tb
+# End time: 16:23:34 on Jan 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/rafael/Documents/PCS3635/EXP_2/comparador_85.vhd
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 16:23:34 on Jan 14,2023
+# vcom -reportprogress 300 -work work /home/rafael/Documents/PCS3635/EXP_2/comparador_85.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity comparador_85
+# -- Compiling architecture dataflow of comparador_85
+# End time: 16:23:34 on Jan 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/rafael/Documents/PCS3635/EXP_2/comparador_85_tb.vhd
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 16:23:34 on Jan 14,2023
+# vcom -reportprogress 300 -work work /home/rafael/Documents/PCS3635/EXP_2/comparador_85_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity comparador_85_tb
+# -- Compiling architecture tb of comparador_85_tb
+# End time: 16:23:34 on Jan 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/rafael/Documents/PCS3635/EXP_2/contador_163.vhd
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 16:23:34 on Jan 14,2023
+# vcom -reportprogress 300 -work work /home/rafael/Documents/PCS3635/EXP_2/contador_163.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity contador_163
+# -- Compiling architecture comportamental of contador_163
+# End time: 16:23:34 on Jan 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/rafael/Documents/PCS3635/EXP_2/contador_163_tb.vhd
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 16:23:34 on Jan 14,2023
+# vcom -reportprogress 300 -work work /home/rafael/Documents/PCS3635/EXP_2/contador_163_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity contador_163_tb
+# -- Compiling architecture tb of contador_163_tb
+# End time: 16:23:35 on Jan 14,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/rafael/Documents/PCS3635/EXP_2/ram_16x4.vhd
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 16:23:40 on Jan 14,2023
+# vcom -reportprogress 300 -work work /home/rafael/Documents/PCS3635/EXP_2/ram_16x4.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ram_16x4
+# -- Compiling architecture ram_mif of ram_16x4
+# -- Compiling architecture ram_modelsim of ram_16x4
+# -- Loading entity ram_16x4
+# End time: 16:23:40 on Jan 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/rafael/Documents/PCS3635/EXP_2/ram_16x4_tb.vhd
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 16:23:40 on Jan 14,2023
+# vcom -reportprogress 300 -work work /home/rafael/Documents/PCS3635/EXP_2/ram_16x4_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ram_16x4_tb
+# -- Compiling architecture tb of ram_16x4_tb
+# -- Loading entity ram_16x4
+# End time: 16:23:40 on Jan 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/rafael/Documents/PCS3635/EXP_2/hexa7seg.vhd
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 16:23:41 on Jan 14,2023
+# vcom -reportprogress 300 -work work /home/rafael/Documents/PCS3635/EXP_2/hexa7seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity hexa7seg
+# -- Compiling architecture comportamental of hexa7seg
+# End time: 16:23:41 on Jan 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+quit -sim
+# End time: 16:24:07 on Jan 14,2023, Elapsed time: 1:17:36
+# Errors: 0, Warnings: 0
+vsim work.circuito_exp2_ativ2_tb
+# vsim work.circuito_exp2_ativ2_tb 
+# Start time: 16:24:31 on Jan 14,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.circuito_exp2_ativ2_tb(tb)#1
+add log -r /*
+add wave -position insertpoint  \
+sim:/circuito_exp2_ativ2_tb/clock_in
+add wave -position insertpoint  \
+sim:/circuito_exp2_ativ2_tb/zera_in
+add wave -position insertpoint  \
+sim:/circuito_exp2_ativ2_tb/conta_in
+add wave -position insertpoint  \
+sim:/circuito_exp2_ativ2_tb/escreve_in
+add wave -position insertpoint  \
+sim:/circuito_exp2_ativ2_tb/chaves_in
+add wave -position insertpoint  \
+sim:/circuito_exp2_ativ2_tb/igual_out
+add wave -position insertpoint  \
+sim:/circuito_exp2_ativ2_tb/fim_out
+add wave -position insertpoint  \
+sim:/circuito_exp2_ativ2_tb/db_contagem_out
+add wave -position insertpoint  \
+sim:/circuito_exp2_ativ2_tb/db_contagem_out
+add wave -position insertpoint  \
+sim:/circuito_exp2_ativ2_tb/db_memoria_out
+add wave -position insertpoint  \
+sim:/circuito_exp2_ativ2_tb/clockPeriod
+run -all
+# ** Note: Inicio da simulacao
+#    Time: 0 ns  Iteration: 0  Instance: /circuito_exp2_ativ2_tb
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /circuito_exp2_ativ2_tb/dut/memoria
+# ** Note: Fim da simulacao
+#    Time: 1460 ns  Iteration: 0  Instance: /circuito_exp2_ativ2_tb
+add wave -position insertpoint  \
+sim:/circuito_exp2_ativ2_tb/clock_in \
+sim:/circuito_exp2_ativ2_tb/zera_in \
+sim:/circuito_exp2_ativ2_tb/conta_in \
+sim:/circuito_exp2_ativ2_tb/escreve_in \
+sim:/circuito_exp2_ativ2_tb/chaves_in \
+sim:/circuito_exp2_ativ2_tb/igual_out \
+sim:/circuito_exp2_ativ2_tb/fim_out \
+sim:/circuito_exp2_ativ2_tb/db_contagem_out \
+sim:/circuito_exp2_ativ2_tb/db_memoria_out
+quit -sim
+# End time: 17:29:16 on Jan 14,2023, Elapsed time: 1:04:45
+# Errors: 0, Warnings: 1
+vsim work.contador_163_tb
+# vsim work.contador_163_tb 
+# Start time: 17:29:24 on Jan 14,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.contador_163_tb(tb)#1
+add wave -position insertpoint  \
+sim:/contador_163_tb/clock_in \
+sim:/contador_163_tb/clr_in \
+sim:/contador_163_tb/ld_in \
+sim:/contador_163_tb/ent_in \
+sim:/contador_163_tb/enp_in \
+sim:/contador_163_tb/d_in \
+sim:/contador_163_tb/q_out \
+sim:/contador_163_tb/rco_out
+# Load canceled
+run -all
+# ** Note: Inicio da simulacao
+#    Time: 0 ns  Iteration: 0  Instance: /contador_163_tb
+# ** Note: Fim da simulacao
+#    Time: 1740 ns  Iteration: 0  Instance: /contador_163_tb
+# End time: 18:00:23 on Jan 14,2023, Elapsed time: 0:30:59
+# Errors: 0, Warnings: 0

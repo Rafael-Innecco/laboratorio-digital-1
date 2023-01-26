@@ -1,0 +1,86 @@
+Archive Project report for circuito_exp2_desafio
+Wed Jan 18 11:46:16 2023
+Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Archive Project Summary
+  3. Archive Project Messages
+  4. Files Archived
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2022  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------+
+; Archive Project Summary                                        ;
++------------------------+---------------------------------------+
+; Archive Project Status ; Successful - Wed Jan 18 11:46:16 2023 ;
+; Revision Name          ; circuito_exp2_desafio                 ;
+; Top-level Entity Name  ; circuito_exp2_desafio                 ;
+; Family                 ; Cyclone V                             ;
++------------------------+---------------------------------------+
+
+
++--------------------------+
+; Archive Project Messages ;
++--------------------------+
+Info: File Set 'Source control' contains:
+    Info: Project source and settings files
+    Info: Automatically detected source files
+Warning: Hierarchical Platform Designer systems and custom IP components(_hw.tcl and associated files) are not archived by the Quartus Archiver
+Info: Archive will store files relative to the closest common parent directory
+Info (13213): Using common directory /home/rafael/Documents/PCS3635/EXP_2/exp2_desafio/
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated archive '/home/rafael/Documents/PCS3635/EXP_2/exp2_desafio/circuito_exp2_desafio.qar'
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated report 'circuito_exp2_desafio.archive.rpt'
+Info (23030): Evaluation of Tcl script /home/rafael/intelFPGA_lite/22.1std/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 587 megabytes
+    Info: Processing ended: Wed Jan 18 11:46:16 2023
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+
++-----------------------------------------------+
+; Files Archived                                ;
++-----------------------------------------------+
+; File Name                                     ;
++-----------------------------------------------+
+; assignment_defaults.qdf                       ;
+; circuito_exp2_desafio.qpf                     ;
+; circuito_exp2_desafio.qsf                     ;
+; circuito_exp2_desafio.vhd                     ;
+; circuito_exp2_desafio_assignment_defaults.qdf ;
+; comparador_85.vhd                             ;
+; contador_163.vhd                              ;
+; hexa7seg.vhd                                  ;
+; ram_16x4.vhd                                  ;
+; ram_conteudo_inicial.mif                      ;
++-----------------------------------------------+
+
+

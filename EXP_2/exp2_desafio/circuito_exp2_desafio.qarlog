@@ -1,0 +1,21 @@
+Quartus Prime Archive log --	/home/rafael/Documents/PCS3635/EXP_2/exp2_desafio/circuito_exp2_desafio.qarlog
+
+Archive:	/home/rafael/Documents/PCS3635/EXP_2/exp2_desafio/circuito_exp2_desafio.qar
+Date:		Wed Jan 18 11:46:16 2023
+Quartus Prime		22.1std.0 Build 915 10/25/2022 SC Lite Edition
+
+	=========== Files Selected: ===========
+/home/rafael/Documents/PCS3635/EXP_2/exp2_desafio/assignment_defaults.qdf
+/home/rafael/Documents/PCS3635/EXP_2/exp2_desafio/circuito_exp2_desafio.qpf
+/home/rafael/Documents/PCS3635/EXP_2/exp2_desafio/circuito_exp2_desafio.qsf
+/home/rafael/Documents/PCS3635/EXP_2/exp2_desafio/circuito_exp2_desafio.vhd
+/home/rafael/Documents/PCS3635/EXP_2/exp2_desafio/circuito_exp2_desafio_assignment_defaults.qdf
+/home/rafael/Documents/PCS3635/EXP_2/exp2_desafio/comparador_85.vhd
+/home/rafael/Documents/PCS3635/EXP_2/exp2_desafio/contador_163.vhd
+/home/rafael/Documents/PCS3635/EXP_2/exp2_desafio/hexa7seg.vhd
+/home/rafael/Documents/PCS3635/EXP_2/exp2_desafio/ram_16x4.vhd
+/home/rafael/Documents/PCS3635/EXP_2/exp2_desafio/ram_conteudo_inicial.mif
+	======= Total: 10 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
