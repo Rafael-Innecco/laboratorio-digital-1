@@ -31,13 +31,13 @@ entity fluxo_dados is
         contaC             : in  std_logic;
         escreveM           : in  std_logic;
         zeraR              : in  std_logic;
-		registraR          : in std_logic;
-		chaves             : in  std_logic_vector (3 downto 0);
+		    registraR          : in std_logic;
+		    chaves             : in  std_logic_vector (3 downto 0);
         chavesIgualMemoria : out std_logic;
         fimC               : out std_logic;
         db_contagem        : out std_logic_vector (3 downto 0);
         db_memoria         : out std_logic_vector (3 downto 0);
-		db_chaves          : out std_logic_vector(3 downto 0)
+		    db_chaves          : out std_logic_vector(3 downto 0)
 	);
 end entity;
 

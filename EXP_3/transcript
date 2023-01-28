@@ -1,0 +1,49 @@
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2021.2 linux_x86_64 Apr 14 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# vsim -novopt fluxo_dados_tb 
+# Start time: 15:58:49 on Jan 28,2023
+# ** Error (suppressible): (vsim-12110) All optimizations are disabled because the -novopt option is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features, please see the User's Manual section on Preserving Object Visibility with vopt. -novopt option is now deprecated and will be removed in future releases.
+# Error loading design
+# End time: 15:58:49 on Jan 28,2023, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vsim -novopt work.fluxo_dados_tb
+# vsim -novopt work.fluxo_dados_tb 
+# Start time: 15:59:02 on Jan 28,2023
+# ** Error (suppressible): (vsim-12110) All optimizations are disabled because the -novopt option is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features, please see the User's Manual section on Preserving Object Visibility with vopt. -novopt option is now deprecated and will be removed in future releases.
+# Error loading design
+# End time: 15:59:02 on Jan 28,2023, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vsim work.contador_163
+# vsim work.contador_163 
+# Start time: 15:59:16 on Jan 28,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.contador_163(comportamental)#1
+vsim work.fluxo_dados_tb
+# End time: 16:00:25 on Jan 28,2023, Elapsed time: 0:01:09
+# Errors: 0, Warnings: 0
+# vsim work.fluxo_dados_tb 
+# Start time: 16:00:25 on Jan 28,2023
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.fluxo_dados_tb(tb)#1
+# End time: 16:00:45 on Jan 28,2023, Elapsed time: 0:00:20
+# Errors: 0, Warnings: 0
