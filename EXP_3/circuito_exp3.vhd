@@ -58,8 +58,8 @@ architecture estrutural of circuito_exp3 is
         );
     end component;
 
-    signal contaC, registraR, zeraC, zeraR, chavesIgualMemoria, fimC: std_logic;
-    signal db_chaveshex, db_contagemhex, db_memoriahex, db_estadohex: std_logic_vector (3 downto 0);
+    signal contaC, registraR, zeraC, zeraR, fimC, chavesIgualMemoria: std_logic := '0';
+    signal db_chaveshex, db_contagemhex, db_memoriahex, db_estadohex: std_logic_vector (3 downto 0) := "0000";
 begin
     fluxo_dadosFD: fluxo_dados
         port map (
@@ -77,6 +77,8 @@ begin
             db_chaves => db_chaveshex
         );
     --
+
+   
 
     unidade_controleUC: unidade_controle
         port map (
@@ -114,4 +116,7 @@ begin
             sseg => db_memoria
         );
     --
+
+    db_igual <= chavesIgualMemoria;
+    db_iniciar <= iniciar;
 end architecture estrutural;

@@ -123,9 +123,9 @@ begin
         clr   => s_not_zera,  -- clr ativo em baixo
         ld    => '1',
 		-- Alteração do nome --
-        ent   => contaC,
+        ent   => '1',
 		-- ----------------- --
-        enp   => '1',
+        enp   => contaC,
         D     => "0000",
         Q     => s_endereco,
 		-- Alteração do nome --
@@ -173,7 +173,7 @@ begin
 		generic map( N => 4)
 		port map (
 			clock  => clock,
-			clear  => zeraC,
+			clear  => zeraR,
 			enable => registraR,
 			D      => chaves,
 			Q      => s_chaves
