@@ -1,13 +1,15 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity circuito_exp3 is
+entity circuito_exp3_desafio is
     port (
         clock       : in std_logic;
         reset       : in std_logic;
         iniciar     : in std_logic;
         chaves      : in std_logic_vector (3 downto 0);
         pronto      : out std_logic;
+        acertou     : out std_logic;
+        errou       : out std_logic;
         db_igual    : out std_logic;
         db_iniciar  : out std_logic;
         db_contagem : out std_logic_vector (6 downto 0);
@@ -17,7 +19,7 @@ entity circuito_exp3 is
     );
 end entity;
 
-architecture estrutural of circuito_exp3 is
+architecture estrutural of circuito_exp3_desafio is
 
     component fluxo_dados
         port (
@@ -36,18 +38,21 @@ architecture estrutural of circuito_exp3 is
         );
     end component;
 
-    component unidade_controle
+    component unidade_controle_desafio
         port (
-            clock     : in  std_logic; 
-            reset     : in  std_logic; 
-            iniciar   : in  std_logic;
-            fimC      : in  std_logic;
-            zeraC     : out std_logic;
-            contaC    : out std_logic;
-            zeraR     : out std_logic;
-            registraR : out std_logic;
-            pronto    : out std_logic;
-            db_estado : out std_logic_vector(3 downto 0)
+            clock       : in  std_logic; 
+            reset       : in  std_logic; 
+            iniciar     : in  std_logic;
+            fimC        : in  std_logic;
+            igual       : in  std_logic;
+            zeraC       : out std_logic;
+            contaC      : out std_logic;
+            zeraR       : out std_logic;
+            registraR   : out std_logic;
+            pronto      : out std_logic;
+            acertou     : out std_logic;
+            errou       : out std_logic;
+            db_estado   : out std_logic_vector(3 downto 0)
         );
     end component;
 
@@ -80,19 +85,21 @@ begin
 
    
 
-    unidade_controleUC: unidade_controle
+    unidade_controleUC: unidade_controle_desafio
         port map (
             clock => clock,
             reset => reset,
             iniciar => iniciar,
             fimC => fimC,
+            igual => chavesIgualMemoria,
             zeraC => zeraC,
             contaC => contaC,
             zeraR => zeraR,
             registraR => registraR,
             pronto => pronto,
+            acertou => acertou,
+            errou => errou,
             db_estado => db_estadohex
-
         ); 
     --
 
