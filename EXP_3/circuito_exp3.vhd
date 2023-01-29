@@ -119,7 +119,8 @@ begin
 
     hex7estado: hexa7seg
         port map (
-            hexa => db_estadohex
+            hexa => db_estadohex,
+            sseg => db_estado
         );
 
     db_igual <= chavesIgualMemoria;

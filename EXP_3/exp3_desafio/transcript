@@ -45,3 +45,4 @@ run -all
 # ** Note: Fim da simulacao
 #    Time: 1120 ns  Iteration: 0  Instance: /circuito_exp3_desafio_tb_1
 # Causality operation skipped due to absence of debug database file
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/rafael/Documents/laboratorio-digital-1/EXP_3/exp3_desafio/wave_1.do
