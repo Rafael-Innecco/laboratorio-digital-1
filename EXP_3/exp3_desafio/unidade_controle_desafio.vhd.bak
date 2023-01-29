@@ -37,7 +37,7 @@ entity unidade_controle_desafio is
 end entity;
 
 architecture fsm of unidade_controle_desafio is
-    type t_estado is (inicial, preparacao, registra, comparacao, proximo, erro, fim_certo);
+    type t_estado is (inicial, preparacao, registra, comparacao, proximo, erro, fim_correto);
     signal Eatual, Eprox: t_estado;
 begin
 
@@ -59,9 +59,9 @@ begin
         comparacao  when  Eatual=registra else
         proximo     when  Eatual=comparacao and fimC='0' and igual = '1' else
         erro        when  Eatual=comparacao and igual = '0' else
-        fim_certo   when  Eatual=comparacao and fimC='1' and igual = '1' else
+        fim_correto when  Eatual=comparacao and fimC='1' and igual = '1' else
         registra    when  Eatual=proximo else
-        inicial     when  Eatual=fim_certo or Eatual=erro else
+        inicial     when  Eatual=fim_correto or Eatual=erro else
         inicial;
 
     -- logica de saída (maquina de Moore)
@@ -82,11 +82,11 @@ begin
                         '0' when others;
     
     with Eatual select
-        pronto <=       '1' when fim_certo | erro,
+        pronto <=       '1' when fim_correto | erro,
                         '0' when others;
     
     with Eatual select
-        acertou <=      '1' when fim_certo,
+        acertou <=      '1' when fim_correto,
                         '0' when others;
     
     with Eatual select
@@ -101,7 +101,7 @@ begin
                      "0101" when comparacao,  -- 5
                      "0110" when proximo,     -- 6
                      "1001" when erro,        -- D
-                     "1100" when fim_certo,   -- C
+                     "1100" when fim_correto, -- C
                      "1111" when others;      -- F
 
 end architecture fsm;

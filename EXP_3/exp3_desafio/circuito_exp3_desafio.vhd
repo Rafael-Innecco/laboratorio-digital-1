@@ -12,6 +12,11 @@ entity circuito_exp3_desafio is
         errou       : out std_logic;
         db_igual    : out std_logic;
         db_iniciar  : out std_logic;
+		  db_zeraC	  : out std_logic;
+		  db_contaC	  : out std_logic;
+		  db_fimC	  : out std_logic;
+		  db_zeraR	  : out std_logic;
+		  db_registraR: out std_logic;
         db_contagem : out std_logic_vector (6 downto 0);
         db_memoria  : out std_logic_vector (6 downto 0);
         db_chaves   : out std_logic_vector (6 downto 0);
@@ -129,6 +134,12 @@ begin
             hexa => db_estadohex,
 				sseg => db_estado
         );
+		  
+	 db_zeraC <= zeraC;
+	 db_contaC <= contaC;
+	 db_fimC <= fimC;
+	 db_zeraR <= zeraR;
+	 db_registraR <= registraR;
 
     db_igual <= chavesIgualMemoria;
     db_iniciar <= iniciar;

@@ -1,5 +1,5 @@
 Analysis & Elaboration report for circuito_exp3_desafio
-Sun Jan 29 18:42:13 2023
+Sun Jan 29 19:44:12 2023
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -42,7 +42,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                 ;
 +-------------------------------+------------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Sun Jan 29 18:42:13 2023          ;
+; Analysis & Elaboration Status ; Successful - Sun Jan 29 19:44:12 2023          ;
 ; Quartus Prime Version         ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                 ; circuito_exp3_desafio                          ;
 ; Top-level Entity Name         ; circuito_exp3_desafio                          ;
@@ -218,7 +218,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Sun Jan 29 18:42:07 2023
+    Info: Processing started: Sun Jan 29 19:44:07 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off circuito_exp3_desafio -c circuito_exp3_desafio --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -241,7 +241,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file compara
     Info (12022): Found design unit 1: comparador_85-dataflow File: /home/rafael/Documents/laboratorio-digital-1/EXP_3/exp3_desafio/comparador_85.vhd Line: 37
     Info (12023): Found entity 1: comparador_85 File: /home/rafael/Documents/laboratorio-digital-1/EXP_3/exp3_desafio/comparador_85.vhd Line: 18
 Info (12021): Found 2 design units, including 1 entities, in source file circuito_exp3_desafio.vhd
-    Info (12022): Found design unit 1: circuito_exp3_desafio-estrutural File: /home/rafael/Documents/laboratorio-digital-1/EXP_3/exp3_desafio/circuito_exp3_desafio.vhd Line: 22
+    Info (12022): Found design unit 1: circuito_exp3_desafio-estrutural File: /home/rafael/Documents/laboratorio-digital-1/EXP_3/exp3_desafio/circuito_exp3_desafio.vhd Line: 27
     Info (12023): Found entity 1: circuito_exp3_desafio File: /home/rafael/Documents/laboratorio-digital-1/EXP_3/exp3_desafio/circuito_exp3_desafio.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file circuito_exp3_desafio_tb_1.vhd
     Info (12022): Found design unit 1: circuito_exp3_desafio_tb_1-tb File: /home/rafael/Documents/laboratorio-digital-1/EXP_3/exp3_desafio/circuito_exp3_desafio_tb_1.vhd Line: 23
@@ -254,17 +254,17 @@ Info (12021): Found 2 design units, including 1 entities, in source file unidade
     Info (12022): Found design unit 1: unidade_controle_desafio-fsm File: /home/rafael/Documents/laboratorio-digital-1/EXP_3/exp3_desafio/unidade_controle_desafio.vhd Line: 39
     Info (12023): Found entity 1: unidade_controle_desafio File: /home/rafael/Documents/laboratorio-digital-1/EXP_3/exp3_desafio/unidade_controle_desafio.vhd Line: 21
 Info (12127): Elaborating entity "circuito_exp3_desafio" for the top level hierarchy
-Info (12128): Elaborating entity "fluxo_dados" for hierarchy "fluxo_dados:fluxo_dadosFD" File: /home/rafael/Documents/laboratorio-digital-1/EXP_3/exp3_desafio/circuito_exp3_desafio.vhd Line: 69
+Info (12128): Elaborating entity "fluxo_dados" for hierarchy "fluxo_dados:fluxo_dadosFD" File: /home/rafael/Documents/laboratorio-digital-1/EXP_3/exp3_desafio/circuito_exp3_desafio.vhd Line: 74
 Info (12128): Elaborating entity "contador_163" for hierarchy "fluxo_dados:fluxo_dadosFD|contador_163:contador" File: /home/rafael/Documents/laboratorio-digital-1/EXP_3/exp3_desafio/fluxo_dados.vhd Line: 120
 Info (12128): Elaborating entity "comparador_85" for hierarchy "fluxo_dados:fluxo_dadosFD|comparador_85:comparador" File: /home/rafael/Documents/laboratorio-digital-1/EXP_3/exp3_desafio/fluxo_dados.vhd Line: 136
 Info (12129): Elaborating entity "ram_16x4" using architecture "A:ram_modelsim" for hierarchy "fluxo_dados:fluxo_dadosFD|ram_16x4:memoria" File: /home/rafael/Documents/laboratorio-digital-1/EXP_3/exp3_desafio/fluxo_dados.vhd Line: 160
 Info (12128): Elaborating entity "registrador_n" for hierarchy "fluxo_dados:fluxo_dadosFD|registrador_n:registrador" File: /home/rafael/Documents/laboratorio-digital-1/EXP_3/exp3_desafio/fluxo_dados.vhd Line: 172
-Info (12128): Elaborating entity "unidade_controle_desafio" for hierarchy "unidade_controle_desafio:unidade_controleUC" File: /home/rafael/Documents/laboratorio-digital-1/EXP_3/exp3_desafio/circuito_exp3_desafio.vhd Line: 88
-Info (12128): Elaborating entity "hexa7seg" for hierarchy "hexa7seg:hex7chaves" File: /home/rafael/Documents/laboratorio-digital-1/EXP_3/exp3_desafio/circuito_exp3_desafio.vhd Line: 106
+Info (12128): Elaborating entity "unidade_controle_desafio" for hierarchy "unidade_controle_desafio:unidade_controleUC" File: /home/rafael/Documents/laboratorio-digital-1/EXP_3/exp3_desafio/circuito_exp3_desafio.vhd Line: 93
+Info (12128): Elaborating entity "hexa7seg" for hierarchy "hexa7seg:hex7chaves" File: /home/rafael/Documents/laboratorio-digital-1/EXP_3/exp3_desafio/circuito_exp3_desafio.vhd Line: 111
 Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 786 megabytes
-    Info: Processing ended: Sun Jan 29 18:42:13 2023
-    Info: Elapsed time: 00:00:06
+    Info: Processing ended: Sun Jan 29 19:44:12 2023
+    Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:15
 
 

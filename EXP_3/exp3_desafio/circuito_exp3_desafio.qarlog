@@ -1,0 +1,25 @@
+Quartus Prime Archive log --	/home/rafael/Documents/laboratorio-digital-1/EXP_3/exp3_desafio/circuito_exp3_desafio.qarlog
+
+Archive:	/home/rafael/Documents/laboratorio-digital-1/EXP_3/exp3_desafio/circuito_exp3_desafio.qar
+Date:		Sun Jan 29 20:22:01 2023
+Quartus Prime		22.1std.0 Build 915 10/25/2022 SC Lite Edition
+
+	=========== Files Selected: ===========
+/home/rafael/Documents/laboratorio-digital-1/EXP_3/exp3_desafio/circuito_exp3_desafio.qpf
+/home/rafael/Documents/laboratorio-digital-1/EXP_3/exp3_desafio/circuito_exp3_desafio.qsf
+/home/rafael/Documents/laboratorio-digital-1/EXP_3/exp3_desafio/circuito_exp3_desafio.vhd
+/home/rafael/Documents/laboratorio-digital-1/EXP_3/exp3_desafio/circuito_exp3_desafio_tb_1.vhd
+/home/rafael/Documents/laboratorio-digital-1/EXP_3/exp3_desafio/circuito_exp3_desafio_tb_2.vhd
+/home/rafael/Documents/laboratorio-digital-1/EXP_3/exp3_desafio/comparador_85.vhd
+/home/rafael/Documents/laboratorio-digital-1/EXP_3/exp3_desafio/contador_163.vhd
+/home/rafael/Documents/laboratorio-digital-1/EXP_3/exp3_desafio/fluxo_dados.vhd
+/home/rafael/Documents/laboratorio-digital-1/EXP_3/exp3_desafio/hexa7seg.vhd
+/home/rafael/Documents/laboratorio-digital-1/EXP_3/exp3_desafio/ram_16x4.vhd
+/home/rafael/Documents/laboratorio-digital-1/EXP_3/exp3_desafio/ram_conteudo_jogadas.mif
+/home/rafael/Documents/laboratorio-digital-1/EXP_3/exp3_desafio/registrador_n.vhd
+/home/rafael/Documents/laboratorio-digital-1/EXP_3/exp3_desafio/unidade_controle_desafio.vhd
+/home/rafael/intelFPGA_lite/22.1std/quartus/linux64/assignment_defaults.qdf
+	======= Total: 14 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

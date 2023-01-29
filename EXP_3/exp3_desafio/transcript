@@ -46,3 +46,6 @@ run -all
 #    Time: 1120 ns  Iteration: 0  Instance: /circuito_exp3_desafio_tb_1
 # Causality operation skipped due to absence of debug database file
 write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/rafael/Documents/laboratorio-digital-1/EXP_3/exp3_desafio/wave_1.do
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/rafael/Documents/laboratorio-digital-1/EXP_3/exp3_desafio/wave_1.do
+# End time: 19:40:22 on Jan 29,2023, Elapsed time: 1:44:42
+# Errors: 0, Warnings: 3
