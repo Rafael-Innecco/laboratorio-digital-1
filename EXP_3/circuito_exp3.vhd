@@ -117,6 +117,11 @@ begin
         );
     --
 
+    hex7estado: hexa7seg
+        port map (
+            hexa => db_estadohex
+        )
+
     db_igual <= chavesIgualMemoria;
     db_iniciar <= iniciar;
 end architecture estrutural;
