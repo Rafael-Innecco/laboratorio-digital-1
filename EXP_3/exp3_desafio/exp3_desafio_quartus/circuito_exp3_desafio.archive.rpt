@@ -1,5 +1,5 @@
 Archive Project report for circuito_exp3_desafio
-Sun Jan 29 20:22:01 2023
+Mon Jan 30 10:31:56 2023
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -36,7 +36,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------+
 ; Archive Project Summary                                        ;
 +------------------------+---------------------------------------+
-; Archive Project Status ; Successful - Sun Jan 29 20:22:01 2023 ;
+; Archive Project Status ; Successful - Mon Jan 30 10:31:56 2023 ;
 ; Revision Name          ; circuito_exp3_desafio                 ;
 ; Top-level Entity Name  ; circuito_exp3_desafio                 ;
 ; Family                 ; Cyclone V                             ;
@@ -51,17 +51,17 @@ Info: File Set 'Source control' contains:
     Info: Automatically detected source files
 Warning: Hierarchical Platform Designer systems and custom IP components(_hw.tcl and associated files) are not archived by the Quartus Archiver
 Info: Archive will store files relative to the closest common parent directory
-Info (13213): Using common directory /home/rafael/Documents/laboratorio-digital-1/EXP_3/exp3_desafio/
+Info (13213): Using common directory /home/rafael/Documents/laboratorio-digital-1/EXP_3/exp3_desafio/exp3_desafio_quartus/
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
-Info: Generated archive '/home/rafael/Documents/laboratorio-digital-1/EXP_3/exp3_desafio/circuito_exp3_desafio.qar'
+Info: Generated archive '/home/rafael/Documents/laboratorio-digital-1/EXP_3/exp3_desafio/exp3_desafio_quartus/exp3_T4BB3_desafio.qar'
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
 Info: Generated report 'circuito_exp3_desafio.archive.rpt'
 Info (23030): Evaluation of Tcl script /home/rafael/intelFPGA_lite/22.1std/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 584 megabytes
-    Info: Processing ended: Sun Jan 29 20:22:01 2023
+    Info: Peak virtual memory: 593 megabytes
+    Info: Processing ended: Mon Jan 30 10:31:56 2023
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 

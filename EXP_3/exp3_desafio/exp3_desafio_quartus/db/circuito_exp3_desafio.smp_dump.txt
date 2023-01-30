@@ -1,0 +1,10 @@
+
+State Machine - |circuito_exp3_desafio|unidade_controle_desafio:unidade_controleUC|Eatual
+Name Eatual.fim_certo Eatual.erro Eatual.proximo Eatual.comparacao Eatual.registra Eatual.preparacao Eatual.inicial 
+Eatual.inicial 0 0 0 0 0 0 0 
+Eatual.preparacao 0 0 0 0 0 1 1 
+Eatual.registra 0 0 0 0 1 0 1 
+Eatual.comparacao 0 0 0 1 0 0 1 
+Eatual.proximo 0 0 1 0 0 0 1 
+Eatual.erro 0 1 0 0 0 0 1 
+Eatual.fim_certo 1 0 0 0 0 0 1 
