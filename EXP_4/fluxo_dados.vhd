@@ -52,6 +52,8 @@ architecture estrutural of fluxo_dados is
   -- Adicionado --
   signal s_chaves       : std_logic_vector(3 downto 0);
   -- ---------- --
+  -- Adicionado para exp 4 --
+  signal s_chaveacionada  : std_logic;
   component contador_163
     port (
         clock : in  std_logic;
@@ -112,9 +114,9 @@ architecture estrutural of fluxo_dados is
   component edge_detector is
     port (
       clock : in std_logic;
-      reset : in std_logci;
+      reset : in std_logic;
       sinal : in std_logic;
-      pulos : out std_logic
+      pulso : out std_logic
     );
   end component;
  -- ---------- --
@@ -191,9 +193,19 @@ begin
 		);
 	-- ---------- --
 
+  detector_jogada: edge_detector
+    port map (
+      clock => clock,
+      reset => registraR,
+      sinal => s_chaveacionada,
+      pulso => jogada_feita
+    );
+
   db_contagem <= s_endereco;
   db_memoria  <= s_dado;
   -- Adicionado --
   db_chaves   <= s_chaves;
   -- ---------- --
+  -- Adicionado para a exp4 --
+  db_tem_jogada <= s_chaveacionada;
 end architecture estrutural;
