@@ -100,9 +100,9 @@ begin
                      "0001" when inicializa_elem,   -- 1
                      "0010" when espera,            -- 2
                      "0100" when registra,          -- 4
-                     "0101" when compara,        -- 5
+                     "0101" when compara,           -- 5
                      "0110" when proximo,           -- 6
-                     "1001" when fim_erro,              -- 9
+                     "1001" when fim_erro,          -- 9
                      "1100" when fim_certo,         -- C
                      "1111" when others;            -- F
 
