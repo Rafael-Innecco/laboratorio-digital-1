@@ -57,8 +57,8 @@ begin
     Eprox <=
         inicial         when  Eatual=inicial and iniciar='0' else
         inicializa_elem when  (Eatual=inicial or Eatual=fim_certo or Eatual=fim_erro) and iniciar='1' else
-        espera          when  Eatual=inicializa_elem or Eatual=proximo or (Eatual = espera and jogada='0') else
-        registra        when  Eatual=inicializa_elem and jogada='1' else
+        espera          when  (Eatual=inicializa_elem) or (Eatual=proximo) or (Eatual = espera and jogada='0') else
+        registra        when  (Eatual=inicializa_elem and jogada='1') else
         compara         when  Eatual=registra else
         proximo         when  Eatual=compara and fim='0' and igual = '1' else
         fim_erro        when  (Eatual=compara and igual = '0') or (Eatual=fim_erro and iniciar='0') else

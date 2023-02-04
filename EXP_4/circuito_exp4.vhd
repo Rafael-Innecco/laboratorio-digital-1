@@ -32,7 +32,7 @@ entity circuito_exp4 is
         db_contagem     : out std_logic_vector (6 downto 0);
         db_memoria      : out std_logic_vector (6 downto 0);
         db_estado       : out std_logic_vector (6 downto 0);
-        db_jogada_feita : out std_logic_vector (6 downto 0);
+        db_jogadafeita : out std_logic_vector (6 downto 0);
         db_clock        : out std_logic;
         db_tem_jogada   : out std_logic
     );
@@ -84,8 +84,8 @@ architecture estrutural of circuito_exp4 is
         );
     end component;
 
-    signal zeraC, contaC, zeraR, registraR, igual, fimC, jogada_feita   : std_logic;
-    signal db_mem_hex, db_cont_hex, db_jogada_hex, db_estado_hex        : std_logic_vector(3 downto 0);
+    signal zeraC, contaC, zeraR, registraR, igual, fimC, jogada_feita   : std_logic := '0';
+    signal db_mem_hex, db_cont_hex, db_jogada_hex, db_estado_hex        : std_logic_vector(3 downto 0) := "0000";
 
 begin
 
@@ -130,7 +130,7 @@ begin
     hex7jogada: hexa7seg
         port map (
             hexa => db_jogada_hex,
-            sseg => db_jogada_feita
+            sseg => db_jogadafeita
         );
     --
 
