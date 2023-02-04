@@ -129,6 +129,8 @@ begin
   s_not_zera    <= not zeraC;
   s_not_escreve <= not escreveM;
   -- ---------------------------- -- 
+
+  s_chaveacionada <= chaves(3) or chaves(2) or chaves(1) or chaves(0);
   
   contador: contador_163
     port map (

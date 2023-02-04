@@ -31,8 +31,8 @@ entity unidade_controle is
         contaC      : out std_logic;
         zeraR       : out std_logic;
         registraR   : out std_logic;
-        acertou     : out std_logic;
-        errou       : out std_logic;
+        acertou     : out std_logic := 0;
+        errou       : out std_logic := 0;
         pronto      : out std_logic;
         db_estado   : out std_logic_vector(3 downto 0)
     );
@@ -58,7 +58,7 @@ begin
         inicial         when  Eatual=inicial and iniciar='0' else
         inicializa_elem when  (Eatual=inicial or Eatual=fim_certo or Eatual=fim_erro) and iniciar='1' else
         espera          when  (Eatual=inicializa_elem) or (Eatual=proximo) or (Eatual = espera and jogada='0') else
-        registra        when  (Eatual=inicializa_elem and jogada='1') else
+        registra        when  (Eatual=espera and jogada='1') else
         compara         when  Eatual=registra else
         proximo         when  Eatual=compara and fim='0' and igual = '1' else
         fim_erro        when  (Eatual=compara and igual = '0') or (Eatual=fim_erro and iniciar='0') else

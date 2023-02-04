@@ -121,7 +121,7 @@ begin
             zeraR        => zeraR,
             registraR    => registraR,
             acertou      => acertou,
-            errou        => acertou,
+            errou        => errou,
             pronto       => pronto,
             db_estado    => db_estado_hex
         );
