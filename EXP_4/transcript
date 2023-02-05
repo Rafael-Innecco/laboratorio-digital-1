@@ -431,3 +431,5 @@ vsim -voptargs=+acc work.circuito_exp4_tb_erro
 # Loading work.edge_detector(rtl)#1
 # Loading work.unidade_controle(fsm)#1
 # Loading work.hexa7seg(comportamental)#1
+# End time: 17:54:10 on Feb 04,2023, Elapsed time: 0:43:59
+# Errors: 0, Warnings: 0
