@@ -153,9 +153,9 @@ begin
     -- espera entre jogadas
     wait for 10*clockPeriod;  
 
-    ---- jogada #4 (jogada errada: chaves=0010 e 15 clocks de duracao)
+    ---- jogada #4 (jogada errada: chaves=0001 e 15 clocks de duracao)
     caso <= 7;
-    chaves_in <= "0010";
+    chaves_in <= "0001";
     wait for 15*clockPeriod;
     chaves_in <= "0000";
     ---- espera entre jogadas
