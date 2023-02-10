@@ -25,18 +25,21 @@ entity unidade_controle is
         clock       	: in std_logic;
         -- Sinais de condicao
 		reset       	: in std_logic;
-        iniciar     	: in std_logic;
-        fim         	: in std_logic;
+        jogar        	: in std_logic; -- novo nome: iniciar -> jogar
+        fim_jogo       	: in std_logic; -- novo nome e funcao: fim -> fim_jogo, identifica momento em que a ultima rodada eh concluida
         jogada      	: in std_logic;
         igual       	: in std_logic;
 		fimTempo		: in std_logic;
+		fim_rodada      : in std_logic; -- novo sinal: identifica fim de uma rodada: contador antigo igual ao da rodada.
         -- Sinais de controle
-		zeraC       	: out std_logic;
-        contaC      	: out std_logic;
+		zeraC_End      	: out std_logic; -- novo nome: sinal de controle do contador de endereco da memoria
+        contaC_End     	: out std_logic; -- novo nome: sinal de controle do contador de endereco da memoria
+		zeraC_Rod       : out std_logic; -- novo sinal de controle: zera contador de rodada
+		contaC_Rod      : out std_logic; -- novo sinal de controle: incrementa contador de rodada
         zeraR       	: out std_logic;
         registraR   	: out std_logic;
-        acertou     	: out std_logic;
-        errou       	: out std_logic;
+        ganhou       	: out std_logic; -- novo nome: acertou -> ganhou
+        perdeu       	: out std_logic; -- novo nome: errou -> perdeu
         pronto      	: out std_logic;
         contaTempo	    : out std_logic;
 		-- Sinais de depuracao 
@@ -46,7 +49,8 @@ entity unidade_controle is
 end entity;
 
 architecture fsm of unidade_controle is
-    type t_estado is (inicial, inicializa_elem, espera, registra, compara, proximo, fim_erro, fim_certo, fim_timeout);
+    type t_estado is (inicial, inicializa_elem, inicio_rodada, ultima_rodada, proxima_rodada,
+  	                  espera, registra, compara, proximo, fim_erro, fim_certo, fim_timeout); -- novos estados para rodadas
     signal Eatual, Eprox: t_estado;
 begin
 
@@ -60,24 +64,32 @@ begin
         end if;
     end process;
 
-    -- logica de proximo estado
+    -- logica de proximo estado:
+	-- Modificada
     Eprox <=
-        inicial         when  Eatual=inicial and iniciar='0' else
-        inicializa_elem when  (Eatual=inicial or Eatual=fim_certo or Eatual=fim_erro or Eatual=fim_timeout) and iniciar='1' else
-        espera          when  (Eatual=inicializa_elem) or (Eatual=proximo) or (Eatual = espera and jogada='0' and fimTempo='0') else
-		  fim_timeout		when	(Eatual=espera and fimTempo = '1') or (Eatual=fim_timeout and iniciar='0') else
-        registra        when  (Eatual=espera and jogada='1') else
+        inicial         when  Eatual=inicial and jogar='0' else -- iniciar -> jogar
+        inicializa_elem when  (Eatual=inicial or Eatual=fim_certo or Eatual=fim_erro or Eatual=fim_timeout) and jogar='1' else --iniciar -> pronto
+        inicio_rodada   when  Eatual=inicializa_elem or Eatual=proxima_rodada else -- novo estado
+		espera          when  (Eatual=inicio_rodada) or (Eatual=proximo) or (Eatual = espera and jogada='0' and fimTempo='0') else -- mudanca na transicao que agora vem de inicio_rodada
+		fim_timeout		when  (Eatual=espera and fimTempo = '1') or (Eatual=fim_timeout and jogar='0') else -- iniciar -> jogar
+        registra        when  (Eatual=espera and jogada='1') else 
         compara         when  Eatual=registra else
-        proximo         when  Eatual=compara and fim='0' and igual = '1' else
-        fim_erro        when  (Eatual=compara and igual = '0') or (Eatual=fim_erro and iniciar='0') else
-        fim_certo       when  (Eatual=compara and fim='1' and igual = '1')  or  (Eatual=fim_certo and iniciar = '0') else
+        proximo         when  Eatual=compara and fim_rodada='0' and igual = '1' else -- fim -> fim_rodada
+        ultima_rodada   when  Eatual=compara and fim_rodada='1' and igual = '0' else -- fim -> fim_rodada / novo estado
+		proxima_rodada  when  Eatual=ultima_rodada and fim_jogo='0' else -- fim -> fim_jogo / novo estado
+		fim_erro        when  (Eatual=compara and igual = '0') or (Eatual=fim_erro and jogar='0') else -- iniciar -> jogar
+        fim_certo       when  (Eatual=ultima_rodada and fim_jogo='1')  or  (Eatual=fim_certo and jogar = '0') else -- igual = '1' foi suprimido da 1.a condicao + mudanca do estado inicial da transicao
         inicial;
 
     -- logica de saída (maquina de Moore)
+	-- Modificada
     with Eatual select
-        zeraC <=        '1' when inicial | inicializa_elem,
+        zeraC_End <=    '1' when inicial | inicializa_elem | ultima_rodada | proxima_rodada, -- novos estados; precisa do proxima_rodada?
                         '0' when others;
-    
+	
+	with Eatual select
+		zeraC_Rod <=    '1' when fim_timeout | fim_erro | fim_certo, 
+						'0' when others;
     with Eatual select
         zeraR <=        '1' when inicial | inicializa_elem,
                         '0' when others;
@@ -87,19 +99,22 @@ begin
                         '0' when others;
 
     with Eatual select
-        contaC <=       '1' when proximo,
+        contaC_End <=   '1' when proximo,
                         '0' when others;
-    
+						
+	with Eatual select 
+		contaC_Rod <=	'1' when proxima_rodada,
+						'0' when others;
     with Eatual select
         pronto <=       '1' when fim_certo | fim_erro | fim_timeout,
                         '0' when others;
     
     with Eatual select
-        acertou <=      '1' when fim_certo,
+        ganhou <=      '1' when fim_certo,
                         '0' when others;
     
     with Eatual select
-        errou <=        '1' when fim_erro | fim_timeout,
+        perdeu <=        '1' when fim_erro | fim_timeout,
                         '0' when others;
 								
 	with Eatual select
@@ -112,12 +127,15 @@ begin
     with Eatual select
         db_estado <= "0000" when inicial,           -- 0
                      "0001" when inicializa_elem,   -- 1
-                     "0010" when espera,            -- 2
+					 "0010" when inicio_rodada,     -- 2 Novo estado 
+                     "0011" when espera,            -- 3 Codigo alterado
                      "0100" when registra,          -- 4
                      "0101" when compara,           -- 5
                      "0110" when proximo,           -- 6
+					 "0111" when ultima_rodada,     -- 7 Novo estado
+					 "1000" when proxima_rodada,    -- 8 Novo estado
                      "1001" when fim_erro,          -- 9
-							"1010" when fim_timeout,		 -- A
+					 "1010" when fim_timeout,		-- A
                      "1100" when fim_certo,         -- C
                      "1111" when others;            -- F
 

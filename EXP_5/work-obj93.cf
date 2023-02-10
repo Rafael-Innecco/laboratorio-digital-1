@@ -1,0 +1,4 @@
+v 4
+file . "unidade_controle.vhd" "6eeede3d43e6ff36a5d20914e175784274c80942" "20230210150013.714":
+  entity unidade_controle at 20( 790) + 0 on 11;
+  architecture fsm of unidade_controle at 51( 2254) + 0 on 12;

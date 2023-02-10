@@ -63,7 +63,7 @@ architecture estrutural of circuito_exp4_desafio is
 				fimTempo		  : out std_logic
         );
     end component;
-
+	
     component unidade_controle 
         port (
             clock       : in std_logic;
