@@ -1,4 +1,11 @@
 v 4
+file . "fluxo_dados.vhd" "d123e68d68ec8f9aa4d4466c56799ca4e49373eb" "20230210154206.169":
+  entity fluxo_dados at 24( 1058) + 0 on 16;
+  architecture estrutural of fluxo_dados at 54( 2359) + 0 on 17;
 file . "unidade_controle.vhd" "6eeede3d43e6ff36a5d20914e175784274c80942" "20230210150013.714":
   entity unidade_controle at 20( 790) + 0 on 11;
   architecture fsm of unidade_controle at 51( 2254) + 0 on 12;
+file . "ram_16x4.vhd" "e970642d52ed6ac148b451196269768d8f366e59" "20230210154201.407":
+  entity ram_16x4 at 24( 1276) + 0 on 13;
+  architecture ram_mif of ram_16x4 at 40( 1778) + 0 on 14;
+  architecture ram_modelsim of ram_16x4 at 70( 2665) + 0 on 15;

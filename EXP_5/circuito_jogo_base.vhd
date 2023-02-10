@@ -45,44 +45,54 @@ end entity;
 architecture estrutural of circuito_exp4_desafio is
     component fluxo_dados
         port (
-            clock         : in  std_logic;
-            zeraC         : in  std_logic;
-            contaC        : in  std_logic;
-            escreveM      : in  std_logic;
-            zeraR         : in  std_logic;
-            registraR     : in std_logic;
-            chaves        : in  std_logic_vector (3 downto 0);
-				contaTempo	  : in std_logic;
-            igual         : out std_logic;
-            fimC          : out std_logic;
-            jogada_feita  : out std_logic;
-            db_tem_jogada : out std_logic;
-            db_contagem   : out std_logic_vector (3 downto 0);
-            db_memoria    : out std_logic_vector (3 downto 0);
-            db_chaves     : out std_logic_vector(3 downto 0);
-				fimTempo		  : out std_logic
+			clock        	    : in  std_logic;
+			zeraC_End           : in  std_logic; -- novo nome: zeraC -> zeraC_End
+			contaC_End   	    : in  std_logic; -- novo nome: contaC -> contaC_End
+			zeraC_Rod    	 	: in std_logic;  -- novo sinal: entrada do contador de rodadas
+			contaC_Rod   	    : in std_logic;  -- novo sinal: entrada do contador de rodadas
+			escreveM     		: in  std_logic;
+			zeraR         		: in  std_logic;
+			registraR           : in std_logic;
+			chaves              : in  std_logic_vector (3 downto 0);
+			contaTempo	        : in std_logic; 
+			igual               : out std_logic;
+			enderecoIgualRodada : out std_logic; -- novo sinal: saida do comparador endereco x rodada - Funcao: fim_rodada
+			fim_jogo     	 	: out std_logic; -- novo sinal: saida do contador de rodada
+			jogada_feita 	 	: out std_logic;
+			db_tem_jogada	 	: out std_logic; 
+			db_contagem  	 	: out std_logic_vector (3 downto 0);
+			db_memoria   	 	: out std_logic_vector (3 downto 0);
+			db_chaves    	 	: out std_logic_vector (3 downto 0);
+			db_rodada    		: out std_logic_vector (3 downto 0); -- novo sinal de depuracao
+			fimTempo	 		: out std_logic 
         );
     end component;
 	
     component unidade_controle 
         port (
-            clock       : in std_logic;
-            reset       : in std_logic;
-            iniciar     : in std_logic;
-            fim         : in std_logic;
-            jogada      : in std_logic;
-            igual       : in std_logic;
-				fimTempo	: in std_logic;
-            zeraC       : out std_logic;
-            contaC      : out std_logic;
-            zeraR       : out std_logic;
-            registraR   : out std_logic;
-            acertou     : out std_logic;
-            errou       : out std_logic;
-            pronto      : out std_logic;
-            db_estado   : out std_logic_vector(3 downto 0);
-				db_timeout	: out std_logic;
-				contaTempo	: out std_logic
+			clock       	: in std_logic;
+			-- Sinais de condicao
+			reset       	: in std_logic;
+			jogar        	: in std_logic; -- novo nome: iniciar -> jogar
+			fim_jogo       	: in std_logic; -- novo nome e funcao: fim -> fim_jogo, identifica momento em que a ultima rodada eh concluida
+			jogada      	: in std_logic;
+			igual       	: in std_logic;
+			fimTempo		: in std_logic;
+			fim_rodada      : in std_logic; -- novo sinal: identifica fim de uma rodada: contador antigo igual ao da rodada.
+			-- Sinais de controle
+			zeraC_End      	: out std_logic; -- novo nome: sinal de controle do contador de endereco da memoria
+			contaC_End     	: out std_logic; -- novo nome: sinal de controle do contador de endereco da memoria
+			zeraC_Rod       : out std_logic; -- novo sinal de controle: zera contador de rodada
+			contaC_Rod      : out std_logic; -- novo sinal de controle: incrementa contador de rodada
+			zeraR       	: out std_logic;
+			registraR   	: out std_logic;
+			ganhou       	: out std_logic; -- novo nome: acertou -> ganhou
+			perdeu       	: out std_logic; -- novo nome: errou -> perdeu
+			pronto      	: out std_logic;
+			contaTempo	    : out std_logic;
+			-- Sinais de depuracao 
+			db_estado   	: out std_logic_vector(3 downto 0);
+			db_timeout	    : out std_logic	
         );
     end component;
 
