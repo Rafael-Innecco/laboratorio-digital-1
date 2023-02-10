@@ -23,23 +23,27 @@
 --
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.math_real.all;
 
 entity fluxo_dados is
     port (
-        clock         : in  std_logic;
-        zeraC         : in  std_logic;
-        contaC        : in  std_logic;
-        escreveM      : in  std_logic;
-        zeraR         : in  std_logic;
-		    registraR     : in std_logic;
-		    chaves        : in  std_logic_vector (3 downto 0);
-        igual         : out std_logic;
-        fimC          : out std_logic;
-        jogada_feita  : out std_logic;
-        db_tem_jogada : out std_logic;
-        db_contagem   : out std_logic_vector (3 downto 0);
-        db_memoria    : out std_logic_vector (3 downto 0);
-		    db_chaves     : out std_logic_vector(3 downto 0)
+      clock         : in  std_logic;
+      zeraC         : in  std_logic;
+      contaC        : in  std_logic;
+      escreveM      : in  std_logic;
+      zeraR         : in  std_logic;
+	   registraR     : in std_logic;
+		chaves        : in  std_logic_vector (3 downto 0);
+		contaTempo	  : in std_logic; -- desafio
+      igual         : out std_logic;
+      fimC          : out std_logic;
+      jogada_feita  : out std_logic;
+      db_tem_jogada : out std_logic; 
+      db_contagem   : out std_logic_vector (3 downto 0);
+      db_memoria    : out std_logic_vector (3 downto 0);
+		db_chaves     : out std_logic_vector(3 downto 0);
+		fimTempo		  : out std_logic -- desafio
 	);
 end entity;
 
@@ -49,11 +53,11 @@ architecture estrutural of fluxo_dados is
   signal s_dado        : std_logic_vector (3 downto 0);
   signal s_not_zera    : std_logic;
   signal s_not_escreve : std_logic;
-  -- Adicionado --
-  signal s_chaves       : std_logic_vector(3 downto 0);
-  -- ---------- --
+  signal s_chaves      : std_logic_vector(3 downto 0);
+  signal zeraT         : std_logic;
   -- Adicionado para exp 4 --
   signal s_chaveacionada  : std_logic := '0';
+
   component contador_163
     port (
         clock : in  std_logic;
@@ -110,7 +114,8 @@ architecture estrutural of fluxo_dados is
         Q      : out std_logic_vector (N-1 downto 0) 
     );
   end component;
-
+  
+  -- Adicionado exp_4 --
   component edge_detector is
     port (
       clock : in std_logic;
@@ -119,16 +124,28 @@ architecture estrutural of fluxo_dados is
       pulso : out std_logic
     );
   end component;
- -- ---------- --
+  
+  component contador_m is
+	generic (
+		constant M : integer := 100
+	);
+	port (
+		clock	: in std_logic;
+		zera_as	: in std_logic;
+		zera_s	: in std_logic;
+		conta		: in std_logic;
+		Q			: out std_logic_vector(natural(ceil(log2(real(M)))) - 1 downto 0);
+		fim		: out std_logic;
+		meio		: out std_logic
+	);
+  end component;
+  
 begin
 
   -- sinais de controle ativos em alto
   -- sinais dos componentes ativos em baixo
-  
-  -- Alteração no nome dos sinais --
   s_not_zera    <= not zeraC;
   s_not_escreve <= not escreveM;
-  -- ---------------------------- -- 
 
   s_chaveacionada <= chaves(3) or chaves(2) or chaves(1) or chaves(0);
   
@@ -137,21 +154,15 @@ begin
         clock => clock,
         clr   => s_not_zera,  -- clr ativo em baixo
         ld    => '1',
-		-- Alteração do nome --
         ent   => '1',
-		-- ----------------- --
         enp   => contaC,
         D     => "0000",
         Q     => s_endereco,
-		-- Alteração do nome --
         rco   => fimC
-		-- ----------------- --
     );
 
   comparador: comparador_85
     port map (
-        -- Alteração: a entrada que antes
-		-- vinha de chaves agora vem de s_chaves
 		i_A3   => s_dado(3),
         i_B3   => s_chaves(3),
         i_A2   => s_dado(2),
@@ -160,30 +171,25 @@ begin
         i_B1   => s_chaves(1),
         i_A0   => s_dado(0),
         i_B0   => s_chaves(0),
-		-- --------------------------------------
         i_AGTB => '0',
         i_ALTB => '0',
         i_AEQB => '1',
         o_AGTB => open, -- saidas nao usadas
         o_ALTB => open,
-		-- Alteração: igual trocado por igual
         o_AEQB => igual
-		-- -----------------------------------------------
     );
 
-  --memoria: entity work.ram_16x4 (ram_mif)  -- usar esta linha para Intel Quartus
-  memoria: entity work.ram_16x4 (ram_modelsim) -- usar arquitetura para ModelSim
+  memoria: entity work.ram_16x4 (ram_mif)  -- usar esta linha para Intel Quartus
+  --memoria: entity work.ram_16x4 (ram_modelsim) -- usar arquitetura para ModelSim
     port map (
        clk          => clock,
        endereco     => s_endereco,
-	   -- Alterado: chaves trocado por s_chaves
        dado_entrada => s_chaves,
-	   -- -------------------------------------
        we           => s_not_escreve, -- we ativo em baixo
        ce           => '0',
        dado_saida   => s_dado
     );
-	-- Adicionado --
+	
 	registrador: registrador_n
 		generic map( N => 4)
 		port map (
@@ -193,21 +199,37 @@ begin
 			D      => chaves,
 			Q      => s_chaves
 		);
-	-- ---------- --
-
+	
+  -- Adicionado para a exp4 --
   detector_jogada: edge_detector
     port map (
       clock => clock,
-      reset => registraR,
+      reset => zeraR,
       sinal => s_chaveacionada,
       pulso => jogada_feita
     );
-
+	 
+	 zeraT <= contaC or zeraC;
+	 
+  contador_timeout: contador_m
+	 generic map (
+		M => 3000
+	 )
+	 port map (
+		clock => clock,
+		zera_as => zeraT,
+		zera_s => '0',
+		conta => contaTempo,
+		Q => open,
+		fim => fimTempo,
+		meio => open
+	 );
+		
   db_contagem <= s_endereco;
   db_memoria  <= s_dado;
-  -- Adicionado --
+  
   db_chaves   <= s_chaves;
-  -- ---------- --
+  
   -- Adicionado para a exp4 --
   db_tem_jogada <= s_chaveacionada;
 end architecture estrutural;

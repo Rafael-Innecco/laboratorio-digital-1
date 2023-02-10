@@ -13,6 +13,7 @@
 -- Revisoes  :
 --  Data        Versao  Autor           Descricao
 --  01/02/2023  1.0     Rafael Innecco  Versão inicial
+--  08/02/2023  1.1     Rafael Innecco  Versao desafio
 --------------------------------------------------------------------
 --
 
@@ -21,25 +22,31 @@ use ieee.std_logic_1164.all;
 
 entity unidade_controle is
     port (
-        clock       : in std_logic;
-        reset       : in std_logic;
-        iniciar     : in std_logic;
-        fim         : in std_logic;
-        jogada      : in std_logic;
-        igual       : in std_logic;
-        zeraC       : out std_logic;
-        contaC      : out std_logic;
-        zeraR       : out std_logic;
-        registraR   : out std_logic;
-        acertou     : out std_logic;
-        errou       : out std_logic;
-        pronto      : out std_logic;
-        db_estado   : out std_logic_vector(3 downto 0)
+        clock       	: in std_logic;
+        -- Sinais de condicao
+		reset       	: in std_logic;
+        iniciar     	: in std_logic;
+        fim         	: in std_logic;
+        jogada      	: in std_logic;
+        igual       	: in std_logic;
+		fimTempo		: in std_logic;
+        -- Sinais de controle
+		zeraC       	: out std_logic;
+        contaC      	: out std_logic;
+        zeraR       	: out std_logic;
+        registraR   	: out std_logic;
+        acertou     	: out std_logic;
+        errou       	: out std_logic;
+        pronto      	: out std_logic;
+        contaTempo	    : out std_logic;
+		-- Sinais de depuracao 
+		db_estado   	: out std_logic_vector(3 downto 0);
+		db_timeout	    : out std_logic	
     );
 end entity;
 
 architecture fsm of unidade_controle is
-    type t_estado is (inicial, inicializa_elem, espera, registra, compara, proximo, fim_erro, fim_certo);
+    type t_estado is (inicial, inicializa_elem, espera, registra, compara, proximo, fim_erro, fim_certo, fim_timeout);
     signal Eatual, Eprox: t_estado;
 begin
 
@@ -56,8 +63,9 @@ begin
     -- logica de proximo estado
     Eprox <=
         inicial         when  Eatual=inicial and iniciar='0' else
-        inicializa_elem when  (Eatual=inicial or Eatual=fim_certo or Eatual=fim_erro) and iniciar='1' else
-        espera          when  (Eatual=inicializa_elem) or (Eatual=proximo) or (Eatual = espera and jogada='0') else
+        inicializa_elem when  (Eatual=inicial or Eatual=fim_certo or Eatual=fim_erro or Eatual=fim_timeout) and iniciar='1' else
+        espera          when  (Eatual=inicializa_elem) or (Eatual=proximo) or (Eatual = espera and jogada='0' and fimTempo='0') else
+		  fim_timeout		when	(Eatual=espera and fimTempo = '1') or (Eatual=fim_timeout and iniciar='0') else
         registra        when  (Eatual=espera and jogada='1') else
         compara         when  Eatual=registra else
         proximo         when  Eatual=compara and fim='0' and igual = '1' else
@@ -83,7 +91,7 @@ begin
                         '0' when others;
     
     with Eatual select
-        pronto <=       '1' when fim_certo | fim_erro,
+        pronto <=       '1' when fim_certo | fim_erro | fim_timeout,
                         '0' when others;
     
     with Eatual select
@@ -91,9 +99,15 @@ begin
                         '0' when others;
     
     with Eatual select
-        errou <=        '1' when fim_erro,
+        errou <=        '1' when fim_erro | fim_timeout,
                         '0' when others;
-    
+								
+	with Eatual select
+			contaTempo <= 	'1' when espera,
+								'0' when others;
+    with Eatual select
+			db_timeout <=	'1' when fim_timeout,
+								'0' when others;
     -- saida de depuracao (db_estado)
     with Eatual select
         db_estado <= "0000" when inicial,           -- 0
@@ -103,6 +117,7 @@ begin
                      "0101" when compara,           -- 5
                      "0110" when proximo,           -- 6
                      "1001" when fim_erro,          -- 9
+							"1010" when fim_timeout,		 -- A
                      "1100" when fim_certo,         -- C
                      "1111" when others;            -- F
 
