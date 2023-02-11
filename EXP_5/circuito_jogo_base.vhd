@@ -42,7 +42,7 @@ entity circuito_jogo_base is -- novo nome de entidade
     );
 end entity;
 
-architecture estrutural of circuito_exp4_desafio is
+architecture estrutural of circuito_jogo_base is -- componente alterado
     component fluxo_dados
         port (
 			clock        	    : in  std_logic;
@@ -68,7 +68,7 @@ architecture estrutural of circuito_exp4_desafio is
         );
     end component;
 	
-    component unidade_controle 
+    component unidade_controle  -- componente alterado
         port (
 			clock       	: in std_logic;
 			-- Sinais de condicao
@@ -103,52 +103,61 @@ architecture estrutural of circuito_exp4_desafio is
         );
     end component;
 
-    signal zeraC, contaC, zeraR, registraR, igual, fimC, jogada_feita   : std_logic := '0';
-    signal db_mem_hex, db_cont_hex, db_jogada_hex, db_estado_hex        : std_logic_vector(3 downto 0) := "0000";
-	 signal contaTempo, fimTempo	: std_logic;
-	 
+	    signal db_mem_hex, db_cont_hex, db_jogada_hex, db_estado_hex, db_rodada_hex : std_logic_vector(3 downto 0) := "0000"; -- novo sinal
+    signal zeraC_End, contaC_End, zeraR, registraR, igual, fim_jogo, jogada_feita   : std_logic := '0'; -- novos nomes
+	signal zeraC_Rod, contaC_Rod    : std_logic; -- novos sinais
+	signal contaTempo, fimTempo 	: std_logic;
+	signal enderecoIgualRodada      : std_logic; -- Novo sinal intermediario
 begin
 
-    fluxo_dadosFD: fluxo_dados
+    fluxo_dadosFD: fluxo_dados -- Instanciacao modificada
         port map (
-            clock          =>  clock,
-            zeraC          =>  zeraC,
-            contaC         =>  contaC,
-            escreveM       =>  '0',
-            zeraR          =>  zeraR,
-            registraR      =>  registraR,
-            chaves         =>  chaves,
-				contaTempo		=>  contaTempo,
-            igual          =>  igual,
-            fimC           =>  fimC,
-            jogada_feita   =>  jogada_feita,
-            db_tem_jogada  =>  db_tem_jogada,
-            db_contagem    =>  db_cont_hex,
-            db_memoria     =>  db_mem_hex,
-            db_chaves      =>  db_jogada_hex,
-				fimTempo			=>  fimTempo
+            clock 	            =>  clock,
+			zeraC_End      	 	=>  zeraC_End,
+            contaC_End   	    =>  contaC_End,
+            zeraC_Rod			=>  zeraC_Rod,
+			contaC_Rod			=>  contaC_Rod,
+			escreveM       	 	=>  '0',
+            zeraR       	    =>  zeraR,
+            registraR   	    =>  registraR,
+            chaves      	    =>  botoes,
+			contaTempo			=>  contaTempo,
+            igual          		=>  igual,
+            enderecoIgualRodada =>  enderecoIgualRodada,
+			fim_jogo            =>  fim_jogo,
+            jogada_feita        =>  jogada_feita,
+            db_tem_jogada 	    =>  db_tem_jogada,
+            db_contagem    		=>  db_cont_hex,
+            db_memoria     		=>  db_mem_hex,
+            db_chaves      		=>  db_jogada_hex,
+			db_rodada           =>  db_rodada_hex,
+			fimTempo			=>  fimTempo
         );
     --
-
-    unidade_controleUC: unidade_controle
+	
+    unidade_controleUC: unidade_controle --Instanciacao modificada
         port map (
             clock        => clock,
             reset        => reset,
-            iniciar      => iniciar,
-            fim          => fimC,
+            jogar       => jogar,
+            fim_jogo     => fim_jogo,
             jogada       => jogada_feita,
             igual        => igual,
-				fimTempo		 => fimTempo,
-            zeraC        => zeraC,
-            contaC       => contaC,
-            zeraR        => zeraR,
+			fimTempo     => fimTempo,
+			fim_rodada   => enderecoIgualRodada,
+            zeraC_End    => zeraC_End,
+            contaC_End   => contaC_End,
+            zeraC_Rod    => zeraC_Rod,
+			contaC_Rod   => contaC_Rod,
+			zeraR        => zeraR,
             registraR    => registraR,
-            acertou      => acertou,
-            errou        => errou,
+            ganhou       => ganhou,
+            perdeu       => perdeu,
             pronto       => pronto,
-            db_estado    => db_estado_hex,
-				db_timeout	 => db_timeout,
-				contaTempo	 => contaTempo
+            contaTempo	 => contaTempo,
+			db_estado    => db_estado_hex,
+			db_timeout	 => db_timeout
+				
         );
     --
 
@@ -172,7 +181,14 @@ begin
             sseg => db_memoria
         );
     --
-
+	
+	hex7rodada: hexa7seg -- nova instanciacao do display
+		port map(
+			hexa => db_rodada_hex,
+			sseg => db_rodada
+		);
+	--
+	
     hex7estado: hexa7seg
         port map (
             hexa => db_estado_hex,
@@ -184,5 +200,5 @@ begin
 
     leds <= db_mem_hex;
 
-    db_igual <= igual;
+    db_jogada_correta <= igual;
 end architecture estrutural;

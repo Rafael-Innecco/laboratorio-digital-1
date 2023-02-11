@@ -120,7 +120,6 @@ architecture estrutural of fluxo_dados is
     );
   end component;
   
-  -- Adicionado exp_4 --
   component edge_detector is
     port (
       clock : in std_logic;
