@@ -1,5 +1,5 @@
 --------------------------------------------------------------------
--- Arquivo   : circuito_exp4.vhd
+-- Arquivo   : circuito_jogo_base.vhd
 -- Projeto   : Experiencia 4 - Desenvolvimento de Projeto de Circuitos Digitais em FPGA
 --------------------------------------------------------------------
 -- Descricao : unidade de controle 
@@ -12,8 +12,7 @@
 --------------------------------------------------------------------
 -- Revisoes  :
 --  Data        Versao  Autor           Descricao
---  01/02/2023  1.0     Rafael Innecco  Versão inicial
---  08/02/2023  1.1     Rafael Innecco  Versao desafio
+--  11/02/2023  1.0     João Arroyo     Versão inicial
 --------------------------------------------------------------------
 
 library ieee;

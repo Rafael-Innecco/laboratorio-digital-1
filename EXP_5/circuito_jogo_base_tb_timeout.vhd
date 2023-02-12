@@ -21,10 +21,10 @@ use ieee.std_logic_1164.all;
 use std.textio.all;
 
 -- entidade do testbench
-entity circuito_exp4_tb_erro is
+entity circuito_exp5_tb_erro is
 end entity;
 
-architecture tb of circuito_exp4_tb_erro is
+architecture tb of circuito_exp5_tb_erro is
 
   -- Componente a ser testado (Device Under Test -- DUT)
   component circuito_exp4
@@ -44,7 +44,7 @@ architecture tb of circuito_exp4_tb_erro is
         db_jogadafeita : out std_logic_vector (6 downto 0);
         db_clock       : out std_logic;
         db_tem_jogada  : out std_logic;
-		db_timeout     : out std_logic;
+		    db_timeout     : out std_logic;
     );
   end component;
   

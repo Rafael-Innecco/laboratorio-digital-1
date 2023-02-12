@@ -29,24 +29,24 @@ architecture tb of circuito_jogo_base_tb_erro is
   -- Componente a ser testado (Device Under Test -- DUT)
   component circuito_jogo_base
     port (
-        clock           	    : in std_logic;
-        reset           		: in std_logic;
-        jogar       		    : in std_logic; -- novo nome: iniciar -> jogar
-        botoes        		    : in std_logic_vector (3 downto 0); -- novo nome: chaves -> botoes
-        leds           			: out std_logic_vector (3 downto 0);
-		pronto          		: out std_logic;
-        ganhou          		: out std_logic; -- novo nome: acertou -> ganhou
-        perdeu           		: out std_logic;     
+        clock           	      : in std_logic;
+        reset           		    : in std_logic;
+        jogar       		        : in std_logic; -- novo nome: iniciar -> jogar
+        botoes        		      : in std_logic_vector (3 downto 0); -- novo nome: chaves -> botoes
+        leds           			    : out std_logic_vector (3 downto 0);
+		    pronto          		    : out std_logic;
+        ganhou          		    : out std_logic; -- novo nome: acertou -> ganhou
+        perdeu           		    : out std_logic;     
         db_clock                : out std_logic;
-		db_tem_jogada    		: out std_logic;
-		db_jogada_correta       : out std_logic; -- novo nome: db_igual -> db_jogada_correta
+        db_tem_jogada    		    : out std_logic;
+        db_jogada_correta       : out std_logic; -- novo nome: db_igual -> db_jogada_correta
         db_enderecoIgualRodada  : out std_logic; -- nova saida
-		db_timeout				: out std_logic;
-		db_contagem     		: out std_logic_vector (6 downto 0);
-        db_memoria      		: out std_logic_vector (6 downto 0);
-        db_jogadafeita 			: out std_logic_vector (6 downto 0);
-		db_rodada       		: out std_logic_vector (6 downto 0); -- nova saida
-		db_estado       		: out std_logic_vector (6 downto 0)      
+        db_timeout				      : out std_logic;
+        db_contagem     		    : out std_logic_vector (6 downto 0);
+        db_memoria      		    : out std_logic_vector (6 downto 0);
+        db_jogadafeita 			    : out std_logic_vector (6 downto 0);
+        db_rodada       		    : out std_logic_vector (6 downto 0); -- nova saida
+        db_estado       		    : out std_logic_vector (6 downto 0)      
     );
   end component;
   
@@ -94,15 +94,15 @@ begin
           pronto                  => pronto_out,
           leds           		  => leds_out,
           db_jogada_correta 	  => jogada_correta_out,
-		  db_enderecoIgualRodada  => endereco_igual_rodada_out,
+		      db_enderecoIgualRodada  => endereco_igual_rodada_out,
           db_contagem     	      => contagem_out,
           db_memoria      		  => memoria_out,
           db_estado       	 	  => estado_out,
           db_jogadafeita  		  => jogada_out,  
           db_clock        		  => clock_out,
           db_tem_jogada   		  => tem_jogada_out,
-		  db_rodada               => rodada_out,
-		  db_timeout      		  => timeout_out
+		      db_rodada               => rodada_out,
+		      db_timeout      		  => timeout_out
        );
  
   ---- Gera sinais de estimulo para a simulacao
@@ -195,7 +195,7 @@ begin
 	
 	---- jogada #1 rodada #4 (chaves=0001 e 15 clocks de duracao)
     caso <= 11;
-    botoes_in <= "0001";
+    botoes_in <= "0010";
     wait for 15*clockPeriod;
     botoes_in <= "0000";
     ---- espera entre jogadas

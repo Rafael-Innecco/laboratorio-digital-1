@@ -1,0 +1,191 @@
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2021.2 linux_x86_64 Apr 14 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+vcom -reportprogress 300 -work work /home/rafael/Documents/laboratorio-digital-1/EXP_5/circuito_jogo_base.vhd
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 13:33:31 on Feb 12,2023
+# vcom -reportprogress 300 -work work /home/rafael/Documents/laboratorio-digital-1/EXP_5/circuito_jogo_base.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity circuito_jogo_base
+# -- Compiling architecture estrutural of circuito_jogo_base
+# End time: 13:33:31 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/rafael/Documents/laboratorio-digital-1/EXP_5/circuito_jogo_base_tb_acerto.vhd
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 13:33:31 on Feb 12,2023
+# vcom -reportprogress 300 -work work /home/rafael/Documents/laboratorio-digital-1/EXP_5/circuito_jogo_base_tb_acerto.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity circuito_exp4_tb_acerto
+# -- Compiling architecture tb of circuito_exp4_tb_acerto
+# ** Error: /home/rafael/Documents/laboratorio-digital-1/EXP_5/circuito_jogo_base_tb_acerto.vhd(48): near ")": (vcom-1576) expecting IDENTIFIER.
+# ** Note: /home/rafael/Documents/laboratorio-digital-1/EXP_5/circuito_jogo_base_tb_acerto.vhd(49): VHDL Compiler exiting
+# End time: 13:33:31 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vcom -reportprogress 300 -work work /home/rafael/Documents/laboratorio-digital-1/EXP_5/circuito_jogo_base_tb_erro.vhd
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 13:33:31 on Feb 12,2023
+# vcom -reportprogress 300 -work work /home/rafael/Documents/laboratorio-digital-1/EXP_5/circuito_jogo_base_tb_erro.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity circuito_jogo_base_tb_erro
+# -- Compiling architecture tb of circuito_jogo_base_tb_erro
+# End time: 13:33:31 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/rafael/Documents/laboratorio-digital-1/EXP_5/circuito_jogo_base_tb_timeout.vhd
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 13:33:31 on Feb 12,2023
+# vcom -reportprogress 300 -work work /home/rafael/Documents/laboratorio-digital-1/EXP_5/circuito_jogo_base_tb_timeout.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity circuito_exp5_tb_erro
+# -- Compiling architecture tb of circuito_exp5_tb_erro
+# ** Error: /home/rafael/Documents/laboratorio-digital-1/EXP_5/circuito_jogo_base_tb_timeout.vhd(48): near ")": (vcom-1576) expecting IDENTIFIER.
+# ** Note: /home/rafael/Documents/laboratorio-digital-1/EXP_5/circuito_jogo_base_tb_timeout.vhd(49): VHDL Compiler exiting
+# End time: 13:33:31 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vcom -reportprogress 300 -work work /home/rafael/Documents/laboratorio-digital-1/EXP_5/comparador_85.vhd
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 13:33:31 on Feb 12,2023
+# vcom -reportprogress 300 -work work /home/rafael/Documents/laboratorio-digital-1/EXP_5/comparador_85.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity comparador_85
+# -- Compiling architecture dataflow of comparador_85
+# End time: 13:33:31 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/rafael/Documents/laboratorio-digital-1/EXP_5/contador_163.vhd
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 13:33:31 on Feb 12,2023
+# vcom -reportprogress 300 -work work /home/rafael/Documents/laboratorio-digital-1/EXP_5/contador_163.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity contador_163
+# -- Compiling architecture comportamental of contador_163
+# End time: 13:33:31 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/rafael/Documents/laboratorio-digital-1/EXP_5/edge_detector.vhd
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 13:33:31 on Feb 12,2023
+# vcom -reportprogress 300 -work work /home/rafael/Documents/laboratorio-digital-1/EXP_5/edge_detector.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity edge_detector
+# -- Compiling architecture rtl of edge_detector
+# End time: 13:33:32 on Feb 12,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/rafael/Documents/laboratorio-digital-1/EXP_5/fluxo_dados.vhd
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 13:33:32 on Feb 12,2023
+# vcom -reportprogress 300 -work work /home/rafael/Documents/laboratorio-digital-1/EXP_5/fluxo_dados.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity fluxo_dados
+# -- Compiling architecture estrutural of fluxo_dados
+# ** Error: (vcom-11) Could not find work.ram_16x4.
+# ** Error (suppressible): /home/rafael/Documents/laboratorio-digital-1/EXP_5/fluxo_dados.vhd(217): (vcom-1195) Cannot find expanded name "work.ram_16x4".
+# ** Error: /home/rafael/Documents/laboratorio-digital-1/EXP_5/fluxo_dados.vhd(217): Unknown expanded name.
+# ** Note: /home/rafael/Documents/laboratorio-digital-1/EXP_5/fluxo_dados.vhd(270): VHDL Compiler exiting
+# End time: 13:33:32 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+vcom -reportprogress 300 -work work /home/rafael/Documents/laboratorio-digital-1/EXP_5/hexa7seg.vhd
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 13:33:32 on Feb 12,2023
+# vcom -reportprogress 300 -work work /home/rafael/Documents/laboratorio-digital-1/EXP_5/hexa7seg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity hexa7seg
+# -- Compiling architecture comportamental of hexa7seg
+# End time: 13:33:32 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/rafael/Documents/laboratorio-digital-1/EXP_5/ram_16x4.vhd
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 13:33:32 on Feb 12,2023
+# vcom -reportprogress 300 -work work /home/rafael/Documents/laboratorio-digital-1/EXP_5/ram_16x4.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ram_16x4
+# -- Compiling architecture ram_mif of ram_16x4
+# -- Compiling architecture ram_modelsim of ram_16x4
+# -- Loading entity ram_16x4
+# End time: 13:33:32 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/rafael/Documents/laboratorio-digital-1/EXP_5/registrador_n.vhd
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 13:33:32 on Feb 12,2023
+# vcom -reportprogress 300 -work work /home/rafael/Documents/laboratorio-digital-1/EXP_5/registrador_n.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity registrador_n
+# -- Compiling architecture comportamental of registrador_n
+# End time: 13:33:32 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/rafael/Documents/laboratorio-digital-1/EXP_5/unidade_controle.vhd
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 13:33:32 on Feb 12,2023
+# vcom -reportprogress 300 -work work /home/rafael/Documents/laboratorio-digital-1/EXP_5/unidade_controle.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity unidade_controle
+# -- Compiling architecture fsm of unidade_controle
+# End time: 13:33:32 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work /home/rafael/Documents/laboratorio-digital-1/EXP_5/contador_m.vhd
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 13:33:32 on Feb 12,2023
+# vcom -reportprogress 300 -work work /home/rafael/Documents/laboratorio-digital-1/EXP_5/contador_m.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity contador_m
+# -- Compiling architecture comportamental of contador_m
+# End time: 13:33:32 on Feb 12,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.circuito_jogo_base_tb_erro
+# vsim work.circuito_jogo_base_tb_erro 
+# Start time: 13:33:43 on Feb 12,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: /home/rafael/Documents/laboratorio-digital-1/EXP_5/circuito_jogo_base.vhd(112): (vopt-1447) Instance "fluxo_dadosFD" is bound to entity "work.fluxo_dados" that has no architectures.
+# ** Warning: /home/rafael/Documents/laboratorio-digital-1/EXP_5/circuito_jogo_base.vhd(112): (vopt-3473) Component instance "fluxo_dadosFD : fluxo_dados" is not bound.
+#         Region: /circuito_jogo_base_tb_erro/dut
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=2.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.circuito_jogo_base_tb_erro(tb)#1
+# ** Error: (vsim-3173) Entity '/home/rafael/Documents/laboratorio-digital-1/EXP_5/work.fluxo_dados' has no architecture.
+# Load interrupted
+# Error loading design
+# End time: 13:33:44 on Feb 12,2023, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 2
+# Break key hit
