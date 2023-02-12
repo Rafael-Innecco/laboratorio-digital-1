@@ -201,4 +201,6 @@ begin
     leds <= db_mem_hex;
 
     db_jogada_correta <= igual;
+	
+	db_enderecoIgualRodada <= enderecoIgualRodada;
 end architecture estrutural;

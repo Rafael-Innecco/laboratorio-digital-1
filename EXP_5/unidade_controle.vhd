@@ -75,7 +75,7 @@ begin
         registra        when  (Eatual=espera and jogada='1') else 
         compara         when  Eatual=registra else
         proximo         when  Eatual=compara and fim_rodada='0' and igual = '1' else -- fim -> fim_rodada
-        ultima_rodada   when  Eatual=compara and fim_rodada='1' and igual = '0' else -- fim -> fim_rodada / novo estado
+        ultima_rodada   when  Eatual=compara and fim_rodada='1' and igual = '1' else -- fim -> fim_rodada / novo estado
 		proxima_rodada  when  Eatual=ultima_rodada and fim_jogo='0' else -- fim -> fim_jogo / novo estado
 		fim_erro        when  (Eatual=compara and igual = '0') or (Eatual=fim_erro and jogar='0') else -- iniciar -> jogar
         fim_certo       when  (Eatual=ultima_rodada and fim_jogo='1')  or  (Eatual=fim_certo and jogar = '0') else -- igual = '1' foi suprimido da 1.a condicao + mudanca do estado inicial da transicao

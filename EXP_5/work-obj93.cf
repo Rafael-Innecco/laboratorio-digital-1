@@ -12,3 +12,6 @@ file . "unidade_controle.vhd" "6eeede3d43e6ff36a5d20914e175784274c80942" "202302
 file . "fluxo_dados.vhd" "d123e68d68ec8f9aa4d4466c56799ca4e49373eb" "20230210154206.169":
   entity fluxo_dados at 24( 1058) + 0 on 16;
   architecture estrutural of fluxo_dados at 54( 2359) + 0 on 17;
+file . "circuito_jogo_base_tb_erro.vhd" "193313fb85cbf8966bf4c939b869531e6188f04b" "20230212152548.999":
+  entity circuito_jogo_base_tb_erro at 19( 970) + 0 on 22;
+  architecture tb of circuito_jogo_base_tb_erro at 27( 1117) + 0 on 23;
