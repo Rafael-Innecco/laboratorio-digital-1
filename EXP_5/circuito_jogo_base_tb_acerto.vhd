@@ -203,12 +203,1029 @@ begin
 	
 	---- jogada #3 rodada #4 (chaves=1000 e 15 clocks de duracao)
     caso <= 12;
-    botoes_in <= "000";
+    botoes_in <= "0100";
     wait for 15*clockPeriod;
     botoes_in <= "0000";
     ---- espera entre jogadas
     wait for 10*clockPeriod;
-	
+    
+  --- jogada #4 rodada #4 (chaves = 0100 e 15 clocks de duração)
+    caso <= 13;
+    botoes_in <= "1000";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    ---- jogada #1 rodada #5 (chaves=0001 e 15 clocks de duracao)
+    caso <= 14;
+    botoes_in <= "0001";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+  ---- jogada #2 rodada #5 (chaves=0010 e 15 clocks de duracao)
+    caso <= 15;
+    botoes_in <= "0010";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+  ---- jogada #3 rodada #5 (chaves=1000 e 15 clocks de duracao)
+    caso <= 16;
+    botoes_in <= "0100";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #4 rodada #5 (chaves = 0100 e 15 clocks de duração)
+    caso <= 17;
+    botoes_in <= "1000";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #5 rodada #5 (chaves = 0100 e 15 clocks de duração)
+    caso <= 18;
+    botoes_in <= "0100";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+
+    ---- jogada #1 rodada #6 (chaves=0001 e 15 clocks de duracao)
+    caso <= 19;
+    botoes_in <= "0001";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+  ---- jogada #2 rodada #6 (chaves=0010 e 15 clocks de duracao)
+    caso <= 20;
+    botoes_in <= "0010";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+  ---- jogada #3 rodada #6 (chaves=1000 e 15 clocks de duracao)
+    caso <= 21;
+    botoes_in <= "0100";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #4 rodada #6 (chaves = 1000 e 15 clocks de duração)
+    caso <= 22;
+    botoes_in <= "1000";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #5 rodada #6 (15 clocks de duração)
+    caso <= 23;
+    botoes_in <= "0100";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #6 rodada #6 (15 clocks de duração)
+    caso <= 24;
+    botoes_in <= "0010";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    ---- jogada #1 rodada #7 (chaves=0001 e 15 clocks de duracao)
+    caso <= 25;
+    botoes_in <= "0001";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+  ---- jogada #2 rodada #7 (chaves=0010 e 15 clocks de duracao)
+    caso <= 26;
+    botoes_in <= "0010";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+  ---- jogada #3 rodada #7 (chaves=1000 e 15 clocks de duracao)
+    caso <= 27;
+    botoes_in <= "0100";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #4 rodada #7 (chaves = 1000 e 15 clocks de duração)
+    caso <= 28;
+    botoes_in <= "1000";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #5 rodada #7 (15 clocks de duração)
+    caso <= 29;
+    botoes_in <= "0100";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #6 rodada #7 (15 clocks de duração)
+    caso <= 30;
+    botoes_in <= "0010";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #7 rodada #7 (15 clocks de duração)
+    caso <= 31;
+    botoes_in <= "0001";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    ---- jogada #1 rodada #8 (chaves=0001 e 15 clocks de duracao)
+    caso <= 32;
+    botoes_in <= "0001";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+  ---- jogada #2 rodada #8 (chaves=0010 e 15 clocks de duracao)
+    caso <= 33;
+    botoes_in <= "0010";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+  ---- jogada #3 rodada #8 (chaves=1000 e 15 clocks de duracao)
+    caso <= 34;
+    botoes_in <= "0100";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #4 rodada #8 (chaves = 1000 e 15 clocks de duração)
+    caso <= 35;
+    botoes_in <= "1000";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #5 rodada #8 (15 clocks de duração)
+    caso <= 36;
+    botoes_in <= "0100";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #6 rodada #8 (15 clocks de duração)
+    caso <= 37;
+    botoes_in <= "0010";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #7 rodada #8 (15 clocks de duração)
+    caso <= 38;
+    botoes_in <= "0001";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #8 rodada #8 (15 clocks de duração)
+    caso <= 39;
+    botoes_in <= "0001";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    ---- jogada #1 rodada #9 (chaves=0001 e 15 clocks de duracao)
+    caso <= 40;
+    botoes_in <= "0001";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+  ---- jogada #2 rodada #9 (chaves=0010 e 15 clocks de duracao)
+    caso <= 41;
+    botoes_in <= "0010";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+  ---- jogada #3 rodada #9 (chaves=1000 e 15 clocks de duracao)
+    caso <= 42;
+    botoes_in <= "0100";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #4 rodada #9 (chaves = 1000 e 15 clocks de duração)
+    caso <= 43;
+    botoes_in <= "1000";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #5 rodada #9 (15 clocks de duração)
+    caso <= 44;
+    botoes_in <= "0100";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #6 rodada #9 (15 clocks de duração)
+    caso <= 45;
+    botoes_in <= "0010";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #7 rodada #9 (15 clocks de duração)
+    caso <= 46;
+    botoes_in <= "0001";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #8 rodada #9 (15 clocks de duração)
+    caso <= 47;
+    botoes_in <= "0001";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #9 rodada #9 (15 clocks de duração)
+    caso <= 48;
+    botoes_in <= "0010";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    ---- jogada #1 rodada #10 (chaves=0001 e 15 clocks de duracao)
+    caso <= 49;
+    botoes_in <= "0001";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+  ---- jogada #2 rodada #10 (chaves=0010 e 15 clocks de duracao)
+    caso <= 50;
+    botoes_in <= "0010";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+  ---- jogada #3 rodada #10 (chaves=1000 e 15 clocks de duracao)
+    caso <= 51;
+    botoes_in <= "0100";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #4 rodada #10 (chaves = 1000 e 15 clocks de duração)
+    caso <= 52;
+    botoes_in <= "1000";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #5 rodada #10 (15 clocks de duração)
+    caso <= 53;
+    botoes_in <= "0100";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #6 rodada #10 (15 clocks de duração)
+    caso <= 54;
+    botoes_in <= "0010";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #7 rodada #10 (15 clocks de duração)
+    caso <= 55;
+    botoes_in <= "0001";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #8 rodada #10 (15 clocks de duração)
+    caso <= 56;
+    botoes_in <= "0001";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #9 rodada #10 (15 clocks de duração)
+    caso <= 57;
+    botoes_in <= "0010";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #10 rodada #10 (15 clocks de duração)
+    caso <= 58;
+    botoes_in <= "0010";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    ---- jogada #1 rodada #11 (chaves=0001 e 15 clocks de duracao)
+    caso <= 59;
+    botoes_in <= "0001";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+  ---- jogada #2 rodada #11 (chaves=0010 e 15 clocks de duracao)
+    caso <= 60;
+    botoes_in <= "0010";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+  ---- jogada #3 rodada #11 (chaves=1000 e 15 clocks de duracao)
+    caso <= 61;
+    botoes_in <= "0100";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #4 rodada #11 (chaves = 1000 e 15 clocks de duração)
+    caso <= 62;
+    botoes_in <= "1000";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #5 rodada #11 (15 clocks de duração)
+    caso <= 63;
+    botoes_in <= "0100";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #6 rodada #11 (15 clocks de duração)
+    caso <= 64;
+    botoes_in <= "0010";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #7 rodada #11 (15 clocks de duração)
+    caso <= 65;
+    botoes_in <= "0001";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #8 rodada #11 (15 clocks de duração)
+    caso <= 66;
+    botoes_in <= "0001";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #9 rodada #11 (15 clocks de duração)
+    caso <= 67;
+    botoes_in <= "0010";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #10 rodada #11 (15 clocks de duração)
+    caso <= 68;
+    botoes_in <= "0010";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #11 rodada #11 (15 clocks de duração)
+    caso <= 69;
+    botoes_in <= "0100";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    ---- jogada #1 rodada #12 (chaves=0001 e 15 clocks de duracao)
+    caso <= 70;
+    botoes_in <= "0001";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+  ---- jogada #2 rodada #12 (chaves=0010 e 15 clocks de duracao)
+    caso <= 71;
+    botoes_in <= "0010";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+  ---- jogada #3 rodada #12 (chaves=1000 e 15 clocks de duracao)
+    caso <= 72;
+    botoes_in <= "0100";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #4 rodada #12 (chaves = 1000 e 15 clocks de duração)
+    caso <= 73;
+    botoes_in <= "1000";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #5 rodada #12 (15 clocks de duração)
+    caso <= 74;
+    botoes_in <= "0100";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #6 rodada #12 (15 clocks de duração)
+    caso <= 75;
+    botoes_in <= "0010";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #7 rodada #12 (15 clocks de duração)
+    caso <= 76;
+    botoes_in <= "0001";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #8 rodada #12 (15 clocks de duração)
+    caso <= 77;
+    botoes_in <= "0001";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #9 rodada #12 (15 clocks de duração)
+    caso <= 78;
+    botoes_in <= "0010";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #10 rodada #12 (15 clocks de duração)
+    caso <= 79;
+    botoes_in <= "0010";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #11 rodada #12 (15 clocks de duração)
+    caso <= 80;
+    botoes_in <= "0100";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #12 rodada #12 (15 clocks de duração)
+    caso <= 81;
+    botoes_in <= "0100";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    ---- jogada #1 rodada #13 (chaves=0001 e 15 clocks de duracao)
+    caso <= 82;
+    botoes_in <= "0001";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+  ---- jogada #2 rodada #13 (chaves=0010 e 15 clocks de duracao)
+    caso <= 83;
+    botoes_in <= "0010";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+  ---- jogada #3 rodada #13 (chaves=1000 e 15 clocks de duracao)
+    caso <= 84;
+    botoes_in <= "0100";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #4 rodada #13 (chaves = 1000 e 15 clocks de duração)
+    caso <= 85;
+    botoes_in <= "1000";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #5 rodada #13 (15 clocks de duração)
+    caso <= 86;
+    botoes_in <= "0100";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #6 rodada #13 (15 clocks de duração)
+    caso <= 87;
+    botoes_in <= "0010";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #7 rodada #13 (15 clocks de duração)
+    caso <= 88;
+    botoes_in <= "0001";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #8 rodada #13 (15 clocks de duração)
+    caso <= 89;
+    botoes_in <= "0001";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #9 rodada #13 (15 clocks de duração)
+    caso <= 90;
+    botoes_in <= "0010";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #10 rodada #13 (15 clocks de duração)
+    caso <= 91;
+    botoes_in <= "0010";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #11 rodada #13 (15 clocks de duração)
+    caso <= 92;
+    botoes_in <= "0100";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #12 rodada #13 (15 clocks de duração)
+    caso <= 93;
+    botoes_in <= "0100";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #13 rodada #13 (15 clocks de duração)
+    caso <= 94;
+    botoes_in <= "1000";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    ---- jogada #1 rodada #14 (chaves=0001 e 15 clocks de duracao)
+    caso <= 95;
+    botoes_in <= "0001";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+  ---- jogada #2 rodada #14 (chaves=0010 e 15 clocks de duracao)
+    caso <= 96;
+    botoes_in <= "0010";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+  ---- jogada #3 rodada #14 (chaves=1000 e 15 clocks de duracao)
+    caso <= 97;
+    botoes_in <= "0100";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #4 rodada #14 (chaves = 1000 e 15 clocks de duração)
+    caso <= 98;
+    botoes_in <= "1000";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #5 rodada #14 (15 clocks de duração)
+    caso <= 99;
+    botoes_in <= "0100";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #6 rodada #14 (15 clocks de duração)
+    caso <= 100;
+    botoes_in <= "0010";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #7 rodada #14 (15 clocks de duração)
+    caso <= 101;
+    botoes_in <= "0001";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #8 rodada #14 (15 clocks de duração)
+    caso <= 102;
+    botoes_in <= "0001";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #9 rodada #14 (15 clocks de duração)
+    caso <= 103;
+    botoes_in <= "0010";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #10 rodada #14 (15 clocks de duração)
+    caso <= 104;
+    botoes_in <= "0010";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #11 rodada #14 (15 clocks de duração)
+    caso <= 105;
+    botoes_in <= "0100";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #12 rodada #14 (15 clocks de duração)
+    caso <= 106;
+    botoes_in <= "0100";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #13 rodada #14 (15 clocks de duração)
+    caso <= 107;
+    botoes_in <= "1000";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #14 rodada #14 (15 clocks de duração)
+    caso <= 108;
+    botoes_in <= "1000";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+  
+
+    ---- jogada #1 rodada #15 (chaves=0001 e 15 clocks de duracao)
+    caso <= 109;
+    botoes_in <= "0001";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+  ---- jogada #2 rodada #15 (chaves=0010 e 15 clocks de duracao)
+    caso <= 110;
+    botoes_in <= "0010";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+  ---- jogada #3 rodada #15 (chaves=1000 e 15 clocks de duracao)
+    caso <= 111;
+    botoes_in <= "0100";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #4 rodada #15 (chaves = 1000 e 15 clocks de duração)
+    caso <= 112;
+    botoes_in <= "1000";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #5 rodada #15 (15 clocks de duração)
+    caso <= 113;
+    botoes_in <= "0100";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #6 rodada #15 (15 clocks de duração)
+    caso <= 114;
+    botoes_in <= "0010";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #7 rodada #15 (15 clocks de duração)
+    caso <= 115;
+    botoes_in <= "0001";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #8 rodada #15 (15 clocks de duração)
+    caso <= 116;
+    botoes_in <= "0001";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #9 rodada #15 (15 clocks de duração)
+    caso <= 117;
+    botoes_in <= "0010";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #10 rodada #15 (15 clocks de duração)
+    caso <= 118;
+    botoes_in <= "0010";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #11 rodada #15 (15 clocks de duração)
+    caso <= 119;
+    botoes_in <= "0100";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #12 rodada #15 (15 clocks de duração)
+    caso <= 120;
+    botoes_in <= "0100";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #13 rodada #15 (15 clocks de duração)
+    caso <= 121;
+    botoes_in <= "1000";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #14 rodada #15 (15 clocks de duração)
+    caso <= 122;
+    botoes_in <= "1000";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #15 rodada #15 (15 clocks de duração)
+    caso <= 123;
+    botoes_in <= "0001";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    ---- jogada #1 rodada #16 (chaves=0001 e 15 clocks de duracao)
+    caso <= 124;
+    botoes_in <= "0001";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+  ---- jogada #2 rodada #16 (chaves=0010 e 15 clocks de duracao)
+    caso <= 125;
+    botoes_in <= "0010";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+  ---- jogada #3 rodada #16 (chaves=1000 e 15 clocks de duracao)
+    caso <= 126;
+    botoes_in <= "0100";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #4 rodada #16 (chaves = 1000 e 15 clocks de duração)
+    caso <= 127;
+    botoes_in <= "1000";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #5 rodada #16 (15 clocks de duração)
+    caso <= 128;
+    botoes_in <= "0100";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #6 rodada #16 (15 clocks de duração)
+    caso <= 129;
+    botoes_in <= "0010";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #7 rodada #16 (15 clocks de duração)
+    caso <= 130;
+    botoes_in <= "0001";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #8 rodada #16 (15 clocks de duração)
+    caso <= 131;
+    botoes_in <= "0001";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #9 rodada #16 (15 clocks de duração)
+    caso <= 132;
+    botoes_in <= "0010";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #10 rodada #16 (15 clocks de duração)
+    caso <= 133;
+    botoes_in <= "0010";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #11 rodada #16 (15 clocks de duração)
+    caso <= 134;
+    botoes_in <= "0100";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #12 rodada #16 (15 clocks de duração)
+    caso <= 135;
+    botoes_in <= "0100";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #13 rodada #16 (15 clocks de duração)
+    caso <= 136;
+    botoes_in <= "1000";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #14 rodada #16 (15 clocks de duração)
+    caso <= 137;
+    botoes_in <= "1000";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #15 rodada #16 (15 clocks de duração)
+    caso <= 138;
+    botoes_in <= "0001";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --- jogada #16 rodada #16 (15 clocks de duração)
+    caso <= 139;
+    botoes_in <= "0100";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
  
     ---- final do testbench
     assert false report "fim da simulacao" severity note;
