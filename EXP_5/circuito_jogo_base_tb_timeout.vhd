@@ -21,22 +21,14 @@ use ieee.std_logic_1164.all;
 use std.textio.all;
 
 -- entidade do testbench
-<<<<<<< HEAD
 entity circuito_jogo_base_tb_timeout is
 end entity;
 
 architecture tb of circuito_jogo_base_tb_timeout is
-=======
-entity circuito_exp5_tb_erro is
-end entity;
-
-architecture tb of circuito_exp5_tb_erro is
->>>>>>> 977ccb40fb1e0b028a1fa011a811cc9b4d5c509f
 
   -- Componente a ser testado (Device Under Test -- DUT)
     component circuito_jogo_base
     port (
-<<<<<<< HEAD
         clock           	    : in std_logic;
         reset           		: in std_logic;
         jogar       		    : in std_logic; -- novo nome: iniciar -> jogar
@@ -55,24 +47,6 @@ architecture tb of circuito_exp5_tb_erro is
         db_jogadafeita 			: out std_logic_vector (6 downto 0);
 		db_rodada       		: out std_logic_vector (6 downto 0); -- nova saida
 		db_estado       		: out std_logic_vector (6 downto 0)      
-=======
-        clock          : in  std_logic;
-        reset          : in  std_logic;
-        iniciar        : in  std_logic;
-        chaves         : in  std_logic_vector (3 downto 0);
-        pronto         : out std_logic;
-        acertou        : out std_logic;
-        errou          : out std_logic;
-        leds           : out std_logic_vector (3 downto 0);
-        db_igual       : out std_logic;
-        db_contagem    : out std_logic_vector (6 downto 0);
-        db_memoria     : out std_logic_vector (6 downto 0);
-        db_estado      : out std_logic_vector (6 downto 0);
-        db_jogadafeita : out std_logic_vector (6 downto 0);
-        db_clock       : out std_logic;
-        db_tem_jogada  : out std_logic;
-		    db_timeout     : out std_logic;
->>>>>>> 977ccb40fb1e0b028a1fa011a811cc9b4d5c509f
     );
   end component;
   
@@ -220,9 +194,9 @@ begin
     ---- espera entre jogadas
     wait for 10*clockPeriod;
 	
-	---- jogada #1 rodada #4 (chaves=0001 e 15 clocks de duracao)
+	---- jogada #2 rodada #4 (chaves=0010 e 15 clocks de duracao)
     caso <= 11;
-    botoes_in <= "0001";
+    botoes_in <= "0010";
     wait for 15*clockPeriod;
     botoes_in <= "0000";
     ---- espera entre jogadas

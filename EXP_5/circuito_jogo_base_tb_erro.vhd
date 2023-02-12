@@ -193,7 +193,7 @@ begin
     ---- espera entre jogadas
     wait for 10*clockPeriod;
 	
-	---- jogada #1 rodada #4 (chaves=0001 e 15 clocks de duracao)
+	---- jogada #2 rodada #4 (chaves=0001 e 15 clocks de duracao)
     caso <= 11;
     botoes_in <= "0010";
     wait for 15*clockPeriod;
@@ -201,7 +201,7 @@ begin
     ---- espera entre jogadas
     wait for 10*clockPeriod;
 	
-	---- jogada #2 rodada #4 (jogada errada: chaves=0100 e 15 clocks de duracao)
+	---- jogada #3 rodada #4 (jogada errada: chaves=0001 e 15 clocks de duracao)
     caso <= 12;
     botoes_in <= "0001";
     wait for 15*clockPeriod;
