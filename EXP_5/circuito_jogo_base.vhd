@@ -20,24 +20,24 @@ use ieee.std_logic_1164.all;
 
 entity circuito_jogo_base is -- novo nome de entidade
     port (
-        clock           	    : in std_logic;
-        reset           		: in std_logic;
-        jogar       		    : in std_logic; -- novo nome: iniciar -> jogar
-        botoes        		    : in std_logic_vector (3 downto 0); -- novo nome: chaves -> botoes
-        leds           			: out std_logic_vector (3 downto 0);
-		pronto          		: out std_logic;
-        ganhou          		: out std_logic; -- novo nome: acertou -> ganhou
-        perdeu           		: out std_logic;     
+        clock           	: in std_logic;
+        reset           	: in std_logic;
+        jogar       		: in std_logic; -- novo nome: iniciar -> jogar
+        botoes        		: in std_logic_vector (3 downto 0); -- novo nome: chaves -> botoes
+        leds           		: out std_logic_vector (3 downto 0);
+	pronto          	: out std_logic;
+        ganhou          	: out std_logic; -- novo nome: acertou -> ganhou
+        perdeu           	: out std_logic;     
         db_clock                : out std_logic;
-		db_tem_jogada    		: out std_logic;
-		db_jogada_correta       : out std_logic; -- novo nome: db_igual -> db_jogada_correta
+	db_tem_jogada    	: out std_logic;
+	db_jogada_correta       : out std_logic; -- novo nome: db_igual -> db_jogada_correta
         db_enderecoIgualRodada  : out std_logic; -- nova saida
-		db_timeout				: out std_logic;
-		db_contagem     		: out std_logic_vector (6 downto 0);
-        db_memoria      		: out std_logic_vector (6 downto 0);
-        db_jogadafeita 			: out std_logic_vector (6 downto 0);
-		db_rodada       		: out std_logic_vector (6 downto 0); -- nova saida
-		db_estado       		: out std_logic_vector (6 downto 0)               
+	db_timeout		: out std_logic;
+	db_contagem     	: out std_logic_vector (6 downto 0);
+        db_memoria      	: out std_logic_vector (6 downto 0);
+        db_jogadafeita 		: out std_logic_vector (6 downto 0);
+	db_rodada       	: out std_logic_vector (6 downto 0); -- nova saida
+	db_estado       	: out std_logic_vector (6 downto 0)               
     );
 end entity;
 
@@ -76,7 +76,7 @@ architecture estrutural of circuito_jogo_base is -- componente alterado
 			fim_jogo       	: in std_logic; -- novo nome e funcao: fim -> fim_jogo, identifica momento em que a ultima rodada eh concluida
 			jogada      	: in std_logic;
 			igual       	: in std_logic;
-			fimTempo		: in std_logic;
+			fimTempo	: in std_logic;
 			fim_rodada      : in std_logic; -- novo sinal: identifica fim de uma rodada: contador antigo igual ao da rodada.
 			-- Sinais de controle
 			zeraC_End      	: out std_logic; -- novo nome: sinal de controle do contador de endereco da memoria
@@ -88,10 +88,10 @@ architecture estrutural of circuito_jogo_base is -- componente alterado
 			ganhou       	: out std_logic; -- novo nome: acertou -> ganhou
 			perdeu       	: out std_logic; -- novo nome: errou -> perdeu
 			pronto      	: out std_logic;
-			contaTempo	    : out std_logic;
+			contaTempo	: out std_logic;
 			-- Sinais de depuracao 
 			db_estado   	: out std_logic_vector(3 downto 0);
-			db_timeout	    : out std_logic	
+			db_timeout	: out std_logic	
         );
     end component;
 
@@ -111,51 +111,51 @@ begin
 
     fluxo_dadosFD: fluxo_dados -- Instanciacao modificada
         port map (
-            clock 	            =>  clock,
-			zeraC_End      	 	=>  zeraC_End,
-            contaC_End   	    =>  contaC_End,
-            zeraC_Rod			=>  zeraC_Rod,
-			contaC_Rod			=>  contaC_Rod,
-			escreveM       	 	=>  '0',
-            zeraR       	    =>  zeraR,
-            registraR   	    =>  registraR,
-            chaves      	    =>  botoes,
-			contaTempo			=>  contaTempo,
-            igual          		=>  igual,
-            enderecoIgualRodada =>  enderecoIgualRodada,
-			fim_jogo            =>  fim_jogo,
-            jogada_feita        =>  jogada_feita,
-            db_tem_jogada 	    =>  db_tem_jogada,
-            db_contagem    		=>  db_cont_hex,
-            db_memoria     		=>  db_mem_hex,
-            db_chaves      		=>  db_jogada_hex,
-			db_rodada           =>  db_rodada_hex,
-			fimTempo			=>  fimTempo
+            	clock 	            	=>  clock,
+		zeraC_End      	 	=>  zeraC_End,
+            	contaC_End   	   	=>  contaC_End,
+            	zeraC_Rod		=>  zeraC_Rod,
+		contaC_Rod		=>  contaC_Rod,
+		escreveM       	 	=>  '0',
+            	zeraR       	    	=>  zeraR,
+            	registraR   	    	=>  registraR,
+            	chaves      	    	=>  botoes,
+		contaTempo		=>  contaTempo,
+            	igual          		=>  igual,
+            	enderecoIgualRodada	=>  enderecoIgualRodada,
+		fim_jogo            	=>  fim_jogo,
+            	jogada_feita        	=>  jogada_feita,
+            	db_tem_jogada 	    	=>  db_tem_jogada,
+            	db_contagem    		=>  db_cont_hex,
+            	db_memoria     		=>  db_mem_hex,
+            	db_chaves      		=>  db_jogada_hex,
+		db_rodada           	=>  db_rodada_hex,
+		fimTemp			=>  fimTempo
         );
     --
 	
     unidade_controleUC: unidade_controle --Instanciacao modificada
         port map (
-            clock        => clock,
-            reset        => reset,
-            jogar       => jogar,
-            fim_jogo     => fim_jogo,
-            jogada       => jogada_feita,
-            igual        => igual,
-			fimTempo     => fimTempo,
-			fim_rodada   => enderecoIgualRodada,
-            zeraC_End    => zeraC_End,
-            contaC_End   => contaC_End,
-            zeraC_Rod    => zeraC_Rod,
-			contaC_Rod   => contaC_Rod,
-			zeraR        => zeraR,
-            registraR    => registraR,
-            ganhou       => ganhou,
-            perdeu       => perdeu,
-            pronto       => pronto,
-            contaTempo	 => contaTempo,
-			db_estado    => db_estado_hex,
-			db_timeout	 => db_timeout
+        	clock        	=> clock,
+          	reset        	=> reset,
+            	jogar       	=> jogar,
+            	fim_jogo     	=> fim_jogo,
+            	jogada       	=> jogada_feita,
+            	igual        	=> igual,
+		fimTempo     	=> fimTempo,
+		fim_rodada   	=> enderecoIgualRodada,
+            	zeraC_End    	=> zeraC_End,
+            	contaC_End   	=> contaC_End,
+            	zeraC_Rod    	=> zeraC_Rod,
+		contaC_Rod   	=> contaC_Rod,
+		zeraR        	=> zeraR,
+            	registraR    	=> registraR,
+            	ganhou       	=> ganhou,
+            	perdeu      	=> perdeu,
+            	pronto       	=> pronto,
+            	contaTempo	=> contaTempo,
+		db_estado    	=> db_estado_hex,
+		db_timeout	=> db_timeout
 				
         );
     --

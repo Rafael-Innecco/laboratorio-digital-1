@@ -132,7 +132,7 @@ begin
     hex7estado: hexa7seg
         port map (
             hexa => db_estadohex,
-				sseg => db_estado
+			sseg => db_estado
         );
 		  
 	 db_zeraC <= zeraC;

@@ -83,46 +83,45 @@ begin
 
     -- logica de saída (maquina de Moore)
 	-- Modificada
-    with Eatual select
-        zeraC_End <=    '1' when inicial | inicializa_elem | ultima_rodada | proxima_rodada, -- novos estados; precisa do proxima_rodada?
-                        '0' when others;
+    	with Eatual select
+        	zeraC_End <=    '1' when inicial | inicializa_elem | ultima_rodada | proxima_rodada, -- novos estados; precisa do proxima_rodada?
+                        	'0' when others;
 	
 	with Eatual select
 		zeraC_Rod <=    '1' when fim_timeout | fim_erro | fim_certo, 
-						'0' when others;
-    with Eatual select
-        zeraR <=        '1' when inicial | inicializa_elem,
-                        '0' when others;
-    
-    with Eatual select
-        registraR <=    '1' when registra,
-                        '0' when others;
+				'0' when others;
+    	with Eatual select
+        	zeraR <=        '1' when inicial | inicializa_elem,
+                        	'0' when others;
+    	
+	with Eatual select
+        	registraR <=    '1' when registra,
+                        	'0' when others;
 
-    with Eatual select
-        contaC_End <=   '1' when proximo,
-                        '0' when others;
+    	with Eatual select
+        	contaC_End <=   '1' when proximo,
+                        	'0' when others;
 						
 	with Eatual select 
 		contaC_Rod <=	'1' when proxima_rodada,
-						'0' when others;
-    with Eatual select
-        pronto <=       '1' when fim_certo | fim_erro | fim_timeout,
-                        '0' when others;
+				'0' when others;
+    	with Eatual select
+        	pronto <=       '1' when fim_certo | fim_erro | fim_timeout,
+                    		'0' when others;
     
-    with Eatual select
-        ganhou <=      '1' when fim_certo,
-                        '0' when others;
+    	with Eatual select
+        	ganhou <=      	'1' when fim_certo,
+                        	'0' when others;
     
-    with Eatual select
-        perdeu <=        '1' when fim_erro | fim_timeout,
-                        '0' when others;
-								
+    	with Eatual select
+        	perdeu <=   	'1' when fim_erro | fim_timeout,
+                        	'0' when others;
 	with Eatual select
-			contaTempo <= 	'1' when espera,
-								'0' when others;
-    with Eatual select
-			db_timeout <=	'1' when fim_timeout,
-								'0' when others;
+		contaTempo <= 	'1' when espera,
+				'0' when others;
+    	with Eatual select
+		db_timeout <=	'1' when fim_timeout,
+				'0' when others;
     -- saida de depuracao (db_estado)
     with Eatual select
         db_estado <= "0000" when inicial,           -- 0
