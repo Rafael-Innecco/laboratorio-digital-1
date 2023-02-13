@@ -47,7 +47,9 @@ entity fluxo_dados is
 		db_memoria   	 	: out std_logic_vector (3 downto 0);
 		db_chaves    	 	: out std_logic_vector (3 downto 0);
 		db_rodada    		: out std_logic_vector (3 downto 0); -- novo sinal de depuracao
-		fimTempo	 		: out std_logic 
+		fimTempo	 		: out std_logic;
+		-- Sinal de delay
+		espera_inicializacao : out std_logic
 	);
 end entity;
 
@@ -62,7 +64,9 @@ architecture estrutural of fluxo_dados is
   signal s_chaves       	 : std_logic_vector(3 downto 0);
   signal zeraT          	 : std_logic;
   signal s_chaveacionada     : std_logic := '0';
-
+  signal zera_R_completo     : std_logic;
+  signal umQuinto			 : std_logic;
+  
   component contador_163
     port (
         clock : in  std_logic;
@@ -134,13 +138,13 @@ architecture estrutural of fluxo_dados is
 		constant M : integer := 100
 	);
 	port (
-		clock	: in std_logic;
-		zera_as	: in std_logic;
-		zera_s	: in std_logic;
+		clock	    : in std_logic;
+		zera_as	    : in std_logic;
+		zera_s	    : in std_logic;
 		conta		: in std_logic;
 		Q			: out std_logic_vector(natural(ceil(log2(real(M)))) - 1 downto 0);
-		fim		: out std_logic;
-		meio		: out std_logic
+		fim		    : out std_logic;
+		umQuinto	: out std_logic
 	);
   end component;
   
@@ -225,11 +229,13 @@ begin
        dado_saida   => s_dado
     );
 	
+	
+	zera_R_completo <= zeraR or (contaTempo and  umQuinto);
 	registrador: registrador_n
 		generic map( N => 4)
 		port map (
 			clock  => clock,
-			clear  => zeraR,
+			clear  => zera_R_completo,
 			enable => registraR,
 			D      => chaves,
 			Q      => s_chaves
@@ -257,10 +263,11 @@ begin
 		conta => contaTempo,
 		Q => open,
 		fim => fimTempo,
-		meio => open
+		umQuinto => umQuinto
 	 );
 		
-  
+	espera_inicializacao <= umQuinto;
+	
   db_contagem <= s_endereco;
   db_memoria  <= s_dado;
   db_chaves   <= s_chaves;

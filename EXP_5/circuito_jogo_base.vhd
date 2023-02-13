@@ -63,7 +63,8 @@ architecture estrutural of circuito_jogo_base is -- componente alterado
 			db_memoria   	 	: out std_logic_vector (3 downto 0);
 			db_chaves    	 	: out std_logic_vector (3 downto 0);
 			db_rodada    		: out std_logic_vector (3 downto 0); -- novo sinal de depuracao
-			fimTempo	 		: out std_logic 
+			fimTempo	 		: out std_logic;
+			espera_inicializacao : out std_logic
         );
     end component;
 	
@@ -78,6 +79,7 @@ architecture estrutural of circuito_jogo_base is -- componente alterado
 			igual       	: in std_logic;
 			fimTempo	: in std_logic;
 			fim_rodada      : in std_logic; -- novo sinal: identifica fim de uma rodada: contador antigo igual ao da rodada.
+			espera_inicializacao : in std_logic; --NOVO
 			-- Sinais de controle
 			zeraC_End      	: out std_logic; -- novo nome: sinal de controle do contador de endereco da memoria
 			contaC_End     	: out std_logic; -- novo nome: sinal de controle do contador de endereco da memoria
@@ -91,7 +93,7 @@ architecture estrutural of circuito_jogo_base is -- componente alterado
 			contaTempo	: out std_logic;
 			-- Sinais de depuracao 
 			db_estado   	: out std_logic_vector(3 downto 0);
-			db_timeout	: out std_logic	
+			db_timeout	    : out std_logic
         );
     end component;
 
@@ -107,56 +109,58 @@ architecture estrutural of circuito_jogo_base is -- componente alterado
 	signal zeraC_Rod, contaC_Rod    : std_logic; -- novos sinais
 	signal contaTempo, fimTempo 	: std_logic;
 	signal enderecoIgualRodada      : std_logic; -- Novo sinal intermediario
+	signal espera_inicializacao     : std_logic;
 begin
 
     fluxo_dadosFD: fluxo_dados -- Instanciacao modificada
         port map (
-            	clock 	            	=>  clock,
-		zeraC_End      	 	=>  zeraC_End,
-            	contaC_End   	   	=>  contaC_End,
-            	zeraC_Rod		=>  zeraC_Rod,
-		contaC_Rod		=>  contaC_Rod,
-		escreveM       	 	=>  '0',
-            	zeraR       	    	=>  zeraR,
-            	registraR   	    	=>  registraR,
-            	chaves      	    	=>  botoes,
-		contaTempo		=>  contaTempo,
-            	igual          		=>  igual,
-            	enderecoIgualRodada	=>  enderecoIgualRodada,
-		fim_jogo            	=>  fim_jogo,
-            	jogada_feita        	=>  jogada_feita,
-            	db_tem_jogada 	    	=>  db_tem_jogada,
-            	db_contagem    		=>  db_cont_hex,
-            	db_memoria     		=>  db_mem_hex,
-            	db_chaves      		=>  db_jogada_hex,
-		db_rodada           	=>  db_rodada_hex,
-		fimTemp			=>  fimTempo
+            clock 	            =>  clock,
+			zeraC_End      	 	=>  zeraC_End,
+            contaC_End   	    =>  contaC_End,
+            zeraC_Rod			=>  zeraC_Rod,
+			contaC_Rod			=>  contaC_Rod,
+			escreveM       	 	=>  '0',
+            zeraR       	    =>  zeraR,
+            registraR   	    =>  registraR,
+            chaves      	    =>  botoes,
+			contaTempo			=>  contaTempo,
+			espera_inicializacao => espera_inicializacao,
+			igual          		=>  igual,
+            enderecoIgualRodada =>  enderecoIgualRodada,
+			fim_jogo            =>  fim_jogo,
+            jogada_feita        =>  jogada_feita,
+            db_tem_jogada 	    =>  db_tem_jogada,
+            db_contagem    		=>  db_cont_hex,
+            db_memoria     		=>  db_mem_hex,
+            db_chaves      		=>  db_jogada_hex,
+			db_rodada           =>  db_rodada_hex,
+			fimTempo			=>  fimTempo
         );
     --
 	
     unidade_controleUC: unidade_controle --Instanciacao modificada
         port map (
-        	clock        	=> clock,
-          	reset        	=> reset,
-            	jogar       	=> jogar,
-            	fim_jogo     	=> fim_jogo,
-            	jogada       	=> jogada_feita,
-            	igual        	=> igual,
-		fimTempo     	=> fimTempo,
-		fim_rodada   	=> enderecoIgualRodada,
-            	zeraC_End    	=> zeraC_End,
-            	contaC_End   	=> contaC_End,
-            	zeraC_Rod    	=> zeraC_Rod,
-		contaC_Rod   	=> contaC_Rod,
-		zeraR        	=> zeraR,
-            	registraR    	=> registraR,
-            	ganhou       	=> ganhou,
-            	perdeu      	=> perdeu,
-            	pronto       	=> pronto,
-            	contaTempo	=> contaTempo,
-		db_estado    	=> db_estado_hex,
-		db_timeout	=> db_timeout
-				
+            clock        => clock,
+            reset        => reset,
+            jogar       => jogar,
+            fim_jogo     => fim_jogo,
+            jogada       => jogada_feita,
+            igual        => igual,
+			fimTempo     => fimTempo,
+			fim_rodada   => enderecoIgualRodada,
+            zeraC_End    => zeraC_End,
+            contaC_End   => contaC_End,
+            zeraC_Rod    => zeraC_Rod,
+			contaC_Rod   => contaC_Rod,
+			zeraR        => zeraR,
+            registraR    => registraR,
+            ganhou       => ganhou,
+            perdeu       => perdeu,
+            pronto       => pronto,
+            contaTempo	 => contaTempo,
+			db_estado    => db_estado_hex,
+			db_timeout	 => db_timeout,
+			espera_inicializacao => espera_inicializacao
         );
     --
 
@@ -196,8 +200,11 @@ begin
     --
     
     db_clock <= clock;
-
-    leds <= db_mem_hex;
+	
+	-- APOS REVISAO DA EXP5 --
+	with db_estado_hex select 
+		leds <= db_mem_hex    when "0001" ,
+		        db_jogada_hex when others;
 
     db_jogada_correta <= igual;
 	
