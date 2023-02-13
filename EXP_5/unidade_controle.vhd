@@ -31,7 +31,8 @@ entity unidade_controle is
         igual       	: in std_logic;
 		fimTempo		: in std_logic;
 		fim_rodada      : in std_logic; -- novo sinal: identifica fim de uma rodada: contador antigo igual ao da rodada.
-        -- Sinais de controle
+        espera_inicializacao : in std_logic; -- NOVO
+		-- Sinais de controle
 		zeraC_End      	: out std_logic; -- novo nome: sinal de controle do contador de endereco da memoria
         contaC_End     	: out std_logic; -- novo nome: sinal de controle do contador de endereco da memoria
 		zeraC_Rod       : out std_logic; -- novo sinal de controle: zera contador de rodada
@@ -68,8 +69,9 @@ begin
 	-- Modificada
     Eprox <=
         inicial         when  Eatual=inicial and jogar='0' else -- iniciar -> jogar
-        inicializa_elem when  (Eatual=inicial or Eatual=fim_certo or Eatual=fim_erro or Eatual=fim_timeout) and jogar='1' else --iniciar -> pronto
-        inicio_rodada   when  Eatual=inicializa_elem or Eatual=proxima_rodada else -- novo estado
+        inicializa_elem when  ((Eatual=inicial or Eatual=fim_certo or Eatual=fim_erro or Eatual=fim_timeout) and jogar='1') 
+								or (Eatual=inicializa_elem and espera_inicializacao = '0') else --iniciar -> pronto
+        inicio_rodada   when  (Eatual=inicializa_elem and espera_inicializacao = '1') or Eatual=proxima_rodada else -- novo estado
 		espera          when  (Eatual=inicio_rodada) or (Eatual=proximo) or (Eatual = espera and jogada='0' and fimTempo='0') else -- mudanca na transicao que agora vem de inicio_rodada
 		fim_timeout		when  (Eatual=espera and fimTempo = '1') or (Eatual=fim_timeout and jogar='0') else -- iniciar -> jogar
         registra        when  (Eatual=espera and jogada='1') else 
@@ -82,9 +84,9 @@ begin
         inicial;
 
     -- logica de saída (maquina de Moore)
-	-- Modificada
-    with Eatual select
-        zeraC_End <=    '1' when inicial | inicializa_elem | ultima_rodada | proxima_rodada, -- novos estados; precisa do proxima_rodada?
+	-- Modificada	
+	with Eatual select
+        zeraC_End <=    '1' when inicial | inicializa_elem | ultima_rodada | inicio_rodada, -- novos estados; 
                         '0' when others;
 	
 	with Eatual select
@@ -114,12 +116,12 @@ begin
                         '0' when others;
     
     with Eatual select
-        perdeu <=        '1' when fim_erro | fim_timeout,
+        perdeu <=       '1' when fim_erro | fim_timeout,
                         '0' when others;
 								
 	with Eatual select
-			contaTempo <= 	'1' when espera,
-								'0' when others;
+			contaTempo <= 	'1' when espera | inicializa_elem,
+							'0' when others;
     with Eatual select
 			db_timeout <=	'1' when fim_timeout,
 								'0' when others;

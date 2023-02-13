@@ -5,7 +5,7 @@
 -------------------------------------------------------------------------
 -- Descricao : contador binario, modulo m, com parametro M generic,
 --             sinais para clear assincrono (zera_as) e sincrono (zera_s)
---             e saidas de fim e meio de contagem
+--             e saidas de fim e um quinto da contagem
 -- 
 --             calculo do numero de bits do contador em funcao do modulo:
 --             N = natural(ceil(log2(real(M))))
@@ -35,13 +35,13 @@ entity contador_m is
         constant M: integer := 100 -- modulo do contador
     );
     port (
-        clock   : in  std_logic;
-        zera_as : in  std_logic;
-        zera_s  : in  std_logic;
-        conta   : in  std_logic;
-        Q       : out std_logic_vector(natural(ceil(log2(real(M))))-1 downto 0);
-        fim     : out std_logic;
-        meio    : out std_logic
+        clock    : in  std_logic;
+        zera_as  : in  std_logic;
+        zera_s   : in  std_logic;
+        conta    : in  std_logic;
+        Q        : out std_logic_vector(natural(ceil(log2(real(M))))-1 downto 0);
+        fim      : out std_logic;
+        umQuinto : out std_logic
     );
 end entity contador_m;
 
@@ -67,10 +67,9 @@ begin
     fim <= '1' when IQ=M-1 else
            '0';
 
-    -- saida meio
-    meio <= '1' when IQ=M/2-1 else
+    -- saida umQuinto
+    umQuinto <= '1' when IQ=M/5-1 else
             '0';
-
     -- saida Q
     Q <= std_logic_vector(to_unsigned(IQ, Q'length));
 
