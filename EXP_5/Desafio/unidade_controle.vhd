@@ -125,7 +125,7 @@ begin
                     '0' when others;
 								
 	with Eatual select
-			contaTempo <= 	'1' when espera | inicializa_elem,
+			contaTempo <= 	'1' when espera | inicializa_elem | espera_escrita,
 							'0' when others;
     with Eatual select
 			db_timeout <=	'1' when fim_timeout,

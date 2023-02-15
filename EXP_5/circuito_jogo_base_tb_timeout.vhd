@@ -128,7 +128,7 @@ begin
     caso <= 2;
     wait until falling_edge(clk_in);
     jogar_in <= '1';
-    wait until falling_edge(clk_in);
+    wait for 2000 * clockPeriod;
     jogar_in <= '0';
     
     -- espera para inicio dos testes
