@@ -81,8 +81,8 @@ begin
         compara         when  Eatual=registra else
         proximo         when  Eatual=compara and fim_rodada='0' and igual = '1' else -- fim -> fim_rodada
         ultima_rodada   when  Eatual=compara and fim_rodada='1' and igual = '1' else -- fim -> fim_rodada / novo estado
-		espera_escrita  when  Eatual=ultima_rodada and fim_jogo='0' else
-        escreve_jogada  when  Eatual=espera_escrita and jogada='1' and jogada='0' else
+		espera_escrita  when  (Eatual=ultima_rodada and fim_jogo='0') or (Eatual = espera_escrita and jogada = '0' and fimTempo  ='0') else
+        escreve_jogada  when  Eatual=espera_escrita and jogada='1' and fimTempo='0' else
         proxima_rodada  when  Eatual = escreve_jogada   else
 		fim_erro        when  (Eatual=compara and igual = '0') or (Eatual=fim_erro and jogar='0') else -- iniciar -> jogar
         fim_certo       when  (Eatual=ultima_rodada and fim_jogo='1')  or  (Eatual=fim_certo and jogar = '0') else -- igual = '1' foi suprimido da 1.a condicao + mudanca do estado inicial da transicao
@@ -135,6 +135,9 @@ begin
             escreveM <= '1' when escreve_jogada,
                         '0' when others;
 
+    with Eatual select
+            seletor_leds <= '1' when inicializa_elem,
+                            '0' when others;
     -- saida de depuracao (db_estado)
     with Eatual select
         db_estado <= "0000" when inicial,           -- 0

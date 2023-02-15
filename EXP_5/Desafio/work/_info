@@ -1,7 +1,14 @@
 m255
 K4
 z2
-!s99 nomlopt
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+R0
 !s11e vcom 2021.2 2021.04, Apr 14 2021
 13
 !s112 1.1
@@ -9,581 +16,583 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 d/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio
+Z1 d/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio
 T_opt
-!s110 1676468233
-Vb@`i_TCgJVg3I_j@egB4i1
-04 29 2 work circuito_desafio_exp5_tb_erro tb 1
-=1-000ae431a4f1-63ece009-c7e7f-16ec
-!s124 OEM10U1 
+!s110 1676470020
+VQUA<KgYd6E3h6XEULG0SB0
+Z2 04 29 2 work circuito_desafio_exp5_tb_erro tb 1
+=1-000ae431a4f1-63ece704-2c27d-2037
+Z3 !s124 OEM10U17 
 o-quiet -auto_acc_if_foreign -work work
-tCvgOpt 0
+Z4 tCvgOpt 0
 n@_opt
-OL;O;2021.2;73
-R0
+Z5 OL;O;2021.2;73
+T_opt1
+!s110 1676469712
+VhDT5zi>UYd;6TWK>@L>TV0
+R2
+=1-000ae431a4f1-63ece5d0-974aa-1f90
+R3
+o-quiet -auto_acc_if_foreign -work work +acc
+R4
+n@_opt1
+R5
+R1
 Ecircuito_desafio_exp5
-Z1 w1676468624
-Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 33
-R0
-Z4 8/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/circuito_desafio_exp5.vhd
-Z5 F/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/circuito_desafio_exp5.vhd
+Z6 w1676468624
+Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z8 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 46
+R1
+Z9 8circuito_desafio_exp5.vhd
+Z10 Fcircuito_desafio_exp5.vhd
 l0
 L21 1
-VSSc3=8o0=PFzhRS8jIOMe0
+VVaIDRgJ]ZmaXYc_`INWFI1
 !s100 L1VQ]m]>i<Hem74FLjiKm3
-Z6 OL;C;2021.2;73
+Z11 OL;C;2021.2;73
 32
-Z7 !s110 1676468758
+Z12 !s110 1676468889
 !i10b 1
-Z8 !s108 1676468758.000000
-Z9 !s90 -reportprogress|300|-work|work|/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/circuito_desafio_exp5.vhd|
-Z10 !s107 /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/circuito_desafio_exp5.vhd|
+Z13 !s108 1676468889.000000
+Z14 !s90 circuito_desafio_exp5.vhd|
+Z15 !s107 circuito_desafio_exp5.vhd|
 !i113 0
-Z11 o-work work
-Z12 tExplicit 1 CvgOpt 0
+Z16 tExplicit 1 CvgOpt 0
 Aestrutural
-R2
-R3
-DEx4 work 21 circuito_desafio_exp5 0 22 SSc3=8o0=PFzhRS8jIOMe0
-!i122 33
+R7
+R8
+DEx4 work 21 circuito_desafio_exp5 0 22 VaIDRgJ]ZmaXYc_`INWFI1
+!i122 46
 l119
 L44 174
-VmOcggUFEP6nJZN?zockKD0
+VBDgTQB;4SF52O>>O@7XAc0
 !s100 BWBOY4no4aIPzg4bNj`en1
-R6
-32
-R7
-!i10b 1
-R8
-R9
-R10
-!i113 0
 R11
+32
 R12
+!i10b 1
+R13
+R14
+R15
+!i113 0
+R16
 Ecircuito_desafio_exp5_tb_acerto
-Z13 w1676465967
-R2
-R3
+Z17 w1676465967
+R7
+R8
 !i122 34
-R0
-Z14 8/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/circuito_desafio_tb_acerto.vhd
-Z15 F/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/circuito_desafio_tb_acerto.vhd
+R1
+Z18 8/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/circuito_desafio_tb_acerto.vhd
+Z19 F/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/circuito_desafio_tb_acerto.vhd
 l0
-Z16 L24 1
+Z20 L24 1
 VfdeQZJWL>ZFNkL[Uh8DmR1
 !s100 Nc?@eB82YTb@jm;Y7ga7=1
-R6
-32
-R7
-!i10b 1
-R8
-Z17 !s90 -reportprogress|300|-work|work|/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/circuito_desafio_tb_acerto.vhd|
-Z18 !s107 /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/circuito_desafio_tb_acerto.vhd|
-!i113 0
 R11
-R12
+32
+Z21 !s110 1676468758
+!i10b 1
+Z22 !s108 1676468758.000000
+Z23 !s90 -reportprogress|300|-work|work|/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/circuito_desafio_tb_acerto.vhd|
+Z24 !s107 /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/circuito_desafio_tb_acerto.vhd|
+!i113 0
+Z25 o-work work
+R16
 Atb
-R2
-R3
+R7
+R8
 DEx4 work 31 circuito_desafio_exp5_tb_acerto 0 22 fdeQZJWL>ZFNkL[Uh8DmR1
 !i122 34
 l79
 L27 1332
 VI3U_1I=;MLVmoYdOKAA;:3
 !s100 9n6jSboJD25mdQFc2HDPG2
-R6
-32
-R7
-!i10b 1
-R8
-R17
-R18
-!i113 0
 R11
-R12
-Ecircuito_desafio_exp5_tb_erro
-R13
-R2
-R3
-!i122 35
-R0
-Z19 8/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/circuito_desafio_tb_erro.vhd
-Z20 F/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/circuito_desafio_tb_erro.vhd
-l0
-R16
-Vdd[O7GZMeDIUYQ;L6gDo72
-!s100 STWJKWCAG8H9F1M8?hWk^2
-R6
 32
-R7
-!i10b 1
-R8
-Z21 !s90 -reportprogress|30|-work|work|/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/circuito_desafio_tb_erro.vhd|
-Z22 !s107 /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/circuito_desafio_tb_erro.vhd|
-!i113 0
-R11
-R12
-Atb
-R2
-R3
-DEx4 work 29 circuito_desafio_exp5_tb_erro 0 22 dd[O7GZMeDIUYQ;L6gDo72
-!i122 35
-l79
-Z23 L27 186
-VRAcWZK;TV3BmJZWXPYJ4N0
-!s100 EO;=QfTnj_e57Yc5:1n2n2
-R6
-32
-R7
-!i10b 1
-R8
 R21
+!i10b 1
 R22
+R23
+R24
 !i113 0
-R11
-R12
-Ecircuito_desafio_exp5_tb_timeout
-R13
-R2
-R3
-!i122 36
-R0
-Z24 8/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/circuito_desafio_tb_timeout.vhd
-Z25 F/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/circuito_desafio_tb_timeout.vhd
-l0
+R25
 R16
+Ecircuito_desafio_exp5_tb_erro
+R17
+R7
+R8
+!i122 47
+R1
+Z26 8circuito_desafio_tb_erro.vhd
+Z27 Fcircuito_desafio_tb_erro.vhd
+l0
+R20
+Vg?S;LR`H@fW=5KKXlN2YQ2
+!s100 STWJKWCAG8H9F1M8?hWk^2
+R11
+32
+Z28 !s110 1676468908
+!i10b 1
+Z29 !s108 1676468908.000000
+Z30 !s90 circuito_desafio_tb_erro.vhd|
+Z31 !s107 circuito_desafio_tb_erro.vhd|
+!i113 0
+R16
+Atb
+R7
+R8
+DEx4 work 29 circuito_desafio_exp5_tb_erro 0 22 g?S;LR`H@fW=5KKXlN2YQ2
+!i122 47
+l79
+Z32 L27 186
+V7LC;G1hJIRcA:^Rfbd3Ki1
+!s100 EO;=QfTnj_e57Yc5:1n2n2
+R11
+32
+R28
+!i10b 1
+R29
+R30
+R31
+!i113 0
+R16
+Ecircuito_desafio_exp5_tb_timeout
+R17
+R7
+R8
+!i122 36
+R1
+Z33 8/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/circuito_desafio_tb_timeout.vhd
+Z34 F/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/circuito_desafio_tb_timeout.vhd
+l0
+R20
 Vo4=5dAHdk=4?K;o694cg<0
 !s100 a8ZKa1Zz`Cm8Bj]3Bg3[f2
-R6
-32
-R7
-!i10b 1
-R8
-Z26 !s90 -reportprogress|30|-work|work|/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/circuito_desafio_tb_timeout.vhd|
-Z27 !s107 /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/circuito_desafio_tb_timeout.vhd|
-!i113 0
 R11
-R12
+32
+R21
+!i10b 1
+R22
+Z35 !s90 -reportprogress|30|-work|work|/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/circuito_desafio_tb_timeout.vhd|
+Z36 !s107 /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/circuito_desafio_tb_timeout.vhd|
+!i113 0
+R25
+R16
 Atb
-R2
-R3
+R7
+R8
 DEx4 work 32 circuito_desafio_exp5_tb_timeout 0 22 o4=5dAHdk=4?K;o694cg<0
 !i122 36
 l80
-R23
+R32
 Vn]_;A1ozEEHPIGHHnP@]91
 !s100 `balfdjWkVg5JVjj[Xjm23
-R6
-32
-R7
-!i10b 1
-R8
-R26
-R27
-!i113 0
 R11
-R12
+32
+R21
+!i10b 1
+R22
+R35
+R36
+!i113 0
+R25
+R16
 Ecomparador_85
-R13
-R2
-R3
+R17
+R7
+R8
 !i122 37
-R0
-Z28 8/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/comparador_85.vhd
-Z29 F/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/comparador_85.vhd
+R1
+Z37 8/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/comparador_85.vhd
+Z38 F/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/comparador_85.vhd
 l0
 L18 1
 Vn;CBL11<o[1W?[o5iWSn_2
 !s100 UchionOWWKZd[S9Df?mH>0
-R6
-32
-R7
-!i10b 1
-R8
-Z30 !s90 -reportprogress|30|-work|work|/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/comparador_85.vhd|
-Z31 !s107 /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/comparador_85.vhd|
-!i113 0
 R11
-R12
+32
+R21
+!i10b 1
+R22
+Z39 !s90 -reportprogress|30|-work|work|/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/comparador_85.vhd|
+Z40 !s107 /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/comparador_85.vhd|
+!i113 0
+R25
+R16
 Adataflow
-R2
-R3
+R7
+R8
 DEx4 work 13 comparador_85 0 22 n;CBL11<o[1W?[o5iWSn_2
 !i122 37
 l41
 L37 20
 VC<^GjH9kdG]R3DLD_99jl3
 !s100 P^;hPi]5OVVdjL6GdC0U80
-R6
-32
-R7
-!i10b 1
-R8
-R30
-R31
-!i113 0
 R11
-R12
+32
+R21
+!i10b 1
+R22
+R39
+R40
+!i113 0
+R25
+R16
 Econtador_163
-R13
-Z32 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
-R2
-R3
+R17
+Z41 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R7
+R8
 !i122 38
-R0
-Z33 8/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/contador_163.vhd
-Z34 F/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/contador_163.vhd
+R1
+Z42 8/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/contador_163.vhd
+Z43 F/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/contador_163.vhd
 l0
 L19 1
 VX76>IE<hD@PAg93BbE2<M3
 !s100 HncTPI9f>PSaSM@8d2b100
-R6
-32
-R7
-!i10b 1
-R8
-Z35 !s90 -reportprogress|30|-work|work|/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/contador_163.vhd|
-Z36 !s107 /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/contador_163.vhd|
-!i113 0
 R11
-R12
+32
+R21
+!i10b 1
+R22
+Z44 !s90 -reportprogress|30|-work|work|/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/contador_163.vhd|
+Z45 !s107 /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/contador_163.vhd|
+!i113 0
+R25
+R16
 Acomportamental
-R32
-R2
-R3
+R41
+R7
+R8
 DEx4 work 12 contador_163 0 22 X76>IE<hD@PAg93BbE2<M3
 !i122 38
 l34
 L32 29
 VgP@4FZQ0Q[OAN>2<2TmgC2
 !s100 :UBU?:`V1RR45eY[;lMH80
-R6
-32
-R7
-!i10b 1
-R8
-R35
-R36
-!i113 0
 R11
-R12
+32
+R21
+!i10b 1
+R22
+R44
+R45
+!i113 0
+R25
+R16
 Econtador_m
-R13
-Z37 DPx4 ieee 9 math_real 0 22 gNk<PdFJ<XNPcfef`f?Z81
-R32
-R2
-R3
+R17
+Z46 DPx4 ieee 9 math_real 0 22 gNk<PdFJ<XNPcfef`f?Z81
+R41
+R7
+R8
 !i122 45
-R0
-Z38 8/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/contador_m.vhd
-Z39 F/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/contador_m.vhd
+R1
+Z47 8/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/contador_m.vhd
+Z48 F/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/contador_m.vhd
 l0
 L33 1
 V]1NNS;86f1QH2V5`APlN?3
 !s100 6HRNZ1oSPg]k1]@aHmKL:3
-R6
-32
-R7
-!i10b 1
-R8
-Z40 !s90 -reportprogress|30|-work|work|/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/contador_m.vhd|
-Z41 !s107 /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/contador_m.vhd|
-!i113 0
 R11
-R12
+32
+R21
+!i10b 1
+R22
+Z49 !s90 -reportprogress|30|-work|work|/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/contador_m.vhd|
+Z50 !s107 /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/contador_m.vhd|
+!i113 0
+R25
+R16
 Acomportamental
-R37
-R32
-R2
-R3
-Z42 DEx4 work 10 contador_m 0 22 ]1NNS;86f1QH2V5`APlN?3
+R46
+R41
+R7
+R8
+DEx4 work 10 contador_m 0 22 ]1NNS;86f1QH2V5`APlN?3
 !i122 45
 l50
-Z43 L48 29
-Z44 VI@K<_QMoITATN>VbTE;NZ1
-Z45 !s100 d8_F_4Eoe5IM:@zjP=8OL2
-R6
-32
-R7
-!i10b 1
-R8
-R40
-R41
-!i113 0
+L48 29
+VI@K<_QMoITATN>VbTE;NZ1
+!s100 d8_F_4Eoe5IM:@zjP=8OL2
 R11
-R12
+32
+R21
+!i10b 1
+R22
+R49
+R50
+!i113 0
+R25
+R16
 Eedge_detector
-R13
-R2
-R3
+R17
+R7
+R8
 !i122 39
-R0
-Z46 8/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/edge_detector.vhd
-Z47 F/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/edge_detector.vhd
+R1
+Z51 8/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/edge_detector.vhd
+Z52 F/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/edge_detector.vhd
 l0
 L25 1
 Vm[G=lk]5c?YknS1=j1EjQ2
 !s100 8YZ2^jBlaX4?0]W6fg5fQ2
-R6
-32
-R7
-!i10b 1
-R8
-Z48 !s90 -reportprogress|30|-work|work|/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/edge_detector.vhd|
-Z49 !s107 /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/edge_detector.vhd|
-!i113 0
 R11
-R12
+32
+R21
+!i10b 1
+R22
+Z53 !s90 -reportprogress|30|-work|work|/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/edge_detector.vhd|
+Z54 !s107 /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/edge_detector.vhd|
+!i113 0
+R25
+R16
 Artl
-R2
-R3
+R7
+R8
 DEx4 work 13 edge_detector 0 22 m[G=lk]5c?YknS1=j1EjQ2
 !i122 39
 l39
 L34 21
 Vm1[ezikQgWhZPG5zlcdH_3
 !s100 XhDFK>6^Pg;Cf>3KW;kN03
-R6
-32
-R7
-!i10b 1
-R8
-R48
-R49
-!i113 0
 R11
-R12
-Efluxo_dados
-Z50 w1676466540
-R37
-R32
-R2
-R3
-!i122 40
-R0
-Z51 8/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/fluxo_dados.vhd
-Z52 F/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/fluxo_dados.vhd
-l0
-L29 1
-V7X9bj2^7b4Vi9g_4_GDaV2
-!s100 ZAJcQ?gU:eC9`a`c]0_HC0
-R6
 32
-R7
+R21
 !i10b 1
-R8
-Z53 !s90 -reportprogress|30|-work|work|/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/fluxo_dados.vhd|
-Z54 !s107 /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/fluxo_dados.vhd|
-!i113 0
-R11
-R12
-Aestrutural
-Z55 DEx4 work 8 ram_16x4 0 22 9B84EKXR6FZS`R0ID3UH=1
-R37
-R32
-R2
-R3
-DEx4 work 11 fluxo_dados 0 22 7X9bj2^7b4Vi9g_4_GDaV2
-!i122 40
-l153
-L58 226
-VFU@O]oZG=4Pbe`<<LJ<PA2
-!s100 `Oa]7InY:f>8f127U5n5n0
-R6
-32
-R7
-!i10b 1
-R8
+R22
 R53
 R54
 !i113 0
-R11
-R12
-Ehexa7seg
-R13
-R2
-R3
-!i122 41
-R0
-Z56 8/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/hexa7seg.vhd
-Z57 F/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/hexa7seg.vhd
-l0
+R25
 R16
+Efluxo_dados
+Z55 w1676469234
+R46
+R41
+R7
+R8
+!i122 48
+R1
+Z56 8fluxo_dados.vhd
+Z57 Ffluxo_dados.vhd
+l0
+L29 1
+V4`G7P;5ib07=5NboK476M1
+!s100 ZAJcQ?gU:eC9`a`c]0_HC0
+R11
+32
+Z58 !s110 1676469267
+!i10b 1
+Z59 !s108 1676469267.000000
+Z60 !s90 fluxo_dados.vhd|
+Z61 !s107 fluxo_dados.vhd|
+!i113 0
+R16
+Aestrutural
+Z62 DEx4 work 8 ram_16x4 0 22 9B84EKXR6FZS`R0ID3UH=1
+R46
+R41
+R7
+R8
+DEx4 work 11 fluxo_dados 0 22 4`G7P;5ib07=5NboK476M1
+!i122 48
+l153
+L58 226
+VDoUBl0NESM[n=ASMMWoQh3
+!s100 OF1SS=MR^2Om>HQ[1LKk40
+R11
+32
+R58
+!i10b 1
+R59
+R60
+R61
+!i113 0
+R16
+Ehexa7seg
+R17
+R7
+R8
+!i122 41
+R1
+Z63 8/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/hexa7seg.vhd
+Z64 F/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/hexa7seg.vhd
+l0
+R20
 VQJZeiVSJF@L3lDY8DEh^K0
 !s100 m70:2LbOnf0ODWJKbc?@F3
-R6
-32
-R7
-!i10b 1
-R8
-Z58 !s90 -reportprogress|30|-work|work|/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/hexa7seg.vhd|
-Z59 !s107 /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/hexa7seg.vhd|
-!i113 0
 R11
-R12
+32
+R21
+!i10b 1
+R22
+Z65 !s90 -reportprogress|30|-work|work|/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/hexa7seg.vhd|
+Z66 !s107 /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/hexa7seg.vhd|
+!i113 0
+R25
+R16
 Acomportamental
-R2
-R3
+R7
+R8
 DEx4 work 8 hexa7seg 0 22 QJZeiVSJF@L3lDY8DEh^K0
 !i122 41
 l32
 L31 22
 V4am;C1Lg0gb:CoRQ`1_]o0
 !s100 U7QTX5YA5zSmB21GTflT=3
-R6
-32
-R7
-!i10b 1
-R8
-R58
-R59
-!i113 0
 R11
-R12
+32
+R21
+!i10b 1
+R22
+R65
+R66
+!i113 0
+R25
+R16
 Eram_16x4
-R13
-R32
-R2
-R3
+R17
+R41
+R7
+R8
 !i122 42
-R0
-Z60 8/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/ram_16x4.vhd
-Z61 F/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/ram_16x4.vhd
+R1
+Z67 8/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/ram_16x4.vhd
+Z68 F/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/ram_16x4.vhd
 l0
 L28 1
 V9B84EKXR6FZS`R0ID3UH=1
 !s100 7_Oke2`[UPj15mR6JKQR]2
-R6
-32
-R7
-!i10b 1
-R8
-Z62 !s90 -reportprogress|30|-work|work|/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/ram_16x4.vhd|
-Z63 !s107 /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/ram_16x4.vhd|
-!i113 0
 R11
-R12
+32
+R21
+!i10b 1
+R22
+Z69 !s90 -reportprogress|30|-work|work|/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/ram_16x4.vhd|
+Z70 !s107 /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/ram_16x4.vhd|
+!i113 0
+R25
+R16
 Aram_modelsim
-R32
-R2
-R3
-R55
+R41
+R7
+R8
+R62
 !i122 42
 l90
 L70 40
 V45Ndf]n=9A`NKcfTXQB4b3
 !s100 @Wb^3GhPLl>oU<nW@hX`C0
-R6
+R11
 32
-R7
+R21
 !i10b 1
+R22
+R69
+R70
+!i113 0
+R25
+R16
+Aram_mif
+R41
+R7
 R8
 R62
-R63
-!i113 0
-R11
-R12
-Aram_mif
-R32
-R2
-R3
-R55
 !i122 42
 l48
 L40 28
 VPee4nSWk_Dcje9L87_9=c3
 !s100 li^dkRXUzaR[dDlo<aFOa3
-R6
-32
-R7
-!i10b 1
-R8
-R62
-R63
-!i113 0
 R11
-R12
+32
+R21
+!i10b 1
+R22
+R69
+R70
+!i113 0
+R25
+R16
 Eregistrador_n
-R13
-R2
-R3
+R17
+R7
+R8
 !i122 43
-R0
-Z64 8/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/registrador_n.vhd
-Z65 F/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/registrador_n.vhd
+R1
+Z71 8/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/registrador_n.vhd
+Z72 F/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/registrador_n.vhd
 l0
 L36 1
 VT?>3PUE:K:?KP;k=7Pn?J3
 !s100 nZ9TMZfV7=cL8G[CVTO]Z1
-R6
-32
-R7
-!i10b 1
-R8
-Z66 !s90 -reportprogress|30|-work|work|/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/registrador_n.vhd|
-Z67 !s107 /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/registrador_n.vhd|
-!i113 0
 R11
-R12
+32
+R21
+!i10b 1
+R22
+Z73 !s90 -reportprogress|30|-work|work|/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/registrador_n.vhd|
+Z74 !s107 /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/registrador_n.vhd|
+!i113 0
+R25
+R16
 Acomportamental
-R2
-R3
+R7
+R8
 DEx4 work 13 registrador_n 0 22 T?>3PUE:K:?KP;k=7Pn?J3
 !i122 43
 l51
 L49 16
 VX1ZEjN^<7[nX?Dk__WYK21
 !s100 NJEJoUNzGSKQfC6FYC6Cz3
-R6
-32
-R7
-!i10b 1
-R8
-R66
-R67
-!i113 0
 R11
-R12
+32
+R21
+!i10b 1
+R22
+R73
+R74
+!i113 0
+R25
+R16
 Eunidade_controle
-Z68 w1676468735
-R2
-R3
-!i122 44
-R0
-Z69 8/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/unidade_controle.vhd
-Z70 F/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/unidade_controle.vhd
+Z75 w1676469939
+R7
+R8
+!i122 51
+R1
+Z76 8unidade_controle.vhd
+Z77 Funidade_controle.vhd
 l0
 L23 1
-VmH94fJR81dImP7[c8aS3G1
+V_JJkARN[JzMaBU50S5:4^2
 !s100 hE[8Pc?MI44<@EE25DzoE3
-R6
-32
-R7
-!i10b 1
-R8
-Z71 !s90 -reportprogress|30|-work|work|/home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/unidade_controle.vhd|
-Z72 !s107 /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/unidade_controle.vhd|
-!i113 0
 R11
-R12
+32
+Z78 !s110 1676469967
+!i10b 1
+Z79 !s108 1676469967.000000
+Z80 !s90 unidade_controle.vhd|
+Z81 !s107 unidade_controle.vhd|
+!i113 0
+R16
 Afsm
-R2
-R3
-DEx4 work 16 unidade_controle 0 22 mH94fJR81dImP7[c8aS3G1
-!i122 44
-l59
-L54 102
-VoFmh:`jOCFFlPoOebS[^m0
-!s100 OzXg_klQ@2WcFR@K4Xc^n3
-R6
-32
 R7
-!i10b 1
 R8
-R71
-R72
-!i113 0
+DEx4 work 16 unidade_controle 0 22 _JJkARN[JzMaBU50S5:4^2
+!i122 51
+l59
+L54 105
+VI9A2_@lAo0KKcLPglDU<23
+!s100 a8m0@l4Nz;SV3IGVJ:nS>0
 R11
-R12
+32
+R78
+!i10b 1
+R79
+R80
+R81
+!i113 0
+R16
