@@ -43,6 +43,8 @@ entity unidade_controle is
         perdeu       	: out std_logic; -- novo nome: errou -> perdeu
         pronto      	: out std_logic;
         contaTempo	    : out std_logic;
+        escreveM        : out std_logic;
+        seletor_leds    : out std_logic;
 		-- Sinais de depuracao 
 		db_estado   	: out std_logic_vector(3 downto 0);
 		db_timeout	    : out std_logic	
@@ -51,7 +53,8 @@ end entity;
 
 architecture fsm of unidade_controle is
     type t_estado is (inicial, inicializa_elem, inicio_rodada, ultima_rodada, proxima_rodada,
-  	                  espera, registra, compara, proximo, fim_erro, fim_certo, fim_timeout); -- novos estados para rodadas
+  	                  espera, registra, compara, proximo, fim_erro, fim_certo, fim_timeout,
+                      espera_escrita, escreve_jogada); -- novo estado para escrita
     signal Eatual, Eprox: t_estado;
 begin
 
@@ -73,12 +76,14 @@ begin
 								or (Eatual=inicializa_elem and espera_inicializacao = '0') else --iniciar -> pronto
         inicio_rodada   when  (Eatual=inicializa_elem and espera_inicializacao = '1') or Eatual=proxima_rodada else -- novo estado
 		espera          when  (Eatual=inicio_rodada) or (Eatual=proximo) or (Eatual = espera and jogada='0' and fimTempo='0') else -- mudanca na transicao que agora vem de inicio_rodada
-		fim_timeout		when  (Eatual=espera and fimTempo = '1') or (Eatual=fim_timeout and jogar='0') else -- iniciar -> jogar
+		fim_timeout		when  ((Eatual=espera or Eatual=espera_escrita) and fimTempo = '1') or (Eatual=fim_timeout and jogar='0') else -- iniciar -> jogar
         registra        when  (Eatual=espera and jogada='1') else 
         compara         when  Eatual=registra else
         proximo         when  Eatual=compara and fim_rodada='0' and igual = '1' else -- fim -> fim_rodada
         ultima_rodada   when  Eatual=compara and fim_rodada='1' and igual = '1' else -- fim -> fim_rodada / novo estado
-		proxima_rodada  when  Eatual=ultima_rodada and fim_jogo='0' else -- fim -> fim_jogo / novo estado
+		espera_escrita  when  Eatual=ultima_rodada and fim_jogo='0' else
+        escreve_jogada  when  Eatual=espera_escrita and jogada='1' and jogada='0' else
+        proxima_rodada  when  Eatual = escreve_jogada   else
 		fim_erro        when  (Eatual=compara and igual = '0') or (Eatual=fim_erro and jogar='0') else -- iniciar -> jogar
         fim_certo       when  (Eatual=ultima_rodada and fim_jogo='1')  or  (Eatual=fim_certo and jogar = '0') else -- igual = '1' foi suprimido da 1.a condicao + mudanca do estado inicial da transicao
         inicial;
@@ -86,7 +91,7 @@ begin
     -- logica de saída (maquina de Moore)
 	-- Modificada	
 	with Eatual select
-        zeraC_End <=    '1' when inicial | ultima_rodada | inicio_rodada | fim_certo | fim_erro | fim_timeout, -- novos estados; 
+        zeraC_End <=    '1' when inicial | inicio_rodada, -- novos estados; 
                         '0' when others;
 	
 	with Eatual select
@@ -97,34 +102,39 @@ begin
                         	'0' when others;
     	
 	with Eatual select
-        	registraR <=    '1' when registra,
+        	registraR <=    '1' when registra | espera_escrita,
                         	'0' when others;
 
-    	with Eatual select
-        	contaC_End <=   '1' when proximo,
-                        	'0' when others;
+    with Eatual select
+    	contaC_End <=   '1' when proximo | ultima_rodada,
+                    	'0' when others;
 						
 	with Eatual select 
 		contaC_Rod <=	'1' when proxima_rodada,
 				'0' when others;
-    	with Eatual select
-        	pronto <=       '1' when fim_certo | fim_erro | fim_timeout,
-                    		'0' when others;
-    
-    	with Eatual select
-        	ganhou <=      	'1' when fim_certo,
-                        	'0' when others;
+    with Eatual select
+        pronto <=   '1' when fim_certo | fim_erro | fim_timeout,
+                	'0' when others;
     
     with Eatual select
-        perdeu <=       '1' when fim_erro | fim_timeout,
-                        '0' when others;
+        ganhou <=   '1' when fim_certo,
+                    '0' when others;
+    
+    with Eatual select
+        perdeu <=   '1' when fim_erro | fim_timeout,
+                    '0' when others;
 								
 	with Eatual select
 			contaTempo <= 	'1' when espera | inicializa_elem,
 							'0' when others;
     with Eatual select
 			db_timeout <=	'1' when fim_timeout,
-								'0' when others;
+							'0' when others;
+
+    with Eatual select
+            escreveM <= '1' when escreve_jogada,
+                        '0' when others;
+
     -- saida de depuracao (db_estado)
     with Eatual select
         db_estado <= "0000" when inicial,           -- 0
@@ -136,9 +146,10 @@ begin
                      "0110" when proximo,           -- 6
 					 "0111" when ultima_rodada,     -- 7 Novo estado
 					 "1000" when proxima_rodada,    -- 8 Novo estado
-                     "1001" when fim_erro,          -- 9
-					 "1010" when fim_timeout,		-- A
+                     "1001" when espera_escrita,    -- 9
+					 "1010" when escreve_jogada,    -- A
+                     "1101" when fim_erro,          -- B
                      "1100" when fim_certo,         -- C
+                     "1101" when fim_timeout,       -- A
                      "1111" when others;            -- F
-
 end architecture fsm;

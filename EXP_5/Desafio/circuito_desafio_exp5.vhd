@@ -18,30 +18,30 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity circuito_jogo_base is -- novo nome de entidade
+entity circuito_desafio_exp5 is -- novo nome de entidade
     port (
         clock           	: in std_logic;
         reset           	: in std_logic;
         jogar       		: in std_logic; -- novo nome: iniciar -> jogar
         botoes        		: in std_logic_vector (3 downto 0); -- novo nome: chaves -> botoes
         leds           		: out std_logic_vector (3 downto 0);
-	pronto          	: out std_logic;
+		pronto          	: out std_logic;
         ganhou          	: out std_logic; -- novo nome: acertou -> ganhou
         perdeu           	: out std_logic;     
         db_clock                : out std_logic;
-	db_tem_jogada    	: out std_logic;
-	db_jogada_correta       : out std_logic; -- novo nome: db_igual -> db_jogada_correta
+		db_tem_jogada    	: out std_logic;
+		db_jogada_correta       : out std_logic; -- novo nome: db_igual -> db_jogada_correta
         db_enderecoIgualRodada  : out std_logic; -- nova saida
-	db_timeout		: out std_logic;
-	db_contagem     	: out std_logic_vector (6 downto 0);
+		db_timeout		: out std_logic;
+		db_contagem     	: out std_logic_vector (6 downto 0);
         db_memoria      	: out std_logic_vector (6 downto 0);
         db_jogadafeita 		: out std_logic_vector (6 downto 0);
-	db_rodada       	: out std_logic_vector (6 downto 0); -- nova saida
-	db_estado       	: out std_logic_vector (6 downto 0)               
+		db_rodada       	: out std_logic_vector (6 downto 0); -- nova saida
+		db_estado       	: out std_logic_vector (6 downto 0)               
     );
 end entity;
 
-architecture estrutural of circuito_jogo_base is -- componente alterado
+architecture estrutural of circuito_desafio_exp5 is -- componente alterado
     component fluxo_dados
         port (
 			clock        	    : in  std_logic;
@@ -54,6 +54,7 @@ architecture estrutural of circuito_jogo_base is -- componente alterado
 			registraR           : in std_logic;
 			chaves              : in  std_logic_vector (3 downto 0);
 			contaTempo	        : in std_logic; 
+			seletor_leds		: in std_logic;
 			igual               : out std_logic;
 			enderecoIgualRodada : out std_logic; -- novo sinal: saida do comparador endereco x rodada - Funcao: fim_rodada
 			fim_jogo     	 	: out std_logic; -- novo sinal: saida do contador de rodada
@@ -64,7 +65,8 @@ architecture estrutural of circuito_jogo_base is -- componente alterado
 			db_chaves    	 	: out std_logic_vector (3 downto 0);
 			db_rodada    		: out std_logic_vector (3 downto 0); -- novo sinal de depuracao
 			fimTempo	 		: out std_logic;
-			espera_inicializacao : out std_logic
+			espera_inicializacao : out std_logic;
+			leds					: out std_logic_vector (3 downto 0)
         );
     end component;
 	
@@ -77,7 +79,7 @@ architecture estrutural of circuito_jogo_base is -- componente alterado
 			fim_jogo       	: in std_logic; -- novo nome e funcao: fim -> fim_jogo, identifica momento em que a ultima rodada eh concluida
 			jogada      	: in std_logic;
 			igual       	: in std_logic;
-			fimTempo	: in std_logic;
+			fimTempo		: in std_logic;
 			fim_rodada      : in std_logic; -- novo sinal: identifica fim de uma rodada: contador antigo igual ao da rodada.
 			espera_inicializacao : in std_logic; --NOVO
 			-- Sinais de controle
@@ -90,7 +92,9 @@ architecture estrutural of circuito_jogo_base is -- componente alterado
 			ganhou       	: out std_logic; -- novo nome: acertou -> ganhou
 			perdeu       	: out std_logic; -- novo nome: errou -> perdeu
 			pronto      	: out std_logic;
-			contaTempo	: out std_logic;
+			contaTempo		: out std_logic;
+			escreveM		: out std_logic;
+			seletor_leds	: out std_logic;
 			-- Sinais de depuracao 
 			db_estado   	: out std_logic_vector(3 downto 0);
 			db_timeout	    : out std_logic
@@ -104,12 +108,14 @@ architecture estrutural of circuito_jogo_base is -- componente alterado
         );
     end component;
 
-	    signal db_mem_hex, db_cont_hex, db_jogada_hex, db_estado_hex, db_rodada_hex : std_logic_vector(3 downto 0) := "0000"; -- novo sinal
+	signal db_mem_hex, db_cont_hex, db_jogada_hex, db_estado_hex, db_rodada_hex : std_logic_vector(3 downto 0) := "0000"; -- novo sinal
     signal zeraC_End, contaC_End, zeraR, registraR, igual, fim_jogo, jogada_feita   : std_logic := '0'; -- novos nomes
 	signal zeraC_Rod, contaC_Rod    : std_logic; -- novos sinais
 	signal contaTempo, fimTempo 	: std_logic;
 	signal enderecoIgualRodada      : std_logic; -- Novo sinal intermediario
 	signal espera_inicializacao     : std_logic;
+	signal seletor_leds				: std_logic;
+	signal escreveM					: std_logic;
 begin
 
     fluxo_dadosFD: fluxo_dados -- Instanciacao modificada
@@ -119,11 +125,12 @@ begin
             contaC_End   	    =>  contaC_End,
             zeraC_Rod			=>  zeraC_Rod,
 			contaC_Rod			=>  contaC_Rod,
-			escreveM       	 	=>  '0',
+			escreveM       	 	=>  escreveM,
             zeraR       	    =>  zeraR,
             registraR   	    =>  registraR,
             chaves      	    =>  botoes,
 			contaTempo			=>  contaTempo,
+			seletor_leds 	=> seletor_leds,
 			espera_inicializacao => espera_inicializacao,
 			igual          		=>  igual,
             enderecoIgualRodada =>  enderecoIgualRodada,
@@ -134,7 +141,8 @@ begin
             db_memoria     		=>  db_mem_hex,
             db_chaves      		=>  db_jogada_hex,
 			db_rodada           =>  db_rodada_hex,
-			fimTempo			=>  fimTempo
+			fimTempo			=>  fimTempo,
+			leds => leds
         );
     --
 	
@@ -158,6 +166,8 @@ begin
             perdeu       => perdeu,
             pronto       => pronto,
             contaTempo	 => contaTempo,
+			escreveM	 => escreveM,
+			seletor_leds => seletor_leds,
 			db_estado    => db_estado_hex,
 			db_timeout	 => db_timeout,
 			espera_inicializacao => espera_inicializacao
@@ -200,10 +210,6 @@ begin
     --
     
     db_clock <= clock;
-	
-	with db_estado_hex select 
-		leds <= db_mem_hex    when "0001" ,
-		        db_jogada_hex when others;
 
     db_jogada_correta <= igual;
 	

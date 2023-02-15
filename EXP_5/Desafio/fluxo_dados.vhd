@@ -37,7 +37,8 @@ entity fluxo_dados is
 		zeraR         		: in  std_logic;
 		registraR           : in std_logic;
 		chaves              : in  std_logic_vector (3 downto 0);
-		contaTempo	        : in std_logic; 
+		contaTempo	        : in std_logic;
+		seletor_leds		  : in std_logic;
 		igual               : out std_logic;
 		enderecoIgualRodada : out std_logic; -- novo sinal: saida do comparador endereco x rodada - Funcao: fim_rodada
 		fim_jogo     	 	: out std_logic; -- novo sinal: saida do contador de rodada
@@ -49,7 +50,8 @@ entity fluxo_dados is
 		db_rodada    		: out std_logic_vector (3 downto 0); -- novo sinal de depuracao
 		fimTempo	 		: out std_logic;
 		-- Sinal de delay
-		espera_inicializacao : out std_logic
+		espera_inicializacao : out std_logic;
+		leds					: out std_logic_vector (3 downto 0)
 	);
 end entity;
 
@@ -274,4 +276,8 @@ begin
   db_tem_jogada <= s_chaveacionada;
   
   db_rodada <= s_rodada; -- novo sinal de depuracao
+  
+  with seletor_leds select 
+		leds <= s_dado    when '1',
+		        s_chaves when others;
 end architecture estrutural;
