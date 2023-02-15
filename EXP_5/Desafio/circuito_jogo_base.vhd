@@ -54,7 +54,6 @@ architecture estrutural of circuito_jogo_base is -- componente alterado
 			registraR           : in std_logic;
 			chaves              : in  std_logic_vector (3 downto 0);
 			contaTempo	        : in std_logic; 
-			seletor_leds		  : in std_logic;
 			igual               : out std_logic;
 			enderecoIgualRodada : out std_logic; -- novo sinal: saida do comparador endereco x rodada - Funcao: fim_rodada
 			fim_jogo     	 	: out std_logic; -- novo sinal: saida do contador de rodada
@@ -65,8 +64,7 @@ architecture estrutural of circuito_jogo_base is -- componente alterado
 			db_chaves    	 	: out std_logic_vector (3 downto 0);
 			db_rodada    		: out std_logic_vector (3 downto 0); -- novo sinal de depuracao
 			fimTempo	 		: out std_logic;
-			espera_inicializacao : out std_logic;
-			leds					: out std_logic_vector (3 downto 0)
+			espera_inicializacao : out std_logic
         );
     end component;
 	
@@ -95,8 +93,7 @@ architecture estrutural of circuito_jogo_base is -- componente alterado
 			contaTempo	: out std_logic;
 			-- Sinais de depuracao 
 			db_estado   	: out std_logic_vector(3 downto 0);
-			db_timeout	    : out std_logic;
-			seletor_leds	: out std_logic
+			db_timeout	    : out std_logic
         );
     end component;
 
@@ -113,7 +110,6 @@ architecture estrutural of circuito_jogo_base is -- componente alterado
 	signal contaTempo, fimTempo 	: std_logic;
 	signal enderecoIgualRodada      : std_logic; -- Novo sinal intermediario
 	signal espera_inicializacao     : std_logic;
-	signal seletor_leds				  : std_logic;
 begin
 
     fluxo_dadosFD: fluxo_dados -- Instanciacao modificada
@@ -128,7 +124,6 @@ begin
             registraR   	    =>  registraR,
             chaves      	    =>  botoes,
 			contaTempo			=>  contaTempo,
-				seletor_leds 	=> seletor_leds,
 			espera_inicializacao => espera_inicializacao,
 			igual          		=>  igual,
             enderecoIgualRodada =>  enderecoIgualRodada,
@@ -139,8 +134,7 @@ begin
             db_memoria     		=>  db_mem_hex,
             db_chaves      		=>  db_jogada_hex,
 			db_rodada           =>  db_rodada_hex,
-			fimTempo			=>  fimTempo,
-				leds => leds
+			fimTempo			=>  fimTempo
         );
     --
 	
@@ -166,8 +160,7 @@ begin
             contaTempo	 => contaTempo,
 			db_estado    => db_estado_hex,
 			db_timeout	 => db_timeout,
-			espera_inicializacao => espera_inicializacao,
-			seletor_leds => seletor_leds
+			espera_inicializacao => espera_inicializacao
         );
     --
 
@@ -207,6 +200,10 @@ begin
     --
     
     db_clock <= clock;
+	
+	with db_estado_hex select 
+		leds <= db_mem_hex    when "0001" ,
+		        db_jogada_hex when others;
 
     db_jogada_correta <= igual;
 	

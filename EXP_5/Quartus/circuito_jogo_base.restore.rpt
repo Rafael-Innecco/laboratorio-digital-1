@@ -1,5 +1,5 @@
 Restore Archived Project report for circuito_jogo_base
-Wed Feb 15 10:00:09 2023
+Wed Feb 15 10:04:46 2023
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------+
 ; Restore Archived Project Summary                                        ;
 +---------------------------------+---------------------------------------+
-; Restore Archived Project Status ; Successful - Wed Feb 15 10:00:09 2023 ;
+; Restore Archived Project Status ; Successful - Wed Feb 15 10:04:46 2023 ;
 ; Revision Name                   ; circuito_jogo_base                    ;
 ; Top-level Entity Name           ; circuito_jogo_base                    ;
 ; Family                          ; Cyclone V                             ;
@@ -47,13 +47,13 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------+
 ; Restore Archived Project Messages ;
 +-----------------------------------+
-Info: Successfully restored '/home/rafael/Documents/laboratorio-digital-1/EXP_5/exp5_T4BB3- atividade1.qar' into the '/home/rafael/Documents/laboratorio-digital-1/EXP_5/Quartus/' directory
+Info: Successfully restored '/home/rafael/Downloads/exp5_T4BB3-atividade2-final.qar' into the '/home/rafael/Documents/laboratorio-digital-1/EXP_5/Quartus/' directory
 Info: Generated report 'circuito_jogo_base.restore.rpt'
 Info (23030): Evaluation of Tcl script /home/rafael/intelFPGA_lite/22.1std/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 581 megabytes
-    Info: Processing ended: Wed Feb 15 10:00:09 2023
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Wed Feb 15 10:04:46 2023
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
 
@@ -63,6 +63,7 @@ Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
 ; File Name                ;
 +--------------------------+
 ; qar_info.json            ;
+; assignment_defaults.qdf  ;
 ; circuito_jogo_base.qpf   ;
 ; circuito_jogo_base.qsf   ;
 ; circuito_jogo_base.vhd   ;
@@ -76,7 +77,6 @@ Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
 ; ram_conteudo_jogadas.mif ;
 ; registrador_n.vhd        ;
 ; unidade_controle.vhd     ;
-; assignment_defaults.qdf  ;
 +--------------------------+
 
 

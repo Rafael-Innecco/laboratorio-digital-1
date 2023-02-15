@@ -45,8 +45,7 @@ entity unidade_controle is
         contaTempo	    : out std_logic;
 		-- Sinais de depuracao 
 		db_estado   	: out std_logic_vector(3 downto 0);
-		db_timeout	    : out std_logic;
-		seletor_leds	: out std_logic
+		db_timeout	    : out std_logic	
     );
 end entity;
 
@@ -121,14 +120,11 @@ begin
                         '0' when others;
 								
 	with Eatual select
-			contaTempo <= 	'1' when espera | inicializa_elem | fim_certo | fim_erro | fim_timeout,
+			contaTempo <= 	'1' when espera | inicializa_elem,
 							'0' when others;
     with Eatual select
 			db_timeout <=	'1' when fim_timeout,
 								'0' when others;
-	with Eatual select
-			seletor_leds	<= '1' when inicializa_elem,
-									'0' when others;
     -- saida de depuracao (db_estado)
     with Eatual select
         db_estado <= "0000" when inicial,           -- 0
