@@ -130,7 +130,7 @@ begin
     caso <= 3;
     wait until falling_edge(clk_in);
     jogar_in <= '1';
-    wait for 2000 * clockPeriod;
+    wait for 2200 * clockPeriod;
     jogar_in <= '0';
 
     -- Cenario de Teste - acerta as 4 primeiras jogadas e erra a 5a jogada

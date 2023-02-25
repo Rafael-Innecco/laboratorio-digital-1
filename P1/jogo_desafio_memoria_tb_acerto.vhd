@@ -122,19 +122,17 @@ begin
     wait for clockPeriod;
     rst_in <= '0';
 
+    -- espera para início dos testes
+    caso <= 2;
+    wait for 10 * clockPeriod;
 
     -- pulso do sinal de Iniciar (muda na borda de descida do clock)
-    caso <= 2;
+    caso <= 3;
     wait until falling_edge(clk_in);
     jogar_in <= '1';
-    wait until falling_edge(clk_in);
+    wait for 2200*clockPeriod;
     jogar_in <= '0';
     
-    -- espera para inicio dos testes
-    caso <= 3;
-    wait for 10*clockPeriod;
-    wait until falling_edge(clk_in);
-
     -- Cenario de Teste - acerta todas as jogadas
 
     ---- jogada #1 rodada #2 (chaves=0001 e 5 clocks de duracao)
