@@ -93,7 +93,7 @@ begin
     -- logica de saída (maquina de Moore)
 	-- Modificada	
 	with Eatual select
-        zeraC_End <=    '1' when inicial | inicio_rodada, -- novos estados; 
+        zeraC_End <=    '1' when inicial | inicio_rodada | fim_timeout | fim_erro, -- novos estados; 
                         '0' when others;
 	
 	with Eatual select
