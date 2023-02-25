@@ -66,7 +66,6 @@ architecture estrutural of fluxo_dados is
   signal s_chaves       	 : std_logic_vector(3 downto 0);
   signal zeraT          	 : std_logic;
   signal s_chaveacionada     : std_logic := '0';
-  signal zera_R_completo     : std_logic;
   signal doisQuintos		 : std_logic;
   
   component contador_163
@@ -232,12 +231,11 @@ begin
     );
 	
 	
-	zera_R_completo <= zeraR or (contaTempo and  doisQuintos);
 	registrador: registrador_n
 		generic map( N => 4)
 		port map (
 			clock  => clock,
-			clear  => zera_R_completo,
+			clear  => zeraR,
 			enable => registraR,
 			D      => chaves,
 			Q      => s_chaves
