@@ -122,6 +122,9 @@ begin
     wait for clockPeriod;
     rst_in <= '0';
 
+    -- espera um tempo (10 ciclos de clock)
+    caso <= 2;
+    wait for 10*clockPeriod;
 
     -- pulso do sinal de JOGAR (muda na borda de descida do clock)
     caso <= 2;
@@ -147,7 +150,7 @@ begin
  
     ---- jogada #2 rodada #2 (chaves=0010 e 7 clocks de duracao)
     caso <= 6;
-    botoes_in <= "0010";
+    botoes_in <= "0001";
     wait for 7*clockPeriod;
     botoes_in <= "0000";
     -- espera entre jogadas
@@ -163,7 +166,7 @@ begin
  
 	---- jogada #2 rodada #3 (chaves=0010 e 15 clocks de duracao)
     caso <= 8;
-    botoes_in <= "0010";
+    botoes_in <= "0001";
     wait for 15*clockPeriod;
     botoes_in <= "0000";
     ---- espera entre jogadas
@@ -171,7 +174,7 @@ begin
  
 	---- jogada #3 rodada #3 (chaves=0100 e 15 clocks de duracao)
     caso <= 9;
-    botoes_in <= "0100";
+    botoes_in <= "0001";
     wait for 15*clockPeriod;
     botoes_in <= "0000";
     ---- espera entre jogadas
@@ -187,7 +190,7 @@ begin
 	
 	---- jogada #2 rodada #4 (chaves=0001 e 15 clocks de duracao)
     caso <= 11;
-    botoes_in <= "0010";
+    botoes_in <= "0001";
     wait for 15*clockPeriod;
     botoes_in <= "0000";
     ---- espera entre jogadas

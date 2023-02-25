@@ -21,10 +21,10 @@ use ieee.std_logic_1164.all;
 use std.textio.all;
 
 -- entidade do testbench
-entity jogo_desafio_memoria_tb_timeout is
+entity jogo_desafio_memoria_tb_dois_jogos is
 end entity;
 
-architecture tb of jogo_desafio_memoria_tb_timeout is
+architecture tb of jogo_desafio_memoria_tb_dois_jogos is
 
   -- Componente a ser testado (Device Under Test -- DUT)
     component jogo_desafio_memoria
@@ -148,7 +148,7 @@ begin
  
     ---- jogada #2 rodada #2 (chaves=0010 e 7 clocks de duracao)
     caso <= 6;
-    botoes_in <= "0001";
+    botoes_in <= "0010";
     wait for 7*clockPeriod;
     botoes_in <= "0000";
     -- espera entre jogadas
@@ -164,7 +164,7 @@ begin
  
 	---- jogada #2 rodada #3 (chaves=0010 e 15 clocks de duracao)
     caso <= 8;
-    botoes_in <= "0001";
+    botoes_in <= "0010";
     wait for 15*clockPeriod;
     botoes_in <= "0000";
     ---- espera entre jogadas
@@ -172,7 +172,7 @@ begin
  
 	---- jogada #3 rodada #3 (chaves=0100 e 15 clocks de duracao)
     caso <= 9;
-    botoes_in <= "0001";
+    botoes_in <= "0100";
     wait for 15*clockPeriod;
     botoes_in <= "0000";
     ---- espera entre jogadas
@@ -188,7 +188,7 @@ begin
 	
 	---- jogada #2 rodada #4 (chaves=0010 e 15 clocks de duracao)
     caso <= 11;
-    botoes_in <= "0001";
+    botoes_in <= "0010";
     wait for 15*clockPeriod;
     botoes_in <= "0000";
     ---- espera entre jogadas
