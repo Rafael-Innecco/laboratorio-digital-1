@@ -112,7 +112,7 @@ begin
   stimulus: process is
   begin
 
- -- inicio da simulacao
+    -- inicio da simulacao
     caso <= 0;
     assert false report "inicio da simulacao" severity note;
     keep_simulating <= '1';  -- inicia geracao do sinal de clock
@@ -123,38 +123,44 @@ begin
     wait for clockPeriod;
     rst_in <= '0';
 
-
-    -- pulso do sinal de Iniciar (muda na borda de descida do clock)
+    -- espera para início dos testes (10 ciclos de clock)
     caso <= 2;
+    wait for 10*clockPeriod;
+
+    -- pulso do sinal de JOGAR (muda na borda de descida do clock)
+    caso <= 3;
     wait until falling_edge(clk_in);
     jogar_in <= '1';
-    wait until falling_edge(clk_in);
+    wait for 2200 * clockPeriod;
     jogar_in <= '0';
-    
-    -- espera para inicio dos testes
-    caso <= 3;
-    wait for 10*clockPeriod;
-    wait until falling_edge(clk_in);
 
     -- Cenario de Teste - acerta as 4 primeiras jogadas e erra a 5a jogada
 
-    ---- jogada #1 rodada #2 (chaves=0001 e 5 clocks de duracao)
-    caso <= 5;
+    ---- jogada #1 rodada #1 (chaves=0001 e 5 clocks de duracao)
+    caso <= 4;
     botoes_in <= "0001";
     wait for 5*clockPeriod;
     botoes_in <= "0000";
     ---- espera entre jogadas
     wait for 10*clockPeriod;
  
-    ---- jogada #2 rodada #2 (chaves=0010 e 7 clocks de duracao)
-    caso <= 6;
+    ---- guarda valor na memória (chaves=0001 e 7 clocks de duracao)
+    caso <= 5;
     botoes_in <= "0001";
     wait for 7*clockPeriod;
     botoes_in <= "0000";
     -- espera entre jogadas
     wait for 10*clockPeriod;  
 
-    ---- jogada #1 rodada #3 (chaves=0001 e 15 clocks de duracao)
+    ---- jogada #1 rodada #2 (chaves=0001 e 15 clocks de duracao)
+    caso <= 6;
+    botoes_in <= "0001";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+ 
+	---- jogada #2 rodada #2 (chaves=0001 e 15 clocks de duracao)
     caso <= 7;
     botoes_in <= "0001";
     wait for 15*clockPeriod;
@@ -162,15 +168,15 @@ begin
     ---- espera entre jogadas
     wait for 10*clockPeriod;
  
-	---- jogada #2 rodada #3 (chaves=0010 e 15 clocks de duracao)
+	---- guarda valor na memória (chaves=0001 e 15 clocks de duracao)
     caso <= 8;
     botoes_in <= "0001";
     wait for 15*clockPeriod;
     botoes_in <= "0000";
     ---- espera entre jogadas
     wait for 10*clockPeriod;
- 
-	---- jogada #3 rodada #3 (chaves=0100 e 15 clocks de duracao)
+	
+	---- jogada #1 rodada #3 (chaves=0001 e 15 clocks de duracao)
     caso <= 9;
     botoes_in <= "0001";
     wait for 15*clockPeriod;
@@ -178,7 +184,7 @@ begin
     ---- espera entre jogadas
     wait for 10*clockPeriod;
 	
-	---- jogada #1 rodada #4 (chaves=0001 e 15 clocks de duracao)
+	---- jogada #2 rodada #3 (chaves=0001 e 15 clocks de duracao)
     caso <= 10;
     botoes_in <= "0001";
     wait for 15*clockPeriod;
@@ -186,20 +192,41 @@ begin
     ---- espera entre jogadas
     wait for 10*clockPeriod;
 	
-	---- jogada #2 rodada #4 (chaves=0010 e 15 clocks de duracao)
+	---- jogada #3 rodada #3 (chaves=0001 e 15 clocks de duracao)
     caso <= 11;
     botoes_in <= "0001";
     wait for 15*clockPeriod;
     botoes_in <= "0000";
     ---- espera entre jogadas
     wait for 10*clockPeriod;
-	
-	---- jogada #2 rodada #4 (timeout: 200.000 clocks de duracao)
+
+    ---- guarda valor na memória (chaves=0001 e 15 clocks de duracao)
     caso <= 12;
-    wait for 5000*clockPeriod;
-    ---- espera timeout
+    botoes_in <= "0001";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
     wait for 10*clockPeriod;
 	
+	---- jogada #1 rodada #4 (chaves=0001 e 15 clocks de duracao)
+    caso <= 13;
+    botoes_in <= "0001";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+	
+	---- jogada #2 rodada #4 (jogada errada: chaves=0010 e 15 clocks de duracao)
+    caso <= 14;
+    botoes_in <= "0001";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --espera por timeout
+    caso <= 15;
+    wait for 5100*clockPeriod;
  
     ---- final do testbench
     assert false report "fim da simulacao" severity note;
