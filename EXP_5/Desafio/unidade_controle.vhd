@@ -14,6 +14,8 @@
 --  Data        Versao  Autor           Descricao
 --  01/02/2023  1.0     Rafael Innecco  Versão inicial
 --  08/02/2023  1.1     Rafael Innecco  Versao desafio
+-- 14/02/2023   1.2     João Arroyo     Versão exp_5
+-- 15/02/2023   1.2.1   Rafaeç Innecco  Versão desafio exp_5
 --------------------------------------------------------------------
 --
 
