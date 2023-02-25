@@ -21,13 +21,13 @@ use ieee.std_logic_1164.all;
 use std.textio.all;
 
 -- entidade do testbench
-entity circuito_desafio_exp5_tb_erro is
+entity jogo_desafio_memoria_tb_erro is
 end entity;
 
-architecture tb of circuito_desafio_exp5_tb_erro is
+architecture tb of jogo_desafio_memoria_tb_erro is
 
   -- Componente a ser testado (Device Under Test -- DUT)
-  component circuito_desafio_exp5
+  component jogo_desafio_memoria
     port (
         clock           	      : in std_logic;
         reset           		    : in std_logic;
@@ -82,7 +82,7 @@ begin
   clk_in <= (not clk_in) and keep_simulating after clockPeriod/2;
   
   ---- DUT para Simulacao
-  dut: circuito_desafio_exp5
+  dut: jogo_desafio_memoria
        port map
        (
           clock          		  => clk_in,

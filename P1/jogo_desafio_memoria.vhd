@@ -18,7 +18,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity circuito_desafio_exp5 is -- novo nome de entidade
+entity jogo_desafio_memoria is -- novo nome de entidade
     port (
         clock           	: in std_logic;
         reset           	: in std_logic;
@@ -41,7 +41,7 @@ entity circuito_desafio_exp5 is -- novo nome de entidade
     );
 end entity;
 
-architecture estrutural of circuito_desafio_exp5 is -- componente alterado
+architecture estrutural of jogo_desafio_memoria is -- componente alterado
     component fluxo_dados
         port (
 			clock        	    : in  std_logic;

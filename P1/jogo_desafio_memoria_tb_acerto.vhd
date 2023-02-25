@@ -21,27 +21,27 @@ use ieee.std_logic_1164.all;
 use std.textio.all;
 
 -- entidade do testbench
-entity circuito_desafio_exp5_tb_acerto is
+entity jogo_desafio_memoria_tb_acerto is
 end entity;
 
-architecture tb of circuito_desafio_exp5_tb_acerto is
+architecture tb of jogo_desafio_memoria_tb_acerto is
 
   -- Componente a ser testado (Device Under Test -- DUT)
-  component circuito_desafio_exp5
+  component jogo_desafio_memoria
     port (
-        clock           	      : in std_logic;
+        clock           	        : in std_logic;
         reset           		    : in std_logic;
         jogar       		        : in std_logic; -- novo nome: iniciar -> jogar
-        botoes        		      : in std_logic_vector (3 downto 0); -- novo nome: chaves -> botoes
+        botoes          		    : in std_logic_vector (3 downto 0); -- novo nome: chaves -> botoes
         leds           			    : out std_logic_vector (3 downto 0);
-		    pronto          		    : out std_logic;
+		pronto          		    : out std_logic;
         ganhou          		    : out std_logic; -- novo nome: acertou -> ganhou
         perdeu           		    : out std_logic;     
-        db_clock                : out std_logic;
+        db_clock                    : out std_logic;
         db_tem_jogada    		    : out std_logic;
-        db_jogada_correta       : out std_logic; -- novo nome: db_igual -> db_jogada_correta
-        db_enderecoIgualRodada  : out std_logic; -- nova saida
-        db_timeout				      : out std_logic;
+        db_jogada_correta           : out std_logic; -- novo nome: db_igual -> db_jogada_correta
+        db_enderecoIgualRodada      : out std_logic; -- nova saida
+        db_timeout				    : out std_logic;
         db_contagem     		    : out std_logic_vector (6 downto 0);
         db_memoria      		    : out std_logic_vector (6 downto 0);
         db_jogadafeita 			    : out std_logic_vector (6 downto 0);
@@ -82,7 +82,7 @@ begin
   clk_in <= (not clk_in) and keep_simulating after clockPeriod/2;
   
   ---- DUT para Simulacao
-  dut: circuito_desafio_exp5
+  dut: jogo_desafio_memoria
        port map
        (
           clock          		  => clk_in,
