@@ -34,3 +34,35 @@ run -all
 #    Time: 0 ns  Iteration: 0  Instance: /circuito_desafio_exp5_tb_erro/dut/fluxo_dadosFD/memoria
 # ** Note: fim da simulacao
 #    Time: 43900 ns  Iteration: 0  Instance: /circuito_desafio_exp5_tb_erro
+vsim work.circuito_desafio_exp5_tb_erro -voptargs=+acc
+# End time: 11:13:18 on Feb 15,2023, Elapsed time: 0:06:18
+# Errors: 0, Warnings: 1
+# vsim work.circuito_desafio_exp5_tb_erro -voptargs="+acc" 
+# Start time: 11:13:18 on Feb 15,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in architecture body "unidade_controle(fsm)".
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.circuito_desafio_exp5_tb_erro(tb)#1
+# Loading work.circuito_desafio_exp5(estrutural)#1
+# Loading ieee.numeric_std(body)
+# Loading ieee.math_real(body)
+# Loading work.fluxo_dados(estrutural)#1
+# Loading work.contador_163(comportamental)#1
+# Loading work.comparador_85(dataflow)#1
+# Loading work.ram_16x4(ram_modelsim)#1
+# Loading work.registrador_n(comportamental)#1
+# Loading work.edge_detector(rtl)#1
+# Loading work.contador_m(comportamental)#1
+# Loading work.unidade_controle(fsm)#1
+# Loading work.hexa7seg(comportamental)#1
+do /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/wave_desafio_erro.do
+run -all
+# ** Note: inicio da simulacao
+#    Time: 0 ns  Iteration: 0  Instance: /circuito_desafio_exp5_tb_erro
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /circuito_desafio_exp5_tb_erro/dut/fluxo_dadosFD/memoria
+# ** Note: fim da simulacao
+#    Time: 43900 ns  Iteration: 0  Instance: /circuito_desafio_exp5_tb_erro
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/wave_desafio_erro.do

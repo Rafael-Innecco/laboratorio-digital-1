@@ -45,6 +45,7 @@ R3
 R4
 n@_opt1
 R5
+R1
 T_opt2
 !s110 1676319923
 V0n5LgV[0^L<>1WKH<k`C^1
@@ -629,7 +630,7 @@ Eunidade_controle
 Z72 w1676321207
 R8
 R9
-!i122 92
+!i122 93
 R1
 Z73 8unidade_controle.vhd
 Z74 Funidade_controle.vhd
@@ -639,9 +640,9 @@ VQ`gTTo2Q[9VJzY1]Ec[CF3
 !s100 @S[]JCNZRIUUH;Q7`8jg:3
 R13
 32
-Z75 !s110 1676321217
+Z75 !s110 1676468131
 !i10b 1
-Z76 !s108 1676321217.000000
+Z76 !s108 1676468131.000000
 Z77 !s90 unidade_controle.vhd|
 Z78 !s107 unidade_controle.vhd|
 !i113 0
@@ -649,12 +650,12 @@ R17
 Afsm
 R8
 R9
-DEx4 work 16 unidade_controle 0 22 Q`gTTo2Q[9VJzY1]Ec[CF3
-!i122 92
+Z79 DEx4 work 16 unidade_controle 0 22 Q`gTTo2Q[9VJzY1]Ec[CF3
+!i122 93
 l56
-L52 93
-VHYUNG<=B4zN4Zf5g`DhmV1
-!s100 mX<5B9fPfgn^MQA3W2T8h2
+Z80 L52 93
+Z81 VHYUNG<=B4zN4Zf5g`DhmV1
+Z82 !s100 mX<5B9fPfgn^MQA3W2T8h2
 R13
 32
 R75

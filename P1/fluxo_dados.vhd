@@ -279,5 +279,5 @@ begin
   
   with seletor_leds select 
 		leds <= s_dado    when '1',
-		        s_chaves when others;
+		        chaves when others;
 end architecture estrutural;

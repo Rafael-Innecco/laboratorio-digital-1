@@ -118,3 +118,5 @@ set_global_assignment -name VHDL_FILE contador_m.vhd
 set_global_assignment -name VHDL_FILE contador_163.vhd
 set_global_assignment -name VHDL_FILE comparador_85.vhd
 set_global_assignment -name VHDL_FILE circuito_jogo_base.vhd
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
