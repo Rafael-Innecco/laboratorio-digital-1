@@ -97,7 +97,7 @@ begin
                         '0' when others;
 	
 	with Eatual select
-		zeraC_Rod <=    '1' when fim_timeout | fim_erro | fim_certo, 
+		zeraC_Rod <=    '1' when fim_timeout | fim_erro | fim_certo | inicial, 
 				'0' when others;
     	with Eatual select
         	zeraR <=        '1' when inicial | inicializa_elem,
