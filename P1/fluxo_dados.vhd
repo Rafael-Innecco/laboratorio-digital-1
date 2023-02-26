@@ -230,7 +230,7 @@ begin
        dado_saida   => s_dado
     );
 	
-	
+	--Antigo: zeraR_completo <= zeraR or (contaTempo and doisQuintos)
 	registrador: registrador_n
 		generic map( N => 4)
 		port map (

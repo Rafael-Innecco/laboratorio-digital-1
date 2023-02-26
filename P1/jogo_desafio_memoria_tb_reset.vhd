@@ -21,10 +21,10 @@ use ieee.std_logic_1164.all;
 use std.textio.all;
 
 -- entidade do testbench
-entity jogo_desafio_memoria_tb_dois_jogos is
+entity jogo_desafio_memoria_tb_reset is
 end entity;
 
-architecture tb of jogo_desafio_memoria_tb_dois_jogos is
+architecture tb of jogo_desafio_memoria_tb_reset is
 
   -- Componente a ser testado (Device Under Test -- DUT)
     component jogo_desafio_memoria
@@ -152,83 +152,47 @@ begin
     -- espera entre jogadas
     wait for 10*clockPeriod;  
 
-    ---- jogada #1 rodada #2 (chaves=0001 e 15 clocks de duracao)
+    -- gera pulso de reset (1 periodo de clock)
     caso <= 6;
-    botoes_in <= "0001";
-    wait for 15*clockPeriod;
-    botoes_in <= "0000";
-    ---- espera entre jogadas
-    wait for 10*clockPeriod;
- 
-	---- jogada #2 rodada #2 (chaves=0001 e 15 clocks de duracao)
-    caso <= 7;
-    botoes_in <= "0001";
-    wait for 15*clockPeriod;
-    botoes_in <= "0000";
-    ---- espera entre jogadas
-    wait for 10*clockPeriod;
- 
-	---- guarda valor na memória (chaves=0001 e 15 clocks de duracao)
-    caso <= 8;
-    botoes_in <= "0001";
-    wait for 15*clockPeriod;
-    botoes_in <= "0000";
-    ---- espera entre jogadas
-    wait for 10*clockPeriod;
+    rst_in <= '1';
+    wait for clockPeriod;
+    rst_in <= '0';
 	
-	---- jogada #1 rodada #3 (chaves=0001 e 15 clocks de duracao)
+    -- espera para início do segundo jogo (10 ciclos de clock)
+    caso <= 7;
+    wait for 10*clockPeriod;
+
+	-- Início novo jogo
+    caso <= 8;
+	wait until falling_edge(clk_in);
+	jogar_in <= '1';
+    wait for 2000*clockPeriod;
+	jogar_in <= '0';
+
+   ---- jogada #1 rodada #1 (chaves=0001 e 5 clocks de duracao)
     caso <= 9;
     botoes_in <= "0001";
-    wait for 15*clockPeriod;
+    wait for 5*clockPeriod;
     botoes_in <= "0000";
     ---- espera entre jogadas
     wait for 10*clockPeriod;
-	
-	---- jogada #2 rodada #3 (chaves=0001 e 15 clocks de duracao)
+ 
+    ---- guarda valor na memória (chaves=0001 e 7 clocks de duracao)
     caso <= 10;
     botoes_in <= "0001";
-    wait for 15*clockPeriod;
+    wait for 7*clockPeriod;
     botoes_in <= "0000";
-    ---- espera entre jogadas
-    wait for 10*clockPeriod;
-	
-	---- jogada #3 rodada #3 (chaves=0001 e 15 clocks de duracao)
-    caso <= 11;
-    botoes_in <= "0001";
-    wait for 15*clockPeriod;
-    botoes_in <= "0000";
-    ---- espera entre jogadas
-    wait for 10*clockPeriod;
-
-    ---- guarda valor na memória (chaves=0001 e 15 clocks de duracao)
-    caso <= 12;
-    botoes_in <= "0001";
-    wait for 15*clockPeriod;
-    botoes_in <= "0000";
-    ---- espera entre jogadas
-    wait for 10*clockPeriod;
-	
-	---- jogada #1 rodada #4 (chaves=0001 e 15 clocks de duracao)
-    caso <= 13;
-    botoes_in <= "0001";
-    wait for 15*clockPeriod;
-    botoes_in <= "0000";
-    ---- espera entre jogadas
-    wait for 10*clockPeriod;
-	
-	---- jogada #2 rodada #4 (jogada errada: chaves=0010 e 15 clocks de duracao)
-    caso <= 14;
-    botoes_in <= "0010";
-    wait for 15*clockPeriod;
-    botoes_in <= "0000";
-    ---- espera entre jogadas
-    wait for 10*clockPeriod;
-
-    -- Espera entre jogos
-    caso <= 15;
-    wait for 10*clockPeriod;
-	
+    -- espera entre jogadas
+    wait for 10*clockPeriod;	
  
+	---- jogada #1 rodada #2 (erro: chaves=0010 e 5 clocks de duracao)
+    caso <= 11;
+    botoes_in <= "0010";
+    wait for 5*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+	
     ---- final do testbench
     assert false report "fim da simulacao" severity note;
     keep_simulating <= '0';
