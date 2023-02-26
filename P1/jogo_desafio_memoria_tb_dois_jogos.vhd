@@ -227,6 +227,111 @@ begin
     -- Espera entre jogos
     caso <= 15;
     wait for 10*clockPeriod;
+
+    -- pulso do sinal de JOGAR (muda na borda de descida do clock)
+    caso <= 16;
+    wait until falling_edge(clk_in);
+    jogar_in <= '1';
+    wait for 2200 * clockPeriod;
+    jogar_in <= '0';
+
+    -- Cenario de Teste - acerta as 4 primeiras jogadas e erra a 5a jogada
+
+    ---- jogada #1 rodada #1 (chaves=0001 e 5 clocks de duracao)
+    caso <= 17;
+    botoes_in <= "0001";
+    wait for 5*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+ 
+    ---- guarda valor na memória (chaves=0001 e 7 clocks de duracao)
+    caso <= 18;
+    botoes_in <= "0001";
+    wait for 7*clockPeriod;
+    botoes_in <= "0000";
+    -- espera entre jogadas
+    wait for 10*clockPeriod;  
+
+    ---- jogada #1 rodada #2 (chaves=0001 e 15 clocks de duracao)
+    caso <= 19;
+    botoes_in <= "0001";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+ 
+	---- jogada #2 rodada #2 (chaves=0001 e 15 clocks de duracao)
+    caso <= 20;
+    botoes_in <= "0001";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+ 
+	---- guarda valor na memória (chaves=0001 e 15 clocks de duracao)
+    caso <= 21;
+    botoes_in <= "0001";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+	
+	---- jogada #1 rodada #3 (chaves=0001 e 15 clocks de duracao)
+    caso <= 22;
+    botoes_in <= "0001";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+	
+	---- jogada #2 rodada #3 (chaves=0001 e 15 clocks de duracao)
+    caso <= 23;
+    botoes_in <= "0001";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+	
+	---- jogada #3 rodada #3 (chaves=0001 e 15 clocks de duracao)
+    caso <= 24;
+    botoes_in <= "0001";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    ---- guarda valor na memória (chaves=0001 e 15 clocks de duracao)
+    caso <= 25;
+    botoes_in <= "0001";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+	
+	---- jogada #1 rodada #4 (chaves=0001 e 15 clocks de duracao)
+    caso <= 26;
+    botoes_in <= "0001";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+	
+	---- jogada #2 rodada #4 (jogada errada: chaves=0010 e 15 clocks de duracao)
+    caso <= 27;
+    botoes_in <= "0001";
+    wait for 15*clockPeriod;
+    botoes_in <= "0000";
+    ---- espera entre jogadas
+    wait for 10*clockPeriod;
+
+    --espera por timeout
+    caso <= 28;
+    wait for 5100*clockPeriod;
+ 
+    ---- final do testbench
+    assert false report "fim da simulacao" severity note;
+    keep_simulating <= '0';
 	
  
     ---- final do testbench
