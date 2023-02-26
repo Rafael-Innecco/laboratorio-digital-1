@@ -1,0 +1,76 @@
+# Copyright (C) 2020  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+
+# Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+# File: C:\Users\jparr\ProjetosQuartus\P1\jogo_desafio_memoria_pinPlanner.csv
+# Generated on: Sun Feb 26 11:22:16 2023
+
+# Note: The column header names should not be changed if you wish to import this .csv file into the Quartus Prime software.
+
+To,Direction,Location,I/O Bank,VREF Group,Fitter Location,I/O Standard,Reserved,Current Strength,Slew Rate,Differential Pair,Transceiver Analog Settings Protocol,VCCR_GXB/VCCT_GXB Voltage,Transceiver I/O Pin Termination,Transceiver Dedicated Refclk Pin Termination,Transmitter Common Mode Driver Voltage,Transmitter Slew Rate Control,Transmitter Differential Output Voltage,Receiver Buffer Common Mode Voltage,Strict Preservation
+botoes[0],Input,PIN_R22,5A,B5A_N0,PIN_M6,,,,,,,,,,,,,,
+botoes[1],Input,PIN_T22,5A,B5A_N0,PIN_Y11,,,,,,,,,,,,,,
+botoes[2],Input,PIN_N19,5B,B5B_N0,PIN_AA13,,,,,,,,,,,,,,
+botoes[3],Input,PIN_P19,5A,B5A_N0,PIN_R9,,,,,,,,,,,,,,
+clock,Input,PIN_N16,5B,B5B_N0,PIN_M16,,,,,,,,,,,,,,
+db_clock,Output,PIN_AA2,2A,B2A_N0,PIN_P16,,,,,,,,,,,,,,
+db_contagem[0],Output,PIN_U21,4A,B4A_N0,PIN_U10,,,,,,,,,,,,,,
+db_contagem[1],Output,PIN_V21,4A,B4A_N0,PIN_V6,,,,,,,,,,,,,,
+db_contagem[2],Output,PIN_W22,4A,B4A_N0,PIN_M7,,,,,,,,,,,,,,
+db_contagem[3],Output,PIN_W21,4A,B4A_N0,PIN_R5,,,,,,,,,,,,,,
+db_contagem[4],Output,PIN_Y22,4A,B4A_N0,PIN_U11,,,,,,,,,,,,,,
+db_contagem[5],Output,PIN_Y21,4A,B4A_N0,PIN_AA7,,,,,,,,,,,,,,
+db_contagem[6],Output,PIN_AA22,4A,B4A_N0,PIN_R6,,,,,,,,,,,,,,
+db_enderecoIgualRodada,Output,PIN_Y3,2A,B2A_N0,PIN_N9,,,,,,,,,,,,,,
+db_estado[0],Output,PIN_N9,3B,B3B_N0,PIN_U7,,,,,,,,,,,,,,
+db_estado[1],Output,PIN_M8,3B,B3B_N0,PIN_Y15,,,,,,,,,,,,,,
+db_estado[2],Output,PIN_T14,4A,B4A_N0,PIN_R11,,,,,,,,,,,,,,
+db_estado[3],Output,PIN_P14,4A,B4A_N0,PIN_U13,,,,,,,,,,,,,,
+db_estado[4],Output,PIN_C1,2A,B2A_N0,PIN_Y9,,,,,,,,,,,,,,
+db_estado[5],Output,PIN_C2,2A,B2A_N0,PIN_U8,,,,,,,,,,,,,,
+db_estado[6],Output,PIN_W19,4A,B4A_N0,PIN_T9,,,,,,,,,,,,,,
+db_jogada_correta,Output,PIN_W2,2A,B2A_N0,PIN_Y10,,,,,,,,,,,,,,
+db_jogadafeita[0],Output,PIN_Y19,4A,B4A_N0,PIN_V9,,,,,,,,,,,,,,
+db_jogadafeita[1],Output,PIN_AB17,4A,B4A_N0,PIN_AB7,,,,,,,,,,,,,,
+db_jogadafeita[2],Output,PIN_AA10,3B,B3B_N0,PIN_M8,,,,,,,,,,,,,,
+db_jogadafeita[3],Output,PIN_Y14,4A,B4A_N0,PIN_AB8,,,,,,,,,,,,,,
+db_jogadafeita[4],Output,PIN_V14,4A,B4A_N0,PIN_AB5,,,,,,,,,,,,,,
+db_jogadafeita[5],Output,PIN_AB22,4A,B4A_N0,PIN_V13,,,,,,,,,,,,,,
+db_jogadafeita[6],Output,PIN_AB21,4A,B4A_N0,PIN_AB10,,,,,,,,,,,,,,
+db_memoria[0],Output,PIN_AA20,4A,B4A_N0,PIN_P8,,,,,,,,,,,,,,
+db_memoria[1],Output,PIN_AB20,4A,B4A_N0,PIN_P7,,,,,,,,,,,,,,
+db_memoria[2],Output,PIN_AA19,4A,B4A_N0,PIN_AA1,,,,,,,,,,,,,,
+db_memoria[3],Output,PIN_AA18,4A,B4A_N0,PIN_P6,,,,,,,,,,,,,,
+db_memoria[4],Output,PIN_AB18,4A,B4A_N0,PIN_U6,,,,,,,,,,,,,,
+db_memoria[5],Output,PIN_AA17,4A,B4A_N0,PIN_W8,,,,,,,,,,,,,,
+db_memoria[6],Output,PIN_U22,4A,B4A_N0,PIN_AA9,,,,,,,,,,,,,,
+db_rodada[0],Output,PIN_Y16,4A,B4A_N0,PIN_AB11,,,,,,,,,,,,,,
+db_rodada[1],Output,PIN_W16,4A,B4A_N0,PIN_U12,,,,,,,,,,,,,,
+db_rodada[2],Output,PIN_Y17,4A,B4A_N0,PIN_M9,,,,,,,,,,,,,,
+db_rodada[3],Output,PIN_V16,4A,B4A_N0,PIN_P12,,,,,,,,,,,,,,
+db_rodada[4],Output,PIN_U17,4A,B4A_N0,PIN_R12,,,,,,,,,,,,,,
+db_rodada[5],Output,PIN_V18,4A,B4A_N0,PIN_R10,,,,,,,,,,,,,,
+db_rodada[6],Output,PIN_V19,4A,B4A_N0,PIN_T10,,,,,,,,,,,,,,
+db_tem_jogada,Output,PIN_AA1,2A,B2A_N0,PIN_AA10,,,,,,,,,,,,,,
+db_timeout,Output,PIN_N2,2A,B2A_N0,PIN_AB6,,,,,,,,,,,,,,
+ganhou,Output,PIN_G11,7A,B7A_N0,PIN_T7,,,,,,,,,,,,,,
+jogar,Input,PIN_C16,7A,B7A_N0,PIN_R7,,,,,,,,,,,,,,
+leds[0],Output,PIN_A15,7A,B7A_N0,PIN_AA12,,,,,,,,,,,,,,
+leds[1],Output,PIN_L8,7A,B7A_N0,PIN_W9,,,,,,,,,,,,,,
+leds[2],Output,PIN_B15,7A,B7A_N0,PIN_N6,,,,,,,,,,,,,,
+leds[3],Output,PIN_E14,7A,B7A_N0,PIN_T8,,,,,,,,,,,,,,
+perdeu,Output,PIN_J18,7A,B7A_N0,PIN_AA8,,,,,,,,,,,,,,
+pronto,Output,PIN_J11,7A,B7A_N0,PIN_N8,,,,,,,,,,,,,,
+reset,Input,PIN_B16,7A,B7A_N0,PIN_V10,,,,,,,,,,,,,,
