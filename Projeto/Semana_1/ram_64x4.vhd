@@ -35,10 +35,10 @@ entity ram_64x4 is
        ce           : in  std_logic;
        dado_saida   : out std_logic_vector(3 downto 0)
     );
-end entity ram_16x4;
+end entity ram_64x4;
 
 -- Dados iniciais em arquivo MIF (para sintese com Intel Quartus Prime) 
-architecture ram_mif of ram_16x4 is
+architecture ram_mif of ram_64x4 is
   type   arranjo_memoria is array(0 to 63) of std_logic_vector(3 downto 0);
   signal memoria : arranjo_memoria;
   
@@ -68,25 +68,21 @@ begin
 end architecture ram_mif;
 
 -- Dados iniciais (para simulacao com Modelsim) 
-architecture ram_modelsim of ram_16x4 is
+architecture ram_modelsim of ram_64x4 is
   type   arranjo_memoria is array(0 to 63) of std_logic_vector(3 downto 0);
   signal memoria : arranjo_memoria := (
-                                        "0001",
-                                        "0010",
-                                        "0100",
-                                        "1000",
-                                        "0100",
-                                        "0010",
-                                        "0001",
-                                        "0001",
-                                        "0010",
-                                        "0010",
-                                        "0100",
-                                        "0100",
-                                        "1000",
-                                        "1000",
-                                        "0001",
-                                        "0100" );
+                                        "0001", "0010", "0100", "1000", "0100", "0010",
+                                        "0001", "0010", "0100", "1000", "0100", "0010",
+                                        "0001", "0010", "0100", "1000", "0100", "0010",
+                                        "0001", "0010", "0100", "1000", "0100", "0010",
+                                        "0001", "0010", "0100", "1000", "0100", "0010",
+                                        "0001", "0010", "0100", "1000", "0100", "0010",
+                                        "0001", "0010", "0100", "1000", "0100", "0010",
+                                        "0001", "0010", "0100", "1000", "0100", "0010",
+                                        "0001", "0010", "0100", "1000", "0100", "0010",
+                                        "0001", "0010", "0100", "1000", "0100", "0010",
+                                        "0001", "0010", "0100", "1000"
+                                        );
   
 begin
 

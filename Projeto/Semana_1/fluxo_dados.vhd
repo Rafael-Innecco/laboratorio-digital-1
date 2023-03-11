@@ -25,8 +25,8 @@ entity fluxo_dados is
     chaves              : in  std_logic_vector (3 downto 0);
     seletor_modo        : in std_logic_vector (1 downto 0);
     -------------------------------------
-		zeraC_End           : in  std_logic; -- novo nome: zeraC -> zeraC_End
-		contaC_End   	      : in  std_logic; -- novo nome: contaC -> contaC_End
+		zeraC           : in  std_logic; -- novo nome: zeraC -> zeraC
+		contaC   	      : in  std_logic; -- novo nome: contaC -> contaC
 		escreveM     		    : in  std_logic;
 		zeraR         		  : in  std_logic;
 		registraR           : in std_logic;
@@ -40,12 +40,12 @@ entity fluxo_dados is
 		igual               : out std_logic;
 		fim_jogo     	 	: out std_logic; -- novo sinal: saida do contador de rodada
 		jogada_feita 	 	: out std_logic;
-    fimTempo	 		  : out std_logic;
+    fim_tempo	 		  : out std_logic;
 		fim_espera      : out std_logic;
     modo_escrita    : out std_logic;
     -------------------------------------
 		db_tem_jogada	 	: out std_logic; 
-		db_contagem  	 	: out std_logic_vector (3 downto 0);
+		db_contagem  	 	: out std_logic_vector (5 downto 0);
 		db_memoria   	 	: out std_logic_vector (3 downto 0);
 		db_chaves    	 	: out std_logic_vector (3 downto 0);
 		leds				    : out std_logic_vector (3 downto 0);
@@ -143,7 +143,6 @@ architecture estrutural of fluxo_dados is
   signal s_not_escreve  	 : std_logic;
   signal s_chaves       	 : std_logic_vector(3 downto 0);
   signal s_chaveacionada   : std_logic := '0';
-
   signal modo              : std_logic_vector(1 downto 0);
 begin
 
@@ -159,9 +158,9 @@ begin
 	 )
 	 port map (
 		clock => clock,
-		zera_as => zeraC_End,
+		zera_as => zeraC,
 		zera_s => '0',
-		conta => contaC_end,
+		conta => contaC,
 		Q => s_endereco,
 		fim => fim_jogo,
 		meio => open
@@ -240,7 +239,7 @@ begin
       enable  => registra_modo,
       D       => seletor_modo,
       Q       => modo
-    )
+    );
 	
   -- Adicionado para a exp4 --
   detector_jogada: edge_detector
@@ -261,7 +260,7 @@ begin
 		zera_s => '0',
 		conta => contaT,
 		Q => open,
-		fim => fimTempo,
+		fim => fim_tempo,
 		meio => open
 	 );
 
@@ -280,7 +279,7 @@ begin
 	 );
 
   with modo(1) select
-    s_dado <= s_dado_fixo when '1'
+    s_dado <= s_dado_fixo when '1',
               s_dado_alternativo when others;
 
   db_contagem <= s_endereco;
