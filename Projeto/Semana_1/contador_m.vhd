@@ -41,7 +41,7 @@ entity contador_m is
         conta    	: in  std_logic;
         Q        	: out std_logic_vector(natural(ceil(log2(real(M))))-1 downto 0);
         fim         : out std_logic;
-        doisQuintos : out std_logic
+        meio        : out std_logic
     );
 end entity contador_m;
 
@@ -68,7 +68,7 @@ begin
            '0';
 
     -- saida umQuinto
-    doisQuintos <= '1' when IQ=2*M/5-1 else
+    doisQuintos <= '1' when IQ=M/2-1 else
             '0';
     -- saida Q
     Q <= std_logic_vector(to_unsigned(IQ, Q'length));

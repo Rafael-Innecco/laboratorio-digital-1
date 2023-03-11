@@ -28,46 +28,41 @@ use ieee.math_real.all;
 
 entity fluxo_dados is
     port (
-		clock        	    : in  std_logic;
+		clock        	      : in  std_logic;
+    chaves              : in  std_logic_vector (3 downto 0);
+    seletor_modo        : in std_logic_vector (1 downto 0);
+    -------------------------------------
 		zeraC_End           : in  std_logic; -- novo nome: zeraC -> zeraC_End
-		contaC_End   	    : in  std_logic; -- novo nome: contaC -> contaC_End
-		zeraC_Rod    	 	: in std_logic;  -- novo sinal: entrada do contador de rodadas
-		contaC_Rod   	    : in std_logic;  -- novo sinal: entrada do contador de rodadas
-		escreveM     		: in  std_logic;
-		zeraR         		: in  std_logic;
+		contaC_End   	      : in  std_logic; -- novo nome: contaC -> contaC_End
+		--zeraC_Rod    	 	: in std_logic;  -- novo sinal: entrada do contador de rodadas
+		--contaC_Rod   	    : in std_logic;  -- novo sinal: entrada do contador de rodadas
+		escreveM     		    : in  std_logic;
+		zeraR         		  : in  std_logic;
 		registraR           : in std_logic;
-		chaves              : in  std_logic_vector (3 downto 0);
 		contaTempo	        : in std_logic;
-		seletor_leds		  : in std_logic;
+		seletor_leds		    : in std_logic;
+    contaP              : in std_logic;
+    zeraP               : in std_logic;
+    -------------------------------------
 		igual               : out std_logic;
 		enderecoIgualRodada : out std_logic; -- novo sinal: saida do comparador endereco x rodada - Funcao: fim_rodada
 		fim_jogo     	 	: out std_logic; -- novo sinal: saida do contador de rodada
 		jogada_feita 	 	: out std_logic;
+    fimTempo	 		: out std_logic;
+		-- Sinal de delay
+		espera_inicializacao : out std_logic;
+    -------------------------------------
 		db_tem_jogada	 	: out std_logic; 
 		db_contagem  	 	: out std_logic_vector (3 downto 0);
 		db_memoria   	 	: out std_logic_vector (3 downto 0);
 		db_chaves    	 	: out std_logic_vector (3 downto 0);
-		db_rodada    		: out std_logic_vector (3 downto 0); -- novo sinal de depuracao
-		fimTempo	 		: out std_logic;
-		-- Sinal de delay
-		espera_inicializacao : out std_logic;
-		leds				 : out std_logic_vector (3 downto 0)
+		--db_rodada    		: out std_logic_vector (3 downto 0); -- novo sinal de depuracao
+		leds				    : out std_logic_vector (3 downto 0);
+    pontuacao       : out std_logic_vector (5 downto 0)
 	);
 end entity;
 
 architecture estrutural of fluxo_dados is
-
-  signal s_endereco          : std_logic_vector (3 downto 0);
-  signal s_rodada     		 : std_logic_vector (3 downto 0); -- novo sinal
-  signal s_dado         	 : std_logic_vector (3 downto 0);
-  signal s_not_zera_end      : std_logic; -- novo nome: sufixo _end
-  signal s_not_zera_rod 	 : std_logic; -- novo sinal
-  signal s_not_escreve  	 : std_logic;
-  signal s_chaves       	 : std_logic_vector(3 downto 0);
-  signal zeraT          	 : std_logic;
-  signal s_chaveacionada     : std_logic := '0';
-  signal doisQuintos		 : std_logic;
-  
   component contador_163
     port (
         clock : in  std_logic;
@@ -100,10 +95,10 @@ architecture estrutural of fluxo_dados is
     );
   end component;
 
-  component ram_16x4 is
+  component ram_64x4 is
     port (
        clk          : in  std_logic;
-       endereco     : in  std_logic_vector(3 downto 0);
+       endereco     : in  std_logic_vector(5 downto 0);
        dado_entrada : in  std_logic_vector(3 downto 0);
        we           : in  std_logic;
        ce           : in  std_logic;
@@ -145,32 +140,57 @@ architecture estrutural of fluxo_dados is
 		conta		: in std_logic;
 		Q			: out std_logic_vector(natural(ceil(log2(real(M)))) - 1 downto 0);
 		fim		    : out std_logic;
-		doisQuintos	: out std_logic
+		meio	: out std_logic
 	);
   end component;
   
+  signal s_endereco        : std_logic_vector (5 downto 0);
+  signal s_rodada     		 : std_logic_vector (3 downto 0); -- novo sinal
+  signal s_dado         	 : std_logic_vector (3 downto 0);
+  signal s_not_zera_end    : std_logic; -- novo nome: sufixo _end
+  signal s_not_zera_rod 	 : std_logic; -- novo sinal
+  signal s_not_escreve  	 : std_logic;
+  signal s_chaves       	 : std_logic_vector(3 downto 0);
+  signal zeraT          	 : std_logic;
+  signal s_chaveacionada   : std_logic := '0';
+  signal termina_espera		 : std_logic;
 begin
 
   -- sinais de controle ativos em alto
   -- sinais dos componentes ativos em baixo
-  s_not_zera_end <= not zeraC_End;
-  s_not_zera_rod <= not zeraC_Rod;
+  --s_not_zera_rod <= not zeraC_Rod;
   s_not_escreve  <= not escreveM;
 
   s_chaveacionada <= chaves(3) or chaves(2) or chaves(1) or chaves(0);
   
-  contador_Endereco_Memoria: contador_163
-    port map (
-        clock => clock,
-        clr   => s_not_zera_end,  -- clr ativo em baixo
-        ld    => '1',
-        ent   => '1',
-        enp   => contaC_End,
-        D     => "0000",
-        Q     => s_endereco,
-        rco   => open -- a confirmar ****
-    );
-	
+  contador_endereco: contador_m
+	 generic map (
+		M => 64
+	 )
+	 port map (
+		clock => clock,
+		zera_as => zeraC_End,
+		zera_s => '0',
+		conta => contaC_end,
+		Q => s_endereco,
+		fim => fim_jogo,
+		meio => open
+	 );
+
+  contador_pontuacao: contador_m
+	 generic map (
+		M => 64
+	 )
+	 port map (
+		clock => clock,
+		zera_as => zeraP,
+		zera_s => '0',
+		conta => contaP,
+		Q => pontuacao,
+		fim => open,
+		meio => open
+	 );
+	/*
   contador_Rodada: contador_163 -- novo componente
     port map( 
 		clock => clock,
@@ -182,10 +202,10 @@ begin
 		Q     => s_rodada,
 		rco   => fim_jogo
 	);
-  
+  */
   comparador_Chaves_Memoria: comparador_85
     port map (
-		i_A3   => s_dado(3),
+		    i_A3   => s_dado(3),
         i_B3   => s_chaves(3),
         i_A2   => s_dado(2),
         i_B2   => s_chaves(2),
@@ -200,7 +220,7 @@ begin
         o_ALTB => open,
         o_AEQB => igual
     );
-	
+	/*
   comparador_rodada_endereco: comparador_85 --novo componente
     port map (
 		i_A3   => s_rodada(3),
@@ -218,9 +238,10 @@ begin
         o_ALTB => open,
         o_AEQB => enderecoIgualRodada
 	);
+  */
 
-  --memoria: entity work.ram_16x4 (ram_mif)  -- usar esta linha para Intel Quartus
-  memoria: entity work.ram_16x4 (ram_modelsim) -- usar arquitetura para ModelSim
+  --memoria_jogada: entity work.ram_64x4 (ram_mif)  -- usar esta linha para Intel Quartus
+  memoria_jogada: entity work.ram_64x4 (ram_modelsim) -- usar arquitetura para ModelSim
     port map (
        clk          => clock,
        endereco     => s_endereco,
@@ -229,10 +250,9 @@ begin
        ce           => '0',
        dado_saida   => s_dado
     );
-	
-	--Antigo: zeraR_completo <= zeraR or (contaTempo and doisQuintos)
-	registrador: registrador_n
-		generic map( N => 4)
+
+	registrador_jogada: registrador_n
+		generic map(N => 4)
 		port map (
 			clock  => clock,
 			clear  => zeraR,
@@ -240,6 +260,16 @@ begin
 			D      => chaves,
 			Q      => s_chaves
 		);
+  
+  registrador_modo: registrador_n
+    generic map (N => 2)
+    port map (
+      clock   => clock,
+      clear   => '0',
+      enable  => registra_modo,
+      D       => seletor_modo,
+      Q       => modo
+    )
 	
   -- Adicionado para a exp4 --
   detector_jogada: edge_detector
@@ -252,9 +282,9 @@ begin
 	 
 	 zeraT <= contaC_End or zeraC_End;
 	 
-  contador_timeout: contador_m
+  contador_tempo: contador_m -- conta passagem de tempo entre jogadas
 	 generic map (
-		M => 5000
+		M => 500
 	 )
 	 port map (
 		clock => clock,
@@ -263,10 +293,24 @@ begin
 		conta => contaTempo,
 		Q => open,
 		fim => fimTempo,
-		doisQuintos => doisQuintos
+		meio => open
+	 );
+
+   contador_espera: contador_m
+	 generic map (
+		M => 1000
+	 )
+	 port map (
+		clock   => clock,
+		zera_as => zeraT,
+		zera_s  => '0',
+		conta   => contaTempo,
+		Q       => open,
+		fim     => termina_espera,
+		meio    => open
 	 );
 		
-	espera_inicializacao <= doisQuintos;
+	espera_inicializacao <= termina_espera;
 	
   db_contagem <= s_endereco;
   db_memoria  <= s_dado;

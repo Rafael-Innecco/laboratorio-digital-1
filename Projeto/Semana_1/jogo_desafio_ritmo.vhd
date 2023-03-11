@@ -1,43 +1,44 @@
 --------------------------------------------------------------------
--- Arquivo   : circuito_jogo_base.vhd
--- Projeto   : Experiencia 4 - Desenvolvimento de Projeto de Circuitos Digitais em FPGA
+-- Arquivo   : jogo_desafio_ritmo.vhd
+-- Projeto   : Projeto da disciplina
 --------------------------------------------------------------------
--- Descricao : unidade de controle 
---
---             1) codificação VHDL (maquina de Moore)
---
---             2) definicao de valores da saida de depuracao
---                db_estado
+-- Descricao : Circuito do projeto da disciplina, baseado no circuito
+--			   da experiência 6
 -- 
 --------------------------------------------------------------------
 -- Revisoes  :
 --  Data        Versao  Autor           Descricao
 --  11/02/2023  1.0     João Arroyo     Versão inicial
+--	11/03/2023	2.0		Rafael Innecco	Modificações iniciais do projeto
 --------------------------------------------------------------------
 
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity jogo_desafio_memoria is -- novo nome de entidade
+entity jogo_desafio_ritmo is -- novo nome de entidade
     port (
         clock           	: in std_logic;
         reset           	: in std_logic;
         jogar       		: in std_logic; -- novo nome: iniciar -> jogar
         botoes        		: in std_logic_vector (3 downto 0); -- novo nome: chaves -> botoes
-        leds           		: out std_logic_vector (3 downto 0);
-		pronto          	: out std_logic;
-        ganhou          	: out std_logic; -- novo nome: acertou -> ganhou
-        perdeu           	: out std_logic;     
-        db_clock                : out std_logic;
-		db_tem_jogada    	: out std_logic;
+		seletor_modo		: in std_logic_vector (1 downto 0); -- seletor modo = XY => X = seletor de memória; Y = seletor de escrita
+		------------------------
+        leds           			: out std_logic_vector (3 downto 0);
+		pronto          		: out std_logic;
+		pontuacao				: out std_logic_vector (6 downto 0); -- indica númeor de jogadas certas
+        --ganhou          		: out std_logic; -- novo nome: acertou -> ganhou
+        --perdeu           		: out std_logic;
+		------------------------     
+        db_clock				: out std_logic;
+		db_tem_jogada    		: out std_logic;
 		db_jogada_correta       : out std_logic; -- novo nome: db_igual -> db_jogada_correta
-        db_enderecoIgualRodada  : out std_logic; -- nova saida
-		db_timeout		: out std_logic;
-		db_contagem     	: out std_logic_vector (6 downto 0);
-        db_memoria      	: out std_logic_vector (6 downto 0);
-        db_jogadafeita 		: out std_logic_vector (6 downto 0);
-		db_rodada       	: out std_logic_vector (6 downto 0); -- nova saida
-		db_estado       	: out std_logic_vector (6 downto 0)               
+        --db_enderecoIgualRodada	: out std_logic; -- nova saida
+		--db_timeout				: out std_logic;
+		db_contagem				: out std_logic_vector (6 downto 0);
+        db_memoria      		: out std_logic_vector (6 downto 0);
+        db_jogadafeita 			: out std_logic_vector (6 downto 0);
+		--db_rodada       		: out std_logic_vector (6 downto 0); -- nova saida
+		db_estado       		: out std_logic_vector (6 downto 0)               
     );
 end entity;
 
@@ -80,7 +81,7 @@ architecture estrutural of jogo_desafio_memoria is -- componente alterado
 			jogada      	: in std_logic;
 			igual       	: in std_logic;
 			fimTempo		: in std_logic;
-			fim_rodada      : in std_logic; -- novo sinal: identifica fim de uma rodada: contador antigo igual ao da rodada.
+			--fim_rodada      : in std_logic; -- novo sinal: identifica fim de uma rodada: contador antigo igual ao da rodada.
 			espera_inicializacao : in std_logic; --NOVO
 			-- Sinais de controle
 			zeraC_End      	: out std_logic; -- novo nome: sinal de controle do contador de endereco da memoria
@@ -89,15 +90,15 @@ architecture estrutural of jogo_desafio_memoria is -- componente alterado
 			contaC_Rod      : out std_logic; -- novo sinal de controle: incrementa contador de rodada
 			zeraR       	: out std_logic;
 			registraR   	: out std_logic;
-			ganhou       	: out std_logic; -- novo nome: acertou -> ganhou
-			perdeu       	: out std_logic; -- novo nome: errou -> perdeu
+			--ganhou       	: out std_logic; -- novo nome: acertou -> ganhou
+			--perdeu       	: out std_logic; -- novo nome: errou -> perdeu
 			pronto      	: out std_logic;
 			contaTempo		: out std_logic;
 			escreveM		: out std_logic;
 			seletor_leds	: out std_logic;
 			-- Sinais de depuracao 
 			db_estado   	: out std_logic_vector(3 downto 0);
-			db_timeout	    : out std_logic
+			--db_timeout	    : out std_logic
         );
     end component;
 
