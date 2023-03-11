@@ -1,4 +1,4 @@
-% conteudo da memoria ram_16x4 %
+% conteudo da memoria ram_60x4 %
 WIDTH=4;
 DEPTH=60;
 ADDRESS_RADIX=UNS;
