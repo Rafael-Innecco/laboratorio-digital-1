@@ -54,7 +54,7 @@ architecture estrutural of jogo_desafio_memoria is -- componente alterado
 			zeraR         		: in  std_logic;
 			registraR           : in std_logic;
 			chaves              : in  std_logic_vector (3 downto 0);
-			contaTempo	        : in std_logic; 
+			contaT	        : in std_logic; 
 			seletor_leds		: in std_logic;
 			igual               : out std_logic;
 			enderecoIgualRodada : out std_logic; -- novo sinal: saida do comparador endereco x rodada - Funcao: fim_rodada
@@ -93,7 +93,7 @@ architecture estrutural of jogo_desafio_memoria is -- componente alterado
 			--ganhou       	: out std_logic; -- novo nome: acertou -> ganhou
 			--perdeu       	: out std_logic; -- novo nome: errou -> perdeu
 			pronto      	: out std_logic;
-			contaTempo		: out std_logic;
+			contaT		: out std_logic;
 			escreveM		: out std_logic;
 			seletor_leds	: out std_logic;
 			-- Sinais de depuracao 
@@ -112,7 +112,7 @@ architecture estrutural of jogo_desafio_memoria is -- componente alterado
 	signal db_mem_hex, db_cont_hex, db_jogada_hex, db_estado_hex, db_rodada_hex : std_logic_vector(3 downto 0) := "0000"; -- novo sinal
     signal zeraC_End, contaC_End, zeraR, registraR, igual, fim_jogo, jogada_feita   : std_logic := '0'; -- novos nomes
 	signal zeraC_Rod, contaC_Rod    : std_logic; -- novos sinais
-	signal contaTempo, fimTempo 	: std_logic;
+	signal contaT, fimTempo 	: std_logic;
 	signal enderecoIgualRodada      : std_logic; -- Novo sinal intermediario
 	signal espera_inicializacao     : std_logic;
 	signal seletor_leds				: std_logic;
@@ -130,7 +130,7 @@ begin
             zeraR       	    =>  zeraR,
             registraR   	    =>  registraR,
             chaves      	    =>  botoes,
-			contaTempo			=>  contaTempo,
+			contaT			=>  contaT,
 			seletor_leds 	=> seletor_leds,
 			espera_inicializacao => espera_inicializacao,
 			igual          		=>  igual,
@@ -166,7 +166,7 @@ begin
             ganhou       => ganhou,
             perdeu       => perdeu,
             pronto       => pronto,
-            contaTempo	 => contaTempo,
+            contaT	 => contaT,
 			escreveM	 => escreveM,
 			seletor_leds => seletor_leds,
 			db_estado    => db_estado_hex,

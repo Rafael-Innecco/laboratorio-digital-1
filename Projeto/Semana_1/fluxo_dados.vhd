@@ -1,17 +1,9 @@
 --------------------------------------------------------------------
--- Arquivo   : circuito_exp2_ativ2.vhd.parcial.txt
+-- Arquivo   : fluxo_dados.txt
 -- Projeto   : Experiencia 2 - Um Fluxo de Dados Simples
 --------------------------------------------------------------------
--- Descricao : ARQUIVO PARCIAL DO
---    Circuito do fluxo de dados da Atividade 2
---
--- COMPLETAR TRECHOS DE CODIGO ABAIXO
---
---    1) contem saidas de depuracao db_contagem e db_memoria
---    2) escolha da arquitetura do componente ram_16x4
---       para simulacao com ModelSim => ram_modelsim
---    3) escolha da arquitetura do componente ram_16x4
---       para sintese com Intel Quartus => ram_mif
+-- Descricao :
+--    Circuito do fluxo de dados do projeto da disciplina
 --
 --------------------------------------------------------------------
 -- Revisoes  :
@@ -19,6 +11,7 @@
 --     11/01/2022  1.0     Edson Midorikawa  versao inicial
 --     07/01/2023  1.1     Edson Midorikawa  revisao
 --     10/02/2023  1.1.1   Edson Midorikawa  arquivo parcial
+--     11/03/2023  2.0     Rafael Innecco    Modificacao inicial para projeto
 --------------------------------------------------------------------
 --
 library ieee;
@@ -34,29 +27,27 @@ entity fluxo_dados is
     -------------------------------------
 		zeraC_End           : in  std_logic; -- novo nome: zeraC -> zeraC_End
 		contaC_End   	      : in  std_logic; -- novo nome: contaC -> contaC_End
-		--zeraC_Rod    	 	: in std_logic;  -- novo sinal: entrada do contador de rodadas
-		--contaC_Rod   	    : in std_logic;  -- novo sinal: entrada do contador de rodadas
 		escreveM     		    : in  std_logic;
 		zeraR         		  : in  std_logic;
 		registraR           : in std_logic;
-		contaTempo	        : in std_logic;
+		contaT	            : in std_logic;
+    zeraT               : in std_logic;
 		seletor_leds		    : in std_logic;
     contaP              : in std_logic;
     zeraP               : in std_logic;
+    registra_modo       : in std_logic;
     -------------------------------------
 		igual               : out std_logic;
-		enderecoIgualRodada : out std_logic; -- novo sinal: saida do comparador endereco x rodada - Funcao: fim_rodada
 		fim_jogo     	 	: out std_logic; -- novo sinal: saida do contador de rodada
 		jogada_feita 	 	: out std_logic;
-    fimTempo	 		: out std_logic;
-		-- Sinal de delay
-		espera_inicializacao : out std_logic;
+    fimTempo	 		  : out std_logic;
+		fim_espera      : out std_logic;
+    modo_escrita    : out std_logic;
     -------------------------------------
 		db_tem_jogada	 	: out std_logic; 
 		db_contagem  	 	: out std_logic_vector (3 downto 0);
 		db_memoria   	 	: out std_logic_vector (3 downto 0);
 		db_chaves    	 	: out std_logic_vector (3 downto 0);
-		--db_rodada    		: out std_logic_vector (3 downto 0); -- novo sinal de depuracao
 		leds				    : out std_logic_vector (3 downto 0);
     pontuacao       : out std_logic_vector (5 downto 0)
 	);
@@ -145,20 +136,19 @@ architecture estrutural of fluxo_dados is
   end component;
   
   signal s_endereco        : std_logic_vector (5 downto 0);
-  signal s_rodada     		 : std_logic_vector (3 downto 0); -- novo sinal
   signal s_dado         	 : std_logic_vector (3 downto 0);
-  signal s_not_zera_end    : std_logic; -- novo nome: sufixo _end
-  signal s_not_zera_rod 	 : std_logic; -- novo sinal
+  signal s_dado_alternativo: std_logic_vector (3 downto 0);
+  signal s_dado_fixo       : std_logic_vector (3 downto 0);
+  signal s_not_zera_end    : std_logic;
   signal s_not_escreve  	 : std_logic;
   signal s_chaves       	 : std_logic_vector(3 downto 0);
-  signal zeraT          	 : std_logic;
   signal s_chaveacionada   : std_logic := '0';
-  signal termina_espera		 : std_logic;
+
+  signal modo              : std_logic_vector(1 downto 0);
 begin
 
   -- sinais de controle ativos em alto
   -- sinais dos componentes ativos em baixo
-  --s_not_zera_rod <= not zeraC_Rod;
   s_not_escreve  <= not escreveM;
 
   s_chaveacionada <= chaves(3) or chaves(2) or chaves(1) or chaves(0);
@@ -190,19 +180,8 @@ begin
 		fim => open,
 		meio => open
 	 );
-	/*
-  contador_Rodada: contador_163 -- novo componente
-    port map( 
-		clock => clock,
-		clr   => s_not_zera_rod,
-		ld    => '1', -- ativo baixo
-		ent   => '1',
-		enp   => contaC_Rod,
-		D     => "0000",
-		Q     => s_rodada,
-		rco   => fim_jogo
-	);
-  */
+
+
   comparador_Chaves_Memoria: comparador_85
     port map (
 		    i_A3   => s_dado(3),
@@ -220,35 +199,27 @@ begin
         o_ALTB => open,
         o_AEQB => igual
     );
-	/*
-  comparador_rodada_endereco: comparador_85 --novo componente
-    port map (
-		i_A3   => s_rodada(3),
-        i_B3   => s_endereco(3),
-        i_A2   => s_rodada(2),
-        i_B2   => s_endereco(2),
-        i_A1   => s_rodada(1),
-        i_B1   => s_endereco(1),
-        i_A0   => s_rodada(0),
-        i_B0   => s_endereco(0),
-        i_AGTB => '0',
-        i_ALTB => '0',
-        i_AEQB => '1', -- nao ha bits menos significativos cascateados -> assume-se igualdade
-        o_AGTB => open, -- saidas nao usadas
-        o_ALTB => open,
-        o_AEQB => enderecoIgualRodada
-	);
-  */
 
-  --memoria_jogada: entity work.ram_64x4 (ram_mif)  -- usar esta linha para Intel Quartus
-  memoria_jogada: entity work.ram_64x4 (ram_modelsim) -- usar arquitetura para ModelSim
+  --memoria_jogada_fixa: entity work.ram_64x4 (ram_mif)  -- usar esta linha para Intel Quartus
+  memoria_jogada_fixa: entity work.ram_64x4 (ram_modelsim) -- usar arquitetura para ModelSim
+    port map (
+       clk          => clock,
+       endereco     => s_endereco,
+       dado_entrada => s_chaves,
+       we           => '1', -- we ativo em baixo, essa memória nunca é sobrescrita
+       ce           => '0',
+       dado_saida   => s_dado_fixo
+    );
+  
+  --memoria_jogada_alternativa: entity work.ram_64x4 (ram_mif)  -- usar esta linha para Intel Quartus
+  memoria_jogada_alternativa: entity work.ram_64x4 (ram_modelsim) -- usar arquitetura para ModelSim
     port map (
        clk          => clock,
        endereco     => s_endereco,
        dado_entrada => s_chaves,
        we           => s_not_escreve, -- we ativo em baixo
        ce           => '0',
-       dado_saida   => s_dado
+       dado_saida   => s_dado_alternativo
     );
 
 	registrador_jogada: registrador_n
@@ -280,8 +251,6 @@ begin
       pulso => jogada_feita
     );
 	 
-	 zeraT <= contaC_End or zeraC_End;
-	 
   contador_tempo: contador_m -- conta passagem de tempo entre jogadas
 	 generic map (
 		M => 500
@@ -290,13 +259,13 @@ begin
 		clock => clock,
 		zera_as => zeraT,
 		zera_s => '0',
-		conta => contaTempo,
+		conta => contaT,
 		Q => open,
 		fim => fimTempo,
 		meio => open
 	 );
 
-   contador_espera: contador_m
+  contador_espera: contador_m
 	 generic map (
 		M => 1000
 	 )
@@ -304,21 +273,23 @@ begin
 		clock   => clock,
 		zera_as => zeraT,
 		zera_s  => '0',
-		conta   => contaTempo,
+		conta   => contaT,
 		Q       => open,
-		fim     => termina_espera,
+		fim     => fim_espera,
 		meio    => open
 	 );
-		
-	espera_inicializacao <= termina_espera;
-	
+
+  with modo(1) select
+    s_dado <= s_dado_fixo when '1'
+              s_dado_alternativo when others;
+
   db_contagem <= s_endereco;
   db_memoria  <= s_dado;
   db_chaves   <= s_chaves;
   db_tem_jogada <= s_chaveacionada;
-  
-  db_rodada <= s_rodada; -- novo sinal de depuracao
-  
+
+  modo_escrita <= modo(0);
+
   with seletor_leds select 
 		leds <= s_dado    when '1',
 		        chaves when others;
