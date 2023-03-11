@@ -132,7 +132,7 @@ begin
 
     -- pulso do sinal de Iniciar (muda na borda de descida do clock)
     caso <= 3;
-    seletor_modo_in <= "00"; -- Codigo do jogo normal
+    seletor_modo_in <= "10"; -- Codigo do jogo normal
     wait for 100*clockPeriod;
  
 	-- pulso do sinal de Iniciar (muda na borda de descida do clock)
