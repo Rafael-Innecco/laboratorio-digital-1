@@ -1,6 +1,6 @@
 Analysis & Elaboration report for circuito_desafio_exp5
-Wed Feb 15 11:26:06 2023
-Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+Tue Feb 28 23:15:24 2023
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
 ---------------------
@@ -25,7 +25,7 @@ Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2022  Intel Corporation. All rights reserved.
+Copyright (C) 2020  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -42,22 +42,22 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+--------------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                                 ;
-+-------------------------------+------------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Wed Feb 15 11:26:06 2023          ;
-; Quartus Prime Version         ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
-; Revision Name                 ; circuito_desafio_exp5                          ;
-; Top-level Entity Name         ; circuito_desafio_exp5                          ;
-; Family                        ; Cyclone V                                      ;
-; Logic utilization (in ALMs)   ; N/A until Partition Merge                      ;
-; Total registers               ; N/A until Partition Merge                      ;
-; Total pins                    ; N/A until Partition Merge                      ;
-; Total virtual pins            ; N/A until Partition Merge                      ;
-; Total block memory bits       ; N/A until Partition Merge                      ;
-; Total PLLs                    ; N/A until Partition Merge                      ;
-; Total DLLs                    ; N/A until Partition Merge                      ;
-+-------------------------------+------------------------------------------------+
++-----------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                              ;
++-------------------------------+---------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Tue Feb 28 23:15:24 2023       ;
+; Quartus Prime Version         ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                 ; circuito_desafio_exp5                       ;
+; Top-level Entity Name         ; circuito_desafio_exp5                       ;
+; Family                        ; Cyclone V                                   ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
+; Total registers               ; N/A until Partition Merge                   ;
+; Total pins                    ; N/A until Partition Merge                   ;
+; Total virtual pins            ; N/A until Partition Merge                   ;
+; Total block memory bits       ; N/A until Partition Merge                   ;
+; Total PLLs                    ; N/A until Partition Merge                   ;
+; Total DLLs                    ; N/A until Partition Merge                   ;
++-------------------------------+---------------------------------------------+
 
 
 +------------------------------------------+
@@ -254,48 +254,58 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------+
 ; Analysis & Elaboration Messages ;
 +---------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Elaboration
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Tue Feb 28 23:15:13 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off circuito_desafio_exp5 -c circuito_desafio_exp5 --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file edge_detector.vhd
-    Info (12022): Found design unit 1: edge_detector-rtl File: /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/edge_detector.vhd Line: 34
-    Info (12023): Found entity 1: edge_detector File: /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/edge_detector.vhd Line: 25
+    Info (12022): Found design unit 1: edge_detector-rtl File: C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/edge_detector.vhd Line: 34
+    Info (12023): Found entity 1: edge_detector File: C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/edge_detector.vhd Line: 25
 Info (12021): Found 2 design units, including 1 entities, in source file contador_163.vhd
-    Info (12022): Found design unit 1: contador_163-comportamental File: /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/contador_163.vhd Line: 32
-    Info (12023): Found entity 1: contador_163 File: /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/contador_163.vhd Line: 19
+    Info (12022): Found design unit 1: contador_163-comportamental File: C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/contador_163.vhd Line: 32
+    Info (12023): Found entity 1: contador_163 File: C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/contador_163.vhd Line: 19
 Info (12021): Found 2 design units, including 1 entities, in source file registrador_n.vhd
-    Info (12022): Found design unit 1: registrador_n-comportamental File: /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/registrador_n.vhd Line: 49
-    Info (12023): Found entity 1: registrador_n File: /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/registrador_n.vhd Line: 36
+    Info (12022): Found design unit 1: registrador_n-comportamental File: C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/registrador_n.vhd Line: 49
+    Info (12023): Found entity 1: registrador_n File: C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/registrador_n.vhd Line: 36
 Info (12021): Found 2 design units, including 1 entities, in source file unidade_controle.vhd
-    Info (12022): Found design unit 1: unidade_controle-fsm File: /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/unidade_controle.vhd Line: 54
-    Info (12023): Found entity 1: unidade_controle File: /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/unidade_controle.vhd Line: 23
+    Info (12022): Found design unit 1: unidade_controle-fsm File: C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/unidade_controle.vhd Line: 54
+    Info (12023): Found entity 1: unidade_controle File: C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/unidade_controle.vhd Line: 23
 Info (12021): Found 2 design units, including 1 entities, in source file fluxo_dados.vhd
-    Info (12022): Found design unit 1: fluxo_dados-estrutural File: /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/fluxo_dados.vhd Line: 58
-    Info (12023): Found entity 1: fluxo_dados File: /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/fluxo_dados.vhd Line: 29
+    Info (12022): Found design unit 1: fluxo_dados-estrutural File: C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/fluxo_dados.vhd Line: 58
+    Info (12023): Found entity 1: fluxo_dados File: C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/fluxo_dados.vhd Line: 29
 Info (12021): Found 2 design units, including 1 entities, in source file circuito_desafio_exp5.vhd
-    Info (12022): Found design unit 1: circuito_desafio_exp5-estrutural File: /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/circuito_desafio_exp5.vhd Line: 44
-    Info (12023): Found entity 1: circuito_desafio_exp5 File: /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/circuito_desafio_exp5.vhd Line: 21
+    Info (12022): Found design unit 1: circuito_desafio_exp5-estrutural File: C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/circuito_desafio_exp5.vhd Line: 44
+    Info (12023): Found entity 1: circuito_desafio_exp5 File: C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/circuito_desafio_exp5.vhd Line: 21
 Info (12021): Found 2 design units, including 1 entities, in source file hexa7seg.vhd
-    Info (12022): Found design unit 1: hexa7seg-comportamental File: /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/hexa7seg.vhd Line: 31
-    Info (12023): Found entity 1: hexa7seg File: /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/hexa7seg.vhd Line: 24
+    Info (12022): Found design unit 1: hexa7seg-comportamental File: C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/hexa7seg.vhd Line: 31
+    Info (12023): Found entity 1: hexa7seg File: C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/hexa7seg.vhd Line: 24
 Info (12021): Found 2 design units, including 1 entities, in source file comparador_85.vhd
-    Info (12022): Found design unit 1: comparador_85-dataflow File: /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/comparador_85.vhd Line: 37
-    Info (12023): Found entity 1: comparador_85 File: /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/comparador_85.vhd Line: 18
+    Info (12022): Found design unit 1: comparador_85-dataflow File: C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/comparador_85.vhd Line: 37
+    Info (12023): Found entity 1: comparador_85 File: C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/comparador_85.vhd Line: 18
 Info (12021): Found 3 design units, including 1 entities, in source file ram_16x4.vhd
-    Info (12022): Found design unit 1: ram_16x4-ram_mif File: /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/ram_16x4.vhd Line: 40
-    Info (12022): Found design unit 2: ram_16x4-ram_modelsim File: /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/ram_16x4.vhd Line: 70
-    Info (12023): Found entity 1: ram_16x4 File: /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/ram_16x4.vhd Line: 28
+    Info (12022): Found design unit 1: ram_16x4-ram_mif File: C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/ram_16x4.vhd Line: 40
+    Info (12022): Found design unit 2: ram_16x4-ram_modelsim File: C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/ram_16x4.vhd Line: 70
+    Info (12023): Found entity 1: ram_16x4 File: C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/ram_16x4.vhd Line: 28
 Info (12021): Found 2 design units, including 1 entities, in source file contador_m.vhd
-    Info (12022): Found design unit 1: contador_m-comportamental File: /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/contador_m.vhd Line: 48
-    Info (12023): Found entity 1: contador_m File: /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/contador_m.vhd Line: 33
+    Info (12022): Found design unit 1: contador_m-comportamental File: C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/contador_m.vhd Line: 48
+    Info (12023): Found entity 1: contador_m File: C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/contador_m.vhd Line: 33
 Info (12127): Elaborating entity "circuito_desafio_exp5" for the top level hierarchy
-Info (12128): Elaborating entity "fluxo_dados" for hierarchy "fluxo_dados:fluxo_dadosFD" File: /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/circuito_desafio_exp5.vhd Line: 121
-Info (12128): Elaborating entity "contador_163" for hierarchy "fluxo_dados:fluxo_dadosFD|contador_163:contador_Endereco_Memoria" File: /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/fluxo_dados.vhd Line: 163
-Info (12128): Elaborating entity "comparador_85" for hierarchy "fluxo_dados:fluxo_dadosFD|comparador_85:comparador_Chaves_Memoria" File: /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/fluxo_dados.vhd Line: 187
-Info (12129): Elaborating entity "ram_16x4" using architecture "A:ram_modelsim" for hierarchy "fluxo_dados:fluxo_dadosFD|ram_16x4:memoria" File: /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/fluxo_dados.vhd Line: 224
-Info (12128): Elaborating entity "registrador_n" for hierarchy "fluxo_dados:fluxo_dadosFD|registrador_n:registrador" File: /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/fluxo_dados.vhd Line: 236
-Info (12128): Elaborating entity "edge_detector" for hierarchy "fluxo_dados:fluxo_dadosFD|edge_detector:detector_jogada" File: /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/fluxo_dados.vhd Line: 247
-Info (12128): Elaborating entity "contador_m" for hierarchy "fluxo_dados:fluxo_dadosFD|contador_m:contador_timeout" File: /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/fluxo_dados.vhd Line: 257
-Info (12128): Elaborating entity "unidade_controle" for hierarchy "unidade_controle:unidade_controleUC" File: /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/circuito_desafio_exp5.vhd Line: 149
-Info (12128): Elaborating entity "hexa7seg" for hierarchy "hexa7seg:hex7jogada" File: /home/rafael/Documents/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/circuito_desafio_exp5.vhd Line: 177
+Info (12128): Elaborating entity "fluxo_dados" for hierarchy "fluxo_dados:fluxo_dadosFD" File: C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/circuito_desafio_exp5.vhd Line: 121
+Info (12128): Elaborating entity "contador_163" for hierarchy "fluxo_dados:fluxo_dadosFD|contador_163:contador_Endereco_Memoria" File: C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/fluxo_dados.vhd Line: 163
+Info (12128): Elaborating entity "comparador_85" for hierarchy "fluxo_dados:fluxo_dadosFD|comparador_85:comparador_Chaves_Memoria" File: C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/fluxo_dados.vhd Line: 187
+Info (12129): Elaborating entity "ram_16x4" using architecture "A:ram_modelsim" for hierarchy "fluxo_dados:fluxo_dadosFD|ram_16x4:memoria" File: C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/fluxo_dados.vhd Line: 224
+Info (12128): Elaborating entity "registrador_n" for hierarchy "fluxo_dados:fluxo_dadosFD|registrador_n:registrador" File: C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/fluxo_dados.vhd Line: 236
+Info (12128): Elaborating entity "edge_detector" for hierarchy "fluxo_dados:fluxo_dadosFD|edge_detector:detector_jogada" File: C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/fluxo_dados.vhd Line: 247
+Info (12128): Elaborating entity "contador_m" for hierarchy "fluxo_dados:fluxo_dadosFD|contador_m:contador_timeout" File: C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/fluxo_dados.vhd Line: 257
+Info (12128): Elaborating entity "unidade_controle" for hierarchy "unidade_controle:unidade_controleUC" File: C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/circuito_desafio_exp5.vhd Line: 149
+Info (12128): Elaborating entity "hexa7seg" for hierarchy "hexa7seg:hex7jogada" File: C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/EXP_5/Desafio/desafio_quartus/circuito_desafio_exp5.vhd Line: 177
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4830 megabytes
+    Info: Processing ended: Tue Feb 28 23:15:24 2023
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:14
 
 

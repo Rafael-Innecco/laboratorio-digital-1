@@ -1,0 +1,17 @@
+
+State Machine - |circuito_desafio_exp5|unidade_controle:unidade_controleUC|Eatual
+Name Eatual.escreve_jogada Eatual.espera_escrita Eatual.fim_timeout Eatual.fim_certo Eatual.fim_erro Eatual.proximo Eatual.compara Eatual.registra Eatual.espera Eatual.proxima_rodada Eatual.ultima_rodada Eatual.inicio_rodada Eatual.inicializa_elem Eatual.inicial 
+Eatual.inicial 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Eatual.inicializa_elem 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+Eatual.inicio_rodada 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+Eatual.ultima_rodada 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+Eatual.proxima_rodada 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+Eatual.espera 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+Eatual.registra 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+Eatual.compara 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+Eatual.proximo 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+Eatual.fim_erro 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+Eatual.fim_certo 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+Eatual.fim_timeout 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+Eatual.espera_escrita 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+Eatual.escreve_jogada 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
