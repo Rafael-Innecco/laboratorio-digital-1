@@ -68,7 +68,7 @@ begin
            '0';
 
     -- saida umQuinto
-    doisQuintos <= '1' when IQ=M/2-1 else
+    meio <= '1' when IQ=M/2-1 else
             '0';
     -- saida Q
     Q <= std_logic_vector(to_unsigned(IQ, Q'length));

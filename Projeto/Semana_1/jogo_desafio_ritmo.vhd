@@ -25,12 +25,12 @@ entity jogo_desafio_ritmo is -- novo nome de entidade
 		------------------------
         leds           			: out std_logic_vector (3 downto 0);
 		pronto          		: out std_logic;
-		pontuacao				: out std_logic_vector (6 downto 0); -- indica númeor de jogadas certas
+		pontuacao				: out std_logic_vector (13 downto 0); -- indica número de jogadas certas, ocupa dois displays de sete segmentos
 		------------------------     
         db_clock				: out std_logic;
 		db_tem_jogada    		: out std_logic;
-		db_jogada_correta       : out std_logic; -- novo nome: db_igual -> db_jogada_correta
-		db_contagem				: out std_logic_vector (6 downto 0);
+		db_jogada_correta       : out std_logic;
+		db_contagem				: out std_logic_vector (13 downto 0); -- Ocupa dois displays de sete segmentos 
         db_memoria      		: out std_logic_vector (6 downto 0);
         db_jogadafeita 			: out std_logic_vector (6 downto 0);
 		db_estado       		: out std_logic_vector (6 downto 0)               
@@ -68,7 +68,7 @@ architecture estrutural of jogo_desafio_ritmo is -- componente alterado
 			db_memoria   	 	: out std_logic_vector (3 downto 0);
 			db_chaves    	 	: out std_logic_vector (3 downto 0);
 			leds				: out std_logic_vector (3 downto 0);
-			pontuacao			: out std_logic_vector (3 downto 0)
+			pontuacao			: out std_logic_vector (5 downto 0)
         );
     end component;
 	
@@ -119,6 +119,8 @@ architecture estrutural of jogo_desafio_ritmo is -- componente alterado
 
 	signal db_mem_hex, db_jogada_hex, db_estado_hex: std_logic_vector(3 downto 0) := "0000"; -- novo sinal
     signal db_cont_hex, pontuacao_hex	: std_logic_vector(5 downto 0);
+	signal db_cont_display1, db_cont_display2, pontuacao_display1, pontuacao_display2: std_logic_vector (6 downto 0);
+	signal db_contagem_hex_parte2, pontuacao_hex_parte2: std_logic_vector (3 downto 0);
 	signal zeraC, contaC, zeraR, registraR	: std_logic := '0';
 	signal zeraP, contaP, registra_modo		: std_logic := '0';
 	signal igual, jogada_feita 	: std_logic := '0';
@@ -158,7 +160,7 @@ begin
             db_contagem    		=>  db_cont_hex,
             db_memoria     		=>  db_mem_hex,
             db_chaves      		=>  db_jogada_hex,
-			leds => leds,
+			leds 				=> leds,
 			pontuacao			=> pontuacao_hex
         );
     --
@@ -198,12 +200,32 @@ begin
         );
     --
 	
-    --hex7contagem: hexa7seg
-    --    port map (
-    --        hexa => db_cont_hex,
-    --        sseg => db_contagem
-    --    );
-    --
+    hex7contagem1: hexa7seg
+        port map (
+            hexa => db_cont_hex(3 downto 0),
+            sseg => db_cont_display1
+       );
+	db_contagem_hex_parte2 <= "00" & db_cont_hex(5 downto 4);
+	hex7contagem2: hexa7seg
+        port map (
+            hexa => db_contagem_hex_parte2,
+            sseg => db_cont_display2
+       );
+	db_contagem <= db_cont_display2 & db_cont_display2;
+
+	hex7pontuacao1: hexa7seg
+        port map (
+            hexa => pontuacao_hex(3 downto 0),
+            sseg => pontuacao_display1
+       );
+	pontuacao_hex_parte2 <= "00" & pontuacao_hex(5 downto 4);
+	hex7pontuacao2: hexa7seg
+        port map (
+            hexa => pontuacao_hex_parte2,
+            sseg => pontuacao_display2
+       );
+	pontuacao <= pontuacao_display2 & pontuacao_display2;
+
 
     hex7memoria: hexa7seg
         port map (

@@ -31,31 +31,26 @@ architecture tb of jogo_desafio_ritmo_tb_modo_escrita is
 
   -- Componente a ser testado (Device Under Test -- DUT)
   component jogo_desafio_ritmo
-         port (
-        clock               : in std_logic;
-        reset               : in std_logic;
-        jogar               : in std_logic; -- novo nome: iniciar -> jogar
-        botoes              : in std_logic_vector (3 downto 0); -- novo nome: chaves -> botoes
-        seletor_modo        : in std_logic_vector (1 downto 0); -- seletor modo = XY => X = seletor de memória; Y = seletor de escrita
-        ------------------------
-        leds                : out std_logic_vector (3 downto 0);
-        pronto              : out std_logic;
-        pontuacao           : out std_logic_vector (6 downto 0);
-		--ganhou            : out std_logic; -- novo nome: acertou -> ganhou
-        --perdeu            : out std_logic;
-        ------------------------
-        db_clock            : out std_logic;
-        db_tem_jogada       : out std_logic;
-        db_jogada_correta   : out std_logic; -- novo nome: db_igual -> db_jogada_correta
-        --db_enderecoIgualRodada    : out std_logic; -- nova saida
-        --db_timeout                : out std_logic;
-        db_contagem         : out std_logic_vector (6 downto 0);
-        db_memoria          : out std_logic_vector (6 downto 0);
-        db_jogadafeita      : out std_logic_vector (6 downto 0);
-        --db_rodada               : out std_logic_vector (6 downto 0); -- nova saida
-        db_estado           : out std_logic_vector (6 downto 0)
-    );
-  end component;
+        port (
+            clock               : in std_logic;
+            reset               : in std_logic;
+            jogar               : in std_logic;
+            botoes              : in std_logic_vector (3 downto 0);
+            seletor_modo        : in std_logic_vector (1 downto 0); 
+            ------------------------
+            leds                : out std_logic_vector (3 downto 0);
+            pronto              : out std_logic;
+            pontuacao           : out std_logic_vector (13 downto 0);
+            ------------------------
+            db_clock            : out std_logic;
+            db_tem_jogada       : out std_logic;
+            db_jogada_correta   : out std_logic;
+            db_contagem         : out std_logic_vector (13 downto 0);
+            db_memoria          : out std_logic_vector (6 downto 0);
+            db_jogadafeita      : out std_logic_vector (6 downto 0);
+            db_estado           : out std_logic_vector (6 downto 0)
+        );
+    end component;
   
   ---- Declaracao de sinais de entrada para conectar o componente
   signal clk_in     : std_logic := '0';
@@ -68,11 +63,11 @@ architecture tb of jogo_desafio_ritmo_tb_modo_escrita is
   ----------------------------------------
   signal leds_out            : std_logic_vector(3 downto 0) := "0000";
   signal pronto_out          : std_logic := '0';
-  signal pontuacao_out       : std_logic_vector(6 downto 0) := "0000000";
+  signal pontuacao_out       : std_logic_vector(13 downto 0) := "00000000000000";
   signal clock_out           : std_logic := '0';
   signal tem_jogada_out      : std_logic := '0';
   signal jogada_correta_out  : std_logic := '0';
-  signal contagem_out        : std_logic_vector(6 downto 0) := "0000000";
+  signal contagem_out        : std_logic_vector(13 downto 0) := "00000000000000";
   signal memoria_out         : std_logic_vector(6 downto 0) := "0000000";
   signal jogada_out          : std_logic_vector(6 downto 0) := "0000000";
   signal estado_out          : std_logic_vector(6 downto 0) := "0000000";

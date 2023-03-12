@@ -136,7 +136,7 @@ begin
         registraR <=        '1' when registra | espera_escrita,
                             '0' when others;
     with Eatual select
-        contaT <= 	        '1' when espera_jogada | inicializa_elem | espera_escrita,
+        contaT <= 	        '1' when espera_jogada | inicializa_elem | espera_escrita | termina_tempo,
 						    '0' when others;
     with Eatual select
         zeraT <=            '1' when ultima_jogada,
