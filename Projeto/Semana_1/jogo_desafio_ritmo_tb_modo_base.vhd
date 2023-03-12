@@ -662,7 +662,7 @@ begin
     wait for 305*clockPeriod;
 	
 	---- jogada 59: acerta
-    caso <= 9;
+    caso <= 63;
 	wait for 100*clockPeriod;
     botoes_in <= "0100";
     wait for 100*clockPeriod;
@@ -671,7 +671,7 @@ begin
     wait for 305*clockPeriod;
 	
 	----  jogada 60: acerta
-    caso <= 63;
+    caso <= 64;
 	wait for 100*clockPeriod;
     botoes_in <= "0010";
     wait for 100*clockPeriod;
@@ -680,7 +680,7 @@ begin
 	wait for 305*clockPeriod;
 
      ----  jogada 61: acerta
-    caso <= 64;
+    caso <= 65;
 	wait for 100*clockPeriod;
     botoes_in <= "0001";
     wait for 100*clockPeriod;
@@ -689,7 +689,7 @@ begin
     wait for 305*clockPeriod;
 	
 	---- jogada 62: acerta
-    caso <= 65;
+    caso <= 66;
 	wait for 100*clockPeriod;
     botoes_in <= "0010";
     wait for 100*clockPeriod;
@@ -698,7 +698,7 @@ begin
     wait for 305*clockPeriod;
 
     ---- jogada 63: acerta
-    caso <= 66;
+    caso <= 67;
 	wait for 100*clockPeriod;
     botoes_in <= "0100";
     wait for 100*clockPeriod;
