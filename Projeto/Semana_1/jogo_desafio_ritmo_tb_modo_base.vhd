@@ -705,15 +705,6 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
-    ---- jogada 64: acerta
-    caso <= 67;
-	wait for 100*clockPeriod;
-    botoes_in <= "1000";
-    wait for 100*clockPeriod;
-    botoes_in <= "0000";
-    ---- finaliza jogada 
-    wait for 305*clockPeriod;
 	
     ---- finaliza jogada 
     wait for 300*clockPeriod;
