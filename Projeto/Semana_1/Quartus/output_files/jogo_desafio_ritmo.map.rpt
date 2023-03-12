@@ -1,0 +1,400 @@
+Analysis & Elaboration report for jogo_desafio_ritmo
+Sun Mar 12 19:44:35 2023
+Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Parameter Settings for User Entity Instance: fluxo_dados:fluxo_dadosFD|contador_m:contador_endereco
+  5. Parameter Settings for User Entity Instance: fluxo_dados:fluxo_dadosFD|contador_m:contador_pontuacao
+  6. Parameter Settings for User Entity Instance: fluxo_dados:fluxo_dadosFD|registrador_n:registrador_jogada
+  7. Parameter Settings for User Entity Instance: fluxo_dados:fluxo_dadosFD|registrador_n:registrador_modo
+  8. Parameter Settings for User Entity Instance: fluxo_dados:fluxo_dadosFD|contador_m:contador_tempo
+  9. Parameter Settings for User Entity Instance: fluxo_dados:fluxo_dadosFD|contador_m:contador_espera
+ 10. Analysis & Elaboration Settings
+ 11. Port Connectivity Checks: "hexa7seg:hex7pontuacao2"
+ 12. Port Connectivity Checks: "hexa7seg:hex7contagem2"
+ 13. Port Connectivity Checks: "fluxo_dados:fluxo_dadosFD|contador_m:contador_espera"
+ 14. Port Connectivity Checks: "fluxo_dados:fluxo_dadosFD|contador_m:contador_tempo"
+ 15. Port Connectivity Checks: "fluxo_dados:fluxo_dadosFD|registrador_n:registrador_modo"
+ 16. Port Connectivity Checks: "fluxo_dados:fluxo_dadosFD|ram_64x4:memoria_jogada_alternativa"
+ 17. Port Connectivity Checks: "fluxo_dados:fluxo_dadosFD|ram_64x4:memoria_jogada_fixa"
+ 18. Port Connectivity Checks: "fluxo_dados:fluxo_dadosFD|comparador_85:comparador_Chaves_Memoria"
+ 19. Port Connectivity Checks: "fluxo_dados:fluxo_dadosFD|contador_m:contador_pontuacao"
+ 20. Port Connectivity Checks: "fluxo_dados:fluxo_dadosFD|contador_m:contador_endereco"
+ 21. Analysis & Elaboration Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2022  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++--------------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                                 ;
++-------------------------------+------------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Sun Mar 12 19:44:35 2023          ;
+; Quartus Prime Version         ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
+; Revision Name                 ; jogo_desafio_ritmo                             ;
+; Top-level Entity Name         ; jogo_desafio_ritmo                             ;
+; Family                        ; Cyclone V                                      ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                      ;
+; Total registers               ; N/A until Partition Merge                      ;
+; Total pins                    ; N/A until Partition Merge                      ;
+; Total virtual pins            ; N/A until Partition Merge                      ;
+; Total block memory bits       ; N/A until Partition Merge                      ;
+; Total PLLs                    ; N/A until Partition Merge                      ;
+; Total DLLs                    ; N/A until Partition Merge                      ;
++-------------------------------+------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fluxo_dados:fluxo_dadosFD|contador_m:contador_endereco ;
++----------------+-------+----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                       ;
++----------------+-------+----------------------------------------------------------------------------+
+; m              ; 63    ; Signed Integer                                                             ;
++----------------+-------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fluxo_dados:fluxo_dadosFD|contador_m:contador_pontuacao ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; m              ; 64    ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fluxo_dados:fluxo_dadosFD|registrador_n:registrador_jogada ;
++----------------+-------+--------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                           ;
++----------------+-------+--------------------------------------------------------------------------------+
+; n              ; 4     ; Signed Integer                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fluxo_dados:fluxo_dadosFD|registrador_n:registrador_modo ;
++----------------+-------+------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                         ;
++----------------+-------+------------------------------------------------------------------------------+
+; n              ; 2     ; Signed Integer                                                               ;
++----------------+-------+------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fluxo_dados:fluxo_dadosFD|contador_m:contador_tempo ;
++----------------+-------+-------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                    ;
++----------------+-------+-------------------------------------------------------------------------+
+; m              ; 500   ; Signed Integer                                                          ;
++----------------+-------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fluxo_dados:fluxo_dadosFD|contador_m:contador_espera ;
++----------------+-------+--------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                     ;
++----------------+-------+--------------------------------------------------------------------------+
+; m              ; 1000  ; Signed Integer                                                           ;
++----------------+-------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Elaboration Settings                                                                                           ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CEBA4F23C7        ;                    ;
+; Top-level entity name                                                           ; jogo_desafio_ritmo ; jogo_desafio_ritmo ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "hexa7seg:hex7pontuacao2" ;
++------------+-------+----------+---------------------+
+; Port       ; Type  ; Severity ; Details             ;
++------------+-------+----------+---------------------+
+; hexa[3..2] ; Input ; Info     ; Stuck at GND        ;
++------------+-------+----------+---------------------+
+
+
++----------------------------------------------------+
+; Port Connectivity Checks: "hexa7seg:hex7contagem2" ;
++------------+-------+----------+--------------------+
+; Port       ; Type  ; Severity ; Details            ;
++------------+-------+----------+--------------------+
+; hexa[3..2] ; Input ; Info     ; Stuck at GND       ;
++------------+-------+----------+--------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fluxo_dados:fluxo_dadosFD|contador_m:contador_espera"                                 ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; zera_s ; Input  ; Info     ; Stuck at GND                                                                        ;
+; q      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; meio   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fluxo_dados:fluxo_dadosFD|contador_m:contador_tempo"                                  ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; zera_s ; Input  ; Info     ; Stuck at GND                                                                        ;
+; q      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; meio   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fluxo_dados:fluxo_dadosFD|registrador_n:registrador_modo" ;
++-------+-------+----------+-----------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                   ;
++-------+-------+----------+-----------------------------------------------------------+
+; clear ; Input ; Info     ; Stuck at GND                                              ;
++-------+-------+----------+-----------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fluxo_dados:fluxo_dadosFD|ram_64x4:memoria_jogada_alternativa" ;
++------+-------+----------+-----------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                         ;
++------+-------+----------+-----------------------------------------------------------------+
+; ce   ; Input ; Info     ; Stuck at GND                                                    ;
++------+-------+----------+-----------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fluxo_dados:fluxo_dadosFD|ram_64x4:memoria_jogada_fixa" ;
++------+-------+----------+----------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                  ;
++------+-------+----------+----------------------------------------------------------+
+; we   ; Input ; Info     ; Stuck at VCC                                             ;
+; ce   ; Input ; Info     ; Stuck at GND                                             ;
++------+-------+----------+----------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fluxo_dados:fluxo_dadosFD|comparador_85:comparador_Chaves_Memoria"                    ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; i_agtb ; Input  ; Info     ; Stuck at GND                                                                        ;
+; i_altb ; Input  ; Info     ; Stuck at GND                                                                        ;
+; i_aeqb ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; o_agtb ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; o_altb ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fluxo_dados:fluxo_dadosFD|contador_m:contador_pontuacao"                              ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; zera_s ; Input  ; Info     ; Stuck at GND                                                                        ;
+; fim    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; meio   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fluxo_dados:fluxo_dadosFD|contador_m:contador_endereco"                               ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; zera_s ; Input  ; Info     ; Stuck at GND                                                                        ;
+; meio   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Elaboration
+    Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+    Info: Processing started: Sun Mar 12 19:44:24 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off jogo_desafio_ritmo -c jogo_desafio_ritmo --analysis_and_elaboration
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file unidade_controle.vhd
+    Info (12022): Found design unit 1: unidade_controle-fsm File: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/unidade_controle.vhd Line: 64
+    Info (12023): Found entity 1: unidade_controle File: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/unidade_controle.vhd Line: 26
+Info (12021): Found 2 design units, including 1 entities, in source file registrador_n.vhd
+    Info (12022): Found design unit 1: registrador_n-comportamental File: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/registrador_n.vhd Line: 49
+    Info (12023): Found entity 1: registrador_n File: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/registrador_n.vhd Line: 36
+Info (12021): Found 3 design units, including 1 entities, in source file ram_64x4.vhd
+    Info (12022): Found design unit 1: ram_64x4-ram_mif File: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/ram_64x4.vhd Line: 41
+    Info (12022): Found design unit 2: ram_64x4-ram_modelsim File: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/ram_64x4.vhd Line: 71
+    Info (12023): Found entity 1: ram_64x4 File: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/ram_64x4.vhd Line: 29
+Info (12021): Found 3 design units, including 1 entities, in source file ram_16x4.vhd
+    Info (12022): Found design unit 1: ram_16x4-ram_mif File: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/ram_16x4.vhd Line: 40
+    Info (12022): Found design unit 2: ram_16x4-ram_modelsim File: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/ram_16x4.vhd Line: 70
+    Info (12023): Found entity 1: ram_16x4 File: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/ram_16x4.vhd Line: 28
+Info (12021): Found 2 design units, including 1 entities, in source file jogo_desafio_ritmo.vhd
+    Info (12022): Found design unit 1: jogo_desafio_ritmo-estrutural File: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/jogo_desafio_ritmo.vhd Line: 40
+    Info (12023): Found entity 1: jogo_desafio_ritmo File: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/jogo_desafio_ritmo.vhd Line: 18
+Info (12021): Found 2 design units, including 1 entities, in source file hexa7seg.vhd
+    Info (12022): Found design unit 1: hexa7seg-comportamental File: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/hexa7seg.vhd Line: 31
+    Info (12023): Found entity 1: hexa7seg File: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/hexa7seg.vhd Line: 24
+Info (12021): Found 2 design units, including 1 entities, in source file fluxo_dados.vhd
+    Info (12022): Found design unit 1: fluxo_dados-estrutural File: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/fluxo_dados.vhd Line: 56
+    Info (12023): Found entity 1: fluxo_dados File: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/fluxo_dados.vhd Line: 22
+Info (12021): Found 2 design units, including 1 entities, in source file edge_detector.vhd
+    Info (12022): Found design unit 1: edge_detector-rtl File: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/edge_detector.vhd Line: 34
+    Info (12023): Found entity 1: edge_detector File: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/edge_detector.vhd Line: 25
+Info (12021): Found 2 design units, including 1 entities, in source file contador_m.vhd
+    Info (12022): Found design unit 1: contador_m-comportamental File: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/contador_m.vhd Line: 48
+    Info (12023): Found entity 1: contador_m File: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/contador_m.vhd Line: 33
+Info (12021): Found 2 design units, including 1 entities, in source file contador_163.vhd
+    Info (12022): Found design unit 1: contador_163-comportamental File: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/contador_163.vhd Line: 32
+    Info (12023): Found entity 1: contador_163 File: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/contador_163.vhd Line: 19
+Info (12021): Found 2 design units, including 1 entities, in source file comparador_85.vhd
+    Info (12022): Found design unit 1: comparador_85-dataflow File: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/comparador_85.vhd Line: 37
+    Info (12023): Found entity 1: comparador_85 File: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/comparador_85.vhd Line: 18
+Info (12127): Elaborating entity "jogo_desafio_ritmo" for the top level hierarchy
+Info (12128): Elaborating entity "fluxo_dados" for hierarchy "fluxo_dados:fluxo_dadosFD" File: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/jogo_desafio_ritmo.vhd Line: 134
+Info (12128): Elaborating entity "contador_m" for hierarchy "fluxo_dados:fluxo_dadosFD|contador_m:contador_endereco" File: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/fluxo_dados.vhd Line: 155
+Info (12128): Elaborating entity "contador_m" for hierarchy "fluxo_dados:fluxo_dadosFD|contador_m:contador_pontuacao" File: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/fluxo_dados.vhd Line: 169
+Info (12128): Elaborating entity "comparador_85" for hierarchy "fluxo_dados:fluxo_dadosFD|comparador_85:comparador_Chaves_Memoria" File: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/fluxo_dados.vhd Line: 184
+Info (12129): Elaborating entity "ram_64x4" using architecture "A:ram_mif" for hierarchy "fluxo_dados:fluxo_dadosFD|ram_64x4:memoria_jogada_fixa" File: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/fluxo_dados.vhd Line: 202
+Info (12128): Elaborating entity "registrador_n" for hierarchy "fluxo_dados:fluxo_dadosFD|registrador_n:registrador_jogada" File: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/fluxo_dados.vhd Line: 224
+Info (12128): Elaborating entity "registrador_n" for hierarchy "fluxo_dados:fluxo_dadosFD|registrador_n:registrador_modo" File: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/fluxo_dados.vhd Line: 234
+Info (12128): Elaborating entity "edge_detector" for hierarchy "fluxo_dados:fluxo_dadosFD|edge_detector:detector_jogada" File: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/fluxo_dados.vhd Line: 245
+Info (12128): Elaborating entity "contador_m" for hierarchy "fluxo_dados:fluxo_dadosFD|contador_m:contador_tempo" File: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/fluxo_dados.vhd Line: 253
+Info (12128): Elaborating entity "contador_m" for hierarchy "fluxo_dados:fluxo_dadosFD|contador_m:contador_espera" File: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/fluxo_dados.vhd Line: 267
+Info (12128): Elaborating entity "unidade_controle" for hierarchy "unidade_controle:unidade_controleUC" File: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/jogo_desafio_ritmo.vhd Line: 168
+Info (12128): Elaborating entity "hexa7seg" for hierarchy "hexa7seg:hex7jogada" File: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/jogo_desafio_ritmo.vhd Line: 196
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 795 megabytes
+    Info: Processing ended: Sun Mar 12 19:44:36 2023
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:21
+
+

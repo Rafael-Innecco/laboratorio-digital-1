@@ -1,0 +1,26 @@
+Quartus Prime Archive log --	/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/jogo_desafio_ritmo.qarlog
+
+Archive:	/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/jogo_desafio_ritmo.qar
+Date:		Sun Mar 12 20:45:34 2023
+Quartus Prime		22.1std.0 Build 915 10/25/2022 SC Lite Edition
+
+	=========== Files Selected: ===========
+/home/rafael/intelFPGA_lite/22.1std/quartus/linux64/assignment_defaults.qdf
+/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/comparador_85.vhd
+/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/contador_163.vhd
+/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/contador_m.vhd
+/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/edge_detector.vhd
+/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/fluxo_dados.vhd
+/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/hexa7seg.vhd
+/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/jogo_desafio_ritmo.qpf
+/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/jogo_desafio_ritmo.qsf
+/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/jogo_desafio_ritmo.vhd
+/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/ram_16x4.vhd
+/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/ram_64x4.vhd
+/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/ram_conteudo_jogadas.mif
+/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/registrador_n.vhd
+/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/unidade_controle.vhd
+	======= Total: 15 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

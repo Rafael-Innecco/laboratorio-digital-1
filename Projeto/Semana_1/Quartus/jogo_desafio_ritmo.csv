@@ -1,0 +1,88 @@
+# Copyright (C) 2022  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+
+# Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+# File: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/Quartus/jogo_desafio_ritmo.csv
+# Generated on: Sun Mar 12 20:45:24 2023
+
+# Note: The column header names should not be changed if you wish to import this .csv file into the Quartus Prime software.
+
+To,Direction,Location,I/O Bank,VREF Group,I/O Standard,Reserved,Current Strength,Slew Rate,Differential Pair,Transceiver Analog Settings Protocol,VCCR_GXB/VCCT_GXB Voltage,Transceiver I/O Pin Termination,Transceiver Dedicated Refclk Pin Termination,Transmitter Common Mode Driver Voltage,Transmitter Slew Rate Control,Transmitter Differential Output Voltage,Receiver Buffer Common Mode Voltage,Strict Preservation
+botoes[0],Input,PIN_R22,5A,B5A_N0,,,,,,,,,,,,,,
+botoes[1],Input,PIN_T22,5A,B5A_N0,,,,,,,,,,,,,,
+botoes[2],Input,PIN_N19,5B,B5B_N0,,,,,,,,,,,,,,
+botoes[3],Input,PIN_P19,5A,B5A_N0,,,,,,,,,,,,,,
+clock,Input,PIN_N16,5B,B5B_N0,,,,,,,,,,,,,,
+db_clock,Output,PIN_AA2,2A,B2A_N0,,,,,,,,,,,,,,
+db_contagem[0],Output,,,,,,,,,,,,,,,,,
+db_contagem[1],Output,,,,,,,,,,,,,,,,,
+db_contagem[2],Output,,,,,,,,,,,,,,,,,
+db_contagem[3],Output,,,,,,,,,,,,,,,,,
+db_contagem[4],Output,,,,,,,,,,,,,,,,,
+db_contagem[5],Output,,,,,,,,,,,,,,,,,
+db_contagem[6],Output,,,,,,,,,,,,,,,,,
+db_contagem[7],Output,,,,,,,,,,,,,,,,,
+db_contagem[8],Output,,,,,,,,,,,,,,,,,
+db_contagem[9],Output,,,,,,,,,,,,,,,,,
+db_contagem[10],Output,,,,,,,,,,,,,,,,,
+db_contagem[11],Output,,,,,,,,,,,,,,,,,
+db_contagem[12],Output,,,,,,,,,,,,,,,,,
+db_contagem[13],Output,,,,,,,,,,,,,,,,,
+db_estado[0],Output,PIN_U21,4A,B4A_N0,,,,,,,,,,,,,,
+db_estado[1],Output,PIN_V21,4A,B4A_N0,,,,,,,,,,,,,,
+db_estado[2],Output,PIN_W22,4A,B4A_N0,,,,,,,,,,,,,,
+db_estado[3],Output,PIN_W21,4A,B4A_N0,,,,,,,,,,,,,,
+db_estado[4],Output,PIN_Y22,4A,B4A_N0,,,,,,,,,,,,,,
+db_estado[5],Output,PIN_Y21,4A,B4A_N0,,,,,,,,,,,,,,
+db_estado[6],Output,PIN_AA22,4A,B4A_N0,,,,,,,,,,,,,,
+db_jogada_correta,Output,PIN_W2,2A,B2A_N0,,,,,,,,,,,,,,
+db_jogadafeita[0],Output,PIN_Y19,4A,B4A_N0,,,,,,,,,,,,,,
+db_jogadafeita[1],Output,PIN_AB17,4A,B4A_N0,,,,,,,,,,,,,,
+db_jogadafeita[2],Output,PIN_AA10,3B,B3B_N0,,,,,,,,,,,,,,
+db_jogadafeita[3],Output,PIN_Y14,4A,B4A_N0,,,,,,,,,,,,,,
+db_jogadafeita[4],Output,PIN_V14,4A,B4A_N0,,,,,,,,,,,,,,
+db_jogadafeita[5],Output,PIN_AB22,4A,B4A_N0,,,,,,,,,,,,,,
+db_jogadafeita[6],Output,PIN_AB21,4A,B4A_N0,,,,,,,,,,,,,,
+db_memoria[0],Output,PIN_AA20,4A,B4A_N0,,,,,,,,,,,,,,
+db_memoria[1],Output,PIN_AB20,4A,B4A_N0,,,,,,,,,,,,,,
+db_memoria[2],Output,PIN_AA19,4A,B4A_N0,,,,,,,,,,,,,,
+db_memoria[3],Output,PIN_AA18,4A,B4A_N0,,,,,,,,,,,,,,
+db_memoria[4],Output,PIN_AB18,4A,B4A_N0,,,,,,,,,,,,,,
+db_memoria[5],Output,PIN_AA17,4A,B4A_N0,,,,,,,,,,,,,,
+db_memoria[6],Output,PIN_U22,4A,B4A_N0,,,,,,,,,,,,,,
+db_tem_jogada,Output,PIN_AA1,2A,B2A_N0,,,,,,,,,,,,,,
+jogar,Input,PIN_C16,7A,B7A_N0,,,,,,,,,,,,,,
+leds[0],Output,PIN_A15,7A,B7A_N0,,,,,,,,,,,,,,
+leds[1],Output,PIN_L8,7A,B7A_N0,,,,,,,,,,,,,,
+leds[2],Output,PIN_B15,7A,B7A_N0,,,,,,,,,,,,,,
+leds[3],Output,PIN_E14,7A,B7A_N0,,,,,,,,,,,,,,
+pontuacao[0],Output,PIN_Y16,4A,B4A_N0,,,,,,,,,,,,,,
+pontuacao[1],Output,PIN_W16,4A,B4A_N0,,,,,,,,,,,,,,
+pontuacao[2],Output,PIN_Y17,4A,B4A_N0,,,,,,,,,,,,,,
+pontuacao[3],Output,PIN_V16,4A,B4A_N0,,,,,,,,,,,,,,
+pontuacao[4],Output,PIN_U17,4A,B4A_N0,,,,,,,,,,,,,,
+pontuacao[5],Output,PIN_V18,4A,B4A_N0,,,,,,,,,,,,,,
+pontuacao[6],Output,PIN_V19,4A,B4A_N0,,,,,,,,,,,,,,
+pontuacao[7],Output,PIN_U20,4A,B4A_N0,,,,,,,,,,,,,,
+pontuacao[8],Output,PIN_Y20,4A,B4A_N0,,,,,,,,,,,,,,
+pontuacao[9],Output,PIN_V20,4A,B4A_N0,,,,,,,,,,,,,,
+pontuacao[10],Output,PIN_U16,4A,B4A_N0,,,,,,,,,,,,,,
+pontuacao[11],Output,PIN_U15,4A,B4A_N0,,,,,,,,,,,,,,
+pontuacao[12],Output,PIN_Y15,4A,B4A_N0,,,,,,,,,,,,,,
+pontuacao[13],Output,PIN_P9,3B,B3B_N0,,,,,,,,,,,,,,
+pronto,Output,PIN_J11,7A,B7A_N0,,,,,,,,,,,,,,
+reset,Input,PIN_B16,7A,B7A_N0,,,,,,,,,,,,,,
+seletor_modo[0],Input,PIN_J18,7A,B7A_N0,,,,,,,,,,,,,,
+seletor_modo[1],Input,PIN_G11,7A,B7A_N0,,,,,,,,,,,,,,
