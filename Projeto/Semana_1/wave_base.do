@@ -26,8 +26,9 @@ add wave -noupdate /jogo_desafio_ritmo_tb_modo_base/dut/fluxo_dadosFD/contaT
 add wave -noupdate /jogo_desafio_ritmo_tb_modo_base/dut/unidade_controleUC/igual
 add wave -noupdate /jogo_desafio_ritmo_tb_modo_base/dut/unidade_controleUC/jogada
 add wave -noupdate /jogo_desafio_ritmo_tb_modo_base/dut/unidade_controleUC/Eprox
+add wave -noupdate /jogo_desafio_ritmo_tb_modo_base/pontuacao_out
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {164295 ns} 0} {{Cursor 2} {164439 ns} 0}
+WaveRestoreCursors {{Cursor 1} {25280 ns} 0} {{Cursor 2} {164439 ns} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 179
 configure wave -valuecolwidth 100
@@ -43,4 +44,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {167793 ns} {168083 ns}
+WaveRestoreZoom {0 ns} {708278 ns}

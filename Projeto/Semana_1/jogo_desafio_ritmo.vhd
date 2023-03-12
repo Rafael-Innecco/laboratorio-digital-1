@@ -211,7 +211,7 @@ begin
             hexa => db_contagem_hex_parte2,
             sseg => db_cont_display2
        );
-	db_contagem <= db_cont_display2 & db_cont_display2;
+	db_contagem <= db_cont_display2 & db_cont_display1;
 
 	hex7pontuacao1: hexa7seg
         port map (
@@ -224,7 +224,7 @@ begin
             hexa => pontuacao_hex_parte2,
             sseg => pontuacao_display2
        );
-	pontuacao <= pontuacao_display2 & pontuacao_display2;
+	pontuacao <= pontuacao_display2 & pontuacao_display1;
 
 
     hex7memoria: hexa7seg
