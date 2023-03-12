@@ -12,537 +12,34 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-vcom -reportprogress 300 -work work {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/comparador_85.vhd}
+vcom -reportprogress 300 -work work {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/jogo_desafio_ritmo_tb_modo_base.vhd}
 # Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 11:40:06 on Mar 12,2023
-# vcom -reportprogress 300 -work work /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/comparador_85.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity comparador_85
-# -- Compiling architecture dataflow of comparador_85
-# End time: 11:40:07 on Mar 12,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vcom -reportprogress 300 -work work {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/contador_163.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 11:40:07 on Mar 12,2023
-# vcom -reportprogress 300 -work work /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/contador_163.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity contador_163
-# -- Compiling architecture comportamental of contador_163
-# End time: 11:40:08 on Mar 12,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vcom -reportprogress 300 -work work {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/contador_m.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 11:40:08 on Mar 12,2023
-# vcom -reportprogress 300 -work work /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/contador_m.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package MATH_REAL
-# -- Compiling entity contador_m
-# -- Compiling architecture comportamental of contador_m
-# ** Error: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/contador_m.vhd(71): Illegal target for signal assignment.
-# ** Error: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/contador_m.vhd(71): (vcom-1136) Unknown identifier "doisQuintos".
-# ** Error: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/contador_m.vhd(72): Enumeration literal '0' is not of type (error).
-# ** Note: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/contador_m.vhd(76): VHDL Compiler exiting
-# End time: 11:40:09 on Mar 12,2023, Elapsed time: 0:00:01
-# Errors: 3, Warnings: 0
-vcom -reportprogress 300 -work work {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/edge_detector.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 11:40:09 on Mar 12,2023
-# vcom -reportprogress 300 -work work /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/edge_detector.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity edge_detector
-# -- Compiling architecture rtl of edge_detector
-# End time: 11:40:10 on Mar 12,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vcom -reportprogress 300 -work work {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/fluxo_dados.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 11:40:10 on Mar 12,2023
-# vcom -reportprogress 300 -work work /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/fluxo_dados.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package MATH_REAL
-# -- Compiling entity fluxo_dados
-# -- Compiling architecture estrutural of fluxo_dados
-# -- Loading entity ram_64x4
-# End time: 11:40:10 on Mar 12,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vcom -reportprogress 300 -work work {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/hexa7seg.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 11:40:10 on Mar 12,2023
-# vcom -reportprogress 300 -work work /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/hexa7seg.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity hexa7seg
-# -- Compiling architecture comportamental of hexa7seg
-# End time: 11:40:11 on Mar 12,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vcom -reportprogress 300 -work work {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/jogo_desafio_memoria_tb_erro.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 11:40:11 on Mar 12,2023
-# vcom -reportprogress 300 -work work /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/jogo_desafio_memoria_tb_erro.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity jogo_desafio_memoria_tb_erro
-# -- Compiling architecture tb of jogo_desafio_memoria_tb_erro
-# End time: 11:40:12 on Mar 12,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vcom -reportprogress 300 -work work {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/jogo_desafio_memoria_tb_reset.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 11:40:12 on Mar 12,2023
-# vcom -reportprogress 300 -work work /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/jogo_desafio_memoria_tb_reset.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity jogo_desafio_memoria_tb_reset
-# -- Compiling architecture tb of jogo_desafio_memoria_tb_reset
-# End time: 11:40:13 on Mar 12,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vcom -reportprogress 300 -work work {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/jogo_desafio_memoria_tb_timeout.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 11:40:13 on Mar 12,2023
-# vcom -reportprogress 300 -work work /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/jogo_desafio_memoria_tb_timeout.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity jogo_desafio_memoria_tb_timeout
-# -- Compiling architecture tb of jogo_desafio_memoria_tb_timeout
-# End time: 11:40:16 on Mar 12,2023, Elapsed time: 0:00:03
-# Errors: 0, Warnings: 0
-vcom -reportprogress 300 -work work {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/jogo_desafio_ritmo.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 11:40:16 on Mar 12,2023
-# vcom -reportprogress 300 -work work /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/jogo_desafio_ritmo.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity jogo_desafio_ritmo
-# -- Compiling architecture estrutural of jogo_desafio_ritmo
-# End time: 11:40:16 on Mar 12,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vcom -reportprogress 300 -work work {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/jogo_desafio_ritmo_tb_erros.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 11:40:16 on Mar 12,2023
-# vcom -reportprogress 300 -work work /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/jogo_desafio_ritmo_tb_erros.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity jogo_desafio_ritmo_tb_erros
-# -- Compiling architecture tb of jogo_desafio_ritmo_tb_erros
-# End time: 11:40:17 on Mar 12,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/jogo_desafio_ritmo_tb_modo_base.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 11:40:17 on Mar 12,2023
-# vcom -reportprogress 30 -work work /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/jogo_desafio_ritmo_tb_modo_base.vhd 
+# Start time: 14:03:28 on Mar 12,2023
+# vcom -reportprogress 300 -work work /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/jogo_desafio_ritmo_tb_modo_base.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity jogo_desafio_ritmo_tb_modo_base
 # -- Compiling architecture tb of jogo_desafio_ritmo_tb_modo_base
-# End time: 11:40:18 on Mar 12,2023, Elapsed time: 0:00:01
+# End time: 14:03:29 on Mar 12,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/jogo_desafio_memoria_tb_dois_jogos.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 11:40:18 on Mar 12,2023
-# vcom -reportprogress 30 -work work /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/jogo_desafio_memoria_tb_dois_jogos.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity jogo_desafio_memoria_tb_dois_jogos
-# -- Compiling architecture tb of jogo_desafio_memoria_tb_dois_jogos
-# End time: 11:40:20 on Mar 12,2023, Elapsed time: 0:00:02
-# Errors: 0, Warnings: 0
-vcom -reportprogress 300 -work work {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/comparador_85.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 12:37:27 on Mar 12,2023
-# vcom -reportprogress 300 -work work /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/comparador_85.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity comparador_85
-# -- Compiling architecture dataflow of comparador_85
-# End time: 12:37:28 on Mar 12,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vcom -reportprogress 300 -work work {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/contador_163.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 12:37:28 on Mar 12,2023
-# vcom -reportprogress 300 -work work /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/contador_163.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity contador_163
-# -- Compiling architecture comportamental of contador_163
-# End time: 12:37:30 on Mar 12,2023, Elapsed time: 0:00:02
-# Errors: 0, Warnings: 0
-vcom -reportprogress 300 -work work {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/contador_m.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 12:37:30 on Mar 12,2023
-# vcom -reportprogress 300 -work work /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/contador_m.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package MATH_REAL
-# -- Compiling entity contador_m
-# -- Compiling architecture comportamental of contador_m
-# ** Error: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/contador_m.vhd(71): Illegal target for signal assignment.
-# ** Error: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/contador_m.vhd(71): (vcom-1136) Unknown identifier "doisQuintos".
-# ** Error: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/contador_m.vhd(72): Enumeration literal '0' is not of type (error).
-# ** Note: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/contador_m.vhd(76): VHDL Compiler exiting
-# End time: 12:37:32 on Mar 12,2023, Elapsed time: 0:00:02
-# Errors: 3, Warnings: 0
-vcom -reportprogress 300 -work work {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/edge_detector.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 12:37:32 on Mar 12,2023
-# vcom -reportprogress 300 -work work /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/edge_detector.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity edge_detector
-# -- Compiling architecture rtl of edge_detector
-# End time: 12:37:33 on Mar 12,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vcom -reportprogress 300 -work work {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/fluxo_dados.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 12:37:33 on Mar 12,2023
-# vcom -reportprogress 300 -work work /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/fluxo_dados.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package MATH_REAL
-# -- Compiling entity fluxo_dados
-# -- Compiling architecture estrutural of fluxo_dados
-# -- Loading entity ram_64x4
-# End time: 12:37:33 on Mar 12,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vcom -reportprogress 300 -work work {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/hexa7seg.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 12:37:34 on Mar 12,2023
-# vcom -reportprogress 300 -work work /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/hexa7seg.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity hexa7seg
-# -- Compiling architecture comportamental of hexa7seg
-# End time: 12:37:34 on Mar 12,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vcom -reportprogress 300 -work work {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/jogo_desafio_ritmo_tb_erros.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 12:37:34 on Mar 12,2023
-# vcom -reportprogress 300 -work work /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/jogo_desafio_ritmo_tb_erros.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity jogo_desafio_ritmo_tb_erros
-# -- Compiling architecture tb of jogo_desafio_ritmo_tb_erros
-# End time: 12:37:35 on Mar 12,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/jogo_desafio_ritmo_tb_modo_base.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 12:37:35 on Mar 12,2023
-# vcom -reportprogress 30 -work work /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/jogo_desafio_ritmo_tb_modo_base.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity jogo_desafio_ritmo_tb_modo_base
-# -- Compiling architecture tb of jogo_desafio_ritmo_tb_modo_base
-# End time: 12:37:36 on Mar 12,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/jogo_desafio_ritmo_tb_modo_escrita.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 12:37:36 on Mar 12,2023
-# vcom -reportprogress 30 -work work /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/jogo_desafio_ritmo_tb_modo_escrita.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity jogo_desafio_ritmo_tb_modo_escrita
-# -- Compiling architecture tb of jogo_desafio_ritmo_tb_modo_escrita
-# End time: 12:37:37 on Mar 12,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/ram_16x4.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 12:37:37 on Mar 12,2023
-# vcom -reportprogress 30 -work work /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/ram_16x4.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity ram_16x4
-# -- Compiling architecture ram_mif of ram_16x4
-# -- Compiling architecture ram_modelsim of ram_16x4
-# -- Loading entity ram_16x4
-# End time: 12:37:38 on Mar 12,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/ram_64x4.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 12:37:38 on Mar 12,2023
-# vcom -reportprogress 30 -work work /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/ram_64x4.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity ram_64x4
-# -- Compiling architecture ram_mif of ram_64x4
-# -- Compiling architecture ram_modelsim of ram_64x4
-# -- Loading entity ram_64x4
-# End time: 12:37:41 on Mar 12,2023, Elapsed time: 0:00:03
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/ram_generica.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 12:37:41 on Mar 12,2023
-# vcom -reportprogress 30 -work work /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/ram_generica.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity ram_generica
-# ** Error: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/ram_generica.vhd(17): (vcom-1136) Unknown identifier "std_logic".
-# ** Error: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/ram_generica.vhd(18): (vcom-1136) Unknown identifier "std_logic_vector".
-# ** Error: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/ram_generica.vhd(19): (vcom-1136) Unknown identifier "std_logic_vector".
-# ** Error: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/ram_generica.vhd(20): (vcom-1136) Unknown identifier "std_logic_vector".
-# ** Error: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/ram_generica.vhd(22): Labels do not match: 'ram_generica' and 'ram'.
-# ** Note: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/ram_generica.vhd(22): VHDL Compiler exiting
-# End time: 12:37:43 on Mar 12,2023, Elapsed time: 0:00:02
-# Errors: 5, Warnings: 0
-vcom -reportprogress 30 -work work {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/jogo_desafio_ritmo.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 12:37:43 on Mar 12,2023
-# vcom -reportprogress 30 -work work /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/jogo_desafio_ritmo.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity jogo_desafio_ritmo
-# -- Compiling architecture estrutural of jogo_desafio_ritmo
-# End time: 12:37:44 on Mar 12,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vcom -reportprogress 300 -work work {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/comparador_85.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 12:39:26 on Mar 12,2023
-# vcom -reportprogress 300 -work work /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/comparador_85.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity comparador_85
-# -- Compiling architecture dataflow of comparador_85
-# End time: 12:39:27 on Mar 12,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vcom -reportprogress 300 -work work {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/contador_163.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 12:39:27 on Mar 12,2023
-# vcom -reportprogress 300 -work work /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/contador_163.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity contador_163
-# -- Compiling architecture comportamental of contador_163
-# End time: 12:39:28 on Mar 12,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vcom -reportprogress 300 -work work {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/contador_m.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 12:39:28 on Mar 12,2023
-# vcom -reportprogress 300 -work work /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/contador_m.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package MATH_REAL
-# -- Compiling entity contador_m
-# -- Compiling architecture comportamental of contador_m
-# End time: 12:39:29 on Mar 12,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vcom -reportprogress 300 -work work {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/edge_detector.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 12:39:29 on Mar 12,2023
-# vcom -reportprogress 300 -work work /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/edge_detector.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity edge_detector
-# -- Compiling architecture rtl of edge_detector
-# End time: 12:39:31 on Mar 12,2023, Elapsed time: 0:00:02
-# Errors: 0, Warnings: 0
-vcom -reportprogress 300 -work work {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/fluxo_dados.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 12:39:31 on Mar 12,2023
-# vcom -reportprogress 300 -work work /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/fluxo_dados.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package MATH_REAL
-# -- Compiling entity fluxo_dados
-# -- Compiling architecture estrutural of fluxo_dados
-# -- Loading entity ram_64x4
-# End time: 12:39:32 on Mar 12,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vcom -reportprogress 300 -work work {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/hexa7seg.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 12:39:32 on Mar 12,2023
-# vcom -reportprogress 300 -work work /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/hexa7seg.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity hexa7seg
-# -- Compiling architecture comportamental of hexa7seg
-# End time: 12:39:33 on Mar 12,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vcom -reportprogress 300 -work work {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/jogo_desafio_ritmo_tb_erros.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 12:39:33 on Mar 12,2023
-# vcom -reportprogress 300 -work work /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/jogo_desafio_ritmo_tb_erros.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity jogo_desafio_ritmo_tb_erros
-# -- Compiling architecture tb of jogo_desafio_ritmo_tb_erros
-# End time: 12:39:34 on Mar 12,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/jogo_desafio_ritmo_tb_modo_base.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 12:39:34 on Mar 12,2023
-# vcom -reportprogress 30 -work work /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/jogo_desafio_ritmo_tb_modo_base.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity jogo_desafio_ritmo_tb_modo_base
-# -- Compiling architecture tb of jogo_desafio_ritmo_tb_modo_base
-# End time: 12:39:35 on Mar 12,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/jogo_desafio_ritmo_tb_modo_escrita.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 12:39:35 on Mar 12,2023
-# vcom -reportprogress 30 -work work /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/jogo_desafio_ritmo_tb_modo_escrita.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity jogo_desafio_ritmo_tb_modo_escrita
-# -- Compiling architecture tb of jogo_desafio_ritmo_tb_modo_escrita
-# End time: 12:39:36 on Mar 12,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/ram_16x4.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 12:39:36 on Mar 12,2023
-# vcom -reportprogress 30 -work work /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/ram_16x4.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity ram_16x4
-# -- Compiling architecture ram_mif of ram_16x4
-# -- Compiling architecture ram_modelsim of ram_16x4
-# -- Loading entity ram_16x4
-# End time: 12:39:38 on Mar 12,2023, Elapsed time: 0:00:02
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/ram_64x4.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 12:39:38 on Mar 12,2023
-# vcom -reportprogress 30 -work work /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/ram_64x4.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity ram_64x4
-# -- Compiling architecture ram_mif of ram_64x4
-# -- Compiling architecture ram_modelsim of ram_64x4
-# -- Loading entity ram_64x4
-# End time: 12:39:39 on Mar 12,2023, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/registrador_n.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 12:39:39 on Mar 12,2023
-# vcom -reportprogress 30 -work work /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/registrador_n.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity registrador_n
-# -- Compiling architecture comportamental of registrador_n
-# End time: 12:39:41 on Mar 12,2023, Elapsed time: 0:00:02
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/jogo_desafio_ritmo.vhd}
-# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 12:39:41 on Mar 12,2023
-# vcom -reportprogress 30 -work work /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/jogo_desafio_ritmo.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity jogo_desafio_ritmo
-# -- Compiling architecture estrutural of jogo_desafio_ritmo
-# End time: 12:39:43 on Mar 12,2023, Elapsed time: 0:00:02
-# Errors: 0, Warnings: 0
-vsim work.jogo_desafio_ritmo_tb_modo_base -voptargs=+acc
-# vsim work.jogo_desafio_ritmo_tb_modo_base -voptargs="+acc" 
-# Start time: 12:40:00 on Mar 12,2023
+vsim work.jogo_desafio_ritmo_tb_modo_base
+# vsim work.jogo_desafio_ritmo_tb_modo_base 
+# Start time: 14:03:42 on Mar 12,2023
 # ** Note: (vsim-3812) Design is being optimized...
-# ** Note: (vopt-143) Recognized 1 FSM in architecture body "unidade_controle(fsm)".
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading work.jogo_desafio_ritmo_tb_modo_base(tb)#1
-# Loading work.jogo_desafio_ritmo(estrutural)#1
 # Loading ieee.numeric_std(body)
 # Loading ieee.math_real(body)
-# Loading work.fluxo_dados(estrutural)#1
-# Loading work.contador_m(comportamental)#1
-# Loading work.comparador_85(dataflow)#1
-# Loading work.ram_64x4(ram_modelsim)#1
-# Loading work.registrador_n(comportamental)#1
-# Loading work.registrador_n(comportamental)#2
-# Loading work.edge_detector(rtl)#1
-# Loading work.contador_m(comportamental)#2
-# Loading work.contador_m(comportamental)#3
-# Loading work.unidade_controle(fsm)#1
-# Loading work.hexa7seg(comportamental)#1
-add wave -position insertpoint  \
-sim:/jogo_desafio_ritmo_tb_modo_base/clk_in \
-sim:/jogo_desafio_ritmo_tb_modo_base/rst_in \
-sim:/jogo_desafio_ritmo_tb_modo_base/jogar_in \
-sim:/jogo_desafio_ritmo_tb_modo_base/botoes_in \
-sim:/jogo_desafio_ritmo_tb_modo_base/seletor_modo_in \
-sim:/jogo_desafio_ritmo_tb_modo_base/leds_out \
-sim:/jogo_desafio_ritmo_tb_modo_base/pronto_out \
-sim:/jogo_desafio_ritmo_tb_modo_base/tem_jogada_out \
-sim:/jogo_desafio_ritmo_tb_modo_base/jogada_correta_out \
-sim:/jogo_desafio_ritmo_tb_modo_base/caso
-add wave -position insertpoint  \
-sim:/jogo_desafio_ritmo_tb_modo_base/dut/db_mem_hex \
-sim:/jogo_desafio_ritmo_tb_modo_base/dut/db_jogada_hex \
-sim:/jogo_desafio_ritmo_tb_modo_base/dut/db_estado_hex \
-sim:/jogo_desafio_ritmo_tb_modo_base/dut/db_cont_hex \
-sim:/jogo_desafio_ritmo_tb_modo_base/dut/pontuacao_hex
-add wave -position insertpoint  \
-sim:/jogo_desafio_ritmo_tb_modo_base/dut/unidade_controleUC/Eatual
-run -all
-# ** Note: inicio da simulacao
-#    Time: 0 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base/dut/fluxo_dadosFD/memoria_jogada_alternativa
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base/dut/fluxo_dadosFD/memoria_jogada_fixa
-# ** Note: fim da simulacao
-#    Time: 622240 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/wave_base.do}
-vsim -voptargs=+acc work.jogo_desafio_ritmo_tb_modo_base
-# End time: 12:43:11 on Mar 12,2023, Elapsed time: 0:03:11
-# Errors: 0, Warnings: 2
-# vsim -voptargs="+acc" work.jogo_desafio_ritmo_tb_modo_base 
-# Start time: 12:43:11 on Mar 12,2023
-# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.jogo_desafio_ritmo(estrutural)#1
+vsim work.jogo_desafio_ritmo_tb_modo_base -voptargs=+acc
+# End time: 14:04:04 on Mar 12,2023, Elapsed time: 0:00:22
+# Errors: 0, Warnings: 0
+# vsim work.jogo_desafio_ritmo_tb_modo_base -voptargs="+acc" 
+# Start time: 14:04:04 on Mar 12,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -562,12 +59,6 @@ vsim -voptargs=+acc work.jogo_desafio_ritmo_tb_modo_base
 # Loading work.unidade_controle(fsm)#1
 # Loading work.hexa7seg(comportamental)#1
 do {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/wave_base.do}
-add wave -position insertpoint  \
-sim:/jogo_desafio_ritmo_tb_modo_base/dut/fluxo_dadosFD/contador_tempo/Q
-add wave -position insertpoint  \
-sim:/jogo_desafio_ritmo_tb_modo_base/dut/fluxo_dadosFD/contador_tempo/fim
-add wave -position insertpoint  \
-sim:/jogo_desafio_ritmo_tb_modo_base/dut/fluxo_dadosFD/contador_tempo/IQ
 run -all
 # ** Note: inicio da simulacao
 #    Time: 0 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base
@@ -576,13 +67,12 @@ run -all
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base/dut/fluxo_dadosFD/memoria_jogada_fixa
 # ** Note: fim da simulacao
-#    Time: 622240 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/wave_base.do}
+#    Time: 662240 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base
 vsim -voptargs=+acc work.jogo_desafio_ritmo_tb_modo_base
-# End time: 12:45:05 on Mar 12,2023, Elapsed time: 0:01:54
+# End time: 14:10:14 on Mar 12,2023, Elapsed time: 0:06:10
 # Errors: 0, Warnings: 2
 # vsim -voptargs="+acc" work.jogo_desafio_ritmo_tb_modo_base 
-# Start time: 12:45:05 on Mar 12,2023
+# Start time: 14:10:14 on Mar 12,2023
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # Loading std.standard
 # Loading std.textio(body)
@@ -602,11 +92,15 @@ vsim -voptargs=+acc work.jogo_desafio_ritmo_tb_modo_base
 # Loading work.contador_m(comportamental)#3
 # Loading work.unidade_controle(fsm)#1
 # Loading work.hexa7seg(comportamental)#1
+add wave -position insertpoint  \
+sim:/jogo_desafio_ritmo_tb_modo_base/dut/unidade_controleUC/igual
 do {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/wave_base.do}
 add wave -position insertpoint  \
-sim:/jogo_desafio_ritmo_tb_modo_base/dut/fluxo_dadosFD/contador_tempo/conta
+sim:/jogo_desafio_ritmo_tb_modo_base/dut/unidade_controleUC/igual
 add wave -position insertpoint  \
-sim:/jogo_desafio_ritmo_tb_modo_base/dut/fluxo_dadosFD/contaT
+sim:/jogo_desafio_ritmo_tb_modo_base/dut/unidade_controleUC/jogada
+add wave -position insertpoint  \
+sim:/jogo_desafio_ritmo_tb_modo_base/dut/unidade_controleUC/Eprox
 run -all
 # ** Note: inicio da simulacao
 #    Time: 0 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base
@@ -615,24 +109,40 @@ run -all
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base/dut/fluxo_dadosFD/memoria_jogada_fixa
 # ** Note: fim da simulacao
-#    Time: 622240 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base
+#    Time: 662240 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base
 vcom -reportprogress 300 -work work {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/unidade_controle.vhd}
 # Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 12:46:53 on Mar 12,2023
+# Start time: 14:32:04 on Mar 12,2023
 # vcom -reportprogress 300 -work work /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/unidade_controle.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity unidade_controle
 # -- Compiling architecture fsm of unidade_controle
-# End time: 12:46:54 on Mar 12,2023, Elapsed time: 0:00:01
+# ** Error: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/unidade_controle.vhd(120): (vcom-1136) Unknown identifier "fimTempo".
+# ** Error: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/unidade_controle.vhd(120): (vcom-1590) Bad expression in right operand of infix expression 'and'.
+# ** Error: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/unidade_controle.vhd(120): (vcom-1590) Bad expression in right operand of infix expression 'or'.
+# ** Error: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/unidade_controle.vhd(116): Type error resolving infix expression "or" as type std.STANDARD.BOOLEAN.
+# ** Note: /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/unidade_controle.vhd(179): VHDL Compiler exiting
+# End time: 14:32:05 on Mar 12,2023, Elapsed time: 0:00:01
+# Errors: 4, Warnings: 0
+vcom -reportprogress 300 -work work {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/unidade_controle.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 14:32:28 on Mar 12,2023
+# vcom -reportprogress 300 -work work /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/unidade_controle.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity unidade_controle
+# -- Compiling architecture fsm of unidade_controle
+# End time: 14:32:30 on Mar 12,2023, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 write format wave -window .main_pane.wave.interior.cs.body.pw.wf {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/wave_base.do}
 vsim -voptargs=+acc work.jogo_desafio_ritmo_tb_modo_base
-# End time: 12:47:11 on Mar 12,2023, Elapsed time: 0:02:06
+# End time: 14:33:25 on Mar 12,2023, Elapsed time: 0:23:11
 # Errors: 0, Warnings: 2
 # vsim -voptargs="+acc" work.jogo_desafio_ritmo_tb_modo_base 
-# Start time: 12:47:11 on Mar 12,2023
+# Start time: 14:33:25 on Mar 12,2023
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # ** Note: (vopt-143) Recognized 1 FSM in architecture body "unidade_controle(fsm)".
 # Loading std.standard
@@ -662,25 +172,24 @@ run -all
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base/dut/fluxo_dadosFD/memoria_jogada_fixa
 # ** Note: fim da simulacao
-#    Time: 622240 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/wave_base.do}
-vcom -reportprogress 300 -work work {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/jogo_desafio_ritmo_tb_modo_escrita.vhd}
+#    Time: 662240 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base
+vcom -reportprogress 300 -work work {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/jogo_desafio_ritmo_tb_modo_base.vhd}
 # Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 12:51:40 on Mar 12,2023
-# vcom -reportprogress 300 -work work /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/jogo_desafio_ritmo_tb_modo_escrita.vhd 
+# Start time: 15:27:26 on Mar 12,2023
+# vcom -reportprogress 300 -work work /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/jogo_desafio_ritmo_tb_modo_base.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity jogo_desafio_ritmo_tb_modo_escrita
-# -- Compiling architecture tb of jogo_desafio_ritmo_tb_modo_escrita
-# End time: 12:51:42 on Mar 12,2023, Elapsed time: 0:00:02
+# -- Compiling entity jogo_desafio_ritmo_tb_modo_base
+# -- Compiling architecture tb of jogo_desafio_ritmo_tb_modo_base
+# End time: 15:27:28 on Mar 12,2023, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 vsim -voptargs=+acc work.jogo_desafio_ritmo_tb_modo_base
-# End time: 12:53:16 on Mar 12,2023, Elapsed time: 0:06:05
+# End time: 15:27:43 on Mar 12,2023, Elapsed time: 0:54:18
 # Errors: 0, Warnings: 2
 # vsim -voptargs="+acc" work.jogo_desafio_ritmo_tb_modo_base 
-# Start time: 12:53:16 on Mar 12,2023
-# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Start time: 15:27:43 on Mar 12,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -708,4 +217,50 @@ run -all
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base/dut/fluxo_dadosFD/memoria_jogada_fixa
 # ** Note: fim da simulacao
-#    Time: 622240 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base
+#    Time: 674540 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base
+vcom -reportprogress 300 -work work {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/unidade_controle.vhd}
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 15:31:07 on Mar 12,2023
+# vcom -reportprogress 300 -work work /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/unidade_controle.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity unidade_controle
+# -- Compiling architecture fsm of unidade_controle
+# End time: 15:31:08 on Mar 12,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vsim -voptargs=+acc work.jogo_desafio_ritmo_tb_modo_base
+# End time: 15:31:18 on Mar 12,2023, Elapsed time: 0:03:35
+# Errors: 0, Warnings: 2
+# vsim -voptargs="+acc" work.jogo_desafio_ritmo_tb_modo_base 
+# Start time: 15:31:18 on Mar 12,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in architecture body "unidade_controle(fsm)".
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.jogo_desafio_ritmo_tb_modo_base(tb)#1
+# Loading work.jogo_desafio_ritmo(estrutural)#1
+# Loading ieee.numeric_std(body)
+# Loading ieee.math_real(body)
+# Loading work.fluxo_dados(estrutural)#1
+# Loading work.contador_m(comportamental)#1
+# Loading work.comparador_85(dataflow)#1
+# Loading work.ram_64x4(ram_modelsim)#1
+# Loading work.registrador_n(comportamental)#1
+# Loading work.registrador_n(comportamental)#2
+# Loading work.edge_detector(rtl)#1
+# Loading work.contador_m(comportamental)#2
+# Loading work.contador_m(comportamental)#3
+# Loading work.unidade_controle(fsm)#1
+# Loading work.hexa7seg(comportamental)#1
+do {/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_1/wave_base.do}
+run -all
+# ** Note: inicio da simulacao
+#    Time: 0 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base/dut/fluxo_dadosFD/memoria_jogada_alternativa
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base/dut/fluxo_dadosFD/memoria_jogada_fixa
+# ** Note: fim da simulacao
+#    Time: 674540 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base

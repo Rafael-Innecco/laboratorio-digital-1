@@ -120,7 +120,10 @@ begin
             (Eatual = espera_jogada and fim_tempo = '1')
         ) else
         proximo         when Eatual = ultima_jogada and fim_jogo = '0' else
-        fim             when Eatual = ultima_jogada and fim_jogo = '1' else
+        fim             when (
+            (Eatual = ultima_jogada and fim_jogo = '1') or
+            (Eatual = fim and jogar = '0')
+        ) else
         inicial;
 
     -- logica de saída (maquina de Moore)

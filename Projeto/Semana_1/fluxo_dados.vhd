@@ -154,7 +154,7 @@ begin
   
   contador_endereco: contador_m
 	 generic map (
-		M => 64
+		M => 63
 	 )
 	 port map (
 		clock => clock,
