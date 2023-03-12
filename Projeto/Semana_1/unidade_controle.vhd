@@ -97,7 +97,7 @@ begin
             (Eatual = proximo and modo_escrita = '0') or
             (Eatual = espera_jogada and jogada = '0' and fim_tempo = '0')
         ) else
-        registra        when Eatual = espera_jogada and (jogada='1' or fim_tempo = '1') else 
+        registra        when Eatual = espera_jogada and jogada='1' else 
         compara         when Eatual = registra else
 		espera_escrita  when (
             (Eatual = inicializa_elem and (fim_espera = '1' and modo_escrita = '1')) or
@@ -105,7 +105,7 @@ begin
             (Eatual = espera_escrita and (jogada = '0' and fim_tempo = '0'))
         ) else
         escreve_jogada  when Eatual = espera_escrita and (jogada = '1' or fim_tempo = '1') else
-        acerto          when Eatual = compara and (jogada = '1' and igual = '1') else
+        acerto          when Eatual = compara and igual = '1' else
         termina_tempo   when (
             (Eatual = compara and ((igual = '0' or jogada = '0') and fim_tempo = '0')) or
             (Eatual = acerto and fim_tempo = '0') or
@@ -116,7 +116,8 @@ begin
             (Eatual = termina_tempo and fim_tempo = '1') or
             (Eatual = escreve_jogada and fim_tempo = '1') or
             (Eatual = acerto and fim_tempo = '1') or
-            (Eatual = compara and ((igual = '0' or jogada = '0') and fim_tempo = '1'))
+            (Eatual = compara and ((igual = '0' or jogada = '0') and fim_tempo = '1')) or
+            (Eatual = espera_jogada and fim_tempo = '1')
         ) else
         proximo         when Eatual = ultima_jogada and fim_jogo = '0' else
         fim             when Eatual = ultima_jogada and fim_jogo = '1' else
