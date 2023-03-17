@@ -17,6 +17,7 @@
 -- 14/02/2023   1.2     João Arroyo     Versão exp_5
 -- 15/02/2023   1.2.1   Rafael Innecco  Versão desafio exp_5
 -- 11/03/2023   2.0     Rafael Innecco  Modificações para o projeto da disciplina
+-- 17/03/2023   2.1     Rafael Innecco  Modificação do controle de pontuação
 --------------------------------------------------------------------
 --
 
@@ -44,17 +45,19 @@ entity unidade_controle is
         registraR   	: out std_logic;
         ----------
         zeraP           : out std_logic;
-        contaP          : out std_logic;
-         ----------
+        atualizaP       : out std_logic;
+        diminuiP_jogada : out std_logic; -- utilizado para diminuir pontuação ao longo do tempo
+        resetaP_jogada  : out std_logic; -- utilzado para colocar a pontuação da rodada em 0100
+        ----------
         registra_modo   : out std_logic;
-         ----------
+        ----------
         pronto      	: out std_logic;
-         ----------
+        ----------
         contaT	        : out std_logic;
         zeraT           : out std_logic;
-         ----------
+        ----------
         escreveM        : out std_logic;
-         ----------
+        ----------
         seletor_leds    : out std_logic;
 		-- Sinais de depuracao 
 		db_estado   	: out std_logic_vector(3 downto 0)
@@ -149,7 +152,7 @@ begin
         zeraP <=            '1' when inicializa_elem,
                             '0' when others;
     with Eatual select
-        contaP <=           '1' when acerto,
+        atualizaP <=           '1' when acerto,
                             '0' when others;
     with Eatual select
         pronto <=           '1' when fim,
@@ -162,6 +165,12 @@ begin
                             '0' when others;
     with Eatual select
         seletor_leds <=     '1' when inicializa_elem,
+                            '0' when others;
+    with Eatual select
+        diminuiP_jogada <=  '1' when espera_jogada, -- Pontuação para jogada menor quanto mais tempo o jogador demora
+                            '0' when others;
+    with Eatual select
+        resetaP_jogada  <=  '1' when ultima_jogada,
                             '0' when others;
 	--
     -- saida de depuracao (db_estado)

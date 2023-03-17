@@ -10,7 +10,7 @@
 --             N = natural(ceil(log2(real(M))))
 --
 -- Exemplo de instanciacao: contador módulo 50
---             CONT50: contador_m 
+--             CONT50: contador_modificado
 --                     generic map ( M=> 50 )
 --                     port map ( ...
 --             
@@ -22,6 +22,7 @@
 --     09/09/2020  1.2     Edson Midorikawa  revisao 
 --     30/01/2022  2.0     Edson Midorikawa  revisao do componente
 --     29/01/2023  2.1     Edson Midorikawa  revisao do componente
+--     15/03/2023  3.0     Rafael Innecco    Modificação para uso no projeto
 -------------------------------------------------------------------------
 --
 library ieee;

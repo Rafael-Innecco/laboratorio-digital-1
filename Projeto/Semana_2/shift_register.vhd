@@ -29,10 +29,12 @@
 
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
 entity shift_register is
     generic (
-        constant N      : integer := 8
+        constant N              : integer := 8;
+        constant reset_value    : integer := 0
     );
     port (
         clock       : in std_logic;
@@ -50,7 +52,7 @@ begin
 
     process(clock, clear, enable_l, enable_s, IQ)
     begin
-        if (clear = '1') then IQ <= (others => '0');
+        if (clear = '1') then IQ <= std_logic_vector(to_unsigned(reset_value, N));
         elsif (clock'event and clock='1') then
             if (enable_l ='1') then IQ <= D;
             elsif (enable_s = '1') then IQ <= "0" & IQ(N-1 downto 1); 

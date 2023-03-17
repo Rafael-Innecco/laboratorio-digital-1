@@ -10,6 +10,7 @@
 --  Data        Versao  Autor           Descricao
 --  11/02/2023  1.0     João Arroyo     Versão inicial
 --	11/03/2023	2.0		Rafael Innecco	Modificações iniciais do projeto
+--	17/03/2023	2.1		Rafael Innecco	Mudança para controle de pontuação
 --------------------------------------------------------------------
 
 library ieee;
@@ -52,7 +53,9 @@ architecture estrutural of jogo_desafio_ritmo is -- componente alterado
 			contaT	        	: in std_logic; 
 			zeraT				: in std_logic;
 			seletor_leds		: in std_logic;
-			contaP				: in std_logic;
+			atualizaP			: in std_logic;
+			diminuiP_jogada		: in std_logic;
+			resetaP_jogada		: in std_logic;
 			zeraP				: in std_logic;
 			registra_modo		: in std_logic;
 			-----------------------
@@ -93,7 +96,9 @@ architecture estrutural of jogo_desafio_ritmo is -- componente alterado
 			registraR   	: out std_logic;
 			------------
 			zeraP			: out std_logic;
-			contaP			: out std_logic;
+			atualizaP		: out std_logic;
+			diminuiP_jogada	: out std_logic;
+			resetaP_jogada	: out std_logic;
 			------------
 			registra_modo	: out std_logic;
 			------------
@@ -122,7 +127,8 @@ architecture estrutural of jogo_desafio_ritmo is -- componente alterado
 	signal db_cont_display1, db_cont_display2, pontuacao_display1, pontuacao_display2: std_logic_vector (6 downto 0);
 	signal db_contagem_hex_parte2, pontuacao_hex_parte2: std_logic_vector (3 downto 0);
 	signal zeraC, contaC, zeraR, registraR	: std_logic := '0';
-	signal zeraP, contaP, registra_modo		: std_logic := '0';
+	signal zeraP, atualizaP, registra_modo	: std_logic := '0';
+	signal diminuiP_jogada, resetaP_jogada	: std_logic := '0';
 	signal igual, jogada_feita 	: std_logic := '0';
 	signal fim_jogo, fim_espera				: std_logic	:= '0';
 	signal modo_escrita						: std_logic;
@@ -145,7 +151,9 @@ begin
 			contaT				=>  contaT,
 			zeraT				=> zeraT,
 			seletor_leds 		=> seletor_leds,
-			contaP				=> contaP,
+			atualizaP			=> atualizaP,
+			diminuiP_jogada		=> diminuiP_jogada,
+			resetaP_jogada		=> resetaP_jogada,
 			zeraP				=> zeraP,
 			registra_modo		=> registra_modo,
 			--------------------------
@@ -167,29 +175,31 @@ begin
 	
     unidade_controleUC: unidade_controle --Instanciacao modificada
         port map (
-            clock        => clock,
-            reset        => reset,
-            jogar       => jogar,
-            fim_jogo     => fim_jogo,
-            jogada       => jogada_feita,
-            igual        => igual,
-			fim_tempo     => fim_tempo,
-			fim_espera	=> fim_espera,
+            clock        	=> clock,
+            reset        	=> reset,
+            jogar       	=> jogar,
+            fim_jogo     	=> fim_jogo,
+            jogada       	=> jogada_feita,
+            igual        	=> igual,
+			fim_tempo     	=> fim_tempo,
+			fim_espera		=> fim_espera,
 			modo_escrita	=> modo_escrita,
 			---------------------
-            zeraC    => zeraC,
-            contaC   => contaC,
-			zeraR        => zeraR,
-            registraR    => registraR,
-			zeraP		=> zeraP,
-			contaP		=> contaP,
+            zeraC    		=> zeraC,
+            contaC   		=> contaC,
+			zeraR        	=> zeraR,
+            registraR    	=> registraR,
+			zeraP			=> zeraP,
+			atualizaP		=> atualizaP,
+			diminuiP_jogada	=>	diminuiP_jogada,
+			resetaP_jogada	=> resetaP_jogada,
 			registra_modo	=> registra_modo,
-            pronto       => pronto,
-            contaT	 => contaT,
-			zeraT		=> zeraT,
-			escreveM	 => escreveM,
-			seletor_leds => seletor_leds,
-			db_estado    => db_estado_hex
+            pronto       	=> pronto,
+            contaT	 		=> contaT,
+			zeraT			=> zeraT,
+			escreveM	 	=> escreveM,
+			seletor_leds 	=> seletor_leds,
+			db_estado    	=> db_estado_hex
         );
     --
 
