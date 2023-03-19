@@ -63,7 +63,7 @@ architecture tb of jogo_desafio_ritmo_tb_modo_base is
   ----------------------------------------
   signal leds_out            : std_logic_vector(3 downto 0) := "0000";
   signal pronto_out          : std_logic := '0';
-  signal pontuacao_out       : std_logic_vector(13 downto 0) := "00000000000000";
+  signal pontuacao_out       : std_logic_vector(8 downto 0) := "000000000";
   signal clock_out           : std_logic := '0';
   signal tem_jogada_out      : std_logic := '0';
   signal jogada_correta_out  : std_logic := '0';
