@@ -26,7 +26,7 @@ entity jogo_desafio_ritmo is -- novo nome de entidade
 		------------------------
         leds           			: out std_logic_vector (3 downto 0);
 		pronto          		: out std_logic;
-		pontuacao				: out std_logic_vector (13 downto 0); -- indica número de jogadas certas, ocupa dois displays de sete segmentos
+		pontuacao				: out std_logic_vector (8 downto 0); -- indica número de jogadas certas, ocupa dois displays de sete segmentos
 		------------------------     
         db_clock				: out std_logic;
 		db_tem_jogada    		: out std_logic;

@@ -69,8 +69,10 @@ end architecture ram_mif;
 
 -- Dados iniciais (para simulacao com Modelsim) 
 architecture ram_modelsim of ram_64x4 is
-  type   arranjo_memoria is array(0 to 63) of std_logic_vector(3 downto 0);
+  type   arranjo_memoria is array(0 to 71) of std_logic_vector(3 downto 0);
   signal memoria : arranjo_memoria := (
+                                        "0000", "0000", "0000", "0000",
+										"0001", "0010", "0100", "1000", "0100", "0010",
                                         "0001", "0010", "0100", "1000", "0100", "0010",
                                         "0001", "0010", "0100", "1000", "0100", "0010",
                                         "0001", "0010", "0100", "1000", "0100", "0010",
@@ -80,8 +82,8 @@ architecture ram_modelsim of ram_64x4 is
                                         "0001", "0010", "0100", "1000", "0100", "0010",
                                         "0001", "0010", "0100", "1000", "0100", "0010",
                                         "0001", "0010", "0100", "1000", "0100", "0010",
-                                        "0001", "0010", "0100", "1000", "0100", "0010",
-                                        "0001", "0010", "0100", "1000"
+                                        "0001", "0010", "0100", "1000",
+										"0000", "0000", "0000", "0000"
                                         );
   
 begin
