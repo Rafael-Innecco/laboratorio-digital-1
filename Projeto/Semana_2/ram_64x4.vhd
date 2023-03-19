@@ -39,7 +39,7 @@ end entity ram_64x4;
 
 -- Dados iniciais em arquivo MIF (para sintese com Intel Quartus Prime) 
 architecture ram_mif of ram_64x4 is
-  type   arranjo_memoria is array(0 to 63) of std_logic_vector(3 downto 0);
+  type   arranjo_memoria is array(0 to 71) of std_logic_vector(3 downto 0);
   signal memoria : arranjo_memoria;
   
   -- Configuracao do Arquivo MIF

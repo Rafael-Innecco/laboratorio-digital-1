@@ -1,0 +1,5 @@
+v 4
+file . "ram_64x4.vhd" "b84569ea7325d5ad60f7d1028f05bff4f85cbfbf" "20230319130825.396":
+  entity ram_64x4 at 25( 1337) + 0 on 11;
+  architecture ram_mif of ram_64x4 at 41( 1839) + 0 on 12;
+  architecture ram_modelsim of ram_64x4 at 71( 2726) + 0 on 13;
