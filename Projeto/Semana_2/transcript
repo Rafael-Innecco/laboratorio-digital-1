@@ -584,3 +584,5 @@ run -all
 #    Time: 0 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base/dut/fluxo_dadosFD/memoria_jogada_fixa
 # ** Note: fim da simulacao
 #    Time: 1378980 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base
+# End time: 17:09:11 on Mar 20,2023, Elapsed time: 0:03:08
+# Errors: 0, Warnings: 10
