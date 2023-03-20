@@ -138,8 +138,11 @@ begin
     -- wait for 1000*clockPeriod; -- 1 segundo: tempo para começar o jogo - FOI REMOVIDO
     jogar_in <= '0';
     
+	
     -- Cenario de Teste: sequencia basica de uma musica
-
+	
+	wait for 4020*clockPeriod; -- primeiros quatro dados sao em branco!
+	
     ----  jogada 1: acerta
     caso <= 5;
 	wait for 100*clockPeriod;
@@ -706,6 +709,9 @@ begin
     ---- finaliza jogada 
     wait for 300*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais	
+	
+	wait for 5000*clockPeriod; -- espera pelo fim dos elementos nulos da memória.
+	
     ---- final do testbench
     assert false report "fim da simulacao" severity note;
     keep_simulating <= '0';
