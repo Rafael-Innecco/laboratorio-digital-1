@@ -40,7 +40,7 @@ architecture tb of jogo_desafio_ritmo_tb_modo_escrita is
             ------------------------
             leds                : out std_logic_vector (15 downto 0);
             pronto              : out std_logic;
-            pontuacao           : out std_logic_vector (8 downto 0);
+            pontuacao           : out std_logic_vector (13 downto 0);
             ------------------------
             db_clock            : out std_logic;
             db_tem_jogada       : out std_logic;
@@ -63,7 +63,7 @@ architecture tb of jogo_desafio_ritmo_tb_modo_escrita is
   ----------------------------------------
   signal leds_out            : std_logic_vector(15 downto 0) := "0000000000000000";
   signal pronto_out          : std_logic := '0';
-  signal pontuacao_out       : std_logic_vector(8 downto 0) := "000000000";
+  signal pontuacao_out       : std_logic_vector(13 downto 0) := "00000000000000";
   signal clock_out           : std_logic := '0';
   signal tem_jogada_out      : std_logic := '0';
   signal jogada_correta_out  : std_logic := '0';
@@ -706,7 +706,15 @@ wait for 500*clockPeriod;
     ---- finaliza jogada 
     wait for 305*clockPeriod;
 	wait for 500*clockPeriod;
-	
+	---- jogada 64: acerta
+	caso <= 68;
+	wait for 100*clockPeriod;
+    botoes_in <= "0001";
+    wait for 100*clockPeriod;
+    botoes_in <= "0000";
+    ---- finaliza jogada 
+    wait for 305*clockPeriod;
+	wait for 500*clockPeriod;
 	------------------------------------------------
 	-- Começo da partida no jogo marcado!
 	------------------------------------------------
@@ -1287,6 +1295,15 @@ wait for 500*clockPeriod;
 	wait for 500*clockPeriod;
     ---- jogada 63: acerta
     caso <= 132;
+	wait for 100*clockPeriod;
+    botoes_in <= "0001";
+    wait for 100*clockPeriod;
+    botoes_in <= "0000";
+    ---- finaliza jogada 
+    wait for 305*clockPeriod;
+	wait for 500*clockPeriod;
+	---- jogada 64: acerta
+    caso <= 133;
 	wait for 100*clockPeriod;
     botoes_in <= "0001";
     wait for 100*clockPeriod;

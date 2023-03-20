@@ -40,7 +40,7 @@ architecture tb of jogo_desafio_ritmo_tb_modo_base is
             ------------------------
             leds                : out std_logic_vector (15 downto 0);
             pronto              : out std_logic;
-            pontuacao           : out std_logic_vector (8 downto 0);
+            pontuacao           : out std_logic_vector (13 downto 0);
             ------------------------
             db_clock            : out std_logic;
             db_tem_jogada       : out std_logic;
@@ -706,8 +706,15 @@ begin
     ---- finaliza jogada 
     wait for 305*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais	
-    ---- finaliza jogada 
-    wait for 300*clockPeriod;
+     caso <= 68;
+	wait for 100*clockPeriod;
+    botoes_in <= "1000";
+    wait for 100*clockPeriod;
+    botoes_in <= "0000";
+	---- finaliza jogada 
+    wait for 305*clockPeriod;
+	wait for 500*clockPeriod;
+	
 	wait for 500*clockPeriod; -- tempo de espera a mais	
 		
     ---- final do testbench
