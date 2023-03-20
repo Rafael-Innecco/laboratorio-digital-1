@@ -127,14 +127,14 @@ begin
 
     -- pulso do sinal de Iniciar (muda na borda de descida do clock)
     caso <= 3;
-    seletor_modo_in <= "01"; -- Codigo do jogo normal
+    seletor_modo_in <= "01"; -- Codigo da gravacao
     wait for 100*clockPeriod;
  
 	-- pulso do sinal de Iniciar (muda na borda de descida do clock)
     caso <= 4;
     wait until falling_edge(clk_in);
     jogar_in <= '1';
-    wait for 1000*clockPeriod; -- 1 segundo: tempo para começar o jogo
+    wait for 1000*clockPeriod; -- 1 segundo: tempo para começar o jogo - ainda temos espera para a escrita.
     jogar_in <= '0';
     
     -- Cenario de Teste: sequencia basica de uma musica
@@ -147,7 +147,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;
 	---- jogada 2: acerta
     caso <= 6;
 	wait for 100*clockPeriod;
@@ -156,7 +156,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ---- jogada 3: acerta
     caso <= 7;
 	wait for 100*clockPeriod;
@@ -165,7 +165,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ---- jogada 4: acerta
     caso <= 8;
 	wait for 100*clockPeriod;
@@ -174,7 +174,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;
 	---- jogada 5: acerta
     caso <= 9;
 	wait for 100*clockPeriod;
@@ -183,7 +183,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;
 	---- jogada 6: acerta
     caso <= 10;
 	wait for 100*clockPeriod;
@@ -192,7 +192,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ---- jogada  7: acerta
     caso <= 11;
 	wait for 100*clockPeriod;
@@ -201,7 +201,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;
 	----  jogada  8: acerta
     caso <= 12;
 	wait for 100*clockPeriod;
@@ -210,7 +210,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ----  jogada  9: acerta
     caso <= 13;
 	wait for 100*clockPeriod;
@@ -219,7 +219,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ----  jogada  10: acerta
     caso <= 14;
 	wait for 100*clockPeriod;
@@ -228,7 +228,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;
 	----  jogada 11: acerta
     caso <= 15;
 	wait for 100*clockPeriod;
@@ -237,7 +237,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;
 	----  jogada 12: acerta
     caso <= 16;
 	wait for 100*clockPeriod;
@@ -246,7 +246,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ----  jogada 13: acerta
     caso <= 17;
 	wait for 100*clockPeriod;
@@ -255,7 +255,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;
 	----  jogada 14: acerta
     caso <= 18;
 	wait for 100*clockPeriod;
@@ -264,7 +264,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ----  jogada 15: acerta
     caso <= 19;
 	wait for 100*clockPeriod;
@@ -273,7 +273,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+wait for 500*clockPeriod;
     ---- jogada 16: acerta
     caso <= 20;
 	wait for 100*clockPeriod;
@@ -282,7 +282,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;	
 	----  jogada 17: acerta
     caso <= 21;
 	wait for 100*clockPeriod;
@@ -291,7 +291,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;	
 	---- jogada 18: acerta
     caso <= 22;
 	wait for 100*clockPeriod;
@@ -300,7 +300,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ---- jogada 19: acerta
     caso <= 23;
 	wait for 100*clockPeriod;
@@ -309,7 +309,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;	
 	---- jogada 20: acerta
     caso <= 24;
 	wait for 100*clockPeriod;
@@ -318,7 +318,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ---- jogada 21: acerta
     caso <= 25;
 	wait for 100*clockPeriod;
@@ -327,7 +327,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ---- jogada 22: acerta
     caso <= 26;
 	wait for 100*clockPeriod;
@@ -336,7 +336,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;	
 	----  jogada 23: acerta
     caso <= 27;
 	wait for 100*clockPeriod;
@@ -345,7 +345,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;	
 	----  jogada  24: acerta
     caso <= 28;
 	wait for 100*clockPeriod;
@@ -354,7 +354,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ----  jogada  25: acerta
     caso <= 29;
 	wait for 100*clockPeriod;
@@ -363,7 +363,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;	
 	----  jogada  26: acerta
     caso <= 30;
 	wait for 100*clockPeriod;
@@ -372,7 +372,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ----  jogada  27: acerta
     caso <= 31;
 	wait for 100*clockPeriod;
@@ -381,7 +381,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ----  jogada  28: acerta
     caso <= 32;
 	wait for 100*clockPeriod;
@@ -390,7 +390,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;	
 	---- jogada 29: acerta
     caso <= 33;
 	wait for 100*clockPeriod;
@@ -399,7 +399,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;	
 	---- jogada 30: acerta
     caso <= 34;
 	wait for 100*clockPeriod;
@@ -408,7 +408,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ----  jogada 31: acerta
     caso <= 35;
 	wait for 100*clockPeriod;
@@ -417,7 +417,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;	
 	---- jogada 32: acerta
     caso <= 36;
 	wait for 100*clockPeriod;
@@ -426,7 +426,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ---- jogada 33: acerta
     caso <= 37;
 	wait for 100*clockPeriod;
@@ -435,7 +435,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ---- jogada 34: acerta
     caso <= 38;
 	wait for 100*clockPeriod;
@@ -444,7 +444,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;
 	---- jogada 35: acerta
     caso <= 39;
 	wait for 100*clockPeriod;
@@ -453,7 +453,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;	
 	---- jogada 36: acerta
     caso <= 40;
 	wait for 100*clockPeriod;
@@ -462,7 +462,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ---- jogada 37: acerta
     caso <= 41;
 	wait for 100*clockPeriod;
@@ -471,7 +471,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;
 	---- jogada 38: acerta
     caso <= 42;
 	wait for 100*clockPeriod;
@@ -480,7 +480,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ---- jogada 39: acerta
     caso <= 43;
 	wait for 100*clockPeriod;
@@ -489,7 +489,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ---- jogada 40: acerta
     caso <= 44;
 	wait for 100*clockPeriod;
@@ -498,7 +498,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;
 	---- jogada 41: acerta
     caso <= 45;
 	wait for 100*clockPeriod;
@@ -507,7 +507,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;
 	---- jogada 42: acerta
     caso <= 46;
 	wait for 100*clockPeriod;
@@ -516,7 +516,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ----  jogada 43: acerta
     caso <= 47;
 	wait for 100*clockPeriod;
@@ -525,7 +525,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;
 	----  jogada 44: acerta
     caso <= 48;
 	wait for 100*clockPeriod;
@@ -534,7 +534,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ----  jogada 45: acerta
     caso <= 49;
 	wait for 100*clockPeriod;
@@ -543,7 +543,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ----  jogada 46: acerta
     caso <= 50;
 	wait for 100*clockPeriod;
@@ -552,7 +552,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;
 	----  jogada 47: acerta
     caso <= 51;
 	wait for 100*clockPeriod;
@@ -561,7 +561,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;
 	----  jogada 48: acerta
     caso <= 52;
 	wait for 100*clockPeriod;
@@ -570,7 +570,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ----  jogada 49: acerta
     caso <= 53;
 	wait for 100*clockPeriod;
@@ -579,7 +579,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;
 	----  jogada 50: acerta
     caso <= 54;
 	wait for 100*clockPeriod;
@@ -588,7 +588,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ----  jogada 51: acerta
     caso <= 55;
 	wait for 100*clockPeriod;
@@ -597,7 +597,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ----  jogada 52: acerta
     caso <= 56;
 	wait for 100*clockPeriod;
@@ -606,7 +606,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;
 	----  jogada 53: acerta
     caso <= 57;
 	wait for 100*clockPeriod;
@@ -615,7 +615,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;
 	----  jogada 54: acerta
     caso <= 58;
 	wait for 100*clockPeriod;
@@ -624,7 +624,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ----  jogada 55: acerta
     caso <= 59;
 	wait for 100*clockPeriod;
@@ -633,7 +633,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 300*clockPeriod;
-	
+	wait for 500*clockPeriod;
 	---- jogada 56: acerta
     caso <= 60;
 	wait for 100*clockPeriod;
@@ -642,7 +642,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ---- jogada 57: acerta
     caso <= 61;
 	wait for 100*clockPeriod;
@@ -651,7 +651,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ---- jogada 58: acerta
     caso <= 62;
 	wait for 100*clockPeriod;
@@ -660,7 +660,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;
 	---- jogada 59: acerta
     caso <= 63;
 	wait for 100*clockPeriod;
@@ -669,7 +669,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;
 	----  jogada 60: acerta
     caso <= 64;
 	wait for 100*clockPeriod;
@@ -678,7 +678,7 @@ begin
     botoes_in <= "0000";
 	---- finaliza jogada
 	wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
      ----  jogada 61: acerta
     caso <= 65;
 	wait for 100*clockPeriod;
@@ -687,7 +687,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;
 	---- jogada 62: acerta
     caso <= 66;
 	wait for 100*clockPeriod;
@@ -696,7 +696,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ---- jogada 63: acerta
     caso <= 67;
 	wait for 100*clockPeriod;
@@ -705,7 +705,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;
 	
 	------------------------------------------------
 	-- Começo da partida no jogo marcado!
@@ -720,9 +720,11 @@ begin
     caso <= 69;
     wait until falling_edge(clk_in);
     jogar_in <= '1';
-    wait for 1000*clockPeriod; -- 1 segundo: tempo para começar o jogo
+    wait for 2*clockPeriod;
+	-- wait for 1000*clockPeriod; -- 1 segundo: tempo para começar o jogo ABORTADO
     jogar_in <= '0';
     
+	wait for 4020*clockPeriod; -- Espera ciclos referentes aos 4 primeiros dados "0000"
     -- Cenario de Teste: sequencia basica de uma musica
 
     ----  jogada 1: acerta
@@ -733,7 +735,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;
 	---- jogada 2: acerta
     caso <= 71;
 	wait for 100*clockPeriod;
@@ -742,7 +744,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ---- jogada 3: acerta
     caso <= 72;
 	wait for 100*clockPeriod;
@@ -751,7 +753,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ---- jogada 4: acerta
     caso <= 73;
 	wait for 100*clockPeriod;
@@ -760,7 +762,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;	
 	---- jogada 5: acerta
     caso <= 74;
 	wait for 100*clockPeriod;
@@ -769,7 +771,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;	
 	---- jogada 6: acerta
     caso <= 75;
 	wait for 100*clockPeriod;
@@ -778,7 +780,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ---- jogada  7: acerta
     caso <= 76;
 	wait for 100*clockPeriod;
@@ -787,7 +789,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;	
 	----  jogada  8: acerta
     caso <= 77;
 	wait for 100*clockPeriod;
@@ -796,7 +798,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ----  jogada  9: acerta
     caso <= 78;
 	wait for 100*clockPeriod;
@@ -805,7 +807,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ----  jogada  10: acerta
     caso <= 79;
 	wait for 100*clockPeriod;
@@ -814,7 +816,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;	
 	----  jogada 11: acerta
     caso <= 80;
 	wait for 100*clockPeriod;
@@ -823,7 +825,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;	
 	----  jogada 12: acerta
     caso <= 81;
 	wait for 100*clockPeriod;
@@ -832,7 +834,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ----  jogada 13: acerta
     caso <= 82;
 	wait for 100*clockPeriod;
@@ -841,7 +843,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;	
 	----  jogada 14: acerta
     caso <= 83;
 	wait for 100*clockPeriod;
@@ -850,7 +852,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ----  jogada 15: acerta
     caso <= 84;
 	wait for 100*clockPeriod;
@@ -859,7 +861,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ---- jogada 16: acerta
     caso <= 85;
 	wait for 100*clockPeriod;
@@ -868,7 +870,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;	
 	----  jogada 17: acerta
     caso <= 86;
 	wait for 100*clockPeriod;
@@ -877,7 +879,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;	
 	---- jogada 18: acerta
     caso <= 87;
 	wait for 100*clockPeriod;
@@ -886,7 +888,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ---- jogada 19: acerta
     caso <= 88;
 	wait for 100*clockPeriod;
@@ -895,7 +897,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;	
 	---- jogada 20: acerta
     caso <= 89;
 	wait for 100*clockPeriod;
@@ -904,7 +906,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ---- jogada 21: acerta
     caso <= 90;
 	wait for 100*clockPeriod;
@@ -913,7 +915,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ---- jogada 22: acerta
     caso <= 91;
 	wait for 100*clockPeriod;
@@ -922,7 +924,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;	
 	----  jogada 23: acerta
     caso <= 92;
 	wait for 100*clockPeriod;
@@ -931,7 +933,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;	
 	----  jogada  24: acerta
     caso <= 93;
 	wait for 100*clockPeriod;
@@ -940,7 +942,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ----  jogada  25: acerta
     caso <= 94;
 	wait for 100*clockPeriod;
@@ -949,7 +951,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;	
 	----  jogada  26: acerta
     caso <= 95;
 	wait for 100*clockPeriod;
@@ -958,7 +960,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ----  jogada  27: acerta
     caso <= 96;
 	wait for 100*clockPeriod;
@@ -967,7 +969,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ----  jogada  28: acerta
     caso <= 97;
 	wait for 100*clockPeriod;
@@ -976,7 +978,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;	
 	---- jogada 29: acerta
     caso <= 98;
 	wait for 100*clockPeriod;
@@ -985,7 +987,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;	
 	---- jogada 30: acerta
     caso <= 99;
 	wait for 100*clockPeriod;
@@ -994,7 +996,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ----  jogada 31: acerta
     caso <= 100;
 	wait for 100*clockPeriod;
@@ -1003,7 +1005,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;	
 	---- jogada 32: acerta
     caso <= 101;
 	wait for 100*clockPeriod;
@@ -1012,7 +1014,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ---- jogada 33: acerta
     caso <= 102;
 	wait for 100*clockPeriod;
@@ -1021,7 +1023,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ---- jogada 34: acerta
     caso <= 103;
 	wait for 100*clockPeriod;
@@ -1030,7 +1032,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;	
 	---- jogada 35: acerta
     caso <= 104;
 	wait for 100*clockPeriod;
@@ -1039,7 +1041,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;	
 	---- jogada 36: acerta
     caso <= 105;
 	wait for 100*clockPeriod;
@@ -1048,7 +1050,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ---- jogada 37: acerta
     caso <= 106;
 	wait for 100*clockPeriod;
@@ -1057,7 +1059,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;	
 	---- jogada 38: acerta
     caso <= 107;
 	wait for 100*clockPeriod;
@@ -1066,7 +1068,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ---- jogada 39: acerta
     caso <= 108;
 	wait for 100*clockPeriod;
@@ -1075,7 +1077,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ---- jogada 40: acerta
     caso <= 109;
 	wait for 100*clockPeriod;
@@ -1084,7 +1086,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;	
 	---- jogada 41: acerta
     caso <= 110;
 	wait for 100*clockPeriod;
@@ -1093,7 +1095,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;	
 	---- jogada 42: acerta
     caso <= 111;
 	wait for 100*clockPeriod;
@@ -1102,7 +1104,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ----  jogada 43: acerta
     caso <= 112;
 	wait for 100*clockPeriod;
@@ -1111,7 +1113,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;	
 	----  jogada 44: acerta
     caso <= 113;
 	wait for 100*clockPeriod;
@@ -1120,7 +1122,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ----  jogada 45: acerta
     caso <= 114;
 	wait for 100*clockPeriod;
@@ -1129,7 +1131,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ----  jogada 46: acerta
     caso <= 115;
 	wait for 100*clockPeriod;
@@ -1138,7 +1140,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;
 	----  jogada 47: acerta
     caso <= 116;
 	wait for 100*clockPeriod;
@@ -1147,7 +1149,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;
 	----  jogada 48: acerta
     caso <= 117;
 	wait for 100*clockPeriod;
@@ -1156,7 +1158,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ----  jogada 49: acerta
     caso <= 118;
 	wait for 100*clockPeriod;
@@ -1165,7 +1167,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;
 	----  jogada 50: acerta
     caso <= 119;
 	wait for 100*clockPeriod;
@@ -1174,7 +1176,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ----  jogada 51: acerta
     caso <= 120;
 	wait for 100*clockPeriod;
@@ -1183,7 +1185,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ----  jogada 52: acerta
     caso <= 121;
 	wait for 100*clockPeriod;
@@ -1192,7 +1194,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;	
 	----  jogada 53: acerta
     caso <= 122;
 	wait for 100*clockPeriod;
@@ -1201,7 +1203,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;	
 	----  jogada 54: acerta
     caso <= 123;
 	wait for 100*clockPeriod;
@@ -1210,7 +1212,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ----  jogada 55: acerta
     caso <= 124;
 	wait for 100*clockPeriod;
@@ -1219,7 +1221,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 300*clockPeriod;
-	
+	wait for 500*clockPeriod;
 	---- jogada 56: acerta
     caso <= 125;
 	wait for 100*clockPeriod;
@@ -1228,7 +1230,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ---- jogada 57: acerta
     caso <= 126;
 	wait for 100*clockPeriod;
@@ -1237,7 +1239,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ---- jogada 58: acerta
     caso <= 127;
 	wait for 100*clockPeriod;
@@ -1246,7 +1248,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;	
 	---- jogada 59: acerta
     caso <= 128;
 	wait for 100*clockPeriod;
@@ -1255,7 +1257,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;	
 	----  jogada 60: acerta
     caso <= 129;
 	wait for 100*clockPeriod;
@@ -1264,7 +1266,7 @@ begin
     botoes_in <= "0000";
 	---- finaliza jogada
 	wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
      ----  jogada 61: acerta
     caso <= 130;
 	wait for 100*clockPeriod;
@@ -1273,7 +1275,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-	
+	wait for 500*clockPeriod;	
 	---- jogada 62: acerta
     caso <= 131;
 	wait for 100*clockPeriod;
@@ -1282,7 +1284,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
-
+	wait for 500*clockPeriod;
     ---- jogada 63: acerta
     caso <= 132;
 	wait for 100*clockPeriod;
@@ -1291,6 +1293,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 305*clockPeriod;
+	wait for 500*clockPeriod;
 	
 	wait for 300*clockPeriod;
 	

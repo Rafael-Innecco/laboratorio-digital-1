@@ -713,8 +713,6 @@ begin
     ---- finaliza jogada 
     wait for 300*clockPeriod;
 	
-	wait for 5000*clockPeriod; -- espera últimos dados da memória.
-	
     ---- final do testbench
     assert false report "fim da simulacao" severity note;
     keep_simulating <= '0';
