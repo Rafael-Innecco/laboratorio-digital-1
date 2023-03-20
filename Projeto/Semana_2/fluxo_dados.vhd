@@ -32,7 +32,6 @@ entity fluxo_dados is
         registraR       : in std_logic;
         contaT	        : in std_logic;
         zeraT           : in std_logic;
-        seletor_leds    : in std_logic;
         atualizaP       : in std_logic;
         diminuiP_jogada : in std_logic;
         resetaP_jogada  : in std_logic;
@@ -50,8 +49,8 @@ entity fluxo_dados is
         db_contagem     : out std_logic_vector (5 downto 0);
         db_memoria      : out std_logic_vector (3 downto 0);
         db_chaves       : out std_logic_vector (3 downto 0);
-        leds            : out std_logic_vector (3 downto 0);
-        pontuacao       : out std_logic_vector (8 downto 0)
+        leds            : out std_logic_vector (15 downto 0);
+        pontuacao       : out std_logic_vector (7 downto 0)
         );
 end entity;
 
@@ -183,28 +182,33 @@ architecture estrutural of fluxo_dados is
         );
     end component;
 
-    signal s_endereco         : std_logic_vector (5 downto 0);
-    signal s_dado         	  : std_logic_vector (3 downto 0);
-    signal s_dado_alternativo : std_logic_vector (3 downto 0);
-    signal s_dado_fixo        : std_logic_vector (3 downto 0);
-    signal s_not_zera_end     : std_logic;
-    signal s_not_escreve  	  : std_logic;
-    signal s_chaves       	  : std_logic_vector(3 downto 0);
-    signal s_chaveacionada    : std_logic := '0';
-    signal modo               : std_logic_vector(1 downto 0);
+    signal s_endereco           : std_logic_vector (5 downto 0);
+    signal s_dado         	    : std_logic_vector (3 downto 0);
+    signal s_dado_alternativo   : std_logic_vector (3 downto 0);
+    signal s_dado_fixo          : std_logic_vector (3 downto 0);
+    signal s_not_zera_end       : std_logic;
+    signal s_not_escreve  	    : std_logic;
+    signal s_chaves       	    : std_logic_vector(3 downto 0);
+    signal s_chaveacionada      : std_logic := '0';
+    signal modo                 : std_logic_vector(1 downto 0);
     --
-    signal primeiro_ponto     : std_logic;
-    signal segundo_ponto      : std_logic;
-    signal diminui_pontuacao  : std_logic;
-    signal p_increment        : std_logic_vector(3 downto 0);
+    signal primeiro_ponto       : std_logic;
+    signal segundo_ponto        : std_logic;
+    signal diminui_pontuacao    : std_logic;
+    signal p_increment          : std_logic_vector(3 downto 0);
 
-    signal p_entrada, p_saida : std_logic_vector(7 downto 0);
-    signal p_inc_expand       : std_logic_vector(7 downto 0);
+    signal p_entrada, p_saida   : std_logic_vector(7 downto 0);
+    signal p_inc_expand         : std_logic_vector(7 downto 0);
+
+    signal led_intermediario1   : std_logic_vector(15 downto 0);
+    signal led_intermediario2   : std_logic_vector(15 downto 0);
+
+    signal seletor_mem_fixa     : std_logic;
 begin
 
     -- sinais de controle ativos em alto
     -- sinais dos componentes ativos em baixo
-    s_not_escreve  <= not escreveM;
+    s_not_escreve  <= (not escreveM);
 
     s_chaveacionada <= chaves(3) or chaves(2) or chaves(1) or chaves(0);
 
@@ -233,6 +237,7 @@ begin
         D       => p_entrada,
         Q       => p_saida
     );
+    pontuacao <= p_saida;
 
     diminui_pontuacao <= (primeiro_ponto or segundo_ponto) and diminuiP_jogada;
     incremento_pontuacao: shift_register
@@ -284,12 +289,13 @@ begin
     --memoria_jogada_fixa: entity work.ram_64x4 (ram_mif)  -- usar esta linha para Intel Quartus
     memoria_jogada_fixa: entity work.ram_64x4 (ram_modelsim) -- usar arquitetura para ModelSim
     port map (
-        clk          => clock,
-        endereco     => s_endereco,
-        dado_entrada => s_chaves,
-        we           => '1', -- we ativo em baixo, essa memória nunca é sobrescrita
-        ce           => '0',
-        dado_saida   => s_dado_fixo
+        clk             => clock,
+        endereco        => s_endereco,
+        dado_entrada    => s_chaves,
+        we              => '1', -- we ativo em baixo, essa memória nunca é sobrescrita
+        ce              => seletor_mem_fixa,
+        dado_saida      => s_dado_fixo,
+        next_data       => led_intermediario1
     );
 
     --memoria_jogada_alternativa: entity work.ram_64x4 (ram_mif)  -- usar esta linha para Intel Quartus
@@ -299,8 +305,9 @@ begin
         endereco     => s_endereco,
         dado_entrada => s_chaves,
         we           => s_not_escreve, -- we ativo em baixo
-        ce           => '0',
-        dado_saida   => s_dado_alternativo
+        ce           => modo(1),
+        dado_saida   => s_dado_alternativo,
+        next_data    => led_intermediario2
     );
 
     registrador_jogada: registrador_n
@@ -335,8 +342,8 @@ begin
     contador_tempo: contador_modificado -- conta passagem de tempo entre jogadas
     generic map (
         M   => 1000,
-        P1  => 500,
-        P2  => 250
+        P1  => 750,
+        P2  => 400
     )
     port map (
         clock => clock,
@@ -363,9 +370,16 @@ begin
         meio    => open
     );
 
+    seletor_mem_fixa <= not modo(1); 
+
     with modo(1) select
-    s_dado <= s_dado_fixo when '1',
-    s_dado_alternativo when others;
+        s_dado <=   s_dado_fixo when '1',
+                    s_dado_alternativo when others;
+    --
+    with modo select
+        leds <= led_intermediario1 when "10",
+                led_intermediario2 when "01",
+                std_logic_vector(to_unsigned(0, 16)) when others;
 
     db_contagem <= s_endereco;
     db_memoria  <= s_dado;
@@ -373,8 +387,4 @@ begin
     db_tem_jogada <= s_chaveacionada;
 
     modo_escrita <= modo(0);
-
-    with seletor_leds select 
-    leds <= s_dado    when '1',
-    chaves when others;
 end architecture estrutural;

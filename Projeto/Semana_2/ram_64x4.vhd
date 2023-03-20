@@ -7,6 +7,7 @@
 --             codigo ADAPTADO do código encontrado no livro 
 --             VHDL Descricao e Sintese de Circuitos Digitais
 --             de Roberto D'Amore, LTC Editora.
+--             
 -------------------------------------------------------------------
 -- Revisoes  :
 --     Data        Versao  Autor             Descricao
@@ -20,6 +21,7 @@
 --                                           simulacao com ModelSim 
 --     07/01/2023  2.1.1   Edson Midorikawa  revisao
 --     11/03/2023  3.0     Rafael Innecco    Modificacao do tamanho da memória
+--     20/03/2023  3.1     Rafael Innecco    Adição de saída com próximas posições
 -------------------------------------------------------------------
 
 library ieee;
@@ -33,7 +35,8 @@ entity ram_64x4 is
        dado_entrada : in  std_logic_vector(3 downto 0);
        we           : in  std_logic;
        ce           : in  std_logic;
-       dado_saida   : out std_logic_vector(3 downto 0)
+       dado_saida   : out std_logic_vector(3 downto 0);
+       next_data    : out std_logic_vector(15 downto 0)
     );
 end entity ram_64x4;
 
@@ -64,6 +67,9 @@ begin
 
   -- saida da memoria
   dado_saida <= memoria(to_integer(unsigned(endereco)));
+
+  -- Indica valor das próximas 4 posições de memória
+  next_data <= memoria(to_integer(unsigned(endereco))) & memoria(to_integer(unsigned(endereco) + 1)) & memoria(to_integer(unsigned(endereco) + 2)) & memoria(to_integer(unsigned(endereco) + 3));
   
 end architecture ram_mif;
 
