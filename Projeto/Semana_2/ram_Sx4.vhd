@@ -1,5 +1,5 @@
 -------------------------------------------------------------------
--- Arquivo   : ram_64x4.vhd
+-- Arquivo   : ram_128x4.vhd
 -- Projeto   : Projeto da disciplina
 -------------------------------------------------------------------
 -- Descricao : módulo de memória RAM sincrona 16x4 
@@ -27,22 +27,26 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
+use ieee.math_real.all;
 
-entity ram_64x4 is
-   port (       
+entity ram_Sx4 is
+  generic (
+    constant S  : integer := 128
+  );
+  port (       
        clk          : in  std_logic;
-       endereco     : in  std_logic_vector(5 downto 0);
+       endereco     : in  std_logic_vector(natural(ceil(log2(real(S)))) - 1 downto 0);
        dado_entrada : in  std_logic_vector(3 downto 0);
        we           : in  std_logic;
        ce           : in  std_logic;
        dado_saida   : out std_logic_vector(3 downto 0);
        next_data    : out std_logic_vector(15 downto 0)
     );
-end entity ram_64x4;
+end entity ram_Sx4;
 
 -- Dados iniciais em arquivo MIF (para sintese com Intel Quartus Prime) 
-architecture ram_mif of ram_64x4 is
-  type   arranjo_memoria is array(0 to 71) of std_logic_vector(3 downto 0);
+architecture ram_mif of ram_Sx4 is
+  type   arranjo_memoria is array(0 to S) of std_logic_vector(3 downto 0);
   signal memoria : arranjo_memoria;
   
   -- Configuracao do Arquivo MIF
@@ -74,11 +78,11 @@ begin
 end architecture ram_mif;
 
 -- Dados iniciais (para simulacao com Modelsim) 
-architecture ram_modelsim of ram_64x4 is
+architecture ram_modelsim of ram_Sx4 is
   type   arranjo_memoria is array(0 to 71) of std_logic_vector(3 downto 0);
   signal memoria : arranjo_memoria := (
                                         "0000", "0000", "0000", "0000",
-										"0001", "0010", "0100", "1000", "0100", "0010",
+										                    "0001", "0010", "0100", "1000", "0100", "0010",
                                         "0001", "0010", "0100", "1000", "0100", "0010",
                                         "0001", "0010", "0100", "1000", "0100", "0010",
                                         "0001", "0010", "0100", "1000", "0100", "0010",
@@ -89,7 +93,7 @@ architecture ram_modelsim of ram_64x4 is
                                         "0001", "0010", "0100", "1000", "0100", "0010",
                                         "0001", "0010", "0100", "1000", "0100", "0010",
                                         "0001", "0010", "0100", "1000",
-										"0000", "0000", "0000", "0000"
+										                    "0000", "0000", "0000", "0000"
                                         );
   
 begin

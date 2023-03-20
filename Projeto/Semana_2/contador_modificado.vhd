@@ -23,6 +23,7 @@
 --     30/01/2022  2.0     Edson Midorikawa  revisao do componente
 --     29/01/2023  2.1     Edson Midorikawa  revisao do componente
 --     15/03/2023  3.0     Rafael Innecco    Modificação para uso no projeto
+--     20/03/2023  3.1     Rafael Innecco    Adição de funcionalidade de load
 -------------------------------------------------------------------------
 --
 library ieee;
@@ -41,6 +42,8 @@ entity contador_modificado is
         zera_as  	: in  std_logic;
         zera_s   	: in  std_logic;
         conta    	: in  std_logic;
+        load        : in  std_logic;
+        D           : in  std_logic_vector(natural(ceil(log2(real(M)))) - 1 downto 0);
         Q        	: out std_logic_vector(natural(ceil(log2(real(M))))-1 downto 0);
         fim         : out std_logic;
         ponto_1     : out std_logic;
@@ -52,11 +55,12 @@ architecture comportamental of contador_modificado is
     signal IQ: integer range 0 to M-1;
 begin
   
-    process (clock,zera_as,zera_s,conta,IQ)
+    process (clock,zera_as,zera_s,conta,IQ, load)
     begin
         if zera_as='1' then    IQ <= 0;   
         elsif rising_edge(clock) then
             if zera_s='1' then IQ <= 0;
+            elsif load='1' then IQ <= to_integer(unsigned(D));
             elsif conta='1' then 
                 if IQ=M-1 then IQ <= 0; 
                 else           IQ <= IQ + 1; 

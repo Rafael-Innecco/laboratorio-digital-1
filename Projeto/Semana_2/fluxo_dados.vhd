@@ -27,6 +27,7 @@ entity fluxo_dados is
         -------------------------------------
         zeraC           : in  std_logic; -- novo nome: zeraC -> zeraC
         contaC          : in  std_logic; -- novo nome: contaC -> contaC
+        carregaC        : in  std_logic;
         escreveM        : in  std_logic;
         zeraR  	        : in  std_logic;
         registraR       : in std_logic;
@@ -46,7 +47,7 @@ entity fluxo_dados is
         modo_escrita    : out std_logic;
         -------------------------------------
         db_tem_jogada   : out std_logic; 
-        db_contagem     : out std_logic_vector (5 downto 0);
+        db_contagem     : out std_logic_vector (6 downto 0);
         db_memoria      : out std_logic_vector (3 downto 0);
         db_chaves       : out std_logic_vector (3 downto 0);
         leds            : out std_logic_vector (15 downto 0);
@@ -55,19 +56,6 @@ entity fluxo_dados is
 end entity;
 
 architecture estrutural of fluxo_dados is
-    component contador_163
-        port (
-            clock : in  std_logic;
-            clr   : in  std_logic;
-            ld    : in  std_logic;
-            ent   : in  std_logic;
-            enp   : in  std_logic;
-            D     : in  std_logic_vector (3 downto 0);
-            Q     : out std_logic_vector (3 downto 0);
-            rco   : out std_logic 
-        );
-    end component;
-
     component comparador_85
         port (
             i_A3   : in  std_logic;
@@ -162,6 +150,8 @@ architecture estrutural of fluxo_dados is
             zera_as  	: in  std_logic;
             zera_s   	: in  std_logic;
             conta    	: in  std_logic;
+            load        : in  std_logic;
+            D           : in  std_logic_vector(natural(ceil(log2(real(M))))-1 downto 0);
             Q        	: out std_logic_vector(natural(ceil(log2(real(M))))-1 downto 0);
             fim         : out std_logic;
             ponto_1     : out std_logic;
@@ -182,7 +172,7 @@ architecture estrutural of fluxo_dados is
         );
     end component;
 
-    signal s_endereco           : std_logic_vector (5 downto 0);
+    signal s_endereco           : std_logic_vector (6 downto 0);
     signal s_dado         	    : std_logic_vector (3 downto 0);
     signal s_dado_alternativo   : std_logic_vector (3 downto 0);
     signal s_dado_fixo          : std_logic_vector (3 downto 0);
@@ -212,18 +202,21 @@ begin
 
     s_chaveacionada <= chaves(3) or chaves(2) or chaves(1) or chaves(0);
 
-    contador_endereco: contador_m
+    contador_endereco: contador_modificado
     generic map (
-        M => 63
+        M => 68
     )
     port map (
         clock => clock,
         zera_as => zeraC,
         zera_s => '0',
         conta => contaC,
+        load => carregaC,
+        D => std_logic_vector(to_unsigned(4, 7)),
         Q => s_endereco,
         fim => fim_jogo,
-        meio => open
+        ponto_1 => open,
+        ponto_2 => open
     );
 
     registrador_pontuacao: registrador_n
@@ -286,8 +279,11 @@ begin
         o_AEQB => igual
     );
 
-    --memoria_jogada_fixa: entity work.ram_64x4 (ram_mif)  -- usar esta linha para Intel Quartus
-    memoria_jogada_fixa: entity work.ram_64x4 (ram_modelsim) -- usar arquitetura para ModelSim
+    --memoria_jogada_fixa: entity work.ram_Sx4 (ram_mif)  -- usar esta linha para Intel Quartus
+    memoria_jogada_fixa: entity work.ram_Sx4 (ram_modelsim) -- usar arquitetura para ModelSim
+    generic map (
+        S => 72
+    )
     port map (
         clk             => clock,
         endereco        => s_endereco,
@@ -298,8 +294,11 @@ begin
         next_data       => led_intermediario1
     );
 
-    --memoria_jogada_alternativa: entity work.ram_64x4 (ram_mif)  -- usar esta linha para Intel Quartus
-    memoria_jogada_alternativa: entity work.ram_64x4 (ram_modelsim) -- usar arquitetura para ModelSim
+    --memoria_jogada_alternativa: entity work.ram_Sx4 (ram_mif)  -- usar esta linha para Intel Quartus
+    memoria_jogada_alternativa: entity work.ram_Sx4 (ram_modelsim) -- usar arquitetura para ModelSim
+    generic map (
+        S => 72
+    )
     port map (
         clk          => clock,
         endereco     => s_endereco,
@@ -350,6 +349,8 @@ begin
         zera_as => zeraT,
         zera_s => '0',
         conta => contaT,
+        load  => '0',
+        D     => std_logic_vector(to_unsigned(0, 10)),
         Q => open,
         fim => fim_tempo,
         ponto_1 => primeiro_ponto,

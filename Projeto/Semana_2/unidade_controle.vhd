@@ -40,6 +40,7 @@ entity unidade_controle is
 		-- Sinais de controle
 		zeraC      	    : out std_logic;
         contaC     	    : out std_logic;
+        carregaC        : out std_logic;
         ----------
         zeraR       	: out std_logic;
         registraR   	: out std_logic;
@@ -58,7 +59,6 @@ entity unidade_controle is
         ----------
         escreveM        : out std_logic;
         ----------
-        seletor_leds    : out std_logic;
 		-- Sinais de depuracao 
 		db_estado   	: out std_logic_vector(3 downto 0)
     );
@@ -66,7 +66,7 @@ end entity;
 
 architecture fsm of unidade_controle is
     type t_estado is (
-                        inicial, inicializa_elem,
+                        inicial, inicializa_elem, inicializa_elem_esc,
   	                    espera_jogada, registra, compara, acerto,
                         espera_escrita, escreve_jogada,
                         termina_tempo, ultima_jogada, proximo, fim
@@ -91,19 +91,23 @@ begin
             Eatual = inicial and jogar='0'
         ) else
         inicializa_elem when (
-            (Eatual = inicial and jogar = '1') or
-            (Eatual = fim and jogar = '1') or
-            (Eatual = inicializa_elem and fim_espera = '0')
+            (Eatual = inicial and jogar = '1' and modo_escrita = '0') or
+            (Eatual = fim and jogar = '1' and modo_escrita = '0')
+        ) else
+        inicializa_elem_esc when (
+            (Eatual = inicial and jogar = '1' and modo_escrita = '1') or
+            (Eatual = fim and jogar = '1' and modo_escrita = '1') or
+            (Eatual = inicializa_elem_esc and fim_espera = '0')
         ) else
 		espera_jogada   when (
-            (Eatual = inicializa_elem and (fim_espera = '1' and modo_escrita = '0')) or
+            (Eatual = inicializa_elem) or
             (Eatual = proximo and modo_escrita = '0') or
             (Eatual = espera_jogada and jogada = '0' and fim_tempo = '0')
         ) else
         registra        when Eatual = espera_jogada and jogada='1' else 
         compara         when Eatual = registra else
 		espera_escrita  when (
-            (Eatual = inicializa_elem and (fim_espera = '1' and modo_escrita = '1')) or
+            (Eatual = inicializa_elem_esc and fim_espera = '1') or
             (Eatual = proximo and modo_escrita = '1') or
             (Eatual = espera_escrita and (jogada = '0' and fim_tempo = '0'))
         ) else
@@ -137,19 +141,19 @@ begin
         contaC <=           '1' when proximo,
                             '0' when others;
     with Eatual select
-        zeraR <=            '1' when inicial | inicializa_elem | proximo | fim,
+        zeraR <=            '1' when inicial | inicializa_elem | proximo | fim | inicializa_elem_esc,
                             '0' when others;
     with Eatual select
         registraR <=        '1' when registra | espera_escrita,
                             '0' when others;
     with Eatual select
-        contaT <= 	        '1' when espera_jogada | inicializa_elem | espera_escrita | termina_tempo,
+        contaT <= 	        '1' when espera_jogada | inicializa_elem | espera_escrita | termina_tempo | inicializa_elem_esc,
 						    '0' when others;
     with Eatual select
         zeraT <=            '1' when ultima_jogada,
                             '0' when others;
     with Eatual select
-        zeraP <=            '1' when inicializa_elem,
+        zeraP <=            '1' when inicializa_elem | inicializa_elem_esc,
                             '0' when others;
     with Eatual select
         atualizaP <=           '1' when acerto,
@@ -164,13 +168,13 @@ begin
         registra_modo <=    '1' when inicial | fim,
                             '0' when others;
     with Eatual select
-        seletor_leds <=     '1' when inicializa_elem,
-                            '0' when others;
-    with Eatual select
         diminuiP_jogada <=  '1' when espera_jogada, -- Pontuação para jogada menor quanto mais tempo o jogador demora
                             '0' when others;
     with Eatual select
         resetaP_jogada  <=  '1' when ultima_jogada,
+                            '0' when others;
+    with Eatual select
+        carregaC <=         '1' when inicializa_elem_esc,
                             '0' when others;
 	--
     -- saida de depuracao (db_estado)

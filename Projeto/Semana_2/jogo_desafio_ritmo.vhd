@@ -47,12 +47,12 @@ architecture estrutural of jogo_desafio_ritmo is -- componente alterado
 			-----------------------
 			zeraC           	: in std_logic;
 			contaC   	    	: in std_logic;
+			carregaC			: in std_logic;
 			escreveM     		: in std_logic;
 			zeraR         		: in std_logic;
 			registraR           : in std_logic;
 			contaT	        	: in std_logic; 
 			zeraT				: in std_logic;
-			seletor_leds		: in std_logic;
 			atualizaP			: in std_logic;
 			diminuiP_jogada		: in std_logic;
 			resetaP_jogada		: in std_logic;
@@ -67,7 +67,7 @@ architecture estrutural of jogo_desafio_ritmo is -- componente alterado
 			modo_escrita		: out std_logic;
 			-----------------------
 			db_tem_jogada	 	: out std_logic; 
-			db_contagem  	 	: out std_logic_vector (5 downto 0);
+			db_contagem  	 	: out std_logic_vector (6 downto 0);
 			db_memoria   	 	: out std_logic_vector (3 downto 0);
 			db_chaves    	 	: out std_logic_vector (3 downto 0);
 			leds				: out std_logic_vector (15 downto 0);
@@ -89,8 +89,9 @@ architecture estrutural of jogo_desafio_ritmo is -- componente alterado
 			modo_escrita	: in std_logic;
 			--------------------------------
 			-- Sinais de controle
-			zeraC      	: out std_logic; 
-			contaC     	: out std_logic;
+			zeraC      		: out std_logic; 
+			contaC     		: out std_logic;
+			carregaC		: out std_logic;
 			------------
 			zeraR       	: out std_logic;
 			registraR   	: out std_logic;
@@ -109,7 +110,6 @@ architecture estrutural of jogo_desafio_ritmo is -- componente alterado
 			------------
 			escreveM		: out std_logic;
 			------------
-			seletor_leds	: out std_logic;
 			-- Sinais de depuracao 
 			db_estado   	: out std_logic_vector(3 downto 0)
         );
@@ -123,7 +123,7 @@ architecture estrutural of jogo_desafio_ritmo is -- componente alterado
     end component;
 
 	signal db_mem_hex, db_jogada_hex, db_estado_hex: std_logic_vector(3 downto 0) := "0000"; -- novo sinal
-    signal db_cont_hex	: std_logic_vector(5 downto 0);
+    signal db_cont_hex	: std_logic_vector(6 downto 0);
 	signal pontuacao_hex: std_logic_vector(7 downto 0);
 	signal db_cont_display1, db_cont_display2, pontuacao_display1, pontuacao_display2: std_logic_vector (6 downto 0);
 	signal db_contagem_hex_parte2, pontuacao_hex_parte2: std_logic_vector (3 downto 0);
@@ -134,8 +134,7 @@ architecture estrutural of jogo_desafio_ritmo is -- componente alterado
 	signal fim_jogo, fim_espera				: std_logic	:= '0';
 	signal modo_escrita						: std_logic;
 	signal contaT, zeraT, fim_tempo			: std_logic;
-	signal seletor_leds				: std_logic;
-	signal escreveM					: std_logic;
+	signal escreveM, carregaC				: std_logic;
 begin
 
     fluxo_dadosFD: fluxo_dados -- Instanciacao modificada
@@ -146,12 +145,12 @@ begin
 			---------------------------
 			zeraC      	 		=>  zeraC,
             contaC   	    	=>  contaC,
+			carregaC			=> carregaC,
 			escreveM       	 	=>  escreveM,
             zeraR       	    =>  zeraR,
             registraR   	    =>  registraR,
 			contaT				=>  contaT,
 			zeraT				=> zeraT,
-			seletor_leds 		=> seletor_leds,
 			atualizaP			=> atualizaP,
 			diminuiP_jogada		=> diminuiP_jogada,
 			resetaP_jogada		=> resetaP_jogada,
@@ -188,6 +187,7 @@ begin
 			---------------------
             zeraC    		=> zeraC,
             contaC   		=> contaC,
+			carregaC			=> carregaC,
 			zeraR        	=> zeraR,
             registraR    	=> registraR,
 			zeraP			=> zeraP,
@@ -199,7 +199,6 @@ begin
             contaT	 		=> contaT,
 			zeraT			=> zeraT,
 			escreveM	 	=> escreveM,
-			seletor_leds 	=> seletor_leds,
 			db_estado    	=> db_estado_hex
         );
     --
@@ -216,7 +215,7 @@ begin
             hexa => db_cont_hex(3 downto 0),
             sseg => db_cont_display1
        );
-	db_contagem_hex_parte2 <= "00" & db_cont_hex(5 downto 4);
+	db_contagem_hex_parte2 <= "0" & db_cont_hex(6 downto 4);
 	hex7contagem2: hexa7seg
         port map (
             hexa => db_contagem_hex_parte2,
