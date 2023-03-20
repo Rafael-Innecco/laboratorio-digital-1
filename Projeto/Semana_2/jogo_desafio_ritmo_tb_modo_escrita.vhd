@@ -38,9 +38,9 @@ architecture tb of jogo_desafio_ritmo_tb_modo_escrita is
             botoes              : in std_logic_vector (3 downto 0);
             seletor_modo        : in std_logic_vector (1 downto 0); 
             ------------------------
-            leds                : out std_logic_vector (3 downto 0);
+            leds                : out std_logic_vector (15 downto 0);
             pronto              : out std_logic;
-            pontuacao           : out std_logic_vector (13 downto 0);
+            pontuacao           : out std_logic_vector (8 downto 0);
             ------------------------
             db_clock            : out std_logic;
             db_tem_jogada       : out std_logic;
@@ -61,9 +61,9 @@ architecture tb of jogo_desafio_ritmo_tb_modo_escrita is
   ----------------------------------------
   ---- Declaracao dos sinais de saida ----
   ----------------------------------------
-  signal leds_out            : std_logic_vector(3 downto 0) := "0000";
+  signal leds_out            : std_logic_vector(15 downto 0) := "0000000000000000";
   signal pronto_out          : std_logic := '0';
-  signal pontuacao_out       : std_logic_vector(13 downto 0) := "00000000000000";
+  signal pontuacao_out       : std_logic_vector(8 downto 0) := "000000000";
   signal clock_out           : std_logic := '0';
   signal tem_jogada_out      : std_logic := '0';
   signal jogada_correta_out  : std_logic := '0';
