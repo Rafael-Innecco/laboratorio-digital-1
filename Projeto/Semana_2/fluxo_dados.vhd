@@ -51,7 +51,7 @@ entity fluxo_dados is
         db_memoria      : out std_logic_vector (3 downto 0);
         db_chaves       : out std_logic_vector (3 downto 0);
         leds            : out std_logic_vector (15 downto 0);
-        pontuacao       : out std_logic_vector (7 downto 0)
+        pontuacao       : out std_logic_vector (8 downto 0)
         );
 end entity;
 
@@ -187,8 +187,8 @@ architecture estrutural of fluxo_dados is
     signal diminui_pontuacao    : std_logic;
     signal p_increment          : std_logic_vector(3 downto 0);
 
-    signal p_entrada, p_saida   : std_logic_vector(7 downto 0);
-    signal p_inc_expand         : std_logic_vector(7 downto 0);
+    signal p_entrada, p_saida   : std_logic_vector(8 downto 0);
+    signal p_inc_expand         : std_logic_vector(8 downto 0);
 
     signal led_intermediario1   : std_logic_vector(15 downto 0);
     signal led_intermediario2   : std_logic_vector(15 downto 0);
@@ -221,7 +221,7 @@ begin
 
     registrador_pontuacao: registrador_n
     generic map (
-        N => 8
+        N => 9
     )
     port map (
         clock   => clock,
@@ -247,10 +247,10 @@ begin
         Q         => p_increment
     );
 
-    p_inc_expand <= "0000" & p_increment;
+    p_inc_expand <= "00000" & p_increment;
     calcula_pontuacao: somador
     generic map (
-        size => 8
+        size => 9
     )
     port map (
         A   => p_saida,

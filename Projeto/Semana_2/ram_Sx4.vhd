@@ -115,4 +115,5 @@ begin
   -- saida da memoria
   dado_saida <= memoria(to_integer(unsigned(endereco)));
 
+  next_data <= memoria(to_integer(unsigned(endereco))) & memoria(to_integer(unsigned(endereco) + 1)) & memoria(to_integer(unsigned(endereco) + 2)) & memoria(to_integer(unsigned(endereco) + 3));
 end architecture ram_modelsim;

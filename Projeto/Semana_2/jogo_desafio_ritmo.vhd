@@ -26,7 +26,7 @@ entity jogo_desafio_ritmo is -- novo nome de entidade
 		------------------------
         leds           			: out std_logic_vector (15 downto 0);
 		pronto          		: out std_logic;
-		pontuacao				: out std_logic_vector (13 downto 0); -- ocupa dois displays de sete segmentos
+		pontuacao				: out std_logic_vector (20 downto 0); -- ocupa três displays de sete segmentos
 		------------------------     
         db_clock				: out std_logic;
 		db_tem_jogada    		: out std_logic;
@@ -71,7 +71,7 @@ architecture estrutural of jogo_desafio_ritmo is -- componente alterado
 			db_memoria   	 	: out std_logic_vector (3 downto 0);
 			db_chaves    	 	: out std_logic_vector (3 downto 0);
 			leds				: out std_logic_vector (15 downto 0);
-			pontuacao			: out std_logic_vector (7 downto 0)
+			pontuacao			: out std_logic_vector (8 downto 0)
         );
     end component;
 	
@@ -124,9 +124,9 @@ architecture estrutural of jogo_desafio_ritmo is -- componente alterado
 
 	signal db_mem_hex, db_jogada_hex, db_estado_hex: std_logic_vector(3 downto 0) := "0000"; -- novo sinal
     signal db_cont_hex	: std_logic_vector(6 downto 0);
-	signal pontuacao_hex: std_logic_vector(7 downto 0);
-	signal db_cont_display1, db_cont_display2, pontuacao_display1, pontuacao_display2: std_logic_vector (6 downto 0);
-	signal db_contagem_hex_parte2, pontuacao_hex_parte2: std_logic_vector (3 downto 0);
+	signal pontuacao_hex: std_logic_vector(8 downto 0);
+	signal db_cont_display1, db_cont_display2, pontuacao_display1, pontuacao_display2, pontuacao_display3: std_logic_vector (6 downto 0);
+	signal db_contagem_hex_parte2, pontuacao_hex_parte3: std_logic_vector (3 downto 0);
 	signal zeraC, contaC, zeraR, registraR	: std_logic := '0';
 	signal zeraP, atualizaP, registra_modo	: std_logic := '0';
 	signal diminuiP_jogada, resetaP_jogada	: std_logic := '0';
@@ -233,7 +233,13 @@ begin
             hexa => pontuacao_hex(7 downto 4),
             sseg => pontuacao_display2
        );
-	pontuacao <= pontuacao_display2 & pontuacao_display1;
+	pontuacao_hex_parte3 <= "000" & pontuacao_hex(8);
+	hex7pontuacao3: hexa7seg
+        port map (
+            hexa => pontuacao_hex_parte3,
+            sseg => pontuacao_display3
+       );
+	pontuacao <= pontuacao_display3 & pontuacao_display2 & pontuacao_display1;
 
 
     hex7memoria: hexa7seg
