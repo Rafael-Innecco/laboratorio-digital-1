@@ -1,0 +1,95 @@
+Restore Archived Project report for jogo_desafio_ritmo
+Wed Mar 22 11:15:03 2023
+Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Restore Archived Project Summary
+  3. Restore Archived Project Messages
+  4. Files Restored
+  5. Files Not Restored
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2022  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------+
+; Restore Archived Project Summary                                        ;
++---------------------------------+---------------------------------------+
+; Restore Archived Project Status ; Successful - Wed Mar 22 11:15:03 2023 ;
+; Revision Name                   ; jogo_desafio_ritmo                    ;
+; Top-level Entity Name           ; jogo_desafio_ritmo                    ;
+; Family                          ; Cyclone V                             ;
++---------------------------------+---------------------------------------+
+
+
++-----------------------------------+
+; Restore Archived Project Messages ;
++-----------------------------------+
+Info: Successfully restored '/home/rafael/Downloads/semana2_T4_BB3_jogo_desafio_ritmo.qar' into the '/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_2/Quartus_final/' directory
+Info: Generated report 'jogo_desafio_ritmo.restore.rpt'
+Info (23030): Evaluation of Tcl script /home/rafael/intelFPGA_lite/22.1std/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 581 megabytes
+    Info: Processing ended: Wed Mar 22 11:15:03 2023
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:00
+
+
++----------------------------------------+
+; Files Restored                         ;
++----------------------------------------+
+; File Name                              ;
++----------------------------------------+
+; qar_info.json                          ;
+; comparador_85.vhd                      ;
+; contador_163.vhd                       ;
+; contador_m.vhd                         ;
+; contador_modificado.vhd                ;
+; edge_detector.vhd                      ;
+; fluxo_dados.vhd                        ;
+; hexa7seg.vhd                           ;
+; jogo_desafio_ritmo.qpf                 ;
+; jogo_desafio_ritmo.qsf                 ;
+; jogo_desafio_ritmo.vhd                 ;
+; jogo_desafio_ritmo_tb_erros.vhd        ;
+; jogo_desafio_ritmo_tb_modo_base.vhd    ;
+; jogo_desafio_ritmo_tb_modo_escrita.vhd ;
+; ram_Sx4.vhd                            ;
+; ram_conteudo_jogadas.mif               ;
+; registrador_n.vhd                      ;
+; shift_register.vhd                     ;
+; somador.vhd                            ;
+; unidade_controle.vhd                   ;
+; assignment_defaults.qdf                ;
++----------------------------------------+
+
+
++--------------------+
+; Files Not Restored ;
++--------------------+
+; File Name          ;
++--------------------+
+
+
