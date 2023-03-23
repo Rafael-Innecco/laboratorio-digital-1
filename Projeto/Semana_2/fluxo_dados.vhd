@@ -289,7 +289,7 @@ begin
         endereco        => s_endereco,
         dado_entrada    => s_chaves,
         we              => '1', -- we ativo em baixo, essa memória nunca é sobrescrita
-        ce              => seletor_mem_fixa,
+        ce              => '0',
         dado_saida      => s_dado_fixo,
         next_data       => led_intermediario1
     );
@@ -371,15 +371,13 @@ begin
         meio    => open
     );
 
-    seletor_mem_fixa <= not modo(1); 
-
     with modo(1) select
         s_dado <=   s_dado_fixo when '1',
                     s_dado_alternativo when others;
     --
     with modo select
         leds <= led_intermediario1 when "10",
-                led_intermediario2 when "01",
+                led_intermediario2 when "00",
                 std_logic_vector(to_unsigned(0, 16)) when others;
 
     db_contagem <= s_endereco;

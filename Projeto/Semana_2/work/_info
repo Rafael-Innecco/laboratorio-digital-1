@@ -22,6 +22,7 @@ o-quiet -auto_acc_if_foreign -work work +acc
 tCvgOpt 0
 n@_opt
 OL;O;2021.2;73
+R1
 Ealu
 Z2 w1679084312
 Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
@@ -728,67 +729,65 @@ R124
 R21
 R12
 Esomador
-Z125 w1679085312
+Z125 w1679610098
 R22
 R3
 R14
-!i122 77
+!i122 109
 R1
-Z126 8/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_2/somador.vhd
-Z127 F/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_2/somador.vhd
+R5
+R6
 l0
 R48
-VJV@k@z@bHJc1gbTLdEDJI2
-!s100 fKTS8]Ul3Piolbn8o=`g[3
+VdP6Kie3cHNk7c^ZmCE@I81
+!s100 MHCTLdMkhUc`YV3DF<<850
 R7
 32
-Z128 !s110 1679341586
+Z126 !s110 1679610101
 !i10b 1
-Z129 !s108 1679341586.000000
-Z130 !s90 -reportprogress|30|-work|work|/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_2/somador.vhd|
-Z131 !s107 /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_2/somador.vhd|
+Z127 !s108 1679610101.000000
+R10
+R11
 !i113 0
-R21
 R12
 Adataflow
 R22
 R3
 R14
-DEx4 work 7 somador 0 22 JV@k@z@bHJc1gbTLdEDJI2
-!i122 77
-l44
-L39 33
-VV[Wn_D:LdabcAR1CBD_`B1
-!s100 G;e77WHRfn3GB6F@TmQ3i0
+DEx4 work 7 somador 0 22 dP6Kie3cHNk7c^ZmCE@I81
+!i122 109
+l46
+L40 35
+VKEKjS;4BzJiFaokQ[6;im1
+!s100 bcTEfP460S70<e;I3ZFPZ0
 R7
 32
-R128
+R126
 !i10b 1
-R129
-R130
-R131
+R127
+R10
+R11
 !i113 0
-R21
 R12
 Eunidade_controle
-Z132 w1679337818
+Z128 w1679337818
 R3
 R14
 !i122 78
 R1
-Z133 8/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_2/unidade_controle.vhd
-Z134 F/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_2/unidade_controle.vhd
+Z129 8/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_2/unidade_controle.vhd
+Z130 F/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_2/unidade_controle.vhd
 l0
 R77
 VB2c^3[NI>zk]1dfCRBMRO1
 !s100 59QKLEK70W:S3f]Fj]GcH0
 R7
 32
-Z135 !s110 1679341588
+Z131 !s110 1679341588
 !i10b 1
-Z136 !s108 1679341587.000000
-Z137 !s90 -reportprogress|30|-work|work|/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_2/unidade_controle.vhd|
-Z138 !s107 /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_2/unidade_controle.vhd|
+Z132 !s108 1679341587.000000
+Z133 !s90 -reportprogress|30|-work|work|/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_2/unidade_controle.vhd|
+Z134 !s107 /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_2/unidade_controle.vhd|
 !i113 0
 R21
 R12
@@ -803,11 +802,11 @@ VRSCLB3i9EdM?h5U`e_K1R3
 !s100 [Rm1@O6B`1XEL6F^MPP6E2
 R7
 32
-R135
+R131
 !i10b 1
-R136
-R137
-R138
+R132
+R133
+R134
 !i113 0
 R21
 R12

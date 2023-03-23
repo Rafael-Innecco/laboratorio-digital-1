@@ -28,8 +28,9 @@ entity somador is
     );
 
     port (
-        A, B : in std_logic_vector (size - 1 downto 0); --inputs
-        F : out std_logic_vector (size - 1 downto 0);
+        A, B    : in std_logic_vector (size - 1 downto 0); --inputs
+        F       : out std_logic_vector (size - 1 downto 0);
+        S       : in std_logic; -- indica adição (0) ou subtração (1)
         Z : out std_logic; --zero flag
         Ov : out std_logic; --overflow flag
         Co : out std_logic --carry out flag
@@ -40,10 +41,12 @@ architecture dataflow of somador is
 
     signal SAI  : std_logic_vector (size - 1 downto 0); --Sinais intermediários
     signal CA   : std_logic_vector (size downto 0); -- Sinais utilizados para realizar o carry na soma e na subtração
+    signal B_int: std_logic_vector (size - 1 downto 0);
 
 begin
+    B_int <= not B when S = '1' else B;
     -- Implementação da soma por Carry-lookahead
-    CA(0) <= '0'; --Carry-in = 0
+    CA(0) <= S; --Carry-in = 0 para soma e 1 para subtração
     GEN_2: for j in 1 to (size) generate
         CA(j) <= (A(j - 1) and B(j - 1)) or ((A(j - 1) or B(j - 1)) and CA(j - 1)); --Carry da soma do j-ésimo std_logic
     end generate GEN_2;
