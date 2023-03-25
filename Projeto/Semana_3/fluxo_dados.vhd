@@ -188,6 +188,18 @@ architecture estrutural of fluxo_dados is
         );
     end component;
 
+    component edge_holder is
+        generic(
+            constant size : natural := 8
+        );
+        port (
+            clock   : in std_logic;
+            reset   : in std_logic;
+            entrada : in std_logic_vector (size-1 downto 0);
+            saida   : out std_logic_vector (size-1 downto 0)
+        );
+    end component;
+
     signal s_endereco           : std_logic_vector (6 downto 0);
     signal s_dado         	    : std_logic_vector (3 downto 0);
     signal s_dado_alternativo   : std_logic_vector (3 downto 0);
@@ -355,15 +367,15 @@ begin
 		  last_data    => led_intermediario3
     );
 
-    registrador_jogada: registrador_n
-    generic map(N => 4)
-    port map (
-        clock  => clock,
-        clear  => zeraR,
-        enable => registraR,
-        D      => chaves,
-        Q      => s_chaves
-    );
+    --registrador_jogada: registrador_n
+    --generic map(N => 4)
+    --port map (
+        --clock  => clock,
+        --clear  => zeraR,
+        --enable => registraR,
+        --D      => chaves,
+        --Q      => s_chaves
+    --);
 
     registrador_modo: registrador_n
     generic map (N => 2)
@@ -376,13 +388,24 @@ begin
     );
 
     -- Adicionado para a exp4 --
-    detector_jogada: edge_detector
+    --detector_jogada: edge_detector
+    --port map (
+        --clock => clock,
+        --reset => zeraR,
+        --sinal => s_chaveacionada,
+        --pulso => jogada_feita
+    --);
+
+    detecta_jogada: edge_holder
+    generic map (size => 4)
     port map (
-        clock => clock,
-        reset => zeraR,
-        sinal => s_chaveacionada,
-        pulso => jogada_feita
+        clock   => clock,
+        reset   => zeraR,
+        entrada => chaves,
+        saida   => s_chaves
     );
+
+    jogada_feita <= s_chaves(0) or s_chaves(1) or s_chaves(2) or s_chaves(3);
 
     contador_tempo: contador_modificado -- conta passagem de tempo entre jogadas
     generic map (
