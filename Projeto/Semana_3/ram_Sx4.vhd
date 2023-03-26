@@ -82,10 +82,10 @@ end architecture ram_mif;
 
 -- Dados iniciais (para simulacao com Modelsim) 
 architecture ram_modelsim of ram_Sx4 is
-  type   arranjo_memoria is array(0 to 71) of std_logic_vector(3 downto 0);
+  type   arranjo_memoria is array(0 to 127) of std_logic_vector(3 downto 0);
   signal memoria : arranjo_memoria := (
                                         "0000", "0000", "0000", "0000",
-										                    "0001", "0010", "0100", "1000", "0100", "0010",
+										"0001", "0010", "0100", "1000", "0100", "0010",
                                         "0001", "0010", "0100", "1000", "0100", "0010",
                                         "0001", "0010", "0100", "1000", "0100", "0010",
                                         "0001", "0010", "0100", "1000", "0100", "0010",
@@ -96,7 +96,21 @@ architecture ram_modelsim of ram_Sx4 is
                                         "0001", "0010", "0100", "1000", "0100", "0010",
                                         "0001", "0010", "0100", "1000", "0100", "0010",
                                         "0001", "0010", "0100", "1000",
-										                    "0000", "0000", "0000", "0000"
+										"0000", "0000", "0000", "0000", -- temos 72.
+										"0000", "0000", "0000", "0000", -- 76
+										"0000", "0000", "0000", "0000", -- 80
+										"0000", "0000", "0000", "0000", -- 84
+										"0000", "0000", "0000", "0000", -- 88
+										"0000", "0000", "0000", "0000", -- 92
+										"0000", "0000", "0000", "0000", -- 96
+										"0000", "0000", "0000", "0000", -- 100
+										"0000", "0000", "0000", "0000", -- 104
+										"0000", "0000", "0000", "0000", -- 108
+										"0000", "0000", "0000", "0000", -- 112
+										"0000", "0000", "0000", "0000", -- 116
+										"0000", "0000", "0000", "0000", -- 120
+										"0000", "0000", "0000", "0000", -- 124
+										"0000", "0000", "0000", "0000" -- 128
                                         );
   
 begin
@@ -119,7 +133,7 @@ begin
   dado_saida <= memoria(to_integer(unsigned(endereco)));
 
   next_data <= memoria(to_integer(unsigned(endereco))) & memoria(to_integer(unsigned(endereco) + 1)) & memoria(to_integer(unsigned(endereco) + 2)) & memoria(to_integer(unsigned(endereco) + 3));
-
+	
   last_data <= memoria(to_integer(unsigned(endereco))) & memoria(to_integer(unsigned(endereco) - 1)) & memoria(to_integer(unsigned(endereco) - 2)) & memoria(to_integer(unsigned(endereco) - 3));
   
   end architecture ram_modelsim;
