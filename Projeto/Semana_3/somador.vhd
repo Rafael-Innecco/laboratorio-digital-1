@@ -41,13 +41,13 @@ architecture dataflow of somador is
 begin
     B_int <= not B when S = '1' else B;
     -- Implementação da soma por Carry-lookahead
-    CA(0) <= '1';
+    CA(0) <= S;
     GEN_2: for j in 1 to (size) generate
-        CA(j) <= (A(j - 1) and B(j - 1)) or ((A(j - 1) or B(j - 1)) and CA(j - 1)); --Carry da soma do j-ésimo std_logic
+        CA(j) <= (A(j - 1) and B_int(j - 1)) or ((A(j - 1) or B_int(j - 1)) and CA(j - 1)); --Carry da soma do j-ésimo std_logic
     end generate GEN_2;
 
     GEN_3: for j in 0 to (size - 1) generate
-        SAI(j) <= A(j) xor B(j) xor CA(j);
+        SAI(j) <= A(j) xor B_int(j) xor CA(j);
     end generate GEN_3;
 
     -- Implementação de flags

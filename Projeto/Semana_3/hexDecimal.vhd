@@ -38,17 +38,17 @@ architecture dataflow of hexDecimal is
         );
     end component;
 
-    signal hexa_ext, hexa_int, dec_ext, Cin_ext: std_logic_vector (4 downto 0);
-    signal dec_int, hexa_2 : std_logic_vector (4 downto 0);
-    signal dez  : std_logic_vector(4 downto 0) := "01010";
+    signal hexa_ext, hexa_int, dec_ext, Cin_ext: std_logic_vector (5 downto 0);
+    signal dec_int, hexa_2 : std_logic_vector (5 downto 0);
+    signal dez  : std_logic_vector(5 downto 0) := "001010";
     signal Ov, lss   : std_logic;
 begin
-    hexa_ext <= "0" & hexa;
-    Cin_ext <= "0000" & Cin;
+    hexa_ext <= "00" & hexa;
+    Cin_ext <= "00000" & Cin;
 
     incrementa_hexa: somador
     generic map (
-        size => 5
+        size => 6
     )
     port map (
         A => hexa_ext,
@@ -61,11 +61,11 @@ begin
         Co => open
     );
 
-    hexa_2 <= "0" & hexa_int (3 downto 0);
+    hexa_2 <= hexa_int;
 
     subtrai_dez: somador
     generic map (
-        size => 5
+        size => 6
     )
     port map (
         A => hexa_2,
