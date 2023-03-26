@@ -52,7 +52,7 @@ entity contador_modificado is
 end entity contador_modificado;
 
 architecture comportamental of contador_modificado is
-    signal IQ: integer range 0 to M-1;
+    signal IQ: integer range 0 to M-1 := 0;
 begin
   
     process (clock,zera_as,zera_s,conta,IQ, load)
