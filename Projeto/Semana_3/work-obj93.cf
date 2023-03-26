@@ -1,4 +1,7 @@
 v 4
+file . "jogo_desafio_ritmo_tb_erros.vhd" "38600093ba61f62124a56bb87e7163ea90f8b5b5" "20230326201124.089":
+  entity jogo_desafio_ritmo_tb_erros at 22( 1070) + 0 on 22;
+  architecture tb of jogo_desafio_ritmo_tb_erros at 30( 1218) + 0 on 23;
 file . "jogo_desafio_ritmo_tb_modo_base.vhd" "d79d2f035be90efe7109127c6d18020de7635600" "20230326181320.249":
   entity jogo_desafio_ritmo_tb_modo_base at 22( 1070) + 0 on 18;
   architecture tb of jogo_desafio_ritmo_tb_modo_base at 30( 1222) + 0 on 19;
@@ -9,3 +12,6 @@ file . "ram_Sx4.vhd" "1afa8f158f1e2e05c8a5a67101f2419b13b62a82" "20230326171809.
   entity ram_sx4 at 27( 1445) + 0 on 15;
   architecture ram_mif of ram_sx4 at 49( 2165) + 0 on 16;
   architecture ram_modelsim of ram_sx4 at 84( 3504) + 0 on 17;
+file . "jogo_desafio_ritmo_tb_modo_escrita.vhd" "7b0d17162b2819ebe571faba4bcf0e8e3c741a93" "20230326193813.607":
+  entity jogo_desafio_ritmo_tb_modo_escrita at 22( 1070) + 0 on 20;
+  architecture tb of jogo_desafio_ritmo_tb_modo_escrita at 30( 1225) + 0 on 21;

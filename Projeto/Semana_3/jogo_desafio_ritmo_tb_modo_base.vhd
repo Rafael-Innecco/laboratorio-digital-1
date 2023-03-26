@@ -151,9 +151,11 @@ begin
 	wait for 100*clockPeriod;
     botoes_in <= "0001";
     wait for 100*clockPeriod;
-    botoes_in <= "0000";
+	botoes_in <= "1001";
+	wait for 100*clockPeriod;
+	botoes_in <= "0000";
     ---- finaliza jogada 
-    wait for 306*clockPeriod;
+    wait for 206*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
 	wait for 400*clockPeriod; -- segunda jogada
 	
@@ -173,9 +175,11 @@ begin
 	wait for 100*clockPeriod;
     botoes_in <= "0100";
     wait for 100*clockPeriod;
+	botoes_in <= "1100";
+	wait for 100*clockPeriod;
     botoes_in <= "0000";
     ---- finaliza jogada 
-    wait for 306*clockPeriod;
+    wait for 206*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
 	wait for 400*clockPeriod; -- segunda jogada
 	
