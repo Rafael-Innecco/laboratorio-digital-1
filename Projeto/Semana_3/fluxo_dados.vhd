@@ -340,7 +340,7 @@ begin
     --memoria_jogada_fixa: entity work.ram_Sx4 (ram_mif)  -- usar esta linha para Intel Quartus
     memoria_jogada_fixa: entity work.ram_Sx4 (ram_modelsim) -- usar arquitetura para ModelSim
     generic map (
-        S => 72
+        S => 128
     )
     port map (
         clk             => clock,
@@ -356,7 +356,7 @@ begin
     memoria_jogada_alternativa: entity work.ram_Sx4 (ram_mif)  -- usar esta linha para Intel Quartus
     --memoria_jogada_alternativa: entity work.ram_Sx4 (ram_modelsim) -- usar arquitetura para ModelSim
     generic map (
-        S => 72
+        S => 128
     )
     port map (
         clk          => clock,
