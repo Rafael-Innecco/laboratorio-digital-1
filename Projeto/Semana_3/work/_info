@@ -49,24 +49,24 @@ R11
 !i113 0
 R12
 Efluxo_dados
-Z13 w1679783836
+Z13 w1679843458
 Z14 DPx4 ieee 9 math_real 0 22 gNk<PdFJ<XNPcfef`f?Z81
 Z15 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 R2
 R3
-!i122 21
+!i122 25
 R0
 Z16 8fluxo_dados.vhd
 Z17 Ffluxo_dados.vhd
 l0
 L22 1
-Vzneod?koGmAbRN2@BO7Ag2
-!s100 MA64K?=6^i_2:D1UPjEAQ3
+VJi[N1K[7;T[GX4k`A@YIC3
+!s100 lIdVPkhz5Ei_^iNRhg;gk0
 R7
 32
-Z18 !s110 1679783838
+Z18 !s110 1679843460
 !i10b 1
-Z19 !s108 1679783838.000000
+Z19 !s108 1679843460.000000
 Z20 !s90 fluxo_dados.vhd|
 Z21 !s107 fluxo_dados.vhd|
 !i113 0
@@ -77,12 +77,12 @@ R14
 R15
 R2
 R3
-Z23 DEx4 work 11 fluxo_dados 0 22 zneod?koGmAbRN2@BO7Ag2
-!i122 21
-l229
-L58 403
-V6ULUgHLKafV>Uc384XZnK2
-!s100 ZR_4^d5;Gif7O<Nf1:[@Q2
+DEx4 work 11 fluxo_dados 0 22 Ji[N1K[7;T[GX4k`A@YIC3
+!i122 25
+l231
+L60 417
+V6?C23cfLDgn9S>>mBcDcE3
+!s100 >SX_a2n1P[<L67hJ`GBGH2
 R7
 32
 R18
@@ -93,24 +93,24 @@ R21
 !i113 0
 R12
 Ehexdecimal
-Z24 w1679697186
+Z23 w1679697186
 R2
 R3
 !i122 5
 R0
-Z25 8hexDecimal.vhd
-Z26 FhexDecimal.vhd
+Z24 8hexDecimal.vhd
+Z25 FhexDecimal.vhd
 l0
 R6
 VPkS`_NZlOQ]GEVB__=i3Y1
 !s100 m<XlW1PU63bb>P6U@3PUf1
 R7
 32
-Z27 !s110 1679697188
+Z26 !s110 1679697188
 !i10b 1
-Z28 !s108 1679697187.000000
-Z29 !s90 hexDecimal.vhd|
-Z30 !s107 hexDecimal.vhd|
+Z27 !s108 1679697187.000000
+Z28 !s90 hexDecimal.vhd|
+Z29 !s107 hexDecimal.vhd|
 !i113 0
 R12
 Adataflow
@@ -124,50 +124,50 @@ V:5R?VNDICMEaiT_XiiiP50
 !s100 DaUm^UAhRF1DM8`COb`K]1
 R7
 32
-R27
+R26
 !i10b 1
+R27
 R28
 R29
-R30
 !i113 0
 R12
 Ejogo_desafio_ritmo
-Z31 w1679775166
+Z30 w1679843698
 R2
 R3
-!i122 13
+!i122 26
 R0
-Z32 8jogo_desafio_ritmo.vhd
-Z33 Fjogo_desafio_ritmo.vhd
+Z31 8jogo_desafio_ritmo.vhd
+Z32 Fjogo_desafio_ritmo.vhd
 l0
 L19 1
 V]3L0`hkfFnBab]Adf7JIL0
 !s100 :TN26jZ_?S`ojA4^:<;MQ3
 R7
 32
-Z34 !s110 1679775178
+Z33 !s110 1679843705
 !i10b 1
-Z35 !s108 1679775177.000000
-Z36 !s90 jogo_desafio_ritmo.vhd|
-Z37 !s107 jogo_desafio_ritmo.vhd|
+Z34 !s108 1679843705.000000
+Z35 !s90 jogo_desafio_ritmo.vhd|
+Z36 !s107 jogo_desafio_ritmo.vhd|
 !i113 0
 R12
 Aestrutural
 R2
 R3
-DEx4 work 18 jogo_desafio_ritmo 0 22 ]3L0`hkfFnBab]Adf7JIL0
-!i122 13
-l139
-L41 221
-VMNf<8dS9>Ao7z0dmU9AT41
-!s100 K<[GH4DQ:eoVf^gH83IoA2
+Z37 DEx4 work 18 jogo_desafio_ritmo 0 22 ]3L0`hkfFnBab]Adf7JIL0
+!i122 26
+l144
+L41 230
+V[]<G_=g99zmg>:LD@F_Xj1
+!s100 a=C4I>DB7FkHDI2zDoAlP0
 R7
 32
-R34
+R33
 !i10b 1
+R34
 R35
 R36
-R37
 !i113 0
 R12
 Eram_sx4
@@ -272,5 +272,44 @@ R48
 R49
 R50
 R51
+!i113 0
+R12
+Eunidade_controle
+Z52 w1679843442
+R2
+R3
+!i122 23
+R0
+Z53 8unidade_controle.vhd
+Z54 Funidade_controle.vhd
+l0
+L27 1
+V11k4z;`<Ii2TF1SG3jQc60
+!s100 QmCZRYUUCWFfBW_lCkkkF1
+R7
+32
+Z55 !s110 1679843444
+!i10b 1
+Z56 !s108 1679843444.000000
+Z57 !s90 unidade_controle.vhd|
+Z58 !s107 unidade_controle.vhd|
+!i113 0
+R12
+Afsm
+R2
+R3
+DEx4 work 16 unidade_controle 0 22 11k4z;`<Ii2TF1SG3jQc60
+!i122 23
+l78
+L69 142
+V`l5hif8D`1oSb_8QezoeH3
+!s100 7_9^oIYSNb?X=3n7[KK;d3
+R7
+32
+R55
+!i10b 1
+R56
+R57
+R58
 !i113 0
 R12

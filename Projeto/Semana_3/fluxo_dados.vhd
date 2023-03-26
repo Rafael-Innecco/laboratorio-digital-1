@@ -32,6 +32,7 @@ entity fluxo_dados is
         zeraR  	        : in  std_logic;
         registraR       : in std_logic;
         contaT	        : in std_logic;
+        contaT2         : in std_logic;
         zeraT           : in std_logic;
         atualizaP       : in std_logic;
         diminuiP_jogada : in std_logic;
@@ -43,6 +44,7 @@ entity fluxo_dados is
         fim_jogo        : out std_logic; -- novo sinal: saida do contador de rodada
         jogada_feita    : out std_logic;
         fim_tempo       : out std_logic;
+        fim_tempo_2     : out std_logic;
         fim_espera      : out std_logic;
         modo_escrita    : out std_logic;
         -------------------------------------
@@ -437,6 +439,20 @@ begin
         conta   => contaT,
         Q       => open,
         fim     => fim_espera,
+        meio    => open
+    );
+
+    contador_tempo2: contador_M
+    generic map (
+        M => 200
+    )
+    port map (
+        clock   => clock,
+        zera_as => zeraT,
+        zera_s  => '0',
+        conta   => contaT2,
+        Q       => open,
+        fim     => fim_tempo_2,
         meio    => open
     );
 

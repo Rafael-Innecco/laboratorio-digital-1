@@ -51,7 +51,8 @@ architecture estrutural of jogo_desafio_ritmo is -- componente alterado
 			escreveM     		: in std_logic;
 			zeraR         		: in std_logic;
 			registraR           : in std_logic;
-			contaT	        	: in std_logic; 
+			contaT	        	: in std_logic;
+			contaT2				: in std_logic; 
 			zeraT				: in std_logic;
 			atualizaP			: in std_logic;
 			diminuiP_jogada		: in std_logic;
@@ -63,6 +64,7 @@ architecture estrutural of jogo_desafio_ritmo is -- componente alterado
 			fim_jogo     	 	: out std_logic;
 			jogada_feita 	 	: out std_logic;
 			fim_tempo			: out std_logic;
+			fim_tempo_2			: out std_logic;
 			fim_espera			: out std_logic;
 			modo_escrita		: out std_logic;
 			-----------------------
@@ -85,6 +87,7 @@ architecture estrutural of jogo_desafio_ritmo is -- componente alterado
 			jogada      	: in std_logic;
 			igual       	: in std_logic;
 			fim_tempo		: in std_logic;
+			fim_tempo_2		: in std_logic;
 			fim_espera		: in std_logic;
 			modo_escrita	: in std_logic;
 			--------------------------------
@@ -106,6 +109,7 @@ architecture estrutural of jogo_desafio_ritmo is -- componente alterado
 			pronto      	: out std_logic;
 			------------
 			contaT			: out std_logic;
+			contaT2			: out std_logic;
 			zeraT			: out std_logic;
 			------------
 			escreveM		: out std_logic;
@@ -134,6 +138,7 @@ architecture estrutural of jogo_desafio_ritmo is -- componente alterado
 	signal fim_jogo, fim_espera				: std_logic	:= '0';
 	signal modo_escrita						: std_logic;
 	signal contaT, zeraT, fim_tempo			: std_logic;
+	signal contaT2, fim_tempo_2				: std_logic;
 	signal escreveM, carregaC				: std_logic;
 	signal not_botoes   : std_logic_vector(3 downto 0);
 begin
@@ -153,6 +158,7 @@ begin
             zeraR       	    =>  zeraR,
             registraR   	    =>  registraR,
 			contaT				=>  contaT,
+			contaT2				=> contaT2,
 			zeraT				=> zeraT,
 			atualizaP			=> atualizaP,
 			diminuiP_jogada		=> diminuiP_jogada,
@@ -164,6 +170,7 @@ begin
 			fim_jogo            =>  fim_jogo,
             jogada_feita        =>  jogada_feita,
 			fim_tempo			=>  fim_tempo,
+			fim_tempo_2			=> fim_tempo_2,
 			fim_espera			=> fim_espera,
 			modo_escrita		=> modo_escrita,
 			---------------------------
@@ -185,6 +192,7 @@ begin
             jogada       	=> jogada_feita,
             igual        	=> igual,
 			fim_tempo     	=> fim_tempo,
+			fim_tempo_2		=> fim_tempo_2,
 			fim_espera		=> fim_espera,
 			modo_escrita	=> modo_escrita,
 			---------------------
@@ -200,6 +208,7 @@ begin
 			registra_modo	=> registra_modo,
             pronto       	=> pronto,
             contaT	 		=> contaT,
+			contaT2			=> contaT2,
 			zeraT			=> zeraT,
 			escreveM	 	=> escreveM,
 			db_estado    	=> db_estado_hex

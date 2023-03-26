@@ -34,6 +34,7 @@ entity unidade_controle is
         jogada      	: in std_logic;
         igual       	: in std_logic;
 		fim_tempo		: in std_logic;
+        fim_tempo_2     : in std_logic;
         fim_espera      : in std_logic;
         modo_escrita    : in std_logic;
         --------------------------------
@@ -55,6 +56,7 @@ entity unidade_controle is
         pronto      	: out std_logic;
         ----------
         contaT	        : out std_logic;
+        contaT2         : out std_logic;
         zeraT           : out std_logic;
         ----------
         escreveM        : out std_logic;
@@ -67,9 +69,10 @@ end entity;
 architecture fsm of unidade_controle is
     type t_estado is (
                         inicial, inicializa_elem, inicializa_elem_esc,
-  	                    espera_jogada, registra, compara, acerto,
+  	                    espera_jogada, compara, acerto,
                         espera_escrita, escreve_jogada,
-                        termina_tempo, ultima_jogada, proximo, fim
+                        termina_tempo, ultima_jogada, proximo, fim,
+                        espera_jogada_2, espera_escrita_2
                     ); -- novo estado para escrita
     signal Eatual, Eprox: t_estado;
 begin
@@ -104,14 +107,25 @@ begin
             (Eatual = proximo and modo_escrita = '0') or
             (Eatual = espera_jogada and jogada = '0' and fim_tempo = '0')
         ) else
-        registra        when Eatual = espera_jogada and jogada='1' else 
-        compara         when Eatual = registra else
+        espera_jogada_2 when (
+            (Eatual = espera_jogada and jogada = '1') or
+            (Eatual = espera_jogada_2 and fim_tempo_2 = '0')
+        ) else
+        --registra        when Eatual = espera_jogada and jogada='1' else 
+        compara         when Eatual = espera_jogada_2 and fim_tempo_2 = '1' else
 		espera_escrita  when (
             (Eatual = inicializa_elem_esc and fim_espera = '1') or
             (Eatual = proximo and modo_escrita = '1') or
             (Eatual = espera_escrita and (jogada = '0' and fim_tempo = '0'))
         ) else
-        escreve_jogada  when Eatual = espera_escrita and (jogada = '1' or fim_tempo = '1') else
+        espera_escrita_2 when (
+            (Eatual = espera_escrita and jogada = '1') or
+            (Eatual = espera_escrita_2 and fim_tempo_2 = '0')
+        ) else
+        escreve_jogada  when (
+            (Eatual = espera_escrita and fim_tempo = '1') or
+            (Eatual = espera_escrita_2 and fim_tempo_2 = '1')
+        ) else
         acerto          when Eatual = compara and igual = '1' else
         termina_tempo   when (
             (Eatual = compara and ((igual = '0' or jogada = '0') and fim_tempo = '0')) or
@@ -144,7 +158,7 @@ begin
         zeraR <=            '1' when inicial | inicializa_elem | proximo | fim | inicializa_elem_esc,
                             '0' when others;
     with Eatual select
-        registraR <=        '1' when registra | espera_escrita,
+        contaT2 <=          '1' when espera_jogada_2 | espera_escrita_2,
                             '0' when others;
     with Eatual select
         contaT <= 	        '1' when espera_jogada | inicializa_elem | espera_escrita | termina_tempo | inicializa_elem_esc,
@@ -182,7 +196,7 @@ begin
         db_estado <= "0000" when inicial,           -- 0
                      "0001" when inicializa_elem,   -- 1
                      "0010" when espera_jogada,     -- 2
-                     "0011" when registra,          -- 3
+                     "0011" when espera_jogada_2,   -- 3
                      "0100" when compara,           -- 4
 					 "0101" when acerto,            -- 5
                      "0110" when espera_escrita,    -- 6
@@ -190,6 +204,7 @@ begin
                      "1000" when termina_tempo,     -- 8
                      "1001" when ultima_jogada,     -- 9
                      "1010" when proximo,           -- A
+                     "1011" when espera_escrita_2,  -- B
                      "1111" when fim,               -- F
                      "1110" when others;            -- E
 end architecture fsm;
