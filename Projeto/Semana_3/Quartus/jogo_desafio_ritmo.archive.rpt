@@ -1,0 +1,96 @@
+Archive Project report for jogo_desafio_ritmo
+Mon Mar 27 16:27:12 2023
+Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Archive Project Summary
+  3. Archive Project Messages
+  4. Files Archived
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2022  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------+
+; Archive Project Summary                                        ;
++------------------------+---------------------------------------+
+; Archive Project Status ; Successful - Mon Mar 27 16:27:12 2023 ;
+; Revision Name          ; jogo_desafio_ritmo                    ;
+; Top-level Entity Name  ; jogo_desafio_ritmo                    ;
+; Family                 ; Cyclone V                             ;
++------------------------+---------------------------------------+
+
+
++--------------------------+
+; Archive Project Messages ;
++--------------------------+
+Info: File Set 'Source control' contains:
+    Info: Project source and settings files
+    Info: Automatically detected source files
+Warning: Hierarchical Platform Designer systems and custom IP components(_hw.tcl and associated files) are not archived by the Quartus Archiver
+Info: Archive will store files relative to the closest common parent directory
+Info (13213): Using common directory /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/Quartus/
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated archive '/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/Quartus/jogo_desafio_ritmo_semana_3_T4BB3.qar'
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated report 'jogo_desafio_ritmo.archive.rpt'
+Info (23030): Evaluation of Tcl script /home/rafael/intelFPGA_lite/22.1std/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 581 megabytes
+    Info: Processing ended: Mon Mar 27 16:27:13 2023
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:00
+
+
++-----------------------------------------------------------------------------+
+; Files Archived                                                              ;
++-----------------------------------------------------------------------------+
+; File Name                                                                   ;
++-----------------------------------------------------------------------------+
+; /home/rafael/intelFPGA_lite/22.1std/quartus/linux64/assignment_defaults.qdf ;
+; comparador_85.vhd                                                           ;
+; contador_163.vhd                                                            ;
+; contador_m.vhd                                                              ;
+; contador_modificado.vhd                                                     ;
+; edge_detector.vhd                                                           ;
+; edge_holder.vhd                                                             ;
+; fluxo_dados.vhd                                                             ;
+; hexa7seg.vhd                                                                ;
+; hexDecimal.vhd                                                              ;
+; jogo_desafio_ritmo.qpf                                                      ;
+; jogo_desafio_ritmo.qsf                                                      ;
+; jogo_desafio_ritmo.vhd                                                      ;
+; ram_conteudo_jogadas.mif                                                    ;
+; ram_Sx4.vhd                                                                 ;
+; registrador_n.vhd                                                           ;
+; shift_register.vhd                                                          ;
+; somador.vhd                                                                 ;
+; somador_decimal.vhd                                                         ;
+; unidade_controle.vhd                                                        ;
++-----------------------------------------------------------------------------+
+
+

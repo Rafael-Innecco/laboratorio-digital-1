@@ -1,0 +1,31 @@
+Quartus Prime Archive log --	/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/Quartus/jogo_desafio_ritmo_semana_3_T4BB3.qarlog
+
+Archive:	/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/Quartus/jogo_desafio_ritmo_semana_3_T4BB3.qar
+Date:		Mon Mar 27 16:27:10 2023
+Quartus Prime		22.1std.0 Build 915 10/25/2022 SC Lite Edition
+
+	=========== Files Selected: ===========
+/home/rafael/intelFPGA_lite/22.1std/quartus/linux64/assignment_defaults.qdf
+/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/Quartus/comparador_85.vhd
+/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/Quartus/contador_163.vhd
+/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/Quartus/contador_m.vhd
+/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/Quartus/contador_modificado.vhd
+/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/Quartus/edge_detector.vhd
+/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/Quartus/edge_holder.vhd
+/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/Quartus/fluxo_dados.vhd
+/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/Quartus/hexDecimal.vhd
+/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/Quartus/hexa7seg.vhd
+/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/Quartus/jogo_desafio_ritmo.qpf
+/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/Quartus/jogo_desafio_ritmo.qsf
+/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/Quartus/jogo_desafio_ritmo.vhd
+/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/Quartus/ram_Sx4.vhd
+/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/Quartus/ram_conteudo_jogadas.mif
+/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/Quartus/registrador_n.vhd
+/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/Quartus/shift_register.vhd
+/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/Quartus/somador.vhd
+/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/Quartus/somador_decimal.vhd
+/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/Quartus/unidade_controle.vhd
+	======= Total: 20 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

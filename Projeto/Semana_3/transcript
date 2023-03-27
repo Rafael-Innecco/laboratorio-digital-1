@@ -1012,3 +1012,6 @@ run -all
 #    Time: 0 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base/dut/fluxo_dadosFD/memoria_jogada_fixa
 # ** Note: fim da simulacao
 #    Time: 1908360 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base
+# Break key hit
+# End time: 10:46:43 on Mar 27,2023, Elapsed time: 0:41:54
+# Errors: 0, Warnings: 19
