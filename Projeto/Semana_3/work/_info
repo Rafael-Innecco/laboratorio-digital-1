@@ -6,6 +6,20 @@ R0
 R0
 R0
 R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
 !s11e MIXED_VERSIONS
 13
 !s112 1.1
@@ -15,64 +29,65 @@ R0
 cModel Technology
 Z1 d/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3
 T_opt
-!s110 1679863729
-VZl<1jN?1j76K@;QTe4QgV2
-Z2 04 13 9 work hexdecimal_tb testbench 1
-=1-000ae431a4f1-6420afac-bf328-aaee
-Z3 !s124 OEM10U4 
-Z4 o-quiet -auto_acc_if_foreign -work work +acc
-Z5 tCvgOpt 0
+!s110 1679919661
+V2LbnzmL[oKeQ;aPgYKQ^f1
+04 31 2 work jogo_desafio_ritmo_tb_modo_base tb 1
+=1-000ae431a4f1-64218a2b-57aa4-2aae
+Z2 !s124 OEM10U38 
+Z3 o-quiet -auto_acc_if_foreign -work work +acc
+Z4 tCvgOpt 0
 n@_opt
-Z6 OL;O;2021.2;73
+Z5 OL;O;2021.2;73
 R1
 T_opt1
-!s110 1679863979
-VmgWeOecIV_R[O>fRU8omb0
+!s110 1679919765
+V]lAEI>Nc;dea53UVM]R8@0
+04 34 2 work jogo_desafio_ritmo_tb_modo_escrita tb 1
+=1-000ae431a4f1-64218a92-71e0f-2b74
 R2
-=1-000ae431a4f1-6420b0a9-eb57d-ac63
 R3
-o-quiet -auto_acc_if_foreign -work work
-R5
+R4
 n@_opt1
-R6
+R5
 R1
 T_opt2
-!s110 1679865338
-V^BdaLo@]2djYeH=IB3LXR3
-04 31 2 work jogo_desafio_ritmo_tb_modo_base tb 1
-=1-000ae431a4f1-6420b5f7-df9e3-b2e6
-!s124 OEM10U37 
+!s110 1679919740
+VP2OW:`G==9aW`CH9]h>1L2
+04 27 2 work jogo_desafio_ritmo_tb_erros tb 1
+=1-000ae431a4f1-64218a79-21d40-2b17
+R2
+R3
 R4
-R5
 n@_opt2
-R6
-Ecomparador_85
-Z7 w1679678208
-Z8 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z9 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 32
+R5
 R1
-Z10 8/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/comparador_85.vhd
-Z11 F/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/comparador_85.vhd
+Ecomparador_85
+Z6 w1679678208
+Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z8 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 60
+R1
+Z9 8/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/comparador_85.vhd
+Z10 F/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/comparador_85.vhd
 l0
-L18 1
+Z11 L18 1
 Vn;CBL11<o[1W?[o5iWSn_2
 !s100 UchionOWWKZd[S9Df?mH>0
 Z12 OL;C;2021.2;73
 32
-Z13 !s110 1679864347
+Z13 !s110 1679919510
 !i10b 1
-Z14 !s108 1679864347.000000
+Z14 !s108 1679919510.000000
 Z15 !s90 -reportprogress|300|-work|work|/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/comparador_85.vhd|
 Z16 !s107 /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/comparador_85.vhd|
 !i113 0
 Z17 o-work work
 Z18 tExplicit 1 CvgOpt 0
 Adataflow
+R7
 R8
-R9
 DEx4 work 13 comparador_85 0 22 n;CBL11<o[1W?[o5iWSn_2
-!i122 32
+!i122 60
 l41
 L37 20
 VC<^GjH9kdG]R3DLD_99jl3
@@ -88,11 +103,11 @@ R16
 R17
 R18
 Econtador_163
-R7
+R6
 Z19 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R7
 R8
-R9
-!i122 33
+!i122 61
 R1
 Z20 8/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/contador_163.vhd
 Z21 F/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/contador_163.vhd
@@ -102,9 +117,9 @@ VX76>IE<hD@PAg93BbE2<M3
 !s100 HncTPI9f>PSaSM@8d2b100
 R12
 32
-Z23 !s110 1679864349
+Z23 !s110 1679919512
 !i10b 1
-Z24 !s108 1679864349.000000
+Z24 !s108 1679919511.000000
 Z25 !s90 -reportprogress|300|-work|work|/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/contador_163.vhd|
 Z26 !s107 /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/contador_163.vhd|
 !i113 0
@@ -112,10 +127,10 @@ R17
 R18
 Acomportamental
 R19
+R7
 R8
-R9
 DEx4 work 12 contador_163 0 22 X76>IE<hD@PAg93BbE2<M3
-!i122 33
+!i122 61
 l34
 L32 29
 VgP@4FZQ0Q[OAN>2<2TmgC2
@@ -131,12 +146,12 @@ R26
 R17
 R18
 Econtador_m
-R7
+R6
 Z27 DPx4 ieee 9 math_real 0 22 gNk<PdFJ<XNPcfef`f?Z81
 R19
+R7
 R8
-R9
-!i122 34
+!i122 62
 R1
 Z28 8/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/contador_m.vhd
 Z29 F/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/contador_m.vhd
@@ -146,9 +161,9 @@ VQ>6`nRV@ajAg;56f855_f2
 !s100 IE8GNmR0YZ`QBj6NenEE91
 R12
 32
-Z30 !s110 1679864351
+Z30 !s110 1679919513
 !i10b 1
-Z31 !s108 1679864351.000000
+Z31 !s108 1679919512.000000
 Z32 !s90 -reportprogress|300|-work|work|/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/contador_m.vhd|
 Z33 !s107 /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/contador_m.vhd|
 !i113 0
@@ -157,10 +172,10 @@ R18
 Acomportamental
 R27
 R19
+R7
 R8
-R9
 DEx4 work 10 contador_m 0 22 Q>6`nRV@ajAg;56f855_f2
-!i122 34
+!i122 62
 l50
 L48 29
 V^j:OC6IHK^QWAPM4IzDV[2
@@ -179,9 +194,9 @@ Econtador_modificado
 Z34 w1679846974
 R27
 R19
+R7
 R8
-R9
-!i122 35
+!i122 63
 R1
 Z35 8/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/contador_modificado.vhd
 Z36 F/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/contador_modificado.vhd
@@ -191,681 +206,771 @@ V[U_BckH^00JEzV_jX2R:33
 !s100 PT:f38_=_bmGU7c:M7_O91
 R12
 32
-Z38 !s110 1679864352
+R30
 !i10b 1
-Z39 !s108 1679864352.000000
-Z40 !s90 -reportprogress|300|-work|work|/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/contador_modificado.vhd|
-Z41 !s107 /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/contador_modificado.vhd|
+Z38 !s108 1679919513.000000
+Z39 !s90 -reportprogress|300|-work|work|/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/contador_modificado.vhd|
+Z40 !s107 /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/contador_modificado.vhd|
 !i113 0
 R17
 R18
 Acomportamental
 R27
 R19
+R7
 R8
-R9
 DEx4 work 19 contador_modificado 0 22 [U_BckH^00JEzV_jX2R:33
-!i122 35
+!i122 63
 l56
 L54 33
 Vkg<8eQJl^]l[o2=n=V:]o2
 !s100 HCVVM?E[zhXfQ;kXo^n@73
 R12
 32
-R38
+R30
 !i10b 1
+R38
 R39
 R40
-R41
 !i113 0
 R17
 R18
 Eedge_detector
+R6
 R7
 R8
-R9
-!i122 36
+!i122 64
 R1
-Z42 8/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/edge_detector.vhd
-Z43 F/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/edge_detector.vhd
+Z41 8/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/edge_detector.vhd
+Z42 F/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/edge_detector.vhd
 l0
 L25 1
 Vm[G=lk]5c?YknS1=j1EjQ2
 !s100 8YZ2^jBlaX4?0]W6fg5fQ2
 R12
 32
-Z44 !s110 1679864354
+Z43 !s110 1679919514
 !i10b 1
-Z45 !s108 1679864354.000000
-Z46 !s90 -reportprogress|300|-work|work|/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/edge_detector.vhd|
-Z47 !s107 /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/edge_detector.vhd|
+Z44 !s108 1679919514.000000
+Z45 !s90 -reportprogress|300|-work|work|/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/edge_detector.vhd|
+Z46 !s107 /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/edge_detector.vhd|
 !i113 0
 R17
 R18
 Artl
+R7
 R8
-R9
 DEx4 work 13 edge_detector 0 22 m[G=lk]5c?YknS1=j1EjQ2
-!i122 36
+!i122 64
 l39
 L34 21
 Vm1[ezikQgWhZPG5zlcdH_3
 !s100 XhDFK>6^Pg;Cf>3KW;kN03
 R12
 32
-R44
+R43
 !i10b 1
+R44
 R45
 R46
-R47
 !i113 0
 R17
 R18
 Eedge_holder
-Z48 w1679851258
+Z47 w1679851258
+R7
 R8
-R9
-!i122 37
+!i122 65
 R1
-Z49 8/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/edge_holder.vhd
-Z50 F/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/edge_holder.vhd
+Z48 8/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/edge_holder.vhd
+Z49 F/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/edge_holder.vhd
 l0
-Z51 L16 1
+Z50 L16 1
 VloeG5[m60c0<W^nMlTZ@03
 !s100 Oi8m[OI2_QI7cP;_j;]>g0
 R12
 32
-Z52 !s110 1679864356
+Z51 !s110 1679919516
 !i10b 1
-Z53 !s108 1679864356.000000
-Z54 !s90 -reportprogress|300|-work|work|/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/edge_holder.vhd|
-Z55 !s107 /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/edge_holder.vhd|
+Z52 !s108 1679919516.000000
+Z53 !s90 -reportprogress|300|-work|work|/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/edge_holder.vhd|
+Z54 !s107 /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/edge_holder.vhd|
 !i113 0
 R17
 R18
 Aestrutural
+R7
 R8
-R9
 DEx4 work 11 edge_holder 0 22 loeG5[m60c0<W^nMlTZ@03
-!i122 37
+!i122 65
 l39
 L28 27
 VY2n_iHo;?VZ8D87BJzAOY2
 !s100 jjG:mW5GD[]@@GQGf<hYj2
 R12
 32
-R52
+R51
 !i10b 1
+R52
 R53
 R54
-R55
 !i113 0
 R17
 R18
 Efluxo_dados
-Z56 w1679865306
+Z55 w1679919612
 R27
 R19
+R7
 R8
-R9
-!i122 51
+!i122 89
 R1
-Z57 8fluxo_dados.vhd
-Z58 Ffluxo_dados.vhd
+Z56 8/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/fluxo_dados.vhd
+Z57 F/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/fluxo_dados.vhd
 l0
 L22 1
-VJi[N1K[7;T[GX4k`A@YIC3
+Vd3M12`1R8:LaaA90IGiYW1
 !s100 lIdVPkhz5Ei_^iNRhg;gk0
 R12
 32
-Z59 !s110 1679865323
+Z58 !s110 1679919855
 !i10b 1
-Z60 !s108 1679865323.000000
-Z61 !s90 fluxo_dados.vhd|
-Z62 !s107 fluxo_dados.vhd|
+Z59 !s108 1679919855.000000
+Z60 !s90 -reportprogress|30|-work|work|/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/fluxo_dados.vhd|
+Z61 !s107 /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/fluxo_dados.vhd|
 !i113 0
+R17
 R18
 Aestrutural
-Z63 DEx4 work 7 ram_sx4 0 22 zaWPSh@9O`=]Xo?;JI]bR0
+Z62 DEx4 work 7 ram_sx4 0 22 zaWPSh@9O`=]Xo?;JI]bR0
 R27
 R19
-R8
-R9
-DEx4 work 11 fluxo_dados 0 22 Ji[N1K[7;T[GX4k`A@YIC3
-!i122 51
-l231
-L60 417
-VM9gR4E[P3g[?Z3bUZ[A0Q2
-!s100 h@9L`8^;dZIWYIkMJ9lId3
-R12
-32
-R59
-!i10b 1
-R60
-R61
-R62
-!i113 0
-R18
-Ehexa7seg
 R7
 R8
-R9
-!i122 39
+Z63 DEx4 work 11 fluxo_dados 0 22 d3M12`1R8:LaaA90IGiYW1
+!i122 89
+l238
+Z64 L60 413
+Z65 V5d]h[mo3:E[3VN13_3U2j0
+Z66 !s100 DNa2Z;dR07A2NLh?kl=nh2
+R12
+32
+R58
+!i10b 1
+R59
+R60
+R61
+!i113 0
+R17
+R18
+Ehexa7seg
+R6
+R7
+R8
+!i122 67
 R1
-Z64 8/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/hexa7seg.vhd
-Z65 F/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/hexa7seg.vhd
+Z67 8/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/hexa7seg.vhd
+Z68 F/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/hexa7seg.vhd
 l0
 L24 1
 VQJZeiVSJF@L3lDY8DEh^K0
 !s100 m70:2LbOnf0ODWJKbc?@F3
 R12
 32
-Z66 !s110 1679864359
+Z69 !s110 1679919519
 !i10b 1
-Z67 !s108 1679864359.000000
-Z68 !s90 -reportprogress|30|-work|work|/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/hexa7seg.vhd|
-Z69 !s107 /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/hexa7seg.vhd|
+Z70 !s108 1679919519.000000
+Z71 !s90 -reportprogress|30|-work|work|/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/hexa7seg.vhd|
+Z72 !s107 /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/hexa7seg.vhd|
 !i113 0
 R17
 R18
 Acomportamental
+R7
 R8
-R9
 DEx4 work 8 hexa7seg 0 22 QJZeiVSJF@L3lDY8DEh^K0
-!i122 39
+!i122 67
 l32
 L31 22
 V4am;C1Lg0gb:CoRQ`1_]o0
 !s100 U7QTX5YA5zSmB21GTflT=3
 R12
 32
-R66
-!i10b 1
-R67
-R68
 R69
+!i10b 1
+R70
+R71
+R72
 !i113 0
 R17
 R18
 Ehexdecimal
-Z70 w1679863588
+Z73 w1679863588
+R7
 R8
-R9
-!i122 40
+!i122 68
 R1
-Z71 8/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/hexDecimal.vhd
-Z72 F/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/hexDecimal.vhd
+Z74 8/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/hexDecimal.vhd
+Z75 F/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/hexDecimal.vhd
 l0
-R51
+R50
 VhcABV6<MaJTVfdl6@1PZN2
 !s100 m<XlW1PU63bb>P6U@3PUf1
 R12
 32
-Z73 !s110 1679864361
+Z76 !s110 1679919520
 !i10b 1
-Z74 !s108 1679864360.000000
-Z75 !s90 -reportprogress|30|-work|work|/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/hexDecimal.vhd|
-Z76 !s107 /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/hexDecimal.vhd|
+Z77 !s108 1679919520.000000
+Z78 !s90 -reportprogress|30|-work|work|/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/hexDecimal.vhd|
+Z79 !s107 /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/hexDecimal.vhd|
 !i113 0
 R17
 R18
 Adataflow
+R7
 R8
-R9
 DEx4 work 10 hexdecimal 0 22 hcABV6<MaJTVfdl6@1PZN2
-!i122 40
+!i122 68
 l45
 L25 62
 VF4cY;H@YcaUc0NXk6nDi=2
 !s100 :398`AWF?i<>k^22dWf;B0
 R12
 32
-R73
-!i10b 1
-R74
-R75
 R76
+!i10b 1
+R77
+R78
+R79
 !i113 0
 R17
 R18
 Ehexdecimal_tb
-Z77 w1679857926
+Z80 w1679857926
 R19
+R7
 R8
-R9
-!i122 41
+!i122 69
 R1
-Z78 8/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/hexDecimal_tb.vhd
-Z79 F/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/hexDecimal_tb.vhd
+Z81 8/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/hexDecimal_tb.vhd
+Z82 F/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/hexDecimal_tb.vhd
 l0
-L13 1
+Z83 L13 1
 V62N^nDA8MDaL4m`]MkF1]1
 !s100 LL@A0Ei1X<5SAUB8OHTe:3
 R12
 32
-R73
+Z84 !s110 1679919521
 !i10b 1
-Z80 !s108 1679864361.000000
-Z81 !s90 -reportprogress|30|-work|work|/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/hexDecimal_tb.vhd|
-Z82 !s107 /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/hexDecimal_tb.vhd|
+R77
+Z85 !s90 -reportprogress|30|-work|work|/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/hexDecimal_tb.vhd|
+Z86 !s107 /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/hexDecimal_tb.vhd|
 !i113 0
 R17
 R18
 Atestbench
 R19
+R7
 R8
-R9
 DEx4 work 13 hexdecimal_tb 0 22 62N^nDA8MDaL4m`]MkF1]1
-!i122 41
+!i122 69
 l30
 L17 94
 VmecX_mX[Bmf<G;M]`QjUK2
 !s100 O_07X=NA8ezId`IF9BDWD0
 R12
 32
-R73
+R84
 !i10b 1
-R80
-R81
-R82
+R77
+R85
+R86
 !i113 0
 R17
 R18
 Ejogo_desafio_ritmo
-Z83 w1679863314
+Z87 w1679863314
+R7
 R8
-R9
-!i122 42
+!i122 87
 R1
-Z84 8/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/jogo_desafio_ritmo.vhd
-Z85 F/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/jogo_desafio_ritmo.vhd
+Z88 8/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/jogo_desafio_ritmo.vhd
+Z89 F/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/jogo_desafio_ritmo.vhd
 l0
 R22
 V5j5@M4?XmE:ba^Hm9H9_A0
 !s100 :TN26jZ_?S`ojA4^:<;MQ3
 R12
 32
-Z86 !s110 1679864364
+Z90 !s110 1679919853
 !i10b 1
-Z87 !s108 1679864363.000000
-Z88 !s90 -reportprogress|30|-work|work|/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/jogo_desafio_ritmo.vhd|
-Z89 !s107 /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/jogo_desafio_ritmo.vhd|
+Z91 !s108 1679919853.000000
+Z92 !s90 -reportprogress|30|-work|work|/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/jogo_desafio_ritmo.vhd|
+Z93 !s107 /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/jogo_desafio_ritmo.vhd|
 !i113 0
 R17
 R18
 Aestrutural
+R7
 R8
-R9
 DEx4 work 18 jogo_desafio_ritmo 0 22 5j5@M4?XmE:ba^Hm9H9_A0
-!i122 42
+!i122 87
 l144
 L41 230
 Vh]kGF=1YKoIZ=lUMFU1mf0
 !s100 a=C4I>DB7FkHDI2zDoAlP0
 R12
 32
-R86
+R90
 !i10b 1
-R87
-R88
-R89
+R91
+R92
+R93
 !i113 0
 R17
 R18
 Ejogo_desafio_ritmo_tb_erros
-Z90 w1679863322
+Z94 w1679863322
+R7
 R8
-R9
-!i122 43
+!i122 88
 R1
-Z91 8/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/jogo_desafio_ritmo_tb_erros.vhd
-Z92 F/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/jogo_desafio_ritmo_tb_erros.vhd
+Z95 8/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/jogo_desafio_ritmo_tb_erros.vhd
+Z96 F/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/jogo_desafio_ritmo_tb_erros.vhd
 l0
-Z93 L27 1
+Z97 L27 1
 VzikSFlPi7CNZl@ULXdKC^3
 !s100 JPE4i1LQcW02]oOIGi0OM1
 R12
 32
-Z94 !s110 1679864365
+Z98 !s110 1679919854
 !i10b 1
-Z95 !s108 1679864365.000000
-Z96 !s90 -reportprogress|30|-work|work|/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/jogo_desafio_ritmo_tb_erros.vhd|
-Z97 !s107 /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/jogo_desafio_ritmo_tb_erros.vhd|
+Z99 !s108 1679919854.000000
+Z100 !s90 -reportprogress|30|-work|work|/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/jogo_desafio_ritmo_tb_erros.vhd|
+Z101 !s107 /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/jogo_desafio_ritmo_tb_erros.vhd|
 !i113 0
 R17
 R18
 Atb
+R7
 R8
-R9
 DEx4 work 27 jogo_desafio_ritmo_tb_erros 0 22 zikSFlPi7CNZl@ULXdKC^3
-!i122 43
+!i122 88
 l82
-Z98 L30 833
+Z102 L30 833
 VRYSf?RTgi`X`m@`c2AD@10
 !s100 QTTZ]d1VZP28Qznie[NJ?1
 R12
 32
-R94
+R98
 !i10b 1
-R95
-R96
-R97
+R99
+R100
+R101
 !i113 0
 R17
 R18
 Ejogo_desafio_ritmo_tb_modo_base
-R90
+R94
+R7
 R8
-R9
-!i122 44
+!i122 86
 R1
-Z99 8/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/jogo_desafio_ritmo_tb_modo_base.vhd
-Z100 F/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/jogo_desafio_ritmo_tb_modo_base.vhd
+Z103 8/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/jogo_desafio_ritmo_tb_modo_base.vhd
+Z104 F/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/jogo_desafio_ritmo_tb_modo_base.vhd
 l0
-R93
+R97
 VnC@NbYz0b<JNaAIEUlCDS1
 !s100 <P_2If<GQg5OHOWUj?14@1
 R12
 32
-Z101 !s110 1679864366
+R90
 !i10b 1
-Z102 !s108 1679864366.000000
-Z103 !s90 -reportprogress|30|-work|work|/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/jogo_desafio_ritmo_tb_modo_base.vhd|
-Z104 !s107 /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/jogo_desafio_ritmo_tb_modo_base.vhd|
+Z105 !s108 1679919852.000000
+Z106 !s90 -reportprogress|30|-work|work|/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/jogo_desafio_ritmo_tb_modo_base.vhd|
+Z107 !s107 /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/jogo_desafio_ritmo_tb_modo_base.vhd|
 !i113 0
 R17
 R18
 Atb
+R7
 R8
-R9
 DEx4 work 31 jogo_desafio_ritmo_tb_modo_base 0 22 nC@NbYz0b<JNaAIEUlCDS1
-!i122 44
+!i122 86
 l82
-R98
+R102
 VI1?BEG?V^:g[nf;][jODz1
 !s100 5omC@ZaL[4o2a>gd7U5G71
 R12
 32
-R101
+R90
 !i10b 1
-R102
-R103
-R104
+R105
+R106
+R107
 !i113 0
 R17
 R18
 Ejogo_desafio_ritmo_tb_modo_escrita
-R90
+R94
+R7
 R8
-R9
-!i122 45
+!i122 85
 R1
-Z105 8/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/jogo_desafio_ritmo_tb_modo_escrita.vhd
-Z106 F/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/jogo_desafio_ritmo_tb_modo_escrita.vhd
+Z108 8/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/jogo_desafio_ritmo_tb_modo_escrita.vhd
+Z109 F/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/jogo_desafio_ritmo_tb_modo_escrita.vhd
 l0
-R93
+R97
 V^3XjNZm55kebbJl1:AEY_2
 !s100 :M8h?emg2PTm=T[k80LJ[1
 R12
 32
-Z107 !s110 1679864367
+Z110 !s110 1679919851
 !i10b 1
-Z108 !s108 1679864367.000000
-Z109 !s90 -reportprogress|30|-work|work|/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/jogo_desafio_ritmo_tb_modo_escrita.vhd|
-Z110 !s107 /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/jogo_desafio_ritmo_tb_modo_escrita.vhd|
+Z111 !s108 1679919851.000000
+Z112 !s90 -reportprogress|300|-work|work|/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/jogo_desafio_ritmo_tb_modo_escrita.vhd|
+Z113 !s107 /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/jogo_desafio_ritmo_tb_modo_escrita.vhd|
 !i113 0
 R17
 R18
 Atb
+R7
 R8
-R9
 DEx4 work 34 jogo_desafio_ritmo_tb_modo_escrita 0 22 ^3XjNZm55kebbJl1:AEY_2
-!i122 45
+!i122 85
 l82
 L30 1552
 V1UIdcKfDZbCF2HB<l0f[z0
 !s100 TSmnNLZSeZK7DbW_hkl5?0
 R12
 32
-R107
-!i10b 1
-R108
-R109
 R110
+!i10b 1
+R111
+R112
+R113
 !i113 0
 R17
 R18
 Eram_sx4
-Z111 w1679863324
+Z114 w1679863324
 R27
 R19
+R7
 R8
-R9
-!i122 46
+!i122 74
 R1
-Z112 8/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/ram_Sx4.vhd
-Z113 F/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/ram_Sx4.vhd
+Z115 8/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/ram_Sx4.vhd
+Z116 F/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/ram_Sx4.vhd
 l0
 L32 1
 VzaWPSh@9O`=]Xo?;JI]bR0
 !s100 MiVD0PgcM]GI0ZjK^KKB_3
 R12
 32
-Z114 !s110 1679864368
+Z117 !s110 1679919527
 !i10b 1
-Z115 !s108 1679864368.000000
-Z116 !s90 -reportprogress|30|-work|work|/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/ram_Sx4.vhd|
-Z117 !s107 /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/ram_Sx4.vhd|
+Z118 !s108 1679919527.000000
+Z119 !s90 -reportprogress|30|-work|work|/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/ram_Sx4.vhd|
+Z120 !s107 /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/ram_Sx4.vhd|
 !i113 0
 R17
 R18
 Aram_modelsim
 R27
 R19
+R7
 R8
-R9
-R63
-!i122 46
+R62
+!i122 74
 l116
 L84 56
 VTLKG422CKGzB8[R8^<4X12
 !s100 e7]C]c_gi8iBl7kL[0h1M3
 R12
 32
-R114
-!i10b 1
-R115
-R116
 R117
+!i10b 1
+R118
+R119
+R120
 !i113 0
 R17
 R18
 Aram_mif
 R27
 R19
+R7
 R8
-R9
-R63
-!i122 46
+R62
+!i122 74
 l57
 L49 33
 Vf]BX40gi4F3d=1YJgf:l;3
 !s100 i=d;gA_U>GRCScCU7;=Z92
 R12
 32
-R114
-!i10b 1
-R115
-R116
 R117
+!i10b 1
+R118
+R119
+R120
 !i113 0
 R17
 R18
 Eregistrador_n
-Z118 w1679678210
+Z121 w1679678210
+R7
 R8
-R9
-!i122 47
+!i122 75
 R1
-Z119 8/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/registrador_n.vhd
-Z120 F/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/registrador_n.vhd
+Z122 8/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/registrador_n.vhd
+Z123 F/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/registrador_n.vhd
 l0
 L36 1
 VT?>3PUE:K:?KP;k=7Pn?J3
 !s100 nZ9TMZfV7=cL8G[CVTO]Z1
 R12
 32
-Z121 !s110 1679864370
+Z124 !s110 1679919528
 !i10b 1
-Z122 !s108 1679864370.000000
-Z123 !s90 -reportprogress|30|-work|work|/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/registrador_n.vhd|
-Z124 !s107 /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/registrador_n.vhd|
+Z125 !s108 1679919528.000000
+Z126 !s90 -reportprogress|30|-work|work|/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/registrador_n.vhd|
+Z127 !s107 /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/registrador_n.vhd|
 !i113 0
 R17
 R18
 Acomportamental
+R7
 R8
-R9
 DEx4 work 13 registrador_n 0 22 T?>3PUE:K:?KP;k=7Pn?J3
-!i122 47
+!i122 75
 l51
 L49 16
 VX1ZEjN^<7[nX?Dk__WYK21
 !s100 NJEJoUNzGSKQfC6FYC6Cz3
 R12
 32
-R121
-!i10b 1
-R122
-R123
 R124
+!i10b 1
+R125
+R126
+R127
 !i113 0
 R17
 R18
 Eshift_register
-R118
+R121
 R19
+R7
 R8
-R9
-!i122 48
+!i122 76
 R1
-Z125 8/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/shift_register.vhd
-Z126 F/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/shift_register.vhd
+Z128 8/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/shift_register.vhd
+Z129 F/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/shift_register.vhd
 l0
 R37
 V^6OOzA2?Xhn61LXhlPUU13
 !s100 a3KCJ4CRinQe=K58M`Kl<3
 R12
 32
-Z127 !s110 1679864371
+Z130 !s110 1679919530
 !i10b 1
-Z128 !s108 1679864371.000000
-Z129 !s90 -reportprogress|30|-work|work|/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/shift_register.vhd|
-Z130 !s107 /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/shift_register.vhd|
+Z131 !s108 1679919530.000000
+Z132 !s90 -reportprogress|30|-work|work|/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/shift_register.vhd|
+Z133 !s107 /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/shift_register.vhd|
 !i113 0
 R17
 R18
 Acomportamental
 R19
+R7
 R8
-R9
 DEx4 work 14 shift_register 0 22 ^6OOzA2?Xhn61LXhlPUU13
-!i122 48
+!i122 76
 l51
 L49 17
 V5a]=Wc?>Ma;RJXFH@_[1`2
 !s100 92AmUJ6IkQm_XgTlJfZa;0
 R12
 32
-R127
-!i10b 1
-R128
-R129
 R130
+!i10b 1
+R131
+R132
+R133
 !i113 0
 R17
 R18
 Esomador
-Z131 w1679863952
+Z134 w1679863952
 R19
+R7
 R8
-R9
-!i122 49
+!i122 77
 R1
-Z132 8/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/somador.vhd
-Z133 F/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/somador.vhd
+Z135 8/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/somador.vhd
+Z136 F/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/somador.vhd
 l0
 L20 1
 V;iZ?AL>AU7i>;TgK2[QAd1
 !s100 I1gWEg8UJL_E:Hoodz>Oo3
 R12
 32
-Z134 !s110 1679864372
+Z137 !s110 1679919531
 !i10b 1
-Z135 !s108 1679864372.000000
-Z136 !s90 -reportprogress|30|-work|work|/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/somador.vhd|
-Z137 !s107 /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/somador.vhd|
+Z138 !s108 1679919531.000000
+Z139 !s90 -reportprogress|30|-work|work|/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/somador.vhd|
+Z140 !s107 /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/somador.vhd|
 !i113 0
 R17
 R18
 Adataflow
 R19
+R7
 R8
-R9
 DEx4 work 7 somador 0 22 ;iZ?AL>AU7i>;TgK2[QAd1
-!i122 49
+!i122 77
 l41
 L36 36
 Vd6mc21b:h]]PIIM2c0CIE3
 !s100 Ph`=8^D<E>VF2YzHUNCJY2
 R12
 32
-R134
-!i10b 1
-R135
-R136
 R137
+!i10b 1
+R138
+R139
+R140
+!i113 0
+R17
+R18
+Esomador_decimal
+Z141 w1679918386
+R27
+R19
+R7
+R8
+!i122 78
+R1
+Z142 8/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/somador_decimal.vhd
+Z143 F/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/somador_decimal.vhd
+l0
+R11
+VoD;jUTP0@mP3[5SPB@`d^1
+!s100 Si_aeHdBFH<:6efXT;aPz0
+R12
+32
+Z144 !s110 1679919532
+!i10b 1
+Z145 !s108 1679919532.000000
+Z146 !s90 -reportprogress|30|-work|work|/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/somador_decimal.vhd|
+Z147 !s107 /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/somador_decimal.vhd|
+!i113 0
+R17
+R18
+Aestrutural
+R27
+R19
+R7
+R8
+DEx4 work 15 somador_decimal 0 22 oD;jUTP0@mP3[5SPB@`d^1
+!i122 78
+l56
+L29 55
+V4G2bH3izNh]4;UkGe>el01
+!s100 =mo6fPzYYeGPGmY?3JM9>3
+R12
+32
+R144
+!i10b 1
+R145
+R146
+R147
+!i113 0
+R17
+R18
+Esomador_decimal_tb
+Z148 w1679917572
+R19
+R7
+R8
+!i122 79
+R1
+Z149 8/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/somador_decimal_tb.vhd
+Z150 F/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/somador_decimal_tb.vhd
+l0
+R83
+VQaYC36z:DVg?^OKg:QPJO1
+!s100 Z52SIHL^10HR>[4E8UG6X0
+R12
+32
+Z151 !s110 1679919533
+!i10b 1
+Z152 !s108 1679919533.000000
+Z153 !s90 -reportprogress|30|-work|work|/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/somador_decimal_tb.vhd|
+Z154 !s107 /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/somador_decimal_tb.vhd|
+!i113 0
+R17
+R18
+Atestbench
+R19
+R7
+R8
+DEx4 work 18 somador_decimal_tb 0 22 QaYC36z:DVg?^OKg:QPJO1
+!i122 79
+l32
+L17 66
+VJnQ?``Xfm1Nb3lSg:9WA[2
+!s100 hXJ;i_?DhoJKdXV0ahQH02
+R12
+32
+R151
+!i10b 1
+R152
+R153
+R154
 !i113 0
 R17
 R18
 Eunidade_controle
-Z138 w1679843442
+Z155 w1679843442
+R7
 R8
-R9
-!i122 50
+!i122 80
 R1
-Z139 8/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/unidade_controle.vhd
-Z140 F/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/unidade_controle.vhd
+Z156 8/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/unidade_controle.vhd
+Z157 F/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/unidade_controle.vhd
 l0
-R93
+R97
 VmWgiCg_C9=99TF9]]onEm0
 !s100 QmCZRYUUCWFfBW_lCkkkF1
 R12
 32
-Z141 !s110 1679864374
+Z158 !s110 1679919534
 !i10b 1
-Z142 !s108 1679864374.000000
-Z143 !s90 -reportprogress|30|-work|work|/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/unidade_controle.vhd|
-Z144 !s107 /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/unidade_controle.vhd|
+Z159 !s108 1679919534.000000
+Z160 !s90 -reportprogress|30|-work|work|/media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/unidade_controle.vhd|
+Z161 !s107 /media/rafael/USB STICK/laboratorio-digital-1/Projeto/Semana_3/unidade_controle.vhd|
 !i113 0
 R17
 R18
 Afsm
+R7
 R8
-R9
 DEx4 work 16 unidade_controle 0 22 mWgiCg_C9=99TF9]]onEm0
-!i122 50
+!i122 80
 l78
 L69 142
 VXgQE6i[R;LmToDMUh_V4=2
 !s100 7_9^oIYSNb?X=3n7[KK;d3
 R12
 32
-R141
+R158
 !i10b 1
-R142
-R143
-R144
+R159
+R160
+R161
 !i113 0
 R17
 R18

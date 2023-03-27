@@ -1,5 +1,5 @@
 --------------------------------------------------------------------
--- Arquivo   : fluxo_dados.txt
+-- Arquivo   : fluxo_dados.vcd
 -- Projeto   : Experiencia 2 - Um Fluxo de Dados Simples
 --------------------------------------------------------------------
 -- Descricao :
@@ -202,6 +202,17 @@ architecture estrutural of fluxo_dados is
         );
     end component;
 
+    component somador_decimal is
+        generic (
+            digits : natural := 3
+        );
+        port (
+            A : in std_logic_vector (4*digits - 1 downto 0);
+            B : in std_logic_vector (3 downto 0);
+            F : out std_logic_vector (4*digits -1 downto 0)
+        );
+    end component;
+
     signal s_endereco           : std_logic_vector (6 downto 0);
     signal s_dado         	    : std_logic_vector (3 downto 0);
     signal s_dado_alternativo   : std_logic_vector (3 downto 0);
@@ -217,17 +228,13 @@ architecture estrutural of fluxo_dados is
     signal diminui_pontuacao    : std_logic;
     signal p_increment          : std_logic_vector(3 downto 0);
 
-    signal p_entrada, p_saida   : std_logic_vector(8 downto 0);
-    signal p_inc_expand         : std_logic_vector(8 downto 0);
-    signal pont_expand          : std_logic_vector(11 downto 0);
+    signal p_entrada, p_saida   : std_logic_vector(11 downto 0);
 
     signal led_intermediario1   : std_logic_vector(15 downto 0);
     signal led_intermediario2   : std_logic_vector(15 downto 0);
 	 signal led_intermediario3   : std_logic_vector(15 downto 0);
 
     signal seletor_mem_fixa     : std_logic;
-
-    signal pont_conv_cout_1, pont_conv_cout_2: std_logic;
 begin
 
     -- sinais de controle ativos em alto
@@ -255,7 +262,7 @@ begin
 
     registrador_pontuacao: registrador_n
     generic map (
-        N => 9
+        N => 12
     )
     port map (
         clock   => clock,
@@ -264,7 +271,6 @@ begin
         D       => p_entrada,
         Q       => p_saida
     );
-    pont_expand <= "000" & p_saida;
 
     diminui_pontuacao <= (primeiro_ponto or segundo_ponto) and diminuiP_jogada;
     incremento_pontuacao: shift_register
@@ -281,43 +287,33 @@ begin
         Q         => p_increment
     );
 
-    p_inc_expand <= "00000" & p_increment;
-    calcula_pontuacao: somador
+    calcula_pontuacao: somador_decimal
     generic map (
-        size => 9
+        digits => 3
     )
     port map (
-        A   => p_saida,
-        B   => p_inc_expand,
-        S   => '0',
-        F   => p_entrada,
-        Z   => open,
-        N   => open,
-        Ov  => open,
-        Co  => open
+        A => p_saida,
+        B => p_increment,
+        F => p_entrada
     );
 
-    hexParaDec1: hexDecimal
-    port map (
-        hexa    => pont_expand (3 downto 0),
-        Cin     => '0',
-        dec     => pontuacao_dec(3 downto 0),
-        Cout    => pont_conv_cout_1
-    );
-    hexaParaDec2: hexDecimal
-    port map (
-        hexa    => pont_expand (7 downto 4),
-        Cin     => pont_conv_cout_1,
-        dec     => pontuacao_dec (7 downto 4),
-        Cout    => pont_conv_cout_2
-    );
-    hexaParaDec3: hexDecimal
-    port map (
-        hexa    => pont_expand (11 downto 8),
-        Cin     => pont_conv_cout_2,
-        dec     => pontuacao_dec (11 downto 8),
-        Cout    => open
-    );
+    pontuacao_dec <= p_saida;
+
+    --p_inc_expand <= "00000" & p_increment;
+    --calcula_pontuacao: somador
+    --generic map (
+        --size => 9
+    --)
+    --port map (
+        --A   => p_saida,
+        --B   => p_inc_expand,
+        --S   => '0',
+        --F   => p_entrada,
+        --Z   => open,
+        --N   => open,
+        --Ov  => open,
+        --Co  => open
+    --);
 
     comparador_Chaves_Memoria: comparador_85
     port map (
