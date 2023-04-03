@@ -1,0 +1,768 @@
+m255
+K4
+z2
+!s11e vcom 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4
+Ecomparador_85
+Z1 w1680520546
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 1
+R0
+Z4 8comparador_85.vhd
+Z5 Fcomparador_85.vhd
+l0
+Z6 L18 1
+V<aUgfj143eC@46l5j^;k=2
+!s100 UchionOWWKZd[S9Df?mH>0
+Z7 OL;C;2021.2;73
+32
+Z8 !s110 1680530424
+!i10b 1
+Z9 !s108 1680530424.000000
+Z10 !s90 comparador_85.vhd|
+Z11 !s107 comparador_85.vhd|
+!i113 0
+Z12 tExplicit 1 CvgOpt 0
+Adataflow
+R2
+R3
+DEx4 work 13 comparador_85 0 22 <aUgfj143eC@46l5j^;k=2
+!i122 1
+l41
+L37 20
+V7OhaVF]TeHZFJ@=mml@l82
+!s100 P^;hPi]5OVVdjL6GdC0U80
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+Econtador_163
+R1
+Z13 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R2
+R3
+!i122 2
+R0
+Z14 8contador_163.vhd
+Z15 Fcontador_163.vhd
+l0
+Z16 L19 1
+VLDS<>;Ui52kXD7nO:4[EM2
+!s100 HncTPI9f>PSaSM@8d2b100
+R7
+32
+Z17 !s110 1680530433
+!i10b 1
+Z18 !s108 1680530433.000000
+Z19 !s90 contador_163.vhd|
+Z20 !s107 contador_163.vhd|
+!i113 0
+R12
+Acomportamental
+R13
+R2
+R3
+DEx4 work 12 contador_163 0 22 LDS<>;Ui52kXD7nO:4[EM2
+!i122 2
+l34
+L32 29
+V?Mb]3Yl^S[da=8E:Vbz2e0
+!s100 :UBU?:`V1RR45eY[;lMH80
+R7
+32
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 0
+R12
+Econtador_m
+Z21 w1680529009
+Z22 DPx4 ieee 9 math_real 0 22 gNk<PdFJ<XNPcfef`f?Z81
+R13
+R2
+R3
+!i122 3
+R0
+Z23 8contador_m.vhd
+Z24 Fcontador_m.vhd
+l0
+L33 1
+VY?fz5T?116oG9gSOFe[_>2
+!s100 IE8GNmR0YZ`QBj6NenEE91
+R7
+32
+Z25 !s110 1680530439
+!i10b 1
+Z26 !s108 1680530438.000000
+Z27 !s90 contador_m.vhd|
+Z28 !s107 contador_m.vhd|
+!i113 0
+R12
+Acomportamental
+R22
+R13
+R2
+R3
+DEx4 work 10 contador_m 0 22 Y?fz5T?116oG9gSOFe[_>2
+!i122 3
+l50
+L48 29
+VBFG3d:7>eXGG2ImJHE7KV1
+!s100 HQDCD@lQoSI;?_;N[TVUV2
+R7
+32
+R25
+!i10b 1
+R26
+R27
+R28
+!i113 0
+R12
+Econtador_modificado
+R1
+R22
+R13
+R2
+R3
+!i122 4
+R0
+Z29 8contador_modificado.vhd
+Z30 Fcontador_modificado.vhd
+l0
+Z31 L34 1
+VloiPO@bPgHT?`hgnBAY[40
+!s100 PT:f38_=_bmGU7c:M7_O91
+R7
+32
+Z32 !s110 1680530443
+!i10b 1
+Z33 !s108 1680530443.000000
+Z34 !s90 contador_modificado.vhd|
+Z35 !s107 contador_modificado.vhd|
+!i113 0
+R12
+Acomportamental
+R22
+R13
+R2
+R3
+DEx4 work 19 contador_modificado 0 22 loiPO@bPgHT?`hgnBAY[40
+!i122 4
+l56
+L54 33
+V0CV8dDVHAdQoB2kmWi^Yd1
+!s100 HCVVM?E[zhXfQ;kXo^n@73
+R7
+32
+R32
+!i10b 1
+R33
+R34
+R35
+!i113 0
+R12
+Edecoder_a
+Z36 w1680530400
+R22
+R13
+R2
+R3
+!i122 5
+R0
+Z37 8decoder_a.vhd
+Z38 Fdecoder_a.vhd
+l0
+L6 1
+Vk^2P4BERiNQlzD?Zm]L;R1
+!s100 WYgdZYgCa7i@bSJU>7:3m1
+R7
+32
+Z39 !s110 1680530457
+!i10b 1
+Z40 !s108 1680530457.000000
+Z41 !s90 decoder_a.vhd|
+Z42 !s107 decoder_a.vhd|
+!i113 0
+R12
+Abehavioral
+R22
+R13
+R2
+R3
+DEx4 work 9 decoder_a 0 22 k^2P4BERiNQlzD?Zm]L;R1
+!i122 5
+l16
+L14 17
+VHEj>MBnB_9^7M;7^:fcXl1
+!s100 >L2@<m7FPK2J00>1><1bh0
+R7
+32
+R39
+!i10b 1
+R40
+R41
+R42
+!i113 0
+R12
+Eedge_detector
+R1
+R2
+R3
+!i122 6
+R0
+Z43 8edge_detector.vhd
+Z44 Fedge_detector.vhd
+l0
+L25 1
+VMATRaPZEoC5gDbzDSfla@1
+!s100 8YZ2^jBlaX4?0]W6fg5fQ2
+R7
+32
+Z45 !s110 1680530463
+!i10b 1
+Z46 !s108 1680530463.000000
+Z47 !s90 edge_detector.vhd|
+Z48 !s107 edge_detector.vhd|
+!i113 0
+R12
+Artl
+R2
+R3
+DEx4 work 13 edge_detector 0 22 MATRaPZEoC5gDbzDSfla@1
+!i122 6
+l39
+L34 21
+Ve2ihg@>PIhNRXh]E=HXC=0
+!s100 XhDFK>6^Pg;Cf>3KW;kN03
+R7
+32
+R45
+!i10b 1
+R46
+R47
+R48
+!i113 0
+R12
+Eedge_holder
+R1
+R2
+R3
+!i122 7
+R0
+Z49 8edge_holder.vhd
+Z50 Fedge_holder.vhd
+l0
+Z51 L16 1
+Vc5Az=6Z15XbD7T36W_7JL2
+!s100 Oi8m[OI2_QI7cP;_j;]>g0
+R7
+32
+Z52 !s110 1680530468
+!i10b 1
+Z53 !s108 1680530468.000000
+Z54 !s90 edge_holder.vhd|
+Z55 !s107 edge_holder.vhd|
+!i113 0
+R12
+Aestrutural
+R2
+R3
+DEx4 work 11 edge_holder 0 22 c5Az=6Z15XbD7T36W_7JL2
+!i122 7
+l39
+L28 27
+VJzG4h7^Z0:bTgfb3VTgfd2
+!s100 jjG:mW5GD[]@@GQGf<hYj2
+R7
+32
+R52
+!i10b 1
+R53
+R54
+R55
+!i113 0
+R12
+Efluxo_dados
+Z56 w1680531020
+R22
+R13
+R2
+R3
+!i122 11
+R0
+Z57 8fluxo_dados.vhd
+Z58 Ffluxo_dados.vhd
+l0
+L22 1
+VF<1@`=5cOlHB@LADVX1EH1
+!s100 RAEN2GEAjhcC6hnjjN6aS0
+R7
+32
+Z59 !s110 1680531022
+!i10b 1
+Z60 !s108 1680531022.000000
+Z61 !s90 fluxo_dados.vhd|
+Z62 !s107 fluxo_dados.vhd|
+!i113 0
+R12
+Aestrutural
+Z63 DEx4 work 7 ram_sx4 0 22 UdkZSb68Wk[Ggma<NWL2R3
+R22
+R13
+R2
+R3
+DEx4 work 11 fluxo_dados 0 22 F<1@`=5cOlHB@LADVX1EH1
+!i122 11
+l252
+L63 424
+VWVD=kB9W9O;CEWmLcM<UW3
+!s100 DG0]U<F9_F1o[aJIZoT3g2
+R7
+32
+R59
+!i10b 1
+R60
+R61
+R62
+!i113 0
+R12
+Ehexa7seg
+R1
+R2
+R3
+!i122 12
+R0
+Z64 8hexa7seg.vhd
+Z65 Fhexa7seg.vhd
+l0
+L24 1
+VYDL50=FC5niQbGIL>l8Z32
+!s100 m70:2LbOnf0ODWJKbc?@F3
+R7
+32
+Z66 !s110 1680531030
+!i10b 1
+Z67 !s108 1680531030.000000
+Z68 !s90 hexa7seg.vhd|
+Z69 !s107 hexa7seg.vhd|
+!i113 0
+R12
+Acomportamental
+R2
+R3
+DEx4 work 8 hexa7seg 0 22 YDL50=FC5niQbGIL>l8Z32
+!i122 12
+l32
+L31 22
+Ve5WWWEO3@O<FC2?6b2gQW0
+!s100 U7QTX5YA5zSmB21GTflT=3
+R7
+32
+R66
+!i10b 1
+R67
+R68
+R69
+!i113 0
+R12
+Ehexdecimal
+R1
+R2
+R3
+!i122 13
+R0
+Z70 8hexDecimal.vhd
+Z71 FhexDecimal.vhd
+l0
+R51
+VPkS`_NZlOQ]GEVB__=i3Y1
+!s100 m<XlW1PU63bb>P6U@3PUf1
+R7
+32
+Z72 !s110 1680531038
+!i10b 1
+Z73 !s108 1680531038.000000
+Z74 !s90 hexDecimal.vhd|
+Z75 !s107 hexDecimal.vhd|
+!i113 0
+R12
+Adataflow
+R2
+R3
+DEx4 work 10 hexdecimal 0 22 PkS`_NZlOQ]GEVB__=i3Y1
+!i122 13
+l45
+L25 62
+V;3:^>Ho8m>^RVN9ZTZ^6M3
+!s100 :398`AWF?i<>k^22dWf;B0
+R7
+32
+R72
+!i10b 1
+R73
+R74
+R75
+!i113 0
+R12
+Ejogo_desafio_ritmo
+Z76 w1680531269
+R2
+R3
+!i122 26
+R0
+Z77 8jogo_desafio_ritmo.vhd
+Z78 Fjogo_desafio_ritmo.vhd
+l0
+R16
+VG]ee_H7gR[:^Jim0``>h91
+!s100 ]zHaJS<m7S7BJj_DG>ING3
+R7
+32
+Z79 !s110 1680531272
+!i10b 1
+Z80 !s108 1680531271.000000
+Z81 !s90 jogo_desafio_ritmo.vhd|
+!s107 jogo_desafio_ritmo.vhd|
+!i113 0
+R12
+Aestrutural
+R2
+R3
+DEx4 work 18 jogo_desafio_ritmo 0 22 G]ee_H7gR[:^Jim0``>h91
+!i122 26
+l149
+L42 237
+V_<j4hJ3M2l[MK0_KK:JfL0
+!s100 KAR[n4dLF2<f1=[cZk^iH1
+R7
+32
+R79
+!i10b 1
+R80
+R81
+Z82 !s107 jogo_desafio_ritmo.vhd|
+!i113 0
+R12
+Eram_sx4
+R1
+R22
+R13
+R2
+R3
+!i122 9
+R0
+Z83 8ram_Sx4.vhd
+Z84 Fram_Sx4.vhd
+l0
+L32 1
+VUdkZSb68Wk[Ggma<NWL2R3
+!s100 MiVD0PgcM]GI0ZjK^KKB_3
+R7
+32
+Z85 !s110 1680530969
+!i10b 1
+Z86 !s108 1680530969.000000
+Z87 !s90 ram_Sx4.vhd|
+Z88 !s107 ram_Sx4.vhd|
+!i113 0
+R12
+Aram_modelsim
+R22
+R13
+R2
+R3
+R63
+!i122 9
+l116
+L84 56
+VS7>2jYSn7SZMMJRgg9YbF0
+!s100 e7]C]c_gi8iBl7kL[0h1M3
+R7
+32
+R85
+!i10b 1
+R86
+R87
+R88
+!i113 0
+R12
+Aram_mif
+R22
+R13
+R2
+R3
+R63
+!i122 9
+l57
+L49 33
+VW;9bf:34_oX@KVIQmh5?@3
+!s100 i=d;gA_U>GRCScCU7;=Z92
+R7
+32
+R85
+!i10b 1
+R86
+R87
+R88
+!i113 0
+R12
+Eregistrador_n
+R1
+R2
+R3
+!i122 15
+R0
+Z89 8registrador_n.vhd
+Z90 Fregistrador_n.vhd
+l0
+L36 1
+V18W2S[l8hcXViEM_cgf9e2
+!s100 nZ9TMZfV7=cL8G[CVTO]Z1
+R7
+32
+Z91 !s110 1680531063
+!i10b 1
+Z92 !s108 1680531063.000000
+Z93 !s90 registrador_n.vhd|
+Z94 !s107 registrador_n.vhd|
+!i113 0
+R12
+Acomportamental
+R2
+R3
+DEx4 work 13 registrador_n 0 22 18W2S[l8hcXViEM_cgf9e2
+!i122 15
+l51
+L49 16
+VB@`:LJDjcC]c8DF63FdGY0
+!s100 NJEJoUNzGSKQfC6FYC6Cz3
+R7
+32
+R91
+!i10b 1
+R92
+R93
+R94
+!i113 0
+R12
+Eseletor_som
+Z95 w1680531183
+R22
+R13
+R2
+R3
+!i122 18
+R0
+Z96 8seletor_som.vhd
+Z97 Fseletor_som.vhd
+l0
+L9 1
+V^[lHn9az?kS2Y5fKankzC3
+!s100 PWz@?<NoGh6Vf?J1@Z;1<3
+R7
+32
+Z98 !s110 1680531185
+!i10b 1
+Z99 !s108 1680531185.000000
+Z100 !s90 seletor_som.vhd|
+Z101 !s107 seletor_som.vhd|
+!i113 0
+R12
+Aestrutural
+R22
+R13
+R2
+R3
+DEx4 work 11 seletor_som 0 22 ^[lHn9az?kS2Y5fKankzC3
+!i122 18
+l44
+L17 137
+V6::bDc:@aR[BTgeWh5bC?1
+!s100 kVD?CKL`Zh=gMfRYg=6h40
+R7
+32
+R98
+!i10b 1
+R99
+R100
+R101
+!i113 0
+R12
+Eshift_register
+R1
+R13
+R2
+R3
+!i122 19
+R0
+Z102 8shift_register.vhd
+Z103 Fshift_register.vhd
+l0
+R31
+VSDa[U2XgfPI5PELV;6a6B3
+!s100 a3KCJ4CRinQe=K58M`Kl<3
+R7
+32
+Z104 !s110 1680531192
+!i10b 1
+Z105 !s108 1680531192.000000
+Z106 !s90 shift_register.vhd|
+Z107 !s107 shift_register.vhd|
+!i113 0
+R12
+Acomportamental
+R13
+R2
+R3
+DEx4 work 14 shift_register 0 22 SDa[U2XgfPI5PELV;6a6B3
+!i122 19
+l51
+L49 17
+V=XTPm<L3Z;FBoA1jYE:=I3
+!s100 92AmUJ6IkQm_XgTlJfZa;0
+R7
+32
+R104
+!i10b 1
+R105
+R106
+R107
+!i113 0
+R12
+Esomador
+Z108 w1680520547
+R13
+R2
+R3
+!i122 21
+R0
+Z109 8somador.vhd
+Z110 Fsomador.vhd
+l0
+L20 1
+VePAUM5?FF=LEcbY?hPPR?2
+!s100 I1gWEg8UJL_E:Hoodz>Oo3
+R7
+32
+Z111 !s110 1680531204
+!i10b 1
+Z112 !s108 1680531204.000000
+Z113 !s90 somador.vhd|
+Z114 !s107 somador.vhd|
+!i113 0
+R12
+Adataflow
+R13
+R2
+R3
+DEx4 work 7 somador 0 22 ePAUM5?FF=LEcbY?hPPR?2
+!i122 21
+l41
+L36 36
+V4U8`d?k@mf=2Cg3ii7>HS2
+!s100 Ph`=8^D<E>VF2YzHUNCJY2
+R7
+32
+R111
+!i10b 1
+R112
+R113
+R114
+!i113 0
+R12
+Esomador_decimal
+R108
+R22
+R13
+R2
+R3
+!i122 20
+R0
+Z115 8somador_decimal.vhd
+Z116 Fsomador_decimal.vhd
+l0
+R6
+V9fP6Ij265AO>H9ZPg3AiI2
+!s100 Si_aeHdBFH<:6efXT;aPz0
+R7
+32
+Z117 !s110 1680531198
+!i10b 1
+Z118 !s108 1680531197.000000
+Z119 !s90 somador_decimal.vhd|
+Z120 !s107 somador_decimal.vhd|
+!i113 0
+R12
+Aestrutural
+R22
+R13
+R2
+R3
+DEx4 work 15 somador_decimal 0 22 9fP6Ij265AO>H9ZPg3AiI2
+!i122 20
+l56
+L29 55
+VKDzhi_AoR3eFRU0iHc9P[0
+!s100 =mo6fPzYYeGPGmY?3JM9>3
+R7
+32
+R117
+!i10b 1
+R118
+R119
+R120
+!i113 0
+R12
+Eunidade_controle
+R108
+R2
+R3
+!i122 22
+R0
+Z121 8unidade_controle.vhd
+Z122 Funidade_controle.vhd
+l0
+L27 1
+V11k4z;`<Ii2TF1SG3jQc60
+!s100 QmCZRYUUCWFfBW_lCkkkF1
+R7
+32
+Z123 !s110 1680531209
+!i10b 1
+Z124 !s108 1680531209.000000
+Z125 !s90 unidade_controle.vhd|
+Z126 !s107 unidade_controle.vhd|
+!i113 0
+R12
+Afsm
+R2
+R3
+DEx4 work 16 unidade_controle 0 22 11k4z;`<Ii2TF1SG3jQc60
+!i122 22
+l78
+L69 142
+V`l5hif8D`1oSb_8QezoeH3
+!s100 7_9^oIYSNb?X=3n7[KK;d3
+R7
+32
+R123
+!i10b 1
+R124
+R125
+R126
+!i113 0
+R12
