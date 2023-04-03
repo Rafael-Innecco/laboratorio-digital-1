@@ -414,9 +414,9 @@ begin
 
     contador_tempo: contador_modificado -- conta passagem de tempo entre jogadas
     generic map (
-        M   => 1200,
-        P1  => 1100,
-        P2  => 1000
+        M   => 1000,
+        P1  => 750,
+        P2  => 500
     )
     port map (
         clock => clock_int,
