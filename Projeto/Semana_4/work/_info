@@ -1,6 +1,10 @@
 m255
 K4
 z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
 !s11e vcom 2021.2 2021.04, Apr 14 2021
 13
 !s112 1.1
@@ -8,761 +12,1028 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 d/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4
-Ecomparador_85
-Z1 w1680520546
-Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 1
-R0
-Z4 8comparador_85.vhd
-Z5 Fcomparador_85.vhd
-l0
-Z6 L18 1
-V<aUgfj143eC@46l5j^;k=2
-!s100 UchionOWWKZd[S9Df?mH>0
-Z7 OL;C;2021.2;73
-32
-Z8 !s110 1680530424
-!i10b 1
-Z9 !s108 1680530424.000000
-Z10 !s90 comparador_85.vhd|
-Z11 !s107 comparador_85.vhd|
-!i113 0
-Z12 tExplicit 1 CvgOpt 0
-Adataflow
+Z1 d/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4
+T_opt
+!s110 1680541858
+VGWFjnf0BTMzHKCQNjk^bN0
+Z2 04 31 2 work jogo_desafio_ritmo_tb_modo_base tb 1
+=3-000ae431a4f1-642b08a2-371f-94d9
+Z3 !s124 OEM10U52 
+o-quiet -auto_acc_if_foreign -work work
+Z4 tCvgOpt 0
+n@_opt
+Z5 OL;O;2021.2;73
+R1
+T_opt1
+!s110 1680542697
+VASzaB1lQ0l2iD<[BPg>h73
 R2
+=1-000ae431a4f1-642b0be9-5b0cb-9f19
 R3
-DEx4 work 13 comparador_85 0 22 <aUgfj143eC@46l5j^;k=2
-!i122 1
+o-quiet -auto_acc_if_foreign -work work +acc
+R4
+n@_opt1
+R5
+Ecomparador_85
+Z6 w1680520546
+Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z8 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 53
+R1
+Z9 8/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/comparador_85.vhd
+Z10 F/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/comparador_85.vhd
+l0
+Z11 L18 1
+Vn;CBL11<o[1W?[o5iWSn_2
+!s100 UchionOWWKZd[S9Df?mH>0
+Z12 OL;C;2021.2;73
+32
+Z13 !s110 1680542020
+!i10b 1
+Z14 !s108 1680542020.000000
+Z15 !s90 -reportprogress|300|-work|work|/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/comparador_85.vhd|
+Z16 !s107 /media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/comparador_85.vhd|
+!i113 0
+Z17 o-work work
+Z18 tExplicit 1 CvgOpt 0
+Adataflow
+R7
+R8
+DEx4 work 13 comparador_85 0 22 n;CBL11<o[1W?[o5iWSn_2
+!i122 53
 l41
 L37 20
-V7OhaVF]TeHZFJ@=mml@l82
+VC<^GjH9kdG]R3DLD_99jl3
 !s100 P^;hPi]5OVVdjL6GdC0U80
-R7
-32
-R8
-!i10b 1
-R9
-R10
-R11
-!i113 0
 R12
-Econtador_163
-R1
-Z13 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
-R2
-R3
-!i122 2
-R0
-Z14 8contador_163.vhd
-Z15 Fcontador_163.vhd
-l0
-Z16 L19 1
-VLDS<>;Ui52kXD7nO:4[EM2
-!s100 HncTPI9f>PSaSM@8d2b100
-R7
 32
-Z17 !s110 1680530433
-!i10b 1
-Z18 !s108 1680530433.000000
-Z19 !s90 contador_163.vhd|
-Z20 !s107 contador_163.vhd|
-!i113 0
-R12
-Acomportamental
 R13
-R2
-R3
-DEx4 work 12 contador_163 0 22 LDS<>;Ui52kXD7nO:4[EM2
-!i122 2
+!i10b 1
+R14
+R15
+R16
+!i113 0
+R17
+R18
+Econtador_163
+R6
+Z19 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R7
+R8
+!i122 54
+R1
+Z20 8/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/contador_163.vhd
+Z21 F/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/contador_163.vhd
+l0
+Z22 L19 1
+VX76>IE<hD@PAg93BbE2<M3
+!s100 HncTPI9f>PSaSM@8d2b100
+R12
+32
+R13
+!i10b 1
+R14
+Z23 !s90 -reportprogress|300|-work|work|/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/contador_163.vhd|
+Z24 !s107 /media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/contador_163.vhd|
+!i113 0
+R17
+R18
+Acomportamental
+R19
+R7
+R8
+DEx4 work 12 contador_163 0 22 X76>IE<hD@PAg93BbE2<M3
+!i122 54
 l34
 L32 29
-V?Mb]3Yl^S[da=8E:Vbz2e0
+VgP@4FZQ0Q[OAN>2<2TmgC2
 !s100 :UBU?:`V1RR45eY[;lMH80
-R7
-32
-R17
-!i10b 1
-R18
-R19
-R20
-!i113 0
 R12
-Econtador_m
-Z21 w1680529009
-Z22 DPx4 ieee 9 math_real 0 22 gNk<PdFJ<XNPcfef`f?Z81
+32
 R13
-R2
-R3
-!i122 3
-R0
-Z23 8contador_m.vhd
-Z24 Fcontador_m.vhd
+!i10b 1
+R14
+R23
+R24
+!i113 0
+R17
+R18
+Econtador_m
+Z25 w1680529009
+Z26 DPx4 ieee 9 math_real 0 22 gNk<PdFJ<XNPcfef`f?Z81
+R19
+R7
+R8
+!i122 55
+R1
+Z27 8/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/contador_m.vhd
+Z28 F/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/contador_m.vhd
 l0
 L33 1
-VY?fz5T?116oG9gSOFe[_>2
+VQ>6`nRV@ajAg;56f855_f2
 !s100 IE8GNmR0YZ`QBj6NenEE91
-R7
-32
-Z25 !s110 1680530439
-!i10b 1
-Z26 !s108 1680530438.000000
-Z27 !s90 contador_m.vhd|
-Z28 !s107 contador_m.vhd|
-!i113 0
 R12
-Acomportamental
-R22
+32
 R13
-R2
-R3
-DEx4 work 10 contador_m 0 22 Y?fz5T?116oG9gSOFe[_>2
-!i122 3
+!i10b 1
+R14
+Z29 !s90 -reportprogress|300|-work|work|/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/contador_m.vhd|
+Z30 !s107 /media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/contador_m.vhd|
+!i113 0
+R17
+R18
+Acomportamental
+R26
+R19
+R7
+R8
+DEx4 work 10 contador_m 0 22 Q>6`nRV@ajAg;56f855_f2
+!i122 55
 l50
 L48 29
-VBFG3d:7>eXGG2ImJHE7KV1
+V[`EoC^MWzm?LcK6N5YRMW0
 !s100 HQDCD@lQoSI;?_;N[TVUV2
-R7
-32
-R25
-!i10b 1
-R26
-R27
-R28
-!i113 0
 R12
+32
+R13
+!i10b 1
+R14
+R29
+R30
+!i113 0
+R17
+R18
 Econtador_modificado
-R1
-R22
-R13
-R2
-R3
-!i122 4
-R0
-Z29 8contador_modificado.vhd
-Z30 Fcontador_modificado.vhd
-l0
-Z31 L34 1
-VloiPO@bPgHT?`hgnBAY[40
-!s100 PT:f38_=_bmGU7c:M7_O91
+R6
+R26
+R19
 R7
-32
-Z32 !s110 1680530443
-!i10b 1
-Z33 !s108 1680530443.000000
-Z34 !s90 contador_modificado.vhd|
-Z35 !s107 contador_modificado.vhd|
-!i113 0
+R8
+!i122 56
+R1
+Z31 8/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/contador_modificado.vhd
+Z32 F/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/contador_modificado.vhd
+l0
+Z33 L34 1
+V[U_BckH^00JEzV_jX2R:33
+!s100 PT:f38_=_bmGU7c:M7_O91
 R12
-Acomportamental
-R22
+32
 R13
-R2
-R3
-DEx4 work 19 contador_modificado 0 22 loiPO@bPgHT?`hgnBAY[40
-!i122 4
+!i10b 1
+R14
+Z34 !s90 -reportprogress|300|-work|work|/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/contador_modificado.vhd|
+Z35 !s107 /media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/contador_modificado.vhd|
+!i113 0
+R17
+R18
+Acomportamental
+R26
+R19
+R7
+R8
+DEx4 work 19 contador_modificado 0 22 [U_BckH^00JEzV_jX2R:33
+!i122 56
 l56
 L54 33
-V0CV8dDVHAdQoB2kmWi^Yd1
+Vkg<8eQJl^]l[o2=n=V:]o2
 !s100 HCVVM?E[zhXfQ;kXo^n@73
-R7
+R12
 32
-R32
+R13
 !i10b 1
-R33
+R14
 R34
 R35
 !i113 0
-R12
+R17
+R18
 Edecoder_a
 Z36 w1680530400
-R22
-R13
-R2
-R3
-!i122 5
-R0
-Z37 8decoder_a.vhd
-Z38 Fdecoder_a.vhd
+R26
+R19
+R7
+R8
+!i122 57
+R1
+Z37 8/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/decoder_a.vhd
+Z38 F/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/decoder_a.vhd
 l0
 L6 1
-Vk^2P4BERiNQlzD?Zm]L;R1
+VX_dNOW2Y^ceNIU24JEz0<3
 !s100 WYgdZYgCa7i@bSJU>7:3m1
-R7
-32
-Z39 !s110 1680530457
-!i10b 1
-Z40 !s108 1680530457.000000
-Z41 !s90 decoder_a.vhd|
-Z42 !s107 decoder_a.vhd|
-!i113 0
 R12
-Abehavioral
-R22
+32
 R13
-R2
-R3
-DEx4 work 9 decoder_a 0 22 k^2P4BERiNQlzD?Zm]L;R1
-!i122 5
+!i10b 1
+R14
+Z39 !s90 -reportprogress|300|-work|work|/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/decoder_a.vhd|
+Z40 !s107 /media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/decoder_a.vhd|
+!i113 0
+R17
+R18
+Abehavioral
+R26
+R19
+R7
+R8
+DEx4 work 9 decoder_a 0 22 X_dNOW2Y^ceNIU24JEz0<3
+!i122 57
 l16
 L14 17
-VHEj>MBnB_9^7M;7^:fcXl1
+V6[Sn5ojDIA2<4ED6V?OU12
 !s100 >L2@<m7FPK2J00>1><1bh0
-R7
-32
-R39
-!i10b 1
-R40
-R41
-R42
-!i113 0
 R12
+32
+R13
+!i10b 1
+R14
+R39
+R40
+!i113 0
+R17
+R18
 Eedge_detector
+R6
+R7
+R8
+!i122 58
 R1
-R2
-R3
-!i122 6
-R0
-Z43 8edge_detector.vhd
-Z44 Fedge_detector.vhd
+Z41 8/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/edge_detector.vhd
+Z42 F/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/edge_detector.vhd
 l0
 L25 1
-VMATRaPZEoC5gDbzDSfla@1
+Vm[G=lk]5c?YknS1=j1EjQ2
 !s100 8YZ2^jBlaX4?0]W6fg5fQ2
-R7
-32
-Z45 !s110 1680530463
-!i10b 1
-Z46 !s108 1680530463.000000
-Z47 !s90 edge_detector.vhd|
-Z48 !s107 edge_detector.vhd|
-!i113 0
 R12
+32
+R13
+!i10b 1
+R14
+Z43 !s90 -reportprogress|300|-work|work|/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/edge_detector.vhd|
+Z44 !s107 /media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/edge_detector.vhd|
+!i113 0
+R17
+R18
 Artl
-R2
-R3
-DEx4 work 13 edge_detector 0 22 MATRaPZEoC5gDbzDSfla@1
-!i122 6
+R7
+R8
+DEx4 work 13 edge_detector 0 22 m[G=lk]5c?YknS1=j1EjQ2
+!i122 58
 l39
 L34 21
-Ve2ihg@>PIhNRXh]E=HXC=0
+Vm1[ezikQgWhZPG5zlcdH_3
 !s100 XhDFK>6^Pg;Cf>3KW;kN03
-R7
-32
-R45
-!i10b 1
-R46
-R47
-R48
-!i113 0
 R12
+32
+R13
+!i10b 1
+R14
+R43
+R44
+!i113 0
+R17
+R18
 Eedge_holder
-R1
-R2
-R3
-!i122 7
-R0
-Z49 8edge_holder.vhd
-Z50 Fedge_holder.vhd
-l0
-Z51 L16 1
-Vc5Az=6Z15XbD7T36W_7JL2
-!s100 Oi8m[OI2_QI7cP;_j;]>g0
+R6
 R7
-32
-Z52 !s110 1680530468
-!i10b 1
-Z53 !s108 1680530468.000000
-Z54 !s90 edge_holder.vhd|
-Z55 !s107 edge_holder.vhd|
-!i113 0
+R8
+!i122 59
+R1
+Z45 8/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/edge_holder.vhd
+Z46 F/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/edge_holder.vhd
+l0
+Z47 L16 1
+VloeG5[m60c0<W^nMlTZ@03
+!s100 Oi8m[OI2_QI7cP;_j;]>g0
 R12
+32
+R13
+!i10b 1
+R14
+Z48 !s90 -reportprogress|300|-work|work|/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/edge_holder.vhd|
+Z49 !s107 /media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/edge_holder.vhd|
+!i113 0
+R17
+R18
 Aestrutural
-R2
-R3
-DEx4 work 11 edge_holder 0 22 c5Az=6Z15XbD7T36W_7JL2
-!i122 7
+R7
+R8
+DEx4 work 11 edge_holder 0 22 loeG5[m60c0<W^nMlTZ@03
+!i122 59
 l39
 L28 27
-VJzG4h7^Z0:bTgfb3VTgfd2
+VY2n_iHo;?VZ8D87BJzAOY2
 !s100 jjG:mW5GD[]@@GQGf<hYj2
-R7
-32
-R52
-!i10b 1
-R53
-R54
-R55
-!i113 0
 R12
-Efluxo_dados
-Z56 w1680531020
-R22
+32
 R13
-R2
-R3
-!i122 11
-R0
-Z57 8fluxo_dados.vhd
-Z58 Ffluxo_dados.vhd
+!i10b 1
+R14
+R48
+R49
+!i113 0
+R17
+R18
+Efluxo_dados
+Z50 w1680542650
+R26
+R19
+R7
+R8
+!i122 77
+R1
+Z51 8/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/fluxo_dados.vhd
+Z52 F/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/fluxo_dados.vhd
 l0
 L22 1
-VF<1@`=5cOlHB@LADVX1EH1
+VmSX=zVd`SbedK=_f]B`L42
 !s100 RAEN2GEAjhcC6hnjjN6aS0
-R7
-32
-Z59 !s110 1680531022
-!i10b 1
-Z60 !s108 1680531022.000000
-Z61 !s90 fluxo_dados.vhd|
-Z62 !s107 fluxo_dados.vhd|
-!i113 0
 R12
+32
+Z53 !s110 1680542686
+!i10b 1
+Z54 !s108 1680542686.000000
+Z55 !s90 -reportprogress|300|-work|work|/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/fluxo_dados.vhd|
+Z56 !s107 /media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/fluxo_dados.vhd|
+!i113 0
+R17
+R18
 Aestrutural
-Z63 DEx4 work 7 ram_sx4 0 22 UdkZSb68Wk[Ggma<NWL2R3
-R22
-R13
-R2
-R3
-DEx4 work 11 fluxo_dados 0 22 F<1@`=5cOlHB@LADVX1EH1
-!i122 11
+Z57 DEx4 work 7 ram_sx4 0 22 zaWPSh@9O`=]Xo?;JI]bR0
+R26
+R19
+R7
+R8
+DEx4 work 11 fluxo_dados 0 22 mSX=zVd`SbedK=_f]B`L42
+!i122 77
 l252
 L63 424
-VWVD=kB9W9O;CEWmLcM<UW3
-!s100 DG0]U<F9_F1o[aJIZoT3g2
-R7
-32
-R59
-!i10b 1
-R60
-R61
-R62
-!i113 0
+V1:zH<3>SPOHIOPDVdEiI]1
+!s100 bI_29nMk4D<^J_RNTjGGa2
 R12
+32
+R53
+!i10b 1
+R54
+R55
+R56
+!i113 0
+R17
+R18
 Ehexa7seg
+R6
+R7
+R8
+!i122 61
 R1
-R2
-R3
-!i122 12
-R0
-Z64 8hexa7seg.vhd
-Z65 Fhexa7seg.vhd
+Z58 8/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/hexa7seg.vhd
+Z59 F/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/hexa7seg.vhd
 l0
 L24 1
-VYDL50=FC5niQbGIL>l8Z32
+VQJZeiVSJF@L3lDY8DEh^K0
 !s100 m70:2LbOnf0ODWJKbc?@F3
-R7
-32
-Z66 !s110 1680531030
-!i10b 1
-Z67 !s108 1680531030.000000
-Z68 !s90 hexa7seg.vhd|
-Z69 !s107 hexa7seg.vhd|
-!i113 0
 R12
+32
+R13
+!i10b 1
+R14
+Z60 !s90 -reportprogress|30|-work|work|/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/hexa7seg.vhd|
+Z61 !s107 /media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/hexa7seg.vhd|
+!i113 0
+R17
+R18
 Acomportamental
-R2
-R3
-DEx4 work 8 hexa7seg 0 22 YDL50=FC5niQbGIL>l8Z32
-!i122 12
+R7
+R8
+DEx4 work 8 hexa7seg 0 22 QJZeiVSJF@L3lDY8DEh^K0
+!i122 61
 l32
 L31 22
-Ve5WWWEO3@O<FC2?6b2gQW0
+V4am;C1Lg0gb:CoRQ`1_]o0
 !s100 U7QTX5YA5zSmB21GTflT=3
-R7
-32
-R66
-!i10b 1
-R67
-R68
-R69
-!i113 0
 R12
+32
+R13
+!i10b 1
+R14
+R60
+R61
+!i113 0
+R17
+R18
 Ehexdecimal
-R1
-R2
-R3
-!i122 13
-R0
-Z70 8hexDecimal.vhd
-Z71 FhexDecimal.vhd
-l0
-R51
-VPkS`_NZlOQ]GEVB__=i3Y1
-!s100 m<XlW1PU63bb>P6U@3PUf1
+R6
 R7
-32
-Z72 !s110 1680531038
-!i10b 1
-Z73 !s108 1680531038.000000
-Z74 !s90 hexDecimal.vhd|
-Z75 !s107 hexDecimal.vhd|
-!i113 0
+R8
+!i122 62
+R1
+Z62 8/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/hexDecimal.vhd
+Z63 F/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/hexDecimal.vhd
+l0
+R47
+VhcABV6<MaJTVfdl6@1PZN2
+!s100 m<XlW1PU63bb>P6U@3PUf1
 R12
+32
+R13
+!i10b 1
+R14
+Z64 !s90 -reportprogress|30|-work|work|/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/hexDecimal.vhd|
+Z65 !s107 /media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/hexDecimal.vhd|
+!i113 0
+R17
+R18
 Adataflow
-R2
-R3
-DEx4 work 10 hexdecimal 0 22 PkS`_NZlOQ]GEVB__=i3Y1
-!i122 13
+R7
+R8
+DEx4 work 10 hexdecimal 0 22 hcABV6<MaJTVfdl6@1PZN2
+!i122 62
 l45
 L25 62
-V;3:^>Ho8m>^RVN9ZTZ^6M3
+VF4cY;H@YcaUc0NXk6nDi=2
 !s100 :398`AWF?i<>k^22dWf;B0
+R12
+32
+R13
+!i10b 1
+R14
+R64
+R65
+!i113 0
+R17
+R18
+Ehexdecimal_tb
+Z66 w1680520547
+R19
 R7
+R8
+!i122 63
+R1
+Z67 8/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/hexDecimal_tb.vhd
+Z68 F/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/hexDecimal_tb.vhd
+l0
+Z69 L13 1
+V62N^nDA8MDaL4m`]MkF1]1
+!s100 LL@A0Ei1X<5SAUB8OHTe:3
+R12
+32
+R13
+!i10b 1
+R14
+Z70 !s90 -reportprogress|30|-work|work|/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/hexDecimal_tb.vhd|
+Z71 !s107 /media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/hexDecimal_tb.vhd|
+!i113 0
+R17
+R18
+Atestbench
+R19
+R7
+R8
+DEx4 work 13 hexdecimal_tb 0 22 62N^nDA8MDaL4m`]MkF1]1
+!i122 63
+l30
+L17 94
+VmecX_mX[Bmf<G;M]`QjUK2
+!s100 O_07X=NA8ezId`IF9BDWD0
+R12
+32
+Z72 !s110 1680542021
+!i10b 1
+R14
+R70
+R71
+!i113 0
+R17
+R18
+Ejogo_desafio_ritmo
+Z73 w1680531269
+R7
+R8
+!i122 64
+R1
+Z74 8/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/jogo_desafio_ritmo.vhd
+Z75 F/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/jogo_desafio_ritmo.vhd
+l0
+R22
+VnPiJIjI3AQ5SZ8Y>W_MIN2
+!s100 ]zHaJS<m7S7BJj_DG>ING3
+R12
 32
 R72
 !i10b 1
-R73
-R74
-R75
+Z76 !s108 1680542021.000000
+Z77 !s90 -reportprogress|30|-work|work|/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/jogo_desafio_ritmo.vhd|
+Z78 !s107 /media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/jogo_desafio_ritmo.vhd|
 !i113 0
-R12
-Ejogo_desafio_ritmo
-Z76 w1680531269
-R2
-R3
-!i122 26
-R0
-Z77 8jogo_desafio_ritmo.vhd
-Z78 Fjogo_desafio_ritmo.vhd
-l0
-R16
-VG]ee_H7gR[:^Jim0``>h91
-!s100 ]zHaJS<m7S7BJj_DG>ING3
-R7
-32
-Z79 !s110 1680531272
-!i10b 1
-Z80 !s108 1680531271.000000
-Z81 !s90 jogo_desafio_ritmo.vhd|
-Z82 !s107 jogo_desafio_ritmo.vhd|
-!i113 0
-R12
+R17
+R18
 Aestrutural
-R2
-R3
-DEx4 work 18 jogo_desafio_ritmo 0 22 G]ee_H7gR[:^Jim0``>h91
-!i122 26
+R7
+R8
+DEx4 work 18 jogo_desafio_ritmo 0 22 nPiJIjI3AQ5SZ8Y>W_MIN2
+!i122 64
 l149
 L42 237
-V_<j4hJ3M2l[MK0_KK:JfL0
+Vbl[3ka@LC8B6Inf;WHaK]2
 !s100 KAR[n4dLF2<f1=[cZk^iH1
-R7
-32
-R79
-!i10b 1
-R80
-R81
-R82
-!i113 0
 R12
-Eram_sx4
+32
+R72
+!i10b 1
+R76
+R77
+R78
+!i113 0
+R17
+R18
+Ejogo_desafio_ritmo_tb_erros
+R66
+R7
+R8
+!i122 65
 R1
-R22
-R13
-R2
-R3
-!i122 9
-R0
-Z83 8ram_Sx4.vhd
-Z84 Fram_Sx4.vhd
+Z79 8/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/jogo_desafio_ritmo_tb_erros.vhd
+Z80 F/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/jogo_desafio_ritmo_tb_erros.vhd
+l0
+Z81 L27 1
+VzikSFlPi7CNZl@ULXdKC^3
+!s100 JPE4i1LQcW02]oOIGi0OM1
+R12
+32
+R72
+!i10b 1
+R76
+Z82 !s90 -reportprogress|30|-work|work|/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/jogo_desafio_ritmo_tb_erros.vhd|
+Z83 !s107 /media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/jogo_desafio_ritmo_tb_erros.vhd|
+!i113 0
+R17
+R18
+Atb
+R7
+R8
+DEx4 work 27 jogo_desafio_ritmo_tb_erros 0 22 zikSFlPi7CNZl@ULXdKC^3
+!i122 65
+l82
+L30 833
+VRYSf?RTgi`X`m@`c2AD@10
+!s100 QTTZ]d1VZP28Qznie[NJ?1
+R12
+32
+R72
+!i10b 1
+R76
+R82
+R83
+!i113 0
+R17
+R18
+Ejogo_desafio_ritmo_tb_modo_base
+Z84 w1680541837
+R7
+R8
+!i122 66
+R1
+Z85 8/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/jogo_desafio_ritmo_tb_modo_base.vhd
+Z86 F/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/jogo_desafio_ritmo_tb_modo_base.vhd
+l0
+R81
+VnC@NbYz0b<JNaAIEUlCDS1
+!s100 <P_2If<GQg5OHOWUj?14@1
+R12
+32
+R72
+!i10b 1
+R76
+Z87 !s90 -reportprogress|30|-work|work|/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/jogo_desafio_ritmo_tb_modo_base.vhd|
+Z88 !s107 /media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/jogo_desafio_ritmo_tb_modo_base.vhd|
+!i113 0
+R17
+R18
+Atb
+R7
+R8
+DEx4 work 31 jogo_desafio_ritmo_tb_modo_base 0 22 nC@NbYz0b<JNaAIEUlCDS1
+!i122 66
+l87
+L30 839
+V<@1e6HN3i^VhTLJh8l60<2
+!s100 hc]zzlUOEYSE3RIPn03G03
+R12
+32
+R72
+!i10b 1
+R76
+R87
+R88
+!i113 0
+R17
+R18
+Ejogo_desafio_ritmo_tb_modo_escrita
+R66
+R7
+R8
+!i122 67
+R1
+Z89 8/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/jogo_desafio_ritmo_tb_modo_escrita.vhd
+Z90 F/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/jogo_desafio_ritmo_tb_modo_escrita.vhd
+l0
+R81
+V^3XjNZm55kebbJl1:AEY_2
+!s100 :M8h?emg2PTm=T[k80LJ[1
+R12
+32
+R72
+!i10b 1
+R76
+Z91 !s90 -reportprogress|30|-work|work|/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/jogo_desafio_ritmo_tb_modo_escrita.vhd|
+Z92 !s107 /media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/jogo_desafio_ritmo_tb_modo_escrita.vhd|
+!i113 0
+R17
+R18
+Atb
+R7
+R8
+DEx4 work 34 jogo_desafio_ritmo_tb_modo_escrita 0 22 ^3XjNZm55kebbJl1:AEY_2
+!i122 67
+l82
+L30 1552
+V1UIdcKfDZbCF2HB<l0f[z0
+!s100 TSmnNLZSeZK7DbW_hkl5?0
+R12
+32
+R72
+!i10b 1
+R76
+R91
+R92
+!i113 0
+R17
+R18
+Eram_sx4
+R6
+R26
+R19
+R7
+R8
+!i122 68
+R1
+Z93 8/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/ram_Sx4.vhd
+Z94 F/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/ram_Sx4.vhd
 l0
 L32 1
-VUdkZSb68Wk[Ggma<NWL2R3
+VzaWPSh@9O`=]Xo?;JI]bR0
 !s100 MiVD0PgcM]GI0ZjK^KKB_3
-R7
-32
-Z85 !s110 1680530969
-!i10b 1
-Z86 !s108 1680530969.000000
-Z87 !s90 ram_Sx4.vhd|
-Z88 !s107 ram_Sx4.vhd|
-!i113 0
 R12
+32
+R72
+!i10b 1
+R76
+Z95 !s90 -reportprogress|30|-work|work|/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/ram_Sx4.vhd|
+Z96 !s107 /media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/ram_Sx4.vhd|
+!i113 0
+R17
+R18
 Aram_modelsim
-R22
-R13
-R2
-R3
-R63
-!i122 9
+R26
+R19
+R7
+R8
+R57
+!i122 68
 l116
 L84 56
-VS7>2jYSn7SZMMJRgg9YbF0
+VTLKG422CKGzB8[R8^<4X12
 !s100 e7]C]c_gi8iBl7kL[0h1M3
-R7
-32
-R85
-!i10b 1
-R86
-R87
-R88
-!i113 0
 R12
+32
+R72
+!i10b 1
+R76
+R95
+R96
+!i113 0
+R17
+R18
 Aram_mif
-R22
-R13
-R2
-R3
-R63
-!i122 9
+R26
+R19
+R7
+R8
+R57
+!i122 68
 l57
 L49 33
-VW;9bf:34_oX@KVIQmh5?@3
+Vf]BX40gi4F3d=1YJgf:l;3
 !s100 i=d;gA_U>GRCScCU7;=Z92
-R7
-32
-R85
-!i10b 1
-R86
-R87
-R88
-!i113 0
 R12
+32
+R72
+!i10b 1
+R76
+R95
+R96
+!i113 0
+R17
+R18
 Eregistrador_n
+R6
+R7
+R8
+!i122 69
 R1
-R2
-R3
-!i122 15
-R0
-Z89 8registrador_n.vhd
-Z90 Fregistrador_n.vhd
+Z97 8/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/registrador_n.vhd
+Z98 F/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/registrador_n.vhd
 l0
 L36 1
-V18W2S[l8hcXViEM_cgf9e2
+VT?>3PUE:K:?KP;k=7Pn?J3
 !s100 nZ9TMZfV7=cL8G[CVTO]Z1
-R7
-32
-Z91 !s110 1680531063
-!i10b 1
-Z92 !s108 1680531063.000000
-Z93 !s90 registrador_n.vhd|
-Z94 !s107 registrador_n.vhd|
-!i113 0
 R12
+32
+R72
+!i10b 1
+R76
+Z99 !s90 -reportprogress|30|-work|work|/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/registrador_n.vhd|
+Z100 !s107 /media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/registrador_n.vhd|
+!i113 0
+R17
+R18
 Acomportamental
-R2
-R3
-DEx4 work 13 registrador_n 0 22 18W2S[l8hcXViEM_cgf9e2
-!i122 15
+R7
+R8
+DEx4 work 13 registrador_n 0 22 T?>3PUE:K:?KP;k=7Pn?J3
+!i122 69
 l51
 L49 16
-VB@`:LJDjcC]c8DF63FdGY0
+VX1ZEjN^<7[nX?Dk__WYK21
 !s100 NJEJoUNzGSKQfC6FYC6Cz3
-R7
-32
-R91
-!i10b 1
-R92
-R93
-R94
-!i113 0
 R12
-Eseletor_som
-Z95 w1680532862
-R22
-R13
-R2
-R3
-!i122 27
-R0
-Z96 8seletor_som.vhd
-Z97 Fseletor_som.vhd
-l0
-L9 1
-V^[lHn9az?kS2Y5fKankzC3
-!s100 PWz@?<NoGh6Vf?J1@Z;1<3
-R7
 32
-Z98 !s110 1680532868
+R72
 !i10b 1
-Z99 !s108 1680532868.000000
-Z100 !s90 seletor_som.vhd|
-Z101 !s107 seletor_som.vhd|
-!i113 0
-R12
-Aestrutural
-R22
-R13
-R2
-R3
-Z102 DEx4 work 11 seletor_som 0 22 ^[lHn9az?kS2Y5fKankzC3
-!i122 27
-l44
-L17 178
-V8ck[1_^;mJS8ZOGNAlP@82
-!s100 ZRV?WWFz4k]i2==1nASTf0
-R7
-32
-R98
-!i10b 1
+R76
 R99
 R100
-R101
 !i113 0
-R12
-Eshift_register
-R1
-R13
-R2
-R3
-!i122 19
-R0
-Z103 8shift_register.vhd
-Z104 Fshift_register.vhd
-l0
-R31
-VSDa[U2XgfPI5PELV;6a6B3
-!s100 a3KCJ4CRinQe=K58M`Kl<3
+R17
+R18
+Eseletor_som
+Z101 w1680532862
+R26
+R19
 R7
-32
-Z105 !s110 1680531192
-!i10b 1
-Z106 !s108 1680531192.000000
-Z107 !s90 shift_register.vhd|
-Z108 !s107 shift_register.vhd|
-!i113 0
+R8
+!i122 70
+R1
+Z102 8/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/seletor_som.vhd
+Z103 F/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/seletor_som.vhd
+l0
+L9 1
+VCE^B1?MIaC?KTJg?U9`Gn0
+!s100 PWz@?<NoGh6Vf?J1@Z;1<3
 R12
+32
+R72
+!i10b 1
+R76
+Z104 !s90 -reportprogress|30|-work|work|/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/seletor_som.vhd|
+Z105 !s107 /media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/seletor_som.vhd|
+!i113 0
+R17
+R18
+Aestrutural
+R26
+R19
+R7
+R8
+DEx4 work 11 seletor_som 0 22 CE^B1?MIaC?KTJg?U9`Gn0
+!i122 70
+l44
+L17 178
+VFeU9b:7m55Lzn=nf]GGG`1
+!s100 ZRV?WWFz4k]i2==1nASTf0
+R12
+32
+R72
+!i10b 1
+R76
+R104
+R105
+!i113 0
+R17
+R18
+Eshift_register
+R6
+R19
+R7
+R8
+!i122 71
+R1
+Z106 8/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/shift_register.vhd
+Z107 F/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/shift_register.vhd
+l0
+R33
+V^6OOzA2?Xhn61LXhlPUU13
+!s100 a3KCJ4CRinQe=K58M`Kl<3
+R12
+32
+R72
+!i10b 1
+R76
+Z108 !s90 -reportprogress|30|-work|work|/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/shift_register.vhd|
+Z109 !s107 /media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/shift_register.vhd|
+!i113 0
+R17
+R18
 Acomportamental
-R13
-R2
-R3
-DEx4 work 14 shift_register 0 22 SDa[U2XgfPI5PELV;6a6B3
-!i122 19
+R19
+R7
+R8
+DEx4 work 14 shift_register 0 22 ^6OOzA2?Xhn61LXhlPUU13
+!i122 71
 l51
 L49 17
-V=XTPm<L3Z;FBoA1jYE:=I3
+V5a]=Wc?>Ma;RJXFH@_[1`2
 !s100 92AmUJ6IkQm_XgTlJfZa;0
-R7
-32
-R105
-!i10b 1
-R106
-R107
-R108
-!i113 0
 R12
+32
+R72
+!i10b 1
+R76
+R108
+R109
+!i113 0
+R17
+R18
 Esomador
-Z109 w1680520547
-R13
-R2
-R3
-!i122 21
-R0
-Z110 8somador.vhd
-Z111 Fsomador.vhd
+R66
+R19
+R7
+R8
+!i122 72
+R1
+Z110 8/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/somador.vhd
+Z111 F/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/somador.vhd
 l0
 L20 1
-VePAUM5?FF=LEcbY?hPPR?2
+V;iZ?AL>AU7i>;TgK2[QAd1
 !s100 I1gWEg8UJL_E:Hoodz>Oo3
-R7
-32
-Z112 !s110 1680531204
-!i10b 1
-Z113 !s108 1680531204.000000
-Z114 !s90 somador.vhd|
-Z115 !s107 somador.vhd|
-!i113 0
 R12
+32
+R72
+!i10b 1
+R76
+Z112 !s90 -reportprogress|30|-work|work|/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/somador.vhd|
+Z113 !s107 /media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/somador.vhd|
+!i113 0
+R17
+R18
 Adataflow
-R13
-R2
-R3
-DEx4 work 7 somador 0 22 ePAUM5?FF=LEcbY?hPPR?2
-!i122 21
+R19
+R7
+R8
+DEx4 work 7 somador 0 22 ;iZ?AL>AU7i>;TgK2[QAd1
+!i122 72
 l41
 L36 36
-V4U8`d?k@mf=2Cg3ii7>HS2
+Vd6mc21b:h]]PIIM2c0CIE3
 !s100 Ph`=8^D<E>VF2YzHUNCJY2
-R7
+R12
 32
+R72
+!i10b 1
+R76
 R112
-!i10b 1
 R113
-R114
-R115
 !i113 0
-R12
+R17
+R18
 Esomador_decimal
-R109
-R22
-R13
-R2
-R3
-!i122 20
-R0
-Z116 8somador_decimal.vhd
-Z117 Fsomador_decimal.vhd
-l0
-R6
-V9fP6Ij265AO>H9ZPg3AiI2
-!s100 Si_aeHdBFH<:6efXT;aPz0
+R66
+R26
+R19
 R7
-32
-Z118 !s110 1680531198
-!i10b 1
-Z119 !s108 1680531197.000000
-Z120 !s90 somador_decimal.vhd|
-Z121 !s107 somador_decimal.vhd|
-!i113 0
+R8
+!i122 73
+R1
+Z114 8/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/somador_decimal.vhd
+Z115 F/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/somador_decimal.vhd
+l0
+R11
+VoD;jUTP0@mP3[5SPB@`d^1
+!s100 Si_aeHdBFH<:6efXT;aPz0
 R12
+32
+R72
+!i10b 1
+R76
+Z116 !s90 -reportprogress|30|-work|work|/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/somador_decimal.vhd|
+Z117 !s107 /media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/somador_decimal.vhd|
+!i113 0
+R17
+R18
 Aestrutural
-R22
-R13
-R2
-R3
-DEx4 work 15 somador_decimal 0 22 9fP6Ij265AO>H9ZPg3AiI2
-!i122 20
+R26
+R19
+R7
+R8
+DEx4 work 15 somador_decimal 0 22 oD;jUTP0@mP3[5SPB@`d^1
+!i122 73
 l56
 L29 55
-VKDzhi_AoR3eFRU0iHc9P[0
+V4G2bH3izNh]4;UkGe>el01
 !s100 =mo6fPzYYeGPGmY?3JM9>3
-R7
+R12
 32
-R118
+R72
 !i10b 1
-R119
+R76
+R116
+R117
+!i113 0
+R17
+R18
+Esomador_decimal_tb
+R66
+R19
+R7
+R8
+!i122 74
+R1
+Z118 8/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/somador_decimal_tb.vhd
+Z119 F/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/somador_decimal_tb.vhd
+l0
+R69
+VQaYC36z:DVg?^OKg:QPJO1
+!s100 Z52SIHL^10HR>[4E8UG6X0
+R12
+32
+R72
+!i10b 1
+R76
+Z120 !s90 -reportprogress|30|-work|work|/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/somador_decimal_tb.vhd|
+Z121 !s107 /media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/somador_decimal_tb.vhd|
+!i113 0
+R17
+R18
+Atestbench
+R19
+R7
+R8
+DEx4 work 18 somador_decimal_tb 0 22 QaYC36z:DVg?^OKg:QPJO1
+!i122 74
+l32
+L17 66
+VJnQ?``Xfm1Nb3lSg:9WA[2
+!s100 hXJ;i_?DhoJKdXV0ahQH02
+R12
+32
+R72
+!i10b 1
+R76
 R120
 R121
 !i113 0
-R12
+R17
+R18
 Eunidade_controle
-R109
-R2
-R3
-!i122 22
-R0
-Z122 8unidade_controle.vhd
-Z123 Funidade_controle.vhd
-l0
-L27 1
-V11k4z;`<Ii2TF1SG3jQc60
-!s100 QmCZRYUUCWFfBW_lCkkkF1
+R66
 R7
-32
-Z124 !s110 1680531209
-!i10b 1
-Z125 !s108 1680531209.000000
-Z126 !s90 unidade_controle.vhd|
-Z127 !s107 unidade_controle.vhd|
-!i113 0
+R8
+!i122 75
+R1
+Z122 8/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/unidade_controle.vhd
+Z123 F/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/unidade_controle.vhd
+l0
+R81
+VmWgiCg_C9=99TF9]]onEm0
+!s100 QmCZRYUUCWFfBW_lCkkkF1
 R12
+32
+R72
+!i10b 1
+R76
+Z124 !s90 -reportprogress|30|-work|work|/media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/unidade_controle.vhd|
+Z125 !s107 /media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/unidade_controle.vhd|
+!i113 0
+R17
+R18
 Afsm
-R2
-R3
-DEx4 work 16 unidade_controle 0 22 11k4z;`<Ii2TF1SG3jQc60
-!i122 22
+R7
+R8
+DEx4 work 16 unidade_controle 0 22 mWgiCg_C9=99TF9]]onEm0
+!i122 75
 l78
 L69 142
-V`l5hif8D`1oSb_8QezoeH3
+VXgQE6i[R;LmToDMUh_V4=2
 !s100 7_9^oIYSNb?X=3n7[KK;d3
-R7
-32
-R124
-!i10b 1
-R125
-R126
-R127
-!i113 0
 R12
+32
+R72
+!i10b 1
+R76
+R124
+R125
+!i113 0
+R17
+R18
