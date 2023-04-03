@@ -50,9 +50,9 @@ begin
 
     not_s_notas <= not s_notas;
 	
-	do4 : contador_m
+	F4 : contador_m
 		generic map(
-        M => 189394 -- do da quarta oitava
+        M => 143172
 		)
 		port map(
         clock   => clock,
@@ -64,9 +64,9 @@ begin
         meio    => tom(0)
 		);
 	
-	re4 : contador_m
+	G4 : contador_m
 		generic map(
-        M => 168805 -- re da quarta oitava
+        M => 127551
 		)
 		port map(
         clock   => clock,
@@ -78,9 +78,9 @@ begin
         meio    => tom(1)
 		);
 		
-	mi4 : contador_m
+	A4 : contador_m
 		generic map(
-        M => 150331 -- mi da quarta oitava
+        M => 113636
 		)
 		port map(
         clock   => clock,
@@ -92,9 +92,9 @@ begin
         meio    => tom(2)
 		);
 		
-	fa4 : contador_m
+	B4 : contador_m
 		generic map(
-        M => 141884 -- fa da quarta oitava
+        M => 101239
 		)
 		port map(
         clock   => clock,
@@ -106,9 +106,9 @@ begin
         meio    => tom(3)
 		);
 	
-	sol4 : contador_m
+	C5 : contador_m
 		generic map(
-        M => 126422 -- sol da quarta oitava
+        M => 95556
 		)
 		port map(
         clock   => clock,
@@ -120,9 +120,9 @@ begin
         meio    => tom(4)
 		);
 		
-	la4 : contador_m
+	D5 : contador_m
 		generic map(
-        M => 112612 -- 50 Mhz / 440 Hz la da quarta oitava
+        M => 85131
 		)
 		port map(
         clock   => clock,
@@ -134,9 +134,9 @@ begin
         meio    => tom(5)
 		);
 	
-	si4 : contador_m
+	E5 : contador_m
 		generic map(
-        M => 100321 -- si da quarta oitava
+        M => 75843
 		)
 		port map(
         clock   => clock,
@@ -147,7 +147,48 @@ begin
         fim     => open,
         meio    => tom(6)
 		);
+    F5 : contador_m
+    generic map(
+    M => 71586
+    )
+    port map(
+    clock   => clock,
+    zera_as => '0',
+    zera_s  => not_s_notas(7),
+    conta   => s_notas(7),
+    Q       => open,
+    fim     => open,
+    meio    => tom(7)
+    );
+    A_sharp4 : contador_m
+    generic map(
+    M => 107259
+    )
+    port map(
+    clock   => clock,
+    zera_as => '0',
+    zera_s  => not_s_notas(8),
+    conta   => s_notas(8),
+    Q       => open,
+    fim     => open,
+    meio    => tom(8)
+    );
+    D_sharp5 : contador_m
+    generic map(
+    M => 80353
+    )
+    port map(
+    clock   => clock,
+    zera_as => '0',
+    zera_s  => not_s_notas(9),
+    conta   => s_notas(9),
+    Q       => open,
+    fim     => open,
+    meio    => tom(9)
+    );
+
+
 	
-	saida <= tom(6) or tom(5) or tom(4) or tom(3) or tom(2) or tom(1) or tom(0);
+	saida <= tom(9) or tom(8) or tom(7) or tom(6) or tom(5) or tom(4) or tom(3) or tom(2) or tom(1) or tom(0);
 	 
 	end architecture;
