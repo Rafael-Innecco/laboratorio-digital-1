@@ -251,7 +251,7 @@ architecture estrutural of fluxo_dados is
     signal seletor_mem_fixa     : std_logic;
 begin
     clock_generator_1: contador_m
-    generic map (M => 50000)
+    generic map (M => 2)
     port map (
         clock   => clock,
         zera_as => '0',
@@ -424,7 +424,7 @@ begin
         zera_s => '0',
         conta => contaT,
         load  => '0',
-        D     => std_logic_vector(to_unsigned(0, 11)),
+        D     => std_logic_vector(to_unsigned(0, 10)),
         Q => open,
         fim => fim_tempo,
         ponto_1 => primeiro_ponto,

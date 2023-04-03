@@ -36,7 +36,7 @@ architecture tb of jogo_desafio_ritmo_tb_modo_base is
             reset               : in std_logic;
             jogar               : in std_logic;
             botoes              : in std_logic_vector (3 downto 0);
-            seletor_modo        : in std_logic_vector (1 downto 0); 
+            seletor_modo        : in std_logic_vector (2 downto 0); 
             ------------------------
             leds                : out std_logic_vector (15 downto 0);
             pronto              : out std_logic;
@@ -48,7 +48,8 @@ architecture tb of jogo_desafio_ritmo_tb_modo_base is
             db_contagem         : out std_logic_vector (13 downto 0);
             db_memoria          : out std_logic_vector (6 downto 0);
             db_jogadafeita      : out std_logic_vector (6 downto 0);
-            db_estado           : out std_logic_vector (6 downto 0)
+            db_estado           : out std_logic_vector (6 downto 0);
+			buzzer              : out std_logic
         );
     end component;
   
@@ -57,7 +58,7 @@ architecture tb of jogo_desafio_ritmo_tb_modo_base is
   signal rst_in     : std_logic := '0';
   signal jogar_in   : std_logic := '0';
   signal botoes_in  : std_logic_vector(3 downto 0) := "0000";
-  signal seletor_modo_in : std_logic_vector (1 downto 0) := "00";
+  signal seletor_modo_in : std_logic_vector (2 downto 0) := "000";
   ----------------------------------------
   ---- Declaracao dos sinais de saida ----
   ----------------------------------------
@@ -72,17 +73,21 @@ architecture tb of jogo_desafio_ritmo_tb_modo_base is
   signal jogada_out          : std_logic_vector(6 downto 0) := "0000000";
   signal estado_out          : std_logic_vector(6 downto 0) := "0000000";
   signal not_botoes          : std_logic_vector(3 downto 0) := "0000";
+  signal buzzer_out			 : std_logic;
   --------------------------------
   ---- Configurações do clock ----
   --------------------------------
   signal keep_simulating: std_logic := '0'; -- delimita o tempo de geração do clock
-  constant clockPeriod : time := 20 ns;     -- frequencia 50MHz
+  
+  constant clockPeriodCircuit : time := 20 ns;
+  
+  constant clockPeriod : time :=  40 ns;     -- frequencia de fato usada!
   signal caso : integer := 0;
  
 begin
   -- Gerador de clock: executa enquanto 'keep_simulating = 1', com o período especificado. 
   -- Quando keep_simulating=0, clock é interrompido, bem como a simulação de eventos
-  clk_in <= (not clk_in) and keep_simulating after clockPeriod/2;
+  clk_in <= (not clk_in) and keep_simulating after clockPeriodCircuit/2;
   not_botoes <= not botoes_in;
   
   ---- DUT para Simulacao
@@ -103,7 +108,8 @@ begin
           db_contagem     	      => contagem_out,
           db_memoria      		  => memoria_out,
           db_jogadafeita  		  => jogada_out,  
-		  db_estado       	 	  => estado_out                   
+		  db_estado       	 	  => estado_out,
+		  buzzer 				  => buzzer_out
        );
  
   ---- Gera sinais de estimulo para a simulacao
@@ -129,7 +135,7 @@ begin
 
     -- pulso do sinal de Iniciar (muda na borda de descida do clock)
     caso <= 3;
-    seletor_modo_in <= "10"; -- Codigo do jogo normal
+    seletor_modo_in <= "010"; -- Codigo do jogo normal
     wait for 100*clockPeriod;
  
 	-- pulso do sinal de Iniciar (muda na borda de descida do clock)
