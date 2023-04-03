@@ -151,8 +151,7 @@ begin
 	
 	wait for 4020*clockPeriod; -- primeiros quatro dados sao em branco!
 	
-	wait for 800*clockPeriod; -- segunda jogada (4x)
-	----  jogada 1: acerta
+	----  jogada 1: acerta -- dupla
     caso <= 5;
 	wait for 100*clockPeriod;
     botoes_in <= "0001";
@@ -163,7 +162,7 @@ begin
     ---- finaliza jogada 
     wait for 206*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
 	---- jogada 2: acerta
     caso <= 6;
@@ -174,7 +173,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
     ---- jogada 3: acerta
     caso <= 7;
@@ -187,7 +186,7 @@ begin
     ---- finaliza jogada 
     wait for 206*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
     ---- jogada 4: acerta
     caso <= 8;
@@ -198,7 +197,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
 	---- jogada 5: acerta com metade ------------------------------- 1/2 ------------
     caso <= 9;
@@ -209,7 +208,7 @@ begin
     ---- finaliza jogada 
     wait for 50*clockPeriod;
 	wait for 406*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
 	---- jogada 6: acerta com 1 ponto ----------------------------- 1/4 ----------------
     caso <= 10;
@@ -219,7 +218,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
 	wait for 106*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
     ---- jogada  7: acerta com 1 ponto ----------------------------- 1/2 --------------
     caso <= 11;
@@ -229,7 +228,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 356*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
 	----  jogada  8: acerta
     caso <= 12;
@@ -240,7 +239,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
     ----  jogada  9: acerta metade ----------------------------- 1/2 ----------
     caso <= 13;
@@ -250,7 +249,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
 	wait for 256*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
     ----  jogada  10: acerta um --------------------------------- 1/4 ----------
     caso <= 14;
@@ -260,7 +259,7 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
 	wait for 136*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
 	----  jogada 11: acerta
     caso <= 15;
@@ -271,7 +270,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
 	----  jogada 12: acerta
     caso <= 16;
@@ -282,7 +281,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
     ----  jogada 13: acerta
     caso <= 17;
@@ -293,7 +292,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
 	----  jogada 14: acerta
     caso <= 18;
@@ -304,7 +303,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
     ----  jogada 15: acerta
     caso <= 19;
@@ -315,7 +314,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
     ---- jogada 16: acerta
     caso <= 20;
@@ -326,7 +325,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
 	----  jogada 17: acerta
     caso <= 21;
@@ -337,7 +336,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais	
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
 	---- jogada 18: acerta
     caso <= 22;
@@ -348,7 +347,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
     ---- jogada 19: acerta
     caso <= 23;
@@ -359,7 +358,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
 	---- jogada 20: acerta
     caso <= 24;
@@ -370,7 +369,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
     ---- jogada 21: acerta
     caso <= 25;
@@ -381,7 +380,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
     ---- jogada 22: acerta
     caso <= 26;
@@ -392,7 +391,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
 	----  jogada 23: acerta
     caso <= 27;
@@ -403,7 +402,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
 	----  jogada  24: acerta
     caso <= 28;
@@ -414,7 +413,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
     ----  jogada  25: acerta
     caso <= 29;
@@ -425,7 +424,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
 	----  jogada  26: acerta
     caso <= 30;
@@ -436,7 +435,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
     ----  jogada  27: acerta
     caso <= 31;
@@ -447,7 +446,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
     ----  jogada  28: acerta
     caso <= 32;
@@ -458,7 +457,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais	
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
 	---- jogada 29: acerta
     caso <= 33;
@@ -469,7 +468,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
 	---- jogada 30: acerta
     caso <= 34;
@@ -480,7 +479,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
     ----  jogada 31: acerta
     caso <= 35;
@@ -491,7 +490,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
 	---- jogada 32: acerta
     caso <= 36;
@@ -502,7 +501,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
     ---- jogada 33: acerta
     caso <= 37;
@@ -513,7 +512,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
     ---- jogada 34: acerta
     caso <= 38;
@@ -524,7 +523,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
 	---- jogada 35: acerta
     caso <= 39;
@@ -535,7 +534,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
 	---- jogada 36: acerta
     caso <= 40;
@@ -546,7 +545,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
     ---- jogada 37: acerta
     caso <= 41;
@@ -557,7 +556,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
 	---- jogada 38: acerta
     caso <= 42;
@@ -568,7 +567,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
     ---- jogada 39: acerta
     caso <= 43;
@@ -579,7 +578,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
     ---- jogada 40: acerta
     caso <= 44;
@@ -590,7 +589,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais	
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
 	---- jogada 41: acerta
     caso <= 45;
@@ -601,7 +600,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
 	---- jogada 42: acerta
     caso <= 46;
@@ -612,7 +611,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
     ----  jogada 43: acerta
     caso <= 47;
@@ -623,7 +622,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
 	----  jogada 44: acerta
     caso <= 48;
@@ -634,7 +633,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
     ----  jogada 45: acerta
     caso <= 49;
@@ -645,7 +644,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
     ----  jogada 46: acerta
     caso <= 50;
@@ -656,7 +655,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
 	----  jogada 47: acerta
     caso <= 51;
@@ -667,7 +666,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
 	----  jogada 48: acerta
     caso <= 52;
@@ -678,7 +677,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
     ----  jogada 49: acerta
     caso <= 53;
@@ -689,7 +688,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais	
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
 	----  jogada 50: acerta
     caso <= 54;
@@ -700,7 +699,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
     ----  jogada 51: acerta
     caso <= 55;
@@ -711,7 +710,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
     ----  jogada 52: acerta
     caso <= 56;
@@ -722,7 +721,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
 	----  jogada 53: acerta
     caso <= 57;
@@ -733,7 +732,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
 	----  jogada 54: acerta
     caso <= 58;
@@ -744,7 +743,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
     ----  jogada 55: acerta
     caso <= 59;
@@ -755,7 +754,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
 	---- jogada 56: acerta
     caso <= 60;
@@ -766,7 +765,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
     ---- jogada 57: acerta
     caso <= 61;
@@ -777,7 +776,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
     ---- jogada 58: acerta
     caso <= 62;
@@ -788,8 +787,8 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais	
-	wait for 400*clockPeriod; -- segunda jogada
-	
+	wait for 200*clockPeriod; -- segunda jogada
+
 	---- jogada 59: acerta
     caso <= 63;
 	wait for 100*clockPeriod;
@@ -799,7 +798,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
 	----  jogada 60: acerta
     caso <= 64;
@@ -810,7 +809,7 @@ begin
 	---- finaliza jogada
 	wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
      ----  jogada 61: acerta
     caso <= 65;
@@ -821,7 +820,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais	
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
 	---- jogada 62: acerta
     caso <= 66;
@@ -832,7 +831,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
     ---- jogada 63: acerta
     caso <= 67;
@@ -843,7 +842,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais	
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
 	---- jogada 64: acerta
      caso <= 68;
@@ -854,7 +853,7 @@ begin
 	---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod;
-	wait for 400*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod; -- segunda jogada
 	
 	wait for 500*clockPeriod; -- tempo de espera a mais	
 		
