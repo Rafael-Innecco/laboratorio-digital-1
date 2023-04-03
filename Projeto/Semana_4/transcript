@@ -1200,3 +1200,107 @@ run -all
 #    Time: 0 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base/dut/fluxo_dadosFD/memoria_jogada_fixa
 # ** Note: fim da simulacao
 #    Time: 7633380 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base
+vcom -reportprogress 300 -work work /media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/seletor_som.vhd
+# Questa Intel Starter FPGA Edition-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 14:49:41 on Apr 03,2023
+# vcom -reportprogress 300 -work work /media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/seletor_som.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Compiling entity seletor_som
+# -- Compiling architecture estrutural of seletor_som
+# End time: 14:49:41 on Apr 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Load canceled
+vsim -voptargs=+acc work.jogo_desafio_ritmo_tb_modo_base
+# End time: 14:49:56 on Apr 03,2023, Elapsed time: 0:24:59
+# Errors: 0, Warnings: 19
+# vsim -voptargs="+acc" work.jogo_desafio_ritmo_tb_modo_base 
+# Start time: 14:49:56 on Apr 03,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.jogo_desafio_ritmo_tb_modo_base(tb)#1
+# Loading work.jogo_desafio_ritmo(estrutural)#1
+# Loading ieee.numeric_std(body)
+# Loading ieee.math_real(body)
+# Loading work.fluxo_dados(estrutural)#1
+# Loading work.contador_m(comportamental)#1
+# Loading work.contador_m(comportamental)#2
+# Loading work.contador_modificado(comportamental)#1
+# Loading work.registrador_n(comportamental)#1
+# Loading work.shift_register(comportamental)#1
+# Loading work.somador_decimal(estrutural)#1
+# Loading work.somador(dataflow)#1
+# Loading work.hexdecimal(dataflow)#1
+# Loading work.somador(dataflow)#2
+# Loading work.comparador_85(dataflow)#1
+# Loading work.ram_sx4(ram_modelsim)#1
+# Loading work.ram_sx4(ram_mif)#1
+# Loading work.registrador_n(comportamental)#2
+# Loading work.edge_holder(estrutural)#1
+# Loading work.edge_detector(rtl)#1
+# Loading work.contador_modificado(comportamental)#2
+# Loading work.contador_m(comportamental)#3
+# Loading work.contador_m(comportamental)#4
+# Loading work.seletor_som(estrutural)#1
+# Loading work.decoder_a(behavioral)#1
+# Loading work.contador_m(comportamental)#5
+# Loading work.contador_m(comportamental)#6
+# Loading work.contador_m(comportamental)#7
+# Loading work.contador_m(comportamental)#8
+# Loading work.contador_m(comportamental)#9
+# Loading work.contador_m(comportamental)#10
+# Loading work.contador_m(comportamental)#11
+# Loading work.contador_m(comportamental)#12
+# Loading work.contador_m(comportamental)#13
+# Loading work.contador_m(comportamental)#14
+# Loading work.unidade_controle(fsm)#1
+# Loading work.hexa7seg(comportamental)#1
+# ** Warning: (vsim-8683) Uninitialized out port /jogo_desafio_ritmo_tb_modo_base/dut/unidade_controleUC/registraR has no driver.
+# This port will contribute value (U) to the signal network.
+do /media/rafael/SeagatePortable/main/home/rafael/Documents/laboratorio-digital-1/Projeto/Semana_4/wave_base.do
+run -all
+# ** Note: inicio da simulacao
+#    Time: 0 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base/dut/fluxo_dadosFD/memoria_jogada_alternativa
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base/dut/fluxo_dadosFD/memoria_jogada_alternativa
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base/dut/fluxo_dadosFD/memoria_jogada_alternativa
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base/dut/fluxo_dadosFD/memoria_jogada_alternativa
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base/dut/fluxo_dadosFD/memoria_jogada_alternativa
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base/dut/fluxo_dadosFD/memoria_jogada_alternativa
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base/dut/fluxo_dadosFD/memoria_jogada_alternativa
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base/dut/fluxo_dadosFD/memoria_jogada_alternativa
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base/dut/fluxo_dadosFD/memoria_jogada_alternativa
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base/dut/fluxo_dadosFD/memoria_jogada_fixa
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base/dut/fluxo_dadosFD/memoria_jogada_fixa
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base/dut/fluxo_dadosFD/memoria_jogada_fixa
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base/dut/fluxo_dadosFD/memoria_jogada_fixa
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base/dut/fluxo_dadosFD/memoria_jogada_fixa
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base/dut/fluxo_dadosFD/memoria_jogada_fixa
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base/dut/fluxo_dadosFD/memoria_jogada_fixa
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base/dut/fluxo_dadosFD/memoria_jogada_fixa
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base/dut/fluxo_dadosFD/memoria_jogada_fixa
+# ** Note: fim da simulacao
+#    Time: 7633380 ns  Iteration: 0  Instance: /jogo_desafio_ritmo_tb_modo_base
