@@ -436,7 +436,7 @@ Z79 !s110 1680531272
 !i10b 1
 Z80 !s108 1680531271.000000
 Z81 !s90 jogo_desafio_ritmo.vhd|
-!s107 jogo_desafio_ritmo.vhd|
+Z82 !s107 jogo_desafio_ritmo.vhd|
 !i113 0
 R12
 Aestrutural
@@ -454,7 +454,7 @@ R79
 !i10b 1
 R80
 R81
-Z82 !s107 jogo_desafio_ritmo.vhd|
+R82
 !i113 0
 R12
 Eram_sx4
@@ -560,12 +560,12 @@ R94
 !i113 0
 R12
 Eseletor_som
-Z95 w1680531183
+Z95 w1680532862
 R22
 R13
 R2
 R3
-!i122 18
+!i122 27
 R0
 Z96 8seletor_som.vhd
 Z97 Fseletor_som.vhd
@@ -575,9 +575,9 @@ V^[lHn9az?kS2Y5fKankzC3
 !s100 PWz@?<NoGh6Vf?J1@Z;1<3
 R7
 32
-Z98 !s110 1680531185
+Z98 !s110 1680532868
 !i10b 1
-Z99 !s108 1680531185.000000
+Z99 !s108 1680532868.000000
 Z100 !s90 seletor_som.vhd|
 Z101 !s107 seletor_som.vhd|
 !i113 0
@@ -587,12 +587,12 @@ R22
 R13
 R2
 R3
-DEx4 work 11 seletor_som 0 22 ^[lHn9az?kS2Y5fKankzC3
-!i122 18
+Z102 DEx4 work 11 seletor_som 0 22 ^[lHn9az?kS2Y5fKankzC3
+!i122 27
 l44
-L17 137
-V6::bDc:@aR[BTgeWh5bC?1
-!s100 kVD?CKL`Zh=gMfRYg=6h40
+L17 178
+V8ck[1_^;mJS8ZOGNAlP@82
+!s100 ZRV?WWFz4k]i2==1nASTf0
 R7
 32
 R98
@@ -609,19 +609,19 @@ R2
 R3
 !i122 19
 R0
-Z102 8shift_register.vhd
-Z103 Fshift_register.vhd
+Z103 8shift_register.vhd
+Z104 Fshift_register.vhd
 l0
 R31
 VSDa[U2XgfPI5PELV;6a6B3
 !s100 a3KCJ4CRinQe=K58M`Kl<3
 R7
 32
-Z104 !s110 1680531192
+Z105 !s110 1680531192
 !i10b 1
-Z105 !s108 1680531192.000000
-Z106 !s90 shift_register.vhd|
-Z107 !s107 shift_register.vhd|
+Z106 !s108 1680531192.000000
+Z107 !s90 shift_register.vhd|
+Z108 !s107 shift_register.vhd|
 !i113 0
 R12
 Acomportamental
@@ -636,33 +636,33 @@ V=XTPm<L3Z;FBoA1jYE:=I3
 !s100 92AmUJ6IkQm_XgTlJfZa;0
 R7
 32
-R104
-!i10b 1
 R105
+!i10b 1
 R106
 R107
+R108
 !i113 0
 R12
 Esomador
-Z108 w1680520547
+Z109 w1680520547
 R13
 R2
 R3
 !i122 21
 R0
-Z109 8somador.vhd
-Z110 Fsomador.vhd
+Z110 8somador.vhd
+Z111 Fsomador.vhd
 l0
 L20 1
 VePAUM5?FF=LEcbY?hPPR?2
 !s100 I1gWEg8UJL_E:Hoodz>Oo3
 R7
 32
-Z111 !s110 1680531204
+Z112 !s110 1680531204
 !i10b 1
-Z112 !s108 1680531204.000000
-Z113 !s90 somador.vhd|
-Z114 !s107 somador.vhd|
+Z113 !s108 1680531204.000000
+Z114 !s90 somador.vhd|
+Z115 !s107 somador.vhd|
 !i113 0
 R12
 Adataflow
@@ -677,34 +677,34 @@ V4U8`d?k@mf=2Cg3ii7>HS2
 !s100 Ph`=8^D<E>VF2YzHUNCJY2
 R7
 32
-R111
-!i10b 1
 R112
+!i10b 1
 R113
 R114
+R115
 !i113 0
 R12
 Esomador_decimal
-R108
+R109
 R22
 R13
 R2
 R3
 !i122 20
 R0
-Z115 8somador_decimal.vhd
-Z116 Fsomador_decimal.vhd
+Z116 8somador_decimal.vhd
+Z117 Fsomador_decimal.vhd
 l0
 R6
 V9fP6Ij265AO>H9ZPg3AiI2
 !s100 Si_aeHdBFH<:6efXT;aPz0
 R7
 32
-Z117 !s110 1680531198
+Z118 !s110 1680531198
 !i10b 1
-Z118 !s108 1680531197.000000
-Z119 !s90 somador_decimal.vhd|
-Z120 !s107 somador_decimal.vhd|
+Z119 !s108 1680531197.000000
+Z120 !s90 somador_decimal.vhd|
+Z121 !s107 somador_decimal.vhd|
 !i113 0
 R12
 Aestrutural
@@ -720,32 +720,32 @@ VKDzhi_AoR3eFRU0iHc9P[0
 !s100 =mo6fPzYYeGPGmY?3JM9>3
 R7
 32
-R117
-!i10b 1
 R118
+!i10b 1
 R119
 R120
+R121
 !i113 0
 R12
 Eunidade_controle
-R108
+R109
 R2
 R3
 !i122 22
 R0
-Z121 8unidade_controle.vhd
-Z122 Funidade_controle.vhd
+Z122 8unidade_controle.vhd
+Z123 Funidade_controle.vhd
 l0
 L27 1
 V11k4z;`<Ii2TF1SG3jQc60
 !s100 QmCZRYUUCWFfBW_lCkkkF1
 R7
 32
-Z123 !s110 1680531209
+Z124 !s110 1680531209
 !i10b 1
-Z124 !s108 1680531209.000000
-Z125 !s90 unidade_controle.vhd|
-Z126 !s107 unidade_controle.vhd|
+Z125 !s108 1680531209.000000
+Z126 !s90 unidade_controle.vhd|
+Z127 !s107 unidade_controle.vhd|
 !i113 0
 R12
 Afsm
@@ -759,10 +759,10 @@ V`l5hif8D`1oSb_8QezoeH3
 !s100 7_9^oIYSNb?X=3n7[KK;d3
 R7
 32
-R123
-!i10b 1
 R124
+!i10b 1
 R125
 R126
+R127
 !i113 0
 R12
