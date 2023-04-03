@@ -1,9 +1,8 @@
------------------Laboratorio Digital-------------------------------------
--- Arquivo   : contador_m.vhd
--- Projeto   : Experiencia 4 - Desenvolvimento de Projeto de 
---                             Circuitos Digitais em FPGA
+----------------Laboratorio Digital-------------------------------------
+-- Arquivo   : contador_modificado.vhd
+-- Projeto   : Projeto final da disciplina
 -------------------------------------------------------------------------
--- Descricao : contador binario, modulo m, com parametro M generic,
+-- Descricao : contador binario, modulo m, com parâmetros M, P1 e P2 generic,
 --             sinais para clear assincrono (zera_as) e sincrono (zera_s)
 --             e saidas de fim e um quinto da contagem
 -- 
@@ -11,7 +10,7 @@
 --             N = natural(ceil(log2(real(M))))
 --
 -- Exemplo de instanciacao: contador módulo 50
---             CONT50: contador_m 
+--             CONT50: contador_modificado
 --                     generic map ( M=> 50 )
 --                     port map ( ...
 --             
@@ -23,6 +22,8 @@
 --     09/09/2020  1.2     Edson Midorikawa  revisao 
 --     30/01/2022  2.0     Edson Midorikawa  revisao do componente
 --     29/01/2023  2.1     Edson Midorikawa  revisao do componente
+--     15/03/2023  3.0     Rafael Innecco    Modificação para uso no projeto
+--     20/03/2023  3.1     Rafael Innecco    Adição de funcionalidade de load
 -------------------------------------------------------------------------
 --
 library ieee;
@@ -30,30 +31,36 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use ieee.math_real.all;
 
-entity contador_m is
+entity contador_modificado is
     generic (
-        constant M: integer := 100 -- modulo do contador
+        constant M  : integer := 100; -- modulo do contador
+        constant P1 : integer := 50; -- primeiro ponto de interesse
+        constant P2 : integer := 25 -- segundo ponto de interesse
     );
     port (
         clock    	: in  std_logic;
         zera_as  	: in  std_logic;
         zera_s   	: in  std_logic;
         conta    	: in  std_logic;
+        load        : in  std_logic;
+        D           : in  std_logic_vector(natural(ceil(log2(real(M)))) - 1 downto 0);
         Q        	: out std_logic_vector(natural(ceil(log2(real(M))))-1 downto 0);
         fim         : out std_logic;
-        meio        : out std_logic
+        ponto_1     : out std_logic;
+        ponto_2     : out std_logic
     );
-end entity contador_m;
+end entity contador_modificado;
 
-architecture comportamental of contador_m is
-    signal IQ: integer range 0 to M-1;
+architecture comportamental of contador_modificado is
+    signal IQ: integer range 0 to M-1 := 0;
 begin
   
-    process (clock,zera_as,zera_s,conta,IQ)
+    process (clock,zera_as,zera_s,conta,IQ, load)
     begin
         if zera_as='1' then    IQ <= 0;   
         elsif rising_edge(clock) then
             if zera_s='1' then IQ <= 0;
+            elsif load='1' then IQ <= to_integer(unsigned(D));
             elsif conta='1' then 
                 if IQ=M-1 then IQ <= 0; 
                 else           IQ <= IQ + 1; 
@@ -67,8 +74,11 @@ begin
     fim <= '1' when IQ=M-1 else
            '0';
 
-    -- saida meio
-    meio <= '1' when IQ>=M/2-1 else
+    -- saida ponto_1
+    ponto_1 <= '1' when IQ=P1-1 else
+            '0';
+    -- saída ponto_2
+    ponto_2 <= '1' when IQ=P2-1 else
             '0';
     -- saida Q
     Q <= std_logic_vector(to_unsigned(IQ, Q'length));
