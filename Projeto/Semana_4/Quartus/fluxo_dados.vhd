@@ -251,7 +251,7 @@ architecture estrutural of fluxo_dados is
     signal seletor_mem_fixa     : std_logic;
 begin
     clock_generator_1: contador_m
-    generic map (M => 50000)
+    generic map (M => 4)
     port map (
         clock   => clock,
         zera_as => '0',
@@ -262,7 +262,7 @@ begin
         meio   => clk_1
     );
     clock_generator_2: contador_m
-    generic map (M => 31250)
+    generic map (M => 83333)
     port map (
         clock   => clock,
         zera_as => '0',
@@ -274,8 +274,8 @@ begin
     );
 
     with modo(2) select clock_int <=
-        clk_2 when '1',
-        clk_1 when others;
+        clk_1 when '0',
+        clk_2 when others;
 
     clock_interno <= clock_int;
 

@@ -52,7 +52,8 @@ begin
 	
 	F4 : contador_m
 		generic map(
-          M => 143172
+         -- M => 143172
+         M => 5
 		)
 		port map(
         clock   => clock,
@@ -66,7 +67,8 @@ begin
 	
 	G4 : contador_m
 		generic map(
-         M => 127551
+        -- M => 127551
+        M => 6
 		)
 		port map(
         clock   => clock,
@@ -80,7 +82,8 @@ begin
 		
 	A4 : contador_m
 		generic map(
-        M => 113636
+        --M => 113636
+        M => 10
 		)
 		port map(
         clock   => clock,
@@ -94,7 +97,8 @@ begin
 		
 	B4 : contador_m
 		generic map(
-        M => 101239
+        --M => 101239
+        M => 20
 		)
 		port map(
         clock   => clock,
@@ -123,7 +127,8 @@ begin
 		
 	D5 : contador_m
 		generic map(
-            M => 85131
+        --M => 85131
+        M => 35
 		)
 		port map(
         clock   => clock,
@@ -137,7 +142,8 @@ begin
 	
 	E5 : contador_m
 		generic map(
-            M => 75843
+        --M => 75843
+        M => 50
 		)
 		port map(
         clock   => clock,
@@ -150,7 +156,8 @@ begin
 		);
     F5 : contador_m
     generic map(
-        M => 71586
+    --M => 71586
+    M => 40
     )
     port map(
     clock   => clock,
@@ -163,7 +170,8 @@ begin
     );
     A_sharp4 : contador_m
     generic map(
-        M => 107259
+    --M => 107259
+    M => 45
     )
     port map(
     clock   => clock,
@@ -176,7 +184,8 @@ begin
     );
     D_sharp5 : contador_m
     generic map(
-        M => 80353
+    --M => 80353
+    M => 70
     )
     port map(
     clock   => clock,

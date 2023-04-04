@@ -1,0 +1,133 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'fluxo_dados:fluxo_dadosFD|contador_m:clock_generator_1|IQ[0]'
+Slack : -6.671
+TNS   : -2167.517
+
+Type  : Slow 1100mV 85C Model Setup 'clock'
+Slack : -3.892
+TNS   : -101.776
+
+Type  : Slow 1100mV 85C Model Hold 'clock'
+Slack : 0.419
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'fluxo_dados:fluxo_dadosFD|contador_m:clock_generator_1|IQ[0]'
+Slack : 0.768
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'fluxo_dados:fluxo_dadosFD|contador_m:clock_generator_1|IQ[0]'
+Slack : -2.182
+TNS   : -103.681
+
+Type  : Slow 1100mV 85C Model Removal 'fluxo_dados:fluxo_dadosFD|contador_m:clock_generator_1|IQ[0]'
+Slack : 1.149
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'fluxo_dados:fluxo_dadosFD|contador_m:clock_generator_1|IQ[0]'
+Slack : -0.908
+TNS   : -823.247
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clock'
+Slack : -0.538
+TNS   : -56.202
+
+Type  : Slow 1100mV 0C Model Setup 'fluxo_dados:fluxo_dadosFD|contador_m:clock_generator_1|IQ[0]'
+Slack : -6.650
+TNS   : -2060.983
+
+Type  : Slow 1100mV 0C Model Setup 'clock'
+Slack : -3.478
+TNS   : -103.801
+
+Type  : Slow 1100mV 0C Model Hold 'clock'
+Slack : 0.087
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'fluxo_dados:fluxo_dadosFD|contador_m:clock_generator_1|IQ[0]'
+Slack : 0.762
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'fluxo_dados:fluxo_dadosFD|contador_m:clock_generator_1|IQ[0]'
+Slack : -2.071
+TNS   : -97.864
+
+Type  : Slow 1100mV 0C Model Removal 'fluxo_dados:fluxo_dadosFD|contador_m:clock_generator_1|IQ[0]'
+Slack : 1.027
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'fluxo_dados:fluxo_dadosFD|contador_m:clock_generator_1|IQ[0]'
+Slack : -0.850
+TNS   : -760.810
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clock'
+Slack : -0.538
+TNS   : -57.594
+
+Type  : Fast 1100mV 85C Model Setup 'fluxo_dados:fluxo_dadosFD|contador_m:clock_generator_1|IQ[0]'
+Slack : -3.183
+TNS   : -935.484
+
+Type  : Fast 1100mV 85C Model Setup 'clock'
+Slack : -1.568
+TNS   : -19.840
+
+Type  : Fast 1100mV 85C Model Hold 'clock'
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'fluxo_dados:fluxo_dadosFD|contador_m:clock_generator_1|IQ[0]'
+Slack : 0.329
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'fluxo_dados:fluxo_dadosFD|contador_m:clock_generator_1|IQ[0]'
+Slack : -0.764
+TNS   : -32.936
+
+Type  : Fast 1100mV 85C Model Removal 'fluxo_dados:fluxo_dadosFD|contador_m:clock_generator_1|IQ[0]'
+Slack : 0.475
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'fluxo_dados:fluxo_dadosFD|contador_m:clock_generator_1|IQ[0]'
+Slack : -0.357
+TNS   : -164.909
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clock'
+Slack : -0.098
+TNS   : -6.786
+
+Type  : Fast 1100mV 0C Model Setup 'fluxo_dados:fluxo_dadosFD|contador_m:clock_generator_1|IQ[0]'
+Slack : -2.836
+TNS   : -791.689
+
+Type  : Fast 1100mV 0C Model Setup 'clock'
+Slack : -1.157
+TNS   : -14.932
+
+Type  : Fast 1100mV 0C Model Hold 'clock'
+Slack : 0.028
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'fluxo_dados:fluxo_dadosFD|contador_m:clock_generator_1|IQ[0]'
+Slack : 0.300
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'fluxo_dados:fluxo_dadosFD|contador_m:clock_generator_1|IQ[0]'
+Slack : -0.615
+TNS   : -24.845
+
+Type  : Fast 1100mV 0C Model Removal 'fluxo_dados:fluxo_dadosFD|contador_m:clock_generator_1|IQ[0]'
+Slack : 0.422
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'fluxo_dados:fluxo_dadosFD|contador_m:clock_generator_1|IQ[0]'
+Slack : -0.256
+TNS   : -110.989
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clock'
+Slack : -0.098
+TNS   : -6.931
+
+------------------------------------------------------------

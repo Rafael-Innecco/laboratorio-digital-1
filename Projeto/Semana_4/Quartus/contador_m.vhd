@@ -67,7 +67,7 @@ begin
     fim <= '1' when IQ=M-1 else
            '0';
 
-    -- saida meio
+    -- saida umQuinto
     meio <= '1' when IQ>=M/2-1 else
             '0';
     -- saida Q

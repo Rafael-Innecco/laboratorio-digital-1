@@ -1,0 +1,17 @@
+
+State Machine - |jogo_desafio_ritmo|unidade_controle:unidade_controleUC|Eatual
+Name Eatual.espera_escrita_2 Eatual.espera_jogada_2 Eatual.fim Eatual.proximo Eatual.ultima_jogada Eatual.termina_tempo Eatual.escreve_jogada Eatual.espera_escrita Eatual.acerto Eatual.compara Eatual.espera_jogada Eatual.inicializa_elem_esc Eatual.inicializa_elem Eatual.inicial 
+Eatual.inicial 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Eatual.inicializa_elem 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+Eatual.inicializa_elem_esc 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+Eatual.espera_jogada 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+Eatual.compara 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+Eatual.acerto 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+Eatual.espera_escrita 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+Eatual.escreve_jogada 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+Eatual.termina_tempo 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+Eatual.ultima_jogada 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+Eatual.proximo 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+Eatual.fim 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+Eatual.espera_jogada_2 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+Eatual.espera_escrita_2 1 0 0 0 0 0 0 0 0 0 0 0 0 1 

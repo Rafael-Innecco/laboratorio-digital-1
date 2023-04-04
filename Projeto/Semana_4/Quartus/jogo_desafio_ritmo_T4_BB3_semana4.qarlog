@@ -1,0 +1,35 @@
+Quartus Prime Archive log --	C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/Projeto/Semana_4/Quartus/jogo_desafio_ritmo_T4_BB3_semana4.qarlog
+
+Archive:	C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/Projeto/Semana_4/Quartus/jogo_desafio_ritmo_T4_BB3_semana4.qar
+Date:		Mon Apr 03 21:11:42 2023
+Quartus Prime		20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/Projeto/Semana_4/Quartus/comparador_85.vhd
+C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/Projeto/Semana_4/Quartus/contador_163.vhd
+C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/Projeto/Semana_4/Quartus/contador_m.vhd
+C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/Projeto/Semana_4/Quartus/contador_modificado.vhd
+C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/Projeto/Semana_4/Quartus/decoder_a.vhd
+C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/Projeto/Semana_4/Quartus/edge_detector.vhd
+C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/Projeto/Semana_4/Quartus/edge_holder.vhd
+C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/Projeto/Semana_4/Quartus/fluxo_dados.vhd
+C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/Projeto/Semana_4/Quartus/hexDecimal.vhd
+C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/Projeto/Semana_4/Quartus/hexDecimal_tb.vhd
+C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/Projeto/Semana_4/Quartus/hexa7seg.vhd
+C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/Projeto/Semana_4/Quartus/jogo_desafio_ritmo.qpf
+C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/Projeto/Semana_4/Quartus/jogo_desafio_ritmo.qsf
+C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/Projeto/Semana_4/Quartus/jogo_desafio_ritmo.vhd
+C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/Projeto/Semana_4/Quartus/ram_Sx4.vhd
+C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/Projeto/Semana_4/Quartus/ram_conteudo_jogadas.mif
+C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/Projeto/Semana_4/Quartus/registrador_n.vhd
+C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/Projeto/Semana_4/Quartus/seletor_som.vhd
+C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/Projeto/Semana_4/Quartus/shift_register.vhd
+C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/Projeto/Semana_4/Quartus/somador.vhd
+C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/Projeto/Semana_4/Quartus/somador_decimal.vhd
+C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/Projeto/Semana_4/Quartus/somador_decimal_tb.vhd
+C:/Users/jparr/Documents/1.o Quadri/PCS3635/laboratorio-digital-1/Projeto/Semana_4/Quartus/unidade_controle.vhd
+c:/intelfpga_lite/20.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 24 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

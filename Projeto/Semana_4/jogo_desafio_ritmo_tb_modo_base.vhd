@@ -173,7 +173,7 @@ begin
     ---- finaliza jogada 
     wait for 306*clockPeriod;
 	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 200*clockPeriod; -- segunda jogada
+	wait for 200*clockPeriod;
 	
     ---- jogada 3: acerta
     caso <= 7;
@@ -196,9 +196,8 @@ begin
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 306*clockPeriod;
-	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 200*clockPeriod; -- segunda jogada
-	
+	wait for 700*clockPeriod; -- tempo de espera a mais
+
 	---- jogada 5: acerta com metade ------------------------------- 1/2 ------------
     caso <= 9;
 	wait for 450*clockPeriod;
@@ -206,15 +205,14 @@ begin
     wait for 100*clockPeriod;
     botoes_in <= "0000";
     ---- finaliza jogada 
-    wait for 50*clockPeriod;
+    wait for 250*clockPeriod;
 	wait for 406*clockPeriod; -- tempo de espera a mais
-	wait for 200*clockPeriod; -- segunda jogada
 	
 	---- jogada 6: acerta com 1 ponto ----------------------------- 1/4 ----------------
     caso <= 10;
-	wait for 800*clockPeriod;
+	wait for 400*clockPeriod;
     botoes_in <= "0010";
-    wait for 100*clockPeriod;
+    wait for 500*clockPeriod;
     botoes_in <= "0000";
     ---- finaliza jogada 
 	wait for 106*clockPeriod; -- tempo de espera a mais
@@ -222,13 +220,13 @@ begin
 	
     ---- jogada  7: acerta com 1 ponto ----------------------------- 1/2 --------------
     caso <= 11;
-	wait for 550*clockPeriod;
+	wait for 400*clockPeriod;
     botoes_in <= "0001";
     wait for 100*clockPeriod;
     botoes_in <= "0000";
     ---- finaliza jogada 
-    wait for 356*clockPeriod; -- tempo de espera a mais
-	wait for 200*clockPeriod; -- segunda jogada
+    wait for 300*clockPeriod; -- tempo de espera a mais
+	wait for 400*clockPeriod; -- segunda jogada	
 	
 	----  jogada  8: acerta
     caso <= 12;
@@ -243,9 +241,9 @@ begin
 	
     ----  jogada  9: acerta metade ----------------------------- 1/2 ----------
     caso <= 13;
-	wait for 650*clockPeriod; 
+	wait for 450*clockPeriod; 
     botoes_in <= "0100";
-    wait for 100*clockPeriod;
+    wait for 300*clockPeriod;
     botoes_in <= "0000";
     ---- finaliza jogada 
 	wait for 256*clockPeriod; -- tempo de espera a mais
@@ -253,13 +251,13 @@ begin
 	
     ----  jogada  10: acerta um --------------------------------- 1/4 ----------
     caso <= 14;
-	wait for 770*clockPeriod;
+	wait for 400*clockPeriod;
     botoes_in <= "1000";
     wait for 100*clockPeriod;
     botoes_in <= "0000";
     ---- finaliza jogada 
-	wait for 136*clockPeriod; -- tempo de espera a mais
-	wait for 200*clockPeriod; -- segunda jogada
+	wait for 300*clockPeriod; -- tempo de espera a mais
+	wait for 400*clockPeriod; -- segunda jogada
 	
 	----  jogada 11: acerta
     caso <= 15;
@@ -811,32 +809,29 @@ begin
 	wait for 500*clockPeriod; -- tempo de espera a mais
 	wait for 200*clockPeriod; -- segunda jogada
 	
-     ----  jogada 61: acerta
+     ----  jogada 61: acerta 2 pontos
     caso <= 65;
-	wait for 100*clockPeriod;
+	wait for 600*clockPeriod;
     botoes_in <= "0001";
     wait for 100*clockPeriod;
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 306*clockPeriod;
-	wait for 500*clockPeriod; -- tempo de espera a mais	
 	wait for 200*clockPeriod; -- segunda jogada
 	
-	---- jogada 62: acerta
+	---- jogada 62: acerta 1 ponto
     caso <= 66;
-	wait for 100*clockPeriod;
+	wait for 800*clockPeriod;
     botoes_in <= "0010";
     wait for 100*clockPeriod;
     botoes_in <= "0000";
     ---- finaliza jogada 
     wait for 306*clockPeriod;
-	wait for 500*clockPeriod; -- tempo de espera a mais
-	wait for 200*clockPeriod; -- segunda jogada
 	
-    ---- jogada 63: acerta
+    ---- jogada 63: erra
     caso <= 67;
 	wait for 100*clockPeriod;
-    botoes_in <= "0100";
+    botoes_in <= "1000";
     wait for 100*clockPeriod;
     botoes_in <= "0000";
     ---- finaliza jogada 
@@ -844,10 +839,10 @@ begin
 	wait for 500*clockPeriod; -- tempo de espera a mais	
 	wait for 200*clockPeriod; -- segunda jogada
 	
-	---- jogada 64: acerta
+	---- jogada 64: timeout
      caso <= 68;
 	wait for 100*clockPeriod;
-    botoes_in <= "1000";
+    botoes_in <= "0000";
     wait for 100*clockPeriod;
     botoes_in <= "0000";
 	---- finaliza jogada 
