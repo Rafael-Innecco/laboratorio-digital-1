@@ -247,35 +247,35 @@ architecture estrutural of fluxo_dados is
     signal led_intermediario1   : std_logic_vector(15 downto 0);
     signal led_intermediario2   : std_logic_vector(15 downto 0);
 	signal led_intermediario3   : std_logic_vector(15 downto 0);
+	signal fim_tempo_int1, fim_tempo_int2       : std_logic;
 
     signal seletor_mem_fixa     : std_logic;
 begin
-    clock_generator_1: contador_m
-    generic map (M => 4)
-    port map (
-        clock   => clock,
-        zera_as => '0',
-        zera_s => '0',
-        conta  => '1',
-        Q      => open,
-        fim    => open,
-        meio   => clk_1
-    );
-    clock_generator_2: contador_m
-    generic map (M => 83333)
-    port map (
-        clock   => clock,
-        zera_as => '0',
-        zera_s  => '0',
-        conta   => '1',
-        Q       => open,
-        fim     => open,
-        meio    => clk_2
-    );
 
-    with modo(2) select clock_int <=
-        clk_1 when '0',
-        clk_2 when others;
+--  clock_generator_1: contador_m
+--  generic map (M => 4)
+--   port map (
+--        clock   => clock,
+--      zera_as => '0',
+--       zera_s => '0',
+--        conta  => '1',
+--      Q      => open,
+---        fim    => open,
+--     meio   => clk_1
+--   );
+ --   clock_generator_2: contador_m
+ --   generic map (M => 83333)
+ --   port map (
+ --       clock   => clock,
+ --       zera_as => '0',
+ --       zera_s  => '0',
+ --       conta   => '1',
+ --       Q       => open,
+ --       fim     => open,
+ --       meio    => clk_2
+ --   );
+
+   clock_int <= clock;
 
     clock_interno <= clock_int;
 
@@ -412,7 +412,7 @@ begin
 
     jogada_feita <= s_chaves(0) or s_chaves(1) or s_chaves(2) or s_chaves(3);
 
-    contador_tempo: contador_modificado -- conta passagem de tempo entre jogadas
+    contador_tempo1: contador_modificado -- conta passagem de tempo entre jogadas
     generic map (
         M   => 1000,
         P1  => 750,
@@ -426,11 +426,38 @@ begin
         load  => '0',
         D     => std_logic_vector(to_unsigned(0, 10)),
         Q => open,
-        fim => fim_tempo,
+        fim => fim_tempo_int1,
         ponto_1 => primeiro_ponto,
         ponto_2 => segundo_ponto
     );
 
+----
+
+contador_tempo2: contador_modificado -- conta passagem de tempo entre jogadas
+    generic map (
+        M   => 600,
+        P1  => 400,
+        P2  => 200
+    )
+    port map (
+        clock => clock_int,
+        zera_as => zeraT,
+        zera_s => '0',
+        conta => contaT,
+        load  => '0',
+        D     => std_logic_vector(to_unsigned(0, 10)),
+        Q => open,
+        fim => fim_tempo_int2,
+        ponto_1 => primeiro_ponto,
+        ponto_2 => segundo_ponto
+    );
+
+	fim_tempo <= fim_tempo_int1 when modo(2) = '0' else
+				 fim_tempo_int2;	
+
+
+
+----
     contador_espera: contador_m
     generic map (
         M => 1000
@@ -445,7 +472,7 @@ begin
         meio    => open
     );
 
-    contador_tempo2: contador_m
+    contador_tempo_jogada2: contador_m
     generic map (
         M => 200
     )

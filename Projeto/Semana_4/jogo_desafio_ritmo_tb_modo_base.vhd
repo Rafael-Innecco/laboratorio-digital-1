@@ -81,7 +81,7 @@ architecture tb of jogo_desafio_ritmo_tb_modo_base is
   
   constant clockPeriodCircuit : time := 20 ns;
   
-  constant clockPeriod : time :=  80 ns;     -- frequencia de fato usada!
+  constant clockPeriod : time :=  20 ns;     -- frequencia de fato usada!
   signal caso : integer := 0;
  
 begin

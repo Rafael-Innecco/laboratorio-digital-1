@@ -35,7 +35,7 @@ entity jogo_desafio_ritmo is -- novo nome de entidade
 		db_contagem			: out std_logic_vector (13 downto 0); -- Ocupa dois displays de sete segmentos 
         db_memoria      	: out std_logic_vector (6 downto 0);
         db_jogadafeita 		: out std_logic_vector (6 downto 0);
-		db_estado       	: out std_logic_vector (6 downto 0)               
+		db_estado       	: out std_logic_vector (6 downto 0)		
     );
 end entity;
 
@@ -119,7 +119,7 @@ architecture estrutural of jogo_desafio_ritmo is -- componente alterado
 			escreveM		: out std_logic;
 			------------
 			-- Sinais de depuracao 
-			db_estado   	: out std_logic_vector(3 downto 0)
+			db_estado   	: out std_logic_vector(3 downto 0)			
         );
     end component;
 
@@ -187,7 +187,7 @@ begin
 			pontuacao_dec		=> pontuacao_hex,
 			---------------------------
 			clock_interno		=> clock_interno,
-			buzzer				=> buzzer
+			buzzer				=> buzzer			
         );
     --
 	
