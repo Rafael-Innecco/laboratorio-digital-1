@@ -1,6 +1,6 @@
 --------------------------------------------------------------------
 -- Arquivo   : unidade_controle.vhd
--- Projeto   : Projeto da disciplina
+-- Projeto   : Projeto da disciplina SEMANA 3
 --------------------------------------------------------------------
 -- Descricao : unidade de controle 
 --
